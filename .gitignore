@@ -48,3 +48,12 @@ CLAUDE.md
 # ===== 临时调试日志（测试过程中产生的）=====
 /tmp/ida_mcp_*.log
 /tmp/auto_start_mcp_*.log
+
+# ===== 源码保护：仅公开入口文件，其余 .py 本地保留但不推送 =====
+*.py
+!stage1/src/operation-sieve-public-master/package/argument_resolver/__main__.py
+!stage1/src/operation-sieve-public-master/package/argument_resolver/analysis/sieve.py
+!stage1/src/operation-sieve-public-master/package/argument_resolver/analysis/env_resolve.py
+!stage1/src/operation-sieve-public-master/pipeline/sieve_pipeline/run.py
+!stage2/src/interaction.py
+!stage2/src/batch_runner.py
