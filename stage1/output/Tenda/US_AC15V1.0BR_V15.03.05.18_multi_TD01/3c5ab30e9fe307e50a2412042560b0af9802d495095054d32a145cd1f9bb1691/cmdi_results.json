@@ -1,0 +1,108 @@
+{
+    "closures": [
+        {
+            "trace": [
+                {
+                    "function": "main",
+                    "string": "main(<MultiValues(<BV32 TOP + ARGC>)>, <MultiValues(<BV32 stack_base + 0xdeadc0de>)>) @ 0x9c60",
+                    "ins_addr": "0x9c60"
+                },
+                {
+                    "function": "sub_93d8",
+                    "string": "sub_93d8(<MultiValues(<BV32 0x0>)>, <MultiValues({0: {<BV32 stack_base + 0xdeadc0e2>, <BV32 0x0>}})>, <MultiValues({0: {<BV32 0xffffffff>, <BV32 TOP>}})>, <MultiValues(<BV32 0x1>)>, <MultiValues(<BV32 0xffffffff>)>, <MultiValues({0: {<BV32 0xffffffff>, <BV32 0x4>, <BV32 0x3>}})>, <MultiValues(<BV32 0x0>)>) @ 0xa74c",
+                    "ins_addr": "0xa74c"
+                }
+            ],
+            "sink": {
+                "function": "execv",
+                "string": "execv(<MultiValues({0: {<BV32 0x0>, <BV32 TOP>, <BV32 stack_base + 0xdeadc2de>}})>, <MultiValues({0: {<BV32 stack_base + 0xdeadc0e2>, <BV32 0x0>}})>) @ 0x95d4",
+                "ins_addr": "0x95d4"
+            },
+            "depth": 2,
+            "inputs": {
+                "likely": [
+                    "ARGV"
+                ],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0.4,
+            "confidence": 0.0143,
+            "source_score": 0.0286,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": true,
+            "sanitized": false
+        }
+    ],
+    "cfg_time": 0.5482668876647949,
+    "vra_time": 1.6257526874542236,
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/usr/bin/spawn-fcgi",
+    "name": "spawn-fcgi",
+    "has_sinks": true,
+    "sha256": "3c5ab30e9fe307e50a2412042560b0af9802d495095054d32a145cd1f9bb1691",
+    "sink_times": {
+        "execv": 7.716958045959473
+    },
+    "error": null,
+    "sieve_time": 20.19148325920105,
+    "sinks": {
+        "execl": 1,
+        "execv": 1
+    },
+    "time_data": {
+        "0x93d8 -> 0x9c60 -> 0x8b68": {
+            "taint_time": 3.1682729721069336,
+            "rda_time": 9.219138622283936
+        },
+        "0x93d8 -> 0x9c60 -> 0x8c94": {
+            "taint_time": 3.20587158203125,
+            "rda_time": 4.510231971740723
+        }
+    }
+}

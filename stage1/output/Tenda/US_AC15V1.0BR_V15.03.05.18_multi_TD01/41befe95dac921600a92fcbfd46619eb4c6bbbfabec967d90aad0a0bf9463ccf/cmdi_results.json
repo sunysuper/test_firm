@@ -1,0 +1,12 @@
+{
+    "sha256": "41befe95dac921600a92fcbfd46619eb4c6bbbfabec967d90aad0a0bf9463ccf",
+    "name": "dnsmasq",
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/usr/sbin/dnsmasq",
+    "closures": [],
+    "cfg_time": 0,
+    "vra_time": 0,
+    "sieve_time": 0,
+    "error": null,
+    "ret_code": 0,
+    "has_sinks": false
+}

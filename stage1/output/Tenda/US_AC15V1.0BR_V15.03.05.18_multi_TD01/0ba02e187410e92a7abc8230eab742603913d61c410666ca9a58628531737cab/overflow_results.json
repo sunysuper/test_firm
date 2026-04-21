@@ -1,0 +1,12 @@
+{
+    "sha256": "0ba02e187410e92a7abc8230eab742603913d61c410666ca9a58628531737cab",
+    "name": "nginx",
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/usr/bin/nginx",
+    "closures": [],
+    "cfg_time": 0,
+    "vra_time": 0,
+    "sieve_time": 0,
+    "error": null,
+    "ret_code": 0,
+    "has_sinks": false
+}

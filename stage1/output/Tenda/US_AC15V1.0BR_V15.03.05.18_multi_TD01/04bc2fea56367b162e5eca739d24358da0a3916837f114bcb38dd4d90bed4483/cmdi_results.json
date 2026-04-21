@@ -1,0 +1,12 @@
+{
+    "sha256": "04bc2fea56367b162e5eca739d24358da0a3916837f114bcb38dd4d90bed4483",
+    "name": "usb_wwan.ko",
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/lib/modules/2.6.36.4brcmarm/kernel/drivers/usb/serial/usb_wwan.ko",
+    "closures": [],
+    "cfg_time": 0,
+    "vra_time": 0,
+    "sieve_time": 0,
+    "error": null,
+    "ret_code": 0,
+    "has_sinks": false
+}

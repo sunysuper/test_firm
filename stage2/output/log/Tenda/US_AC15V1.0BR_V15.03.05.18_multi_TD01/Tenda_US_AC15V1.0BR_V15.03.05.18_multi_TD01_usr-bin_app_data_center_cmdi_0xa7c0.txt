@@ -1,0 +1,1072 @@
+============================================================
+IDACMP Vulnerability Analysis Log
+============================================================
+Timestamp:    2026-04-21T02:00:17.611676
+Binary:       app_data_center
+Vendor:       Tenda
+Firmware:     US_AC15V1.0BR_V15.03.05.18_multi_TD01
+Vuln Type:    cmdi
+Sink:         system @ 0xa7c0
+Rank:         70.7
+Reachable:    True
+Sanitized:    False
+Analysis Model: gpt-5.4
+Tool Model:     gpt-5.4
+============================================================
+
+Trace Path:
+  [0] main @ 0x9f04
+      main() @ 0x9f04
+  [1] sub_9de8 @ 0xa1d0
+      sub_9de8(<MultiValues(<BV32 TOP + 0x1>)>, <MultiValues({0: {<BV32 0x0>, <BV32 heap_base + 0x34>}})>, <MultiValues({0: {<...
+  [2] sub_a6e8 @ 0x9e8c
+      sub_a6e8(<MultiValues({0: {<BV32 TOP>, <BV32 0x0>}})>, <MultiValues({0: {<BV32 0x1>, <BV32 0x0>, <BV32 TOP>, <BV32 0x2>}...
+
+Sink:
+  Function: system
+  Address:  0xa7c0
+  Call:     system(<MultiValues(<BV32 stack_base - 0x1070>)>) @ 0xa7c0
+
+============================================================
+[PHASE 1] Trace Analysis
+============================================================
+
+[TRACE-AGENT] Round 1
+Additional Information: Please provide the decompiled code or disassembly for the caller function sub_a6e8, specifically the function containing the sink call system(...) at 0xa7c0. I need the instructions in sub_a6e8 leading up to 0xa7c0 so I can verify how the system argument is actually constructed inside that function and correct the traced source if necessary.
+
+[TOOL-MODEL] {"tool": "decompile_function(address='0xa6e8')"}
+
+
+[IDA-TOOL] decompile_function(address='0xa6e8') -> OK
+/* line: 0, address: 0xa6e8 */ int __fastcall sub_A6E8(int a1)
+/* line: 1 */ {
+/* line: 2 */   char v3[4]; // [sp+8h] [bp-814h] BYREF
+/* line: 3 */   const char *v4; // [sp+808h] [bp-14h]
+/* line: 4 */   void *s1; // [sp+80Ch] [bp-10h]
+/* line: 5 */   _BOOL4 v6; // [sp+810h] [bp-Ch]
+/* line: 6 */   int v7; // [sp+814h] [bp-8h]
+/* line: 7 */ 
+/* line: 8, address: 0xa704 */   v6 = 0;
+/* line: 9, address: 0xa70c */   v7 = 0;
+/* line: 10, address: 0xa720 */   s1 = (void *)sub_9B30(a1, "action");
+/* line: 11, address: 0xa734 */   v4 = (const char *)sub_9B30(a1, "dev_name");
+/* line: 12, address: 0xa740 */   if ( s1 )
+/* line: 13, address: 0xa768 */     v6 = memcmp(s1, "fdel", 4u) == 0;
+/* line: 14, address: 0xa77c */   if ( !v4 || !*v4 )
+/* line: 15, address: 0xa7cc */     return 3;
+/* line: 16, address: 0xa78c */   sub_A510(v4);
+/* line: 17, address: 0xa7b0 */   snprintf(v3, 0x800u, "cfm post netctrl 51?op=3,string_info=%s", v4);
+/* line: 18, address: 0xa7c0 */   system(v3);
+/* line: 19, address: 0xa7dc */   return v7;
+/* line: 20 */ }
+
+[TOOL-MODEL] {"status": "completed", "result": "已获取 sub_A6E8 的反编译代码，且包含 sink 调用 system(...) 位于 0xa7c0。该函数中 system 参数的构造如下：先通过 sub_9B30(a1, \"dev_name\") 取出 v4，然后在 0xa7b0 处执行 snprintf(v3, 0x800u, \"cfm post netctrl 51?op=3,string_info=%s\", v4)，最终在 0xa7c0 处调用 system(v3)。因此 system 的实际参数缓冲区是局部变量 v3，其内容由固定格式字符串与 dev_name 参数 v4 拼接得到。相关关键指令/语句链路为：0xa720 s1 = sub_9B30(a1, \"action\"); 0xa734 v4 = sub_9B30(a1, \"dev_name\"); 0xa77c if (!v4 || !*v4) return 3; 0xa78c sub_A510(v4); 0xa7b0 snprintf(v3, 0x800u, \"cfm post netctrl 51?op=3,string_info=%s\", v4); 0xa7c0 system(v3)。可据此修正 traced source：sink system(...) 的可控来源应重点标记为 a1 中键名 \"dev_name\" 对应的返回值，而不是仅笼统归因于调用点本身。"}
+
+[TOOL-MODEL] 任务完成 (共2轮)
+
+[TOOL-MODEL] {"status": "completed", "result": "已定位字符串 \"dev_name\" 的引用并获取相关反编译代码。\n\n1) 字符串位置\n- \"dev_name\" 位于地址 0x1aef0\n\n2) 交叉引用 / 使用该字符串的函数\n- 0xa728 -> 函数 sub_A6E8（函数起始地址 0xa6e8）\n- 0xabf4 -> 函数 sub_A7E0（函数起始地址 0xa7e0）\n\n3) sub_A6E8 @ 0xa6e8 的反编译代码\n```c\nint __fastcall sub_A6E8(int a1)\n{\n  char v3[4]; // [sp+8h] [bp-814h] BYREF\n  const char *v4; // [sp+808h] [bp-14h]\n  void *s1; // [sp+80Ch] [bp-10h]\n  _BOOL4 v6; // [sp+810h] [bp-Ch]\n  int v7; // [sp+814h] [bp-8h]\n\n  v6 = 0;\n  v7 = 0;\n  s1 = (void *)sub_9B30(a1, \"action\");\n  v4 = (const char *)sub_9B30(a1, \"dev_name\");\n  if ( s1 )\n    v6 = memcmp(s1, \"fdel\", 4u) == 0;\n  if ( !v4 || !*v4 )\n    return 3;\n  sub_A510(v4);\n  snprintf(v3, 0x800u, \"cfm post netctrl 51?op=3,string_info=%s\", v4);\n  system(v3);\n  return v7;\n}\n```\n\n4) sub_A7E0 @ 0xa7e0 的反编译代码\n```c\nint __fastcall sub_A7E0(int a1)\n{\n  char *v1;\n  unsigned __int64 v2;\n  __int64 v3;\n  __int64 v4;\n  __int64 v5;\n  __int64 v6;\n  __int64 v7;\n  __int64 v8;\n  int v9;\n  int v10;\n  int v11;\n  int v12;\n  int v13;\n  __int64 v14;\n  int v15;\n  int v18;\n  int v19;\n  int v20;\n  int v21;\n  int v22;\n  int v23;\n  __int64 v24;\n  char *v25;\n  char v26[68];\n  char v27[20];\n  __int64 v28;\n  __int64 v29;\n  int v30;\n  int v31;\n  char *v32;\n  char *v33;\n  char *s;\n  int v35;\n  int v36;\n  int v37;\n  char *v38;\n  int v39;\n\n  v39 = 0;\n  v36 = 0;\n  v37 = 0;\n  v35 = sub_12488(\"/tmp/usb/UsbVolumeInfo\", \"r\");\n  if ( v35 )\n  {\n    v39 = sub_F5F0();\n    if ( v39 )\n    {\nLABEL_14:\n      while ( sub_12A8C(v27, 2047, v35) )\n      {\n        s = v27;\n        v38 = strchr(v27, 59);\n        if ( v38 )\n          *v38++ = 0;\n        v25 = strchr(v38, 59);\n        if ( v25 )\n        {\n          v1 = v25;\n          *v25 = 0;\n          v25 = v1 + 1;\n        }\n        while ( v25 )\n        {\n          v33 = strtok_r(0, \"~\", &v25);\n          if ( !v33 )\n            break;\n          v32 = strchr(v33, 58);\n          if ( v32 )\n          {\n            *v32 = 0;\n            sprintf(v26, \"%s%s\", \"/var/etc/upan/\", v33);\n            statvfs64(v26, &v18);\n            v31 = v20 - v22;\n            v2 = ((v24 + (unsigned __int64)(unsigned int)(v20 - v22)) >> 1) + 100LL * (unsigned int)(v20 - v22);\n            v30 = sub_1A28C(v2, HIDWORD(v2), v24 + v20 - v22, (v24 + (unsigned __int64)(unsigned int)(v20 - v22)) >> 32);\n            v36 = sub_F62C();\n            if ( !v36 )\n              goto LABEL_14;\n            v3 = sub_19C20(v20, v21);\n            v4 = sub_19B94(v19);\n            v5 = sub_19C94(v3, HIDWORD(v3), v4, HIDWORD(v4));\n            v29 = sub_19F00(v5, HIDWORD(v5), 0, 1083179008);\n            v6 = sub_19C20(v22, v23);\n            v7 = sub_19B94(v19);\n            v8 = sub_19C94(v6, HIDWORD(v6), v7, HIDWORD(v7));\n            v28 = sub_19F00(v8, HIDWORD(v8), 0, 1083179008);\n            v9 = sub_F59C(s);\n            sub_EE10(v36, \"name\", v9);\n            v10 = sub_F59C(v38);\n            sub_EE10(v36, \"dev_name\", v10);\n            v11 = sub_F59C(v33);\n            sub_EE10(v36, \"label\", v11);\n            v12 = sub_F53C(v29, HIDWORD(v29));\n            sub_EE10(v36, \"size\", v12);\n            v13 = sub_F53C(v28, HIDWORD(v28));\n            sub_EE10(v36, \"memory_unuse\", v13);\n            v14 = sub_19B94(v30);\n            v15 = sub_F53C(v14, HIDWORD(v14));\n            sub_EE10(v36, \"memory\", v15);\n            sub_ED84(v39, v36);\n          }\n        }\n      }\n      sub_124E8(v35);\n    }\n    else\n    {\n      v37 = 9;\n    }\n  }\n  else\n  {\n    v37 = 0;\n  }\n  if ( v39 )\n    sub_EE10(a1, \"info\", v39);\n  return v37;\n}\n```\n\n5) 使用上下文与可控性初步分析\n- 在 sub_A6E8 中，`dev_name` 通过 `sub_9B30(a1, \"dev_name\")` 从请求/参数对象 `a1` 中取出。\n- 之后仅做了空检查：`if ( !v4 || !*v4 ) return 3;`\n- 随后传入 `sub_A510(v4)`，然后直接拼接进命令字符串：\n  - `snprintf(..., \"cfm post netctrl 51?op=3,string_info=%s\", v4);`\n  - `system(v3);`\n- 因此从当前代码看，`dev_name` 很可能是外部可输入参数，并且流向 `system()`，存在明显命令注入风险，除非 `sub_A510` 做了严格过滤/转义。\n\n- 在 sub_A7E0 中，`dev_name` 不是来自外部请求参数，而是从 `/tmp/usb/UsbVolumeInfo` 解析出的字段 `v38`，再作为键值 `\"dev_name\"` 填入某个结果对象中：\n  - `sub_EE10(v36, \"dev_name\", v10);`\n- 这里的 `dev_name` 更像是数据结构字段名，不是直接 sink。\n\n6) 与你请求的 sink/data-flow 相关结论\n- 你特别要求的 0xa6e8 函数已经反编译完成。\n- 该函数中到 sink 的关键数据流为：\n  - `sub_9B30(a1, \"dev_name\")` -> `v4`\n  - `sub_A510(v4)`\n  - `snprintf(... %s, v4)`\n  - `system(v3)`\n- 若要最终判断攻击者是否可控，下一步应重点分析：\n  - `sub_9B30`：确认 `a1` 是否对应 HTTP/CGI 请求参数容器\n  - `sub_A510`：确认是否为有效净化函数，还是仅普通处理\n\n当前已满足你的明确需求：已搜索 `dev_name` 的引用位置，并提供了使用它的反编译函数，以及 0xa6e8 的反编译代码和参数到 sink 的数据流说明。"}
+
+[TOOL-MODEL] 任务完成 (共5轮)
+
+[TRACE-AGENT] Round 2
+system("cfm post netctrl 51?op=3,string_info=%s" % sub_9B30(a1, "dev_name")) @ 0xa7c0
+
+============================================================
+[PHASE 1 RESULT] Extracted Source (耗时 17.6s)
+system("cfm post netctrl 51?op=3,string_info=%s" % sub_9B30(a1, "dev_name")) @ 0xa7c0
+============================================================
+
+============================================================
+[PHASE 2] Vulnerability Controllability Analysis
+============================================================
+
+[VULN-AGENT] Round 2
+Additional Information: I need the decompiled code of the function at address 0x9B30 to analyze whether `sub_9B30(a1, "dev_name")` reads attacker-controlled HTTP/CGI input, and the decompiled code of the function at address 0xA510 to determine whether it performs effective sanitization/escaping before the value is passed to `system()`.
+
+Additional Information: I need to search for endpoint registration strings. Please search for strings matching "/goform/" or "/cgi-bin/" or "/cgi/" in the binary to find URL-to-handler mappings.
+
+Additional Information: I need cross-references to the caller function at address 0xA6E8 to find the dispatcher that registers this handler and determine the HTTP endpoint path. Then decompile the dispatcher function to find the URL string paired with the handler.
+
+[VULN-AGENT] Round 1
+Additional Information: I need to analyze the occurrence and usage context of the string "dev_name" in the firmware to determine if it can be controlled by an attacker. Please search for where this string is referenced and provide the decompiled functions that use it.
+
+Additional Information: I need the decompiled code of the function at address 0xA6E8 to analyze the parameter construction and data flow leading to the sink call.
+
+Additional Information: I need to search for endpoint registration strings. Please search for strings matching "/goform/" or "/cgi-bin/" or "/cgi/" in the binary to find URL-to-handler mappings.
+
+[TOOL-MODEL] {"tool": "decompile_function(address='0x9B30')"}
+{"tool": "decompile_function(address='0xA510')"}
+{"tool": "list_strings_filter(filter='/goform/|/cgi-bin/|/cgi/', offset=0, count=100)"}
+
+[IDA-TOOL] decompile_function(address='0x9B30') -> OK
+/* line: 0, address: 0x9b30 */ int *__fastcall sub_9B30(int **a1, const char *a2)
+/* line: 1 */ {
+/* line: 2 */   int **v5; // [sp+4h] [bp-8h]
+/* line: 3 */ 
+/* line: 4, address: 0x9b3c */   v5 = a1;
+/* line: 5, address: 0x9b4c */   if ( !a1 )
+/* line: 6, address: 0x9b50 */     return 0;
+/* line: 7, address: 0x9b98 */   while ( v5 )
+/* line: 8 */   {
+/* line: 9, address: 0x9b68 */     if ( !strcmp((const char *)v5[1], a2) )
+/* line: 10, address: 0x9b80 */       return v5[2];
+/* line: 11, address: 0x9b8c */     v5 = (int **)*v5;
+/* line: 12 */   }
+/* line: 13, address: 0x9ba8 */   return 0;
+/* line: 14 */ }
+
+[IDA-TOOL] decompile_function(address='0xA510') -> OK
+/* line: 0, address: 0xa510 */ int __fastcall sub_A510(const void *a1)
+/* line: 1 */ {
+/* line: 2 */   size_t v1; // r0
+/* line: 3 */   char v4[12]; // [sp+8h] [bp-81Ch] BYREF
+/* line: 4 */   char *v5; // [sp+808h] [bp-1Ch]
+/* line: 5 */   char *v6; // [sp+80Ch] [bp-18h]
+/* line: 6 */   char *s; // [sp+810h] [bp-14h]
+/* line: 7 */   int v8; // [sp+814h] [bp-10h]
+/* line: 8 */   int v9; // [sp+818h] [bp-Ch]
+/* line: 9 */   int v10; // [sp+81Ch] [bp-8h]
+/* line: 10 */ 
+/* line: 11, address: 0xa524 */   v10 = 0;
+/* line: 12, address: 0xa53c */   v9 = sub_12488("/tmp/usb/UsbVolumeInfo", "r");
+/* line: 13, address: 0xa548 */   if ( !v9 )
+/* line: 14, address: 0xa550 */     return 0;
+/* line: 15, address: 0xa56c */   v8 = sub_12488("/tmp/usb/.UsbVolumeInfo_Bak", "w");
+/* line: 16, address: 0xa578 */   if ( v8 )
+/* line: 17 */   {
+/* line: 18, address: 0xa6a4 */     while ( sub_12A8C(v4, 2047, v9) )
+/* line: 19 */     {
+/* line: 20, address: 0xa59c */       s = v4;
+/* line: 21, address: 0xa5ac */       v6 = strchr(v4, 59);
+/* line: 22, address: 0xa5b8 */       if ( v6 )
+/* line: 23 */       {
+/* line: 24, address: 0xa5d4 */         v5 = strchr(++v6, 59);
+/* line: 25, address: 0xa5e0 */         if ( v5 )
+/* line: 26 */         {
+/* line: 27, address: 0xa5fc */           if ( !memcmp(a1, v6, v5 - v6) )
+/* line: 28, address: 0xa5fc */             continue;
+/* line: 29 */         }
+/* line: 30 */       }
+/* line: 31, address: 0xa634 */       sub_12E3C("%s", v4);
+/* line: 32, address: 0xa648 */       v1 = strlen(v4);
+/* line: 33, address: 0xa66c */       sub_13064(v4, 1, v1, v8);
+/* line: 34 */     }
+/* line: 35, address: 0xa6ac */     sub_124E8(v8);
+/* line: 36, address: 0xa6b4 */     sub_124E8(v9);
+/* line: 37, address: 0xa6c0 */     remove("/tmp/usb/UsbVolumeInfo");
+/* line: 38, address: 0xa6d4 */     rename("/tmp/usb/.UsbVolumeInfo_Bak", "/tmp/usb/UsbVolumeInfo");
+/* line: 39 */   }
+/* line: 40 */   else
+/* line: 41 */   {
+/* line: 42, address: 0xa580 */     sub_124E8(v9);
+/* line: 43, address: 0xa588 */     return 0;
+/* line: 44 */   }
+/* line: 45, address: 0xa6e4 */   return v10;
+/* line: 46 */ }
+
+[IDA-TOOL] list_strings_filter(filter='/goform/|/cgi-bin/|/cgi/', offset=0, count=100) -> OK
+{
+  "data": [],
+  "next_offset": null
+}
+
+[TOOL-MODEL] {"tool": "list_strings_filter(filter='dev_name', offset=0, count=100)"}
+{"tool": "get_function_by_address(address='0xa6e8')"}
+{"tool": "list_strings_filter(filter='/goform/', offset=0, count=100)"}
+
+[IDA-TOOL] list_strings_filter(filter='dev_name', offset=0, count=100) -> OK
+{
+  "data": [
+    {
+      "address": "0x1aef0",
+      "length": 9,
+      "string": "dev_name"
+    }
+  ],
+  "next_offset": null
+}
+
+[IDA-TOOL] get_function_by_address(address='0xa6e8') -> OK
+{
+  "address": "0xa6e8",
+  "name": "sub_A6E8",
+  "size": "0xf8"
+}
+
+[IDA-TOOL] list_strings_filter(filter='/goform/', offset=0, count=100) -> OK
+{
+  "data": [],
+  "next_offset": null
+}
+
+[TOOL-MODEL] {"tool": "get_xrefs_to(address='0xA6E8')"}
+{"tool": "get_xrefs_to(address='0xA6E8')"}
+
+[IDA-TOOL] get_xrefs_to(address='0xA6E8') -> OK
+[
+  {
+    "address": "0x9e8c",
+    "type": "code",
+    "function": {
+      "address": "0x9e8c",
+      "name": "sub_9DE8",
+      "size": "0x11c"
+    }
+  }
+]
+
+[IDA-TOOL] get_xrefs_to(address='0xA6E8') -> OK
+[
+  {
+    "address": "0x9e8c",
+    "type": "code",
+    "function": {
+      "address": "0x9e8c",
+      "name": "sub_9DE8",
+      "size": "0x11c"
+    }
+  }
+]
+
+[TOOL-MODEL] {"tool": "get_xrefs_to(address='0x1aef0')"}
+
+
+[IDA-TOOL] get_xrefs_to(address='0x1aef0') -> OK
+[
+  {
+    "address": "0xa728",
+    "type": "data",
+    "function": {
+      "address": "0xa728",
+      "name": "sub_A6E8",
+      "size": "0xf8"
+    }
+  },
+  {
+    "address": "0xabf4",
+    "type": "data",
+    "function": {
+      "address": "0xabf4",
+      "name": "sub_A7E0",
+      "size": "0x59c"
+    }
+  }
+]
+
+[TOOL-MODEL] {"tool": "decompile_function(address='0x9DE8')"}
+
+[IDA-TOOL] decompile_function(address='0x9DE8') -> OK
+/* line: 0, address: 0x9de8 */ int __fastcall sub_9DE8(const char *a1, int a2, int a3, int a4)
+/* line: 1 */ {
+/* line: 2 */   int v8; // [sp+14h] [bp-8h]
+/* line: 3 */ 
+/* line: 4, address: 0x9e08 */   v8 = 4;
+/* line: 5, address: 0x9e18 */   if ( !strcmp(a1, "request") )
+/* line: 6, address: 0x9e34 */     return sub_B1B0(a3, a4);
+/* line: 7, address: 0x9e48 */   if ( !strcmp(a1, "usblist") )
+/* line: 8, address: 0x9e60 */     return sub_A7E0(a4);
+/* line: 9, address: 0x9e74 */   if ( !strcmp(a1, "usbeject") )
+/* line: 10, address: 0x9e90 */     return sub_A6E8(a3);
+/* line: 11, address: 0x9ea4 */   if ( !strcmp(a1, "download") )
+/* line: 12, address: 0x9ec0 */     return sub_A36C(a3, a4);
+/* line: 13, address: 0x9ed4 */   if ( !strcmp(a1, "stok") )
+/* line: 14, address: 0x9ef0 */     return sub_11E70(a3, a4);
+/* line: 15, address: 0x9f00 */   return v8;
+/* line: 16 */ }
+
+[TOOL-MODEL] {"tool": "decompile_function(address='0xa6e8')"}
+
+[IDA-TOOL] decompile_function(address='0xa6e8') -> OK
+/* line: 0, address: 0xa6e8 */ int __fastcall sub_A6E8(int a1)
+/* line: 1 */ {
+/* line: 2 */   char v3[4]; // [sp+8h] [bp-814h] BYREF
+/* line: 3 */   const char *v4; // [sp+808h] [bp-14h]
+/* line: 4 */   void *s1; // [sp+80Ch] [bp-10h]
+/* line: 5 */   _BOOL4 v6; // [sp+810h] [bp-Ch]
+/* line: 6 */   int v7; // [sp+814h] [bp-8h]
+/* line: 7 */ 
+/* line: 8, address: 0xa704 */   v6 = 0;
+/* line: 9, address: 0xa70c */   v7 = 0;
+/* line: 10, address: 0xa720 */   s1 = (void *)sub_9B30(a1, "action");
+/* line: 11, address: 0xa734 */   v4 = (const char *)sub_9B30(a1, "dev_name");
+/* line: 12, address: 0xa740 */   if ( s1 )
+/* line: 13, address: 0xa768 */     v6 = memcmp(s1, "fdel", 4u) == 0;
+/* line: 14, address: 0xa77c */   if ( !v4 || !*v4 )
+/* line: 15, address: 0xa7cc */     return 3;
+/* line: 16, address: 0xa78c */   sub_A510(v4);
+/* line: 17, address: 0xa7b0 */   snprintf(v3, 0x800u, "cfm post netctrl 51?op=3,string_info=%s", v4);
+/* line: 18, address: 0xa7c0 */   system(v3);
+/* line: 19, address: 0xa7dc */   return v7;
+/* line: 20 */ }
+
+[TOOL-MODEL] {"tool": "decompile_function(address='0xabf4')"}
+
+[IDA-TOOL] decompile_function(address='0xabf4') -> OK
+/* line: 0, address: 0xa7e0 */ int __fastcall sub_A7E0(int a1)
+/* line: 1 */ {
+/* line: 2 */   char *v1; // r3
+/* line: 3 */   unsigned __int64 v2; // r0
+/* line: 4 */   __int64 v3; // r4
+/* line: 5 */   __int64 v4; // r0
+/* line: 6 */   __int64 v5; // r0
+/* line: 7 */   __int64 v6; // r4
+/* line: 8 */   __int64 v7; // r0
+/* line: 9 */   __int64 v8; // r0
+/* line: 10 */   int v9; // r0
+/* line: 11 */   int v10; // r0
+/* line: 12 */   int v11; // r0
+/* line: 13 */   int v12; // r0
+/* line: 14 */   int v13; // r0
+/* line: 15 */   __int64 v14; // r0
+/* line: 16 */   int v15; // r0
+/* line: 17 */   int v18; // [sp+8h] [bp-18ACh] BYREF
+/* line: 18 */   int v19; // [sp+Ch] [bp-18A8h]
+/* line: 19 */   int v20; // [sp+10h] [bp-18A4h]
+/* line: 20 */   int v21; // [sp+14h] [bp-18A0h]
+/* line: 21 */   int v22; // [sp+18h] [bp-189Ch]
+/* line: 22 */   int v23; // [sp+1Ch] [bp-1898h]
+/* line: 23 */   __int64 v24; // [sp+20h] [bp-1894h]
+/* line: 24 */   char *v25; // [sp+6Ch] [bp-1848h] BYREF
+/* line: 25 */   char v26[68]; // [sp+70h] [bp-1844h] BYREF
+/* line: 26 */   char v27[20]; // [sp+1070h] [bp-844h] BYREF
+/* line: 27 */   __int64 v28; // [sp+1870h] [bp-44h]
+/* line: 28 */   __int64 v29; // [sp+1878h] [bp-3Ch]
+/* line: 29 */   int v30; // [sp+1880h] [bp-34h]
+/* line: 30 */   int v31; // [sp+1884h] [bp-30h]
+/* line: 31 */   char *v32; // [sp+1888h] [bp-2Ch]
+/* line: 32 */   char *v33; // [sp+188Ch] [bp-28h]
+/* line: 33 */   char *s; // [sp+1890h] [bp-24h]
+/* line: 34 */   int v35; // [sp+1894h] [bp-20h]
+/* line: 35 */   int v36; // [sp+1898h] [bp-1Ch]
+/* line: 36 */   int v37; // [sp+189Ch] [bp-18h]
+/* line: 37 */   char *v38; // [sp+18A0h] [bp-14h]
+/* line: 38 */   int v39; // [sp+18A4h] [bp-10h]
+/* line: 39 */ 
+/* line: 40, address: 0xa804 */   v39 = 0;
+/* line: 41, address: 0xa80c */   v36 = 0;
+/* line: 42, address: 0xa814 */   v37 = 0;
+/* line: 43, address: 0xa82c */   v35 = sub_12488("/tmp/usb/UsbVolumeInfo", "r");
+/* line: 44, address: 0xa838 */   if ( v35 )
+/* line: 45 */   {
+/* line: 46, address: 0xa84c */     v39 = sub_F5F0();
+/* line: 47, address: 0xa858 */     if ( v39 )
+/* line: 48 */     {
+/* line: 49 */ LABEL_14:
+/* line: 50, address: 0xad34 */       while ( sub_12A8C(v27, 2047, v35) )
+/* line: 51 */       {
+/* line: 52, address: 0xa874 */         s = v27;
+/* line: 53, address: 0xa884 */         v38 = strchr(v27, 59);
+/* line: 54, address: 0xa890 */         if ( v38 )
+/* line: 55, address: 0xa89c */           *v38++ = 0;
+/* line: 56, address: 0xa8c8 */         v25 = strchr(v38, 59);
+/* line: 57, address: 0xa8e0 */         if ( v25 )
+/* line: 58 */         {
+/* line: 59, address: 0xa8f0 */           v1 = v25;
+/* line: 60, address: 0xa8f8 */           *v25 = 0;
+/* line: 61, address: 0xa90c */           v25 = v1 + 1;
+/* line: 62 */         }
+/* line: 63, address: 0xacc8 */         while ( v25 )
+/* line: 64 */         {
+/* line: 65, address: 0xacf0 */           v33 = strtok_r(0, "~", &v25);
+/* line: 66, address: 0xacfc */           if ( !v33 )
+/* line: 67, address: 0xacfc */             break;
+/* line: 68, address: 0xa920 */           v32 = strchr(v33, 58);
+/* line: 69, address: 0xa92c */           if ( v32 )
+/* line: 70 */           {
+/* line: 71, address: 0xa938 */             *v32 = 0;
+/* line: 72, address: 0xa964 */             sprintf(v26, "%s%s", "/var/etc/upan/", v33);
+/* line: 73, address: 0xa988 */             statvfs64(v26, &v18);
+/* line: 74, address: 0xa9d0 */             v31 = v20 - v22;
+/* line: 75, address: 0xaa40 */             v2 = ((v24 + (unsigned __int64)(unsigned int)(v20 - v22)) >> 1) + 100LL * (unsigned int)(v20 - v22);
+/* line: 76, address: 0xaa84 */             v30 = sub_1A28C(v2, HIDWORD(v2), v24 + v20 - v22, (v24 + (unsigned __int64)(unsigned int)(v20 - v22)) >> 32);
+/* line: 77, address: 0xaa8c */             v36 = sub_F62C();
+/* line: 78, address: 0xaa98 */             if ( !v36 )
+/* line: 79, address: 0xaa98 */               goto LABEL_14;
+/* line: 80, address: 0xaac4 */             v3 = sub_19C20(v20, v21);
+/* line: 81, address: 0xaaec */             v4 = sub_19B94(v19);
+/* line: 82, address: 0xab00 */             v5 = sub_19C94(v3, HIDWORD(v3), v4, HIDWORD(v4));
+/* line: 83, address: 0xab2c */             v29 = sub_19F00(v5, HIDWORD(v5), 0, 1083179008);
+/* line: 84, address: 0xab58 */             v6 = sub_19C20(v22, v23);
+/* line: 85, address: 0xab80 */             v7 = sub_19B94(v19);
+/* line: 86, address: 0xab94 */             v8 = sub_19C94(v6, HIDWORD(v6), v7, HIDWORD(v7));
+/* line: 87, address: 0xabc0 */             v28 = sub_19F00(v8, HIDWORD(v8), 0, 1083179008);
+/* line: 88, address: 0xabc8 */             v9 = sub_F59C(s);
+/* line: 89, address: 0xabe0 */             sub_EE10(v36, "name", v9);
+/* line: 90, address: 0xabe8 */             v10 = sub_F59C(v38);
+/* line: 91, address: 0xac00 */             sub_EE10(v36, "dev_name", v10);
+/* line: 92, address: 0xac08 */             v11 = sub_F59C(v33);
+/* line: 93, address: 0xac20 */             sub_EE10(v36, "label", v11);
+/* line: 94, address: 0xac28 */             v12 = sub_F53C(v29, HIDWORD(v29));
+/* line: 95, address: 0xac40 */             sub_EE10(v36, "size", v12);
+/* line: 96, address: 0xac48 */             v13 = sub_F53C(v28, HIDWORD(v28));
+/* line: 97, address: 0xac60 */             sub_EE10(v36, "memory_unuse", v13);
+/* line: 98, address: 0xac68 */             v14 = sub_19B94(v30);
+/* line: 99, address: 0xac7c */             v15 = sub_F53C(v14, HIDWORD(v14));
+/* line: 100, address: 0xac94 */             sub_EE10(v36, "memory", v15);
+/* line: 101, address: 0xaca0 */             sub_ED84(v39, v36);
+/* line: 102 */           }
+/* line: 103 */         }
+/* line: 104 */       }
+/* line: 105, address: 0xad3c */       sub_124E8(v35);
+/* line: 106 */     }
+/* line: 107 */     else
+/* line: 108 */     {
+/* line: 109, address: 0xa860 */       v37 = 9;
+/* line: 110 */     }
+/* line: 111 */   }
+/* line: 112 */   else
+/* line: 113 */   {
+/* line: 114, address: 0xa840 */     v37 = 0;
+/* line: 115 */   }
+/* line: 116, address: 0xad48 */   if ( v39 )
+/* line: 117, address: 0xad68 */     sub_EE10(a1, "info", v39);
+/* line: 118, address: 0xad78 */   return v37;
+/* line: 119 */ }
+
+[TOOL-MODEL] {"tool": "list_strings_filter(filter='/cgi-bin/', offset=0, count=100)"}
+
+[IDA-TOOL] list_strings_filter(filter='/cgi-bin/', offset=0, count=100) -> OK
+{
+  "data": [
+    {
+      "address": "0x1b078",
+      "length": 23,
+      "string": "/cgi-bin/luci/;stok=%s"
+    }
+  ],
+  "next_offset": null
+}
+
+[TOOL-MODEL] {"tool": "list_strings_filter(filter='/cgi/', offset=0, count=100)"}
+
+[IDA-TOOL] list_strings_filter(filter='/cgi/', offset=0, count=100) -> OK
+{
+  "data": [],
+  "next_offset": null
+}
+
+[TOOL-MODEL] {"tool": "get_xrefs_to(address='0x1b078')"}
+
+[IDA-TOOL] get_xrefs_to(address='0x1b078') -> OK
+[
+  {
+    "address": "0x11fa8",
+    "type": "data",
+    "function": {
+      "address": "0x11fa8",
+      "name": "sub_11E70",
+      "size": "0x18c"
+    }
+  }
+]
+
+[TOOL-MODEL] {"tool": "decompile_function(address='0x11fa8')"}
+
+[IDA-TOOL] decompile_function(address='0x11fa8') -> OK
+/* line: 0, address: 0x11e70 */ int __fastcall sub_11E70(int **a1, int a2)
+/* line: 1 */ {
+/* line: 2 */   int Value; // r0
+/* line: 3 */   int v4; // r0
+/* line: 4 */   char v8[64]; // [sp+Ch] [bp-190h] BYREF
+/* line: 5 */   char s[64]; // [sp+4Ch] [bp-150h] BYREF
+/* line: 6 */   char s2[256]; // [sp+8Ch] [bp-110h] BYREF
+/* line: 7 */   int *v11; // [sp+18Ch] [bp-10h]
+/* line: 8 */   char *s1; // [sp+190h] [bp-Ch]
+/* line: 9 */   const char *v13; // [sp+194h] [bp-8h]
+/* line: 10 */ 
+/* line: 11, address: 0x11e88 */   v13 = 0;
+/* line: 12, address: 0x11ea0 */   memset(s, 0, sizeof(s));
+/* line: 13, address: 0x11eb4 */   s1 = (char *)sub_9B30(a1, "username");
+/* line: 14, address: 0x11ec8 */   v11 = sub_9B30(a1, "password");
+/* line: 15, address: 0x11edc */   Value = GetValue("sys.userpass", s2);
+/* line: 16, address: 0x11eec */   if ( s2[0] )
+/* line: 17 */   {
+/* line: 18, address: 0x11f04 */     if ( !s1 || !v11 )
+/* line: 19, address: 0x11f0c */       return 1;
+/* line: 20, address: 0x11f20 */     sub_1197C(v11, s, 64);
+/* line: 21, address: 0x11f38 */     if ( strncmp(s, s2, 0x40u) )
+/* line: 22, address: 0x11f4c */       return 1;
+/* line: 23, address: 0x11f60 */     GetValue("sys.username", s2);
+/* line: 24, address: 0x11f74 */     Value = strncmp(s1, s2, 0x40u);
+/* line: 25, address: 0x11f80 */     if ( Value )
+/* line: 26, address: 0x11f88 */       return 1;
+/* line: 27 */   }
+/* line: 28, address: 0x11f94 */   v13 = (const char *)sub_11C14(Value);
+/* line: 29, address: 0x11fa0 */   if ( !v13 )
+/* line: 30, address: 0x11fec */     return 6;
+/* line: 31, address: 0x11fbc */   sprintf(v8, "/cgi-bin/luci/;stok=%s", v13);
+/* line: 32, address: 0x11fc8 */   v4 = sub_F59C(v8);
+/* line: 33, address: 0x11fe0 */   sub_EE10(a2, "stok", v4);
+/* line: 34, address: 0x11ff8 */   return 0;
+/* line: 35 */ }
+
+[TOOL-MODEL] {"status": "completed", "result": "已获取所需反编译结果并完成初步关联分析：\n1) sub_9B30@0x9B30 的反编译代码表明它本身不读取 HTTP/CGI 输入，而是一个链表查找辅助函数：遍历 a1 指向的节点链表，比较节点名 v5[1] 与参数名 a2，若 strcmp 命中则返回 v5[2]。因此，对调用形式 sub_9B30(a1, \"dev_name\") 而言，是否读取攻击者可控输入取决于 a1 的来源；该函数本身只是按键名 \"dev_name\" 从已有参数表/键值链表中取值，不能单独证明它直接从 HTTP/CGI 读取，但非常像是在 CGI/请求参数容器中按名称取参数值。\n\nsub_9B30 代码语义：\n- a1 == NULL 时返回 0\n- 遍历链表节点\n- 若节点名等于 a2，则返回该节点的 value 指针/字段\n- 否则继续到下一个节点\n\n2) sub_A510@0xA510 的反编译代码表明它不执行面向 shell 的转义或净化，也看不出与 system() 直接相关。它只是：\n- 打开 /tmp/usb/UsbVolumeInfo 读取\n- 打开 /tmp/usb/.UsbVolumeInfo_Bak 写入\n- 逐行读取内容\n- 通过分号 ; 解析字段\n- 若中间字段与传入参数 a1 匹配，则跳过该行\n- 否则将原始行写入备份文件\n- 最后替换原文件\n\n因此，sub_A510 的作用更像“按某个字段删除记录/过滤条目”，不是有效的命令注入防护函数，也没有任何 shell escaping、引号转义、黑白名单过滤、字符剔除、system 参数构造等行为。若某值随后被传给 system()，不能依赖 sub_A510 作为有效净化。\n\n3) 对 0xA6E8 的交叉引用分析结果：\n- 唯一代码引用来自 0x9E8C，所在函数 sub_9DE8@0x9DE8\n- 反编译 sub_9DE8 后可见一个字符串分发器：\n  - \"request\"  -> sub_B1B0(a3, a4)\n  - \"usblist\"  -> sub_A7E0(a4)\n  - \"usbeject\" -> sub_A6E8(a3)\n  - \"download\" -> sub_A36C(a3, a4)\n  - \"stok\"     -> sub_11E70(a3, a4)\n\n由此可以确定，与 handler sub_A6E8 配对的路径片段/动作字符串是：\"usbeject\"。\n这说明 dispatcher 并不是直接以 /goform/...、/cgi-bin/...、/cgi/... 形式注册，而是对某个上层路由参数 a1 进行字符串比较；其中当 a1 == \"usbeject\" 时分派到 sub_A6E8。\n\n4) 端点注册字符串搜索结果：\n- 对 /goform/、/cgi-bin/、/cgi/ 的字符串搜索未返回结果\n- 说明该二进制中至少在当前字符串数据库里没有明显硬编码的完整 URL 前缀\n- 更可能的情况是：\n  - 路由在其他模块中完成\n  - 或该模块只处理动作名（如 \"usbeject\"），由外层 CGI/HTTP 框架将 URL 映射到该分发器\n\n结论：\n- sub_9B30 是参数查找器，不是直接输入读取器；若 a1 来自 HTTP/CGI 参数表，则 sub_9B30(a1, \"dev_name\") 实际上是在读取名为 dev_name 的请求参数，具有攻击者可控的高可能性，但最终仍需继续追踪 a1 的来源来最终确认。\n- sub_A510 不构成对传入 system() 值的有效 sanitization/escaping。\n- 与 0xA6E8 对应的 dispatcher 为 sub_9DE8，配对动作字符串为 \"usbeject\"。\n- 未发现 /goform/、/cgi-bin/、/cgi/ 这类完整 endpoint 前缀字符串。"}
+
+[TOOL-MODEL] 任务完成 (共4轮)
+
+[VULN-AGENT] Round 3
+Additional Information: I need the decompiled code of the function at address 0xA1D0 and, if different, the full decompiled code of main at 0x9F04 to analyze how the arguments to sub_9DE8 are constructed, specifically to confirm whether a3 is an HTTP/CGI parameter container and to identify the outer dispatcher/endpoint mapping for the "usbeject" action. Additionally, please provide cross-references to sub_9DE8 (0x9DE8) and decompiled caller/registration context so I can determine the HTTP endpoint path and authentication behavior.
+
+[TOOL-MODEL] {"tool": "decompile_function(address='0xA1D0')"}
+{"tool": "decompile_function(address='0x9F04')"}
+
+[IDA-TOOL] decompile_function(address='0xA1D0') -> OK
+/* line: 0, address: 0x9f04 */ int sub_9F04()
+/* line: 1 */ {
+/* line: 2 */   void *v0; // r0
+/* line: 3 */   const char *v1; // r3
+/* line: 4 */   __int64 v2; // r0
+/* line: 5 */   int v3; // r0
+/* line: 6 */   const char *v4; // r3
+/* line: 7 */   int v5; // r0
+/* line: 8 */   _BYTE v7[2048]; // [sp+0h] [bp-834h] BYREF
+/* line: 9 */   void *ptr; // [sp+800h] [bp-34h]
+/* line: 10 */   char *v9; // [sp+804h] [bp-30h]
+/* line: 11 */   char *v10; // [sp+808h] [bp-2Ch]
+/* line: 12 */   char *nptr; // [sp+80Ch] [bp-28h]
+/* line: 13 */   char *s; // [sp+810h] [bp-24h]
+/* line: 14 */   char *s1; // [sp+814h] [bp-20h]
+/* line: 15 */   int v14; // [sp+818h] [bp-1Ch]
+/* line: 16 */   int v15; // [sp+81Ch] [bp-18h]
+/* line: 17 */   char *v16; // [sp+820h] [bp-14h]
+/* line: 18 */   char *v17; // [sp+824h] [bp-10h]
+/* line: 19 */   int v18; // [sp+828h] [bp-Ch]
+/* line: 20 */   int v19; // [sp+82Ch] [bp-8h]
+/* line: 21 */ 
+/* line: 22, address: 0x9f28 */   v0 = memset(v7, 0, sizeof(v7));
+/* line: 23 */   while ( sub_12120(v0) >= 0 )
+/* line: 24 */   {
+/* line: 25, address: 0x9f34 */     v14 = 0;
+/* line: 26, address: 0x9f44 */     s1 = getenv("REQUEST_METHOD");
+/* line: 27, address: 0x9f54 */     s = getenv("SCRIPT_NAME");
+/* line: 28, address: 0x9f64 */     nptr = getenv("CONTENT_LENGTH");
+/* line: 29, address: 0x9f70 */     if ( !s )
+/* line: 30 */     {
+/* line: 31, address: 0x9f98 */       v19 = 4;
+/* line: 32, address: 0x9f9c */       goto LABEL_34;
+/* line: 33 */     }
+/* line: 34, address: 0x9f80 */     v10 = strrchr(s, 47);
+/* line: 35, address: 0x9fb0 */     if ( !v10 || (++v10, !*v10) )
+/* line: 36 */     {
+/* line: 37, address: 0x9fc0 */       v19 = 4;
+/* line: 38, address: 0x9fc4 */       goto LABEL_34;
+/* line: 39 */     }
+/* line: 40, address: 0x9fd0 */     if ( !s1 )
+/* line: 41 */     {
+/* line: 42, address: 0x9fd8 */       v19 = 4;
+/* line: 43, address: 0x9fdc */       goto LABEL_34;
+/* line: 44 */     }
+/* line: 45, address: 0x9fec */     if ( !strcmp(s1, "POST") )
+/* line: 46 */     {
+/* line: 47, address: 0xa010 */       memset(v7, 0, sizeof(v7));
+/* line: 48, address: 0xa01c */       if ( nptr )
+/* line: 49 */       {
+/* line: 50, address: 0xa028 */         v18 = atoi(nptr);
+/* line: 51, address: 0xa034 */         if ( v18 > 0 )
+/* line: 52, address: 0xa05c */           v19 = sub_12F94(v7, 1, 2048, &dword_24C50);
+/* line: 53 */       }
+/* line: 54, address: 0xa078 */       if ( v19 < v18 || v19 == 2048 )
+/* line: 55 */       {
+/* line: 56, address: 0xa080 */         v19 = 6;
+/* line: 57, address: 0xa084 */         goto LABEL_34;
+/* line: 58 */       }
+/* line: 59, address: 0xa090 */       v17 = v7;
+/* line: 60 */     }
+/* line: 61 */     else
+/* line: 62 */     {
+/* line: 63, address: 0xa0a4 */       if ( strcmp(s1, "GET") )
+/* line: 64 */       {
+/* line: 65, address: 0xa0cc */         v19 = 4;
+/* line: 66, address: 0xa0d0 */         goto LABEL_34;
+/* line: 67 */       }
+/* line: 68, address: 0xa0c0 */       v17 = getenv("QUERY_STRING");
+/* line: 69 */     }
+/* line: 70, address: 0xa0e4 */     if ( v17 && *v17 )
+/* line: 71, address: 0xa0f8 */       v15 = sub_998C(v17);
+/* line: 72 */     else
+/* line: 73, address: 0xa104 */       v15 = 0;
+/* line: 74, address: 0xa110 */     v16 = s + 14;
+/* line: 75, address: 0xa124 */     if ( memcmp(s + 14, ";stok=", 6u) )
+/* line: 76 */     {
+/* line: 77, address: 0xa188 */       v16 = 0;
+/* line: 78 */ LABEL_31:
+/* line: 79, address: 0xa18c */       v14 = sub_F62C();
+/* line: 80, address: 0xa19c */       if ( v14 )
+/* line: 81 */       {
+/* line: 82, address: 0xa1bc */         memset(&dword_24C4C, 0, sizeof(dword_24C4C));
+/* line: 83, address: 0xa1d4 */         v19 = sub_9DE8(v10, (int)v16, v15, v14);
+/* line: 84, address: 0xa1dc */         sub_9AC4(v15);
+/* line: 85 */       }
+/* line: 86 */       else
+/* line: 87 */       {
+/* line: 88, address: 0xa1a4 */         v19 = 9;
+/* line: 89 */       }
+/* line: 90, address: 0xa1a8 */       goto LABEL_34;
+/* line: 91 */     }
+/* line: 92, address: 0xa13c */     v16 += 6;
+/* line: 93, address: 0xa14c */     v9 = strchr(v16, 47);
+/* line: 94, address: 0xa158 */     if ( v9 )
+/* line: 95, address: 0xa164 */       *v9 = 0;
+/* line: 96, address: 0xa170 */     v19 = sub_11AAC(v16);
+/* line: 97, address: 0xa17c */     if ( !v19 )
+/* line: 98, address: 0xa17c */       goto LABEL_31;
+/* line: 99 */ LABEL_34:
+/* line: 100 */     if ( dword_24C4C )
+/* line: 101 */       sub_12E3C("Content-type: %s\n\n", (const char *)dword_24C4C);
+/* line: 102 */     else
+/* line: 103 */       sub_12E3C("Content-type: text/html; charset=utf-8\n\n");
+/* line: 104, address: 0xa228 */     if ( v14 )
+/* line: 105 */     {
+/* line: 106, address: 0xa270 */       v2 = sub_19BB8(v19);
+/* line: 107, address: 0xa284 */       v3 = sub_F53C(v2, HIDWORD(v2));
+/* line: 108, address: 0xa29c */       sub_EE10(v14, "code", v3);
+/* line: 109, address: 0xa2a8 */       if ( v19 > 10 )
+/* line: 110, address: 0xa2c0 */         v4 = "Unkown";
+/* line: 111 */       else
+/* line: 112, address: 0xa2b8 */         v4 = (&off_23EE0)[2 * v19];
+/* line: 113, address: 0xa2cc */       v5 = sub_F59C(v4);
+/* line: 114, address: 0xa2e4 */       sub_EE10(v14, "msg", v5);
+/* line: 115, address: 0xa2f0 */       ptr = (void *)sub_D010(v14);
+/* line: 116, address: 0xa2f8 */       sub_B4DC(v14);
+/* line: 117, address: 0xa304 */       if ( ptr )
+/* line: 118 */       {
+/* line: 119, address: 0xa30c */         sub_FB68(ptr);
+/* line: 120, address: 0xa31c */         sub_12E3C("%s", (const char *)ptr);
+/* line: 121, address: 0xa324 */         free(ptr);
+/* line: 122 */       }
+/* line: 123 */       else
+/* line: 124 */       {
+/* line: 125, address: 0xa348 */         v0 = (void *)sub_12E3C("{\"code\":%d, \"msg\":\"%s\"}", 9, off_23F28);
+/* line: 126 */       }
+/* line: 127 */     }
+/* line: 128 */     else
+/* line: 129 */     {
+/* line: 130, address: 0xa234 */       if ( v19 > 10 )
+/* line: 131, address: 0xa24c */         v1 = "Unkown";
+/* line: 132 */       else
+/* line: 133, address: 0xa244 */         v1 = (&off_23EE0)[2 * v19];
+/* line: 134, address: 0xa264 */       v0 = (void *)sub_12E3C("{\"code\":%d, \"msg\":\"%s\"}", v19, v1);
+/* line: 135 */     }
+/* line: 136 */   }
+/* line: 137, address: 0xa368 */   return 0;
+/* line: 138 */ }
+
+[IDA-TOOL] decompile_function(address='0x9F04') -> OK
+/* line: 0, address: 0x9f04 */ int sub_9F04()
+/* line: 1 */ {
+/* line: 2 */   void *v0; // r0
+/* line: 3 */   const char *v1; // r3
+/* line: 4 */   __int64 v2; // r0
+/* line: 5 */   int v3; // r0
+/* line: 6 */   const char *v4; // r3
+/* line: 7 */   int v5; // r0
+/* line: 8 */   _BYTE v7[2048]; // [sp+0h] [bp-834h] BYREF
+/* line: 9 */   void *ptr; // [sp+800h] [bp-34h]
+/* line: 10 */   char *v9; // [sp+804h] [bp-30h]
+/* line: 11 */   char *v10; // [sp+808h] [bp-2Ch]
+/* line: 12 */   char *nptr; // [sp+80Ch] [bp-28h]
+/* line: 13 */   char *s; // [sp+810h] [bp-24h]
+/* line: 14 */   char *s1; // [sp+814h] [bp-20h]
+/* line: 15 */   int v14; // [sp+818h] [bp-1Ch]
+/* line: 16 */   int v15; // [sp+81Ch] [bp-18h]
+/* line: 17 */   char *v16; // [sp+820h] [bp-14h]
+/* line: 18 */   char *v17; // [sp+824h] [bp-10h]
+/* line: 19 */   int v18; // [sp+828h] [bp-Ch]
+/* line: 20 */   int v19; // [sp+82Ch] [bp-8h]
+/* line: 21 */ 
+/* line: 22, address: 0x9f28 */   v0 = memset(v7, 0, sizeof(v7));
+/* line: 23 */   while ( sub_12120(v0) >= 0 )
+/* line: 24 */   {
+/* line: 25, address: 0x9f34 */     v14 = 0;
+/* line: 26, address: 0x9f44 */     s1 = getenv("REQUEST_METHOD");
+/* line: 27, address: 0x9f54 */     s = getenv("SCRIPT_NAME");
+/* line: 28, address: 0x9f64 */     nptr = getenv("CONTENT_LENGTH");
+/* line: 29, address: 0x9f70 */     if ( !s )
+/* line: 30 */     {
+/* line: 31, address: 0x9f98 */       v19 = 4;
+/* line: 32, address: 0x9f9c */       goto LABEL_34;
+/* line: 33 */     }
+/* line: 34, address: 0x9f80 */     v10 = strrchr(s, 47);
+/* line: 35, address: 0x9fb0 */     if ( !v10 || (++v10, !*v10) )
+/* line: 36 */     {
+/* line: 37, address: 0x9fc0 */       v19 = 4;
+/* line: 38, address: 0x9fc4 */       goto LABEL_34;
+/* line: 39 */     }
+/* line: 40, address: 0x9fd0 */     if ( !s1 )
+/* line: 41 */     {
+/* line: 42, address: 0x9fd8 */       v19 = 4;
+/* line: 43, address: 0x9fdc */       goto LABEL_34;
+/* line: 44 */     }
+/* line: 45, address: 0x9fec */     if ( !strcmp(s1, "POST") )
+/* line: 46 */     {
+/* line: 47, address: 0xa010 */       memset(v7, 0, sizeof(v7));
+/* line: 48, address: 0xa01c */       if ( nptr )
+/* line: 49 */       {
+/* line: 50, address: 0xa028 */         v18 = atoi(nptr);
+/* line: 51, address: 0xa034 */         if ( v18 > 0 )
+/* line: 52, address: 0xa05c */           v19 = sub_12F94(v7, 1, 2048, &dword_24C50);
+/* line: 53 */       }
+/* line: 54, address: 0xa078 */       if ( v19 < v18 || v19 == 2048 )
+/* line: 55 */       {
+/* line: 56, address: 0xa080 */         v19 = 6;
+/* line: 57, address: 0xa084 */         goto LABEL_34;
+/* line: 58 */       }
+/* line: 59, address: 0xa090 */       v17 = v7;
+/* line: 60 */     }
+/* line: 61 */     else
+/* line: 62 */     {
+/* line: 63, address: 0xa0a4 */       if ( strcmp(s1, "GET") )
+/* line: 64 */       {
+/* line: 65, address: 0xa0cc */         v19 = 4;
+/* line: 66, address: 0xa0d0 */         goto LABEL_34;
+/* line: 67 */       }
+/* line: 68, address: 0xa0c0 */       v17 = getenv("QUERY_STRING");
+/* line: 69 */     }
+/* line: 70, address: 0xa0e4 */     if ( v17 && *v17 )
+/* line: 71, address: 0xa0f8 */       v15 = sub_998C(v17);
+/* line: 72 */     else
+/* line: 73, address: 0xa104 */       v15 = 0;
+/* line: 74, address: 0xa110 */     v16 = s + 14;
+/* line: 75, address: 0xa124 */     if ( memcmp(s + 14, ";stok=", 6u) )
+/* line: 76 */     {
+/* line: 77, address: 0xa188 */       v16 = 0;
+/* line: 78 */ LABEL_31:
+/* line: 79, address: 0xa18c */       v14 = sub_F62C();
+/* line: 80, address: 0xa19c */       if ( v14 )
+/* line: 81 */       {
+/* line: 82, address: 0xa1bc */         memset(&dword_24C4C, 0, sizeof(dword_24C4C));
+/* line: 83, address: 0xa1d4 */         v19 = sub_9DE8(v10, (int)v16, v15, v14);
+/* line: 84, address: 0xa1dc */         sub_9AC4(v15);
+/* line: 85 */       }
+/* line: 86 */       else
+/* line: 87 */       {
+/* line: 88, address: 0xa1a4 */         v19 = 9;
+/* line: 89 */       }
+/* line: 90, address: 0xa1a8 */       goto LABEL_34;
+/* line: 91 */     }
+/* line: 92, address: 0xa13c */     v16 += 6;
+/* line: 93, address: 0xa14c */     v9 = strchr(v16, 47);
+/* line: 94, address: 0xa158 */     if ( v9 )
+/* line: 95, address: 0xa164 */       *v9 = 0;
+/* line: 96, address: 0xa170 */     v19 = sub_11AAC(v16);
+/* line: 97, address: 0xa17c */     if ( !v19 )
+/* line: 98, address: 0xa17c */       goto LABEL_31;
+/* line: 99 */ LABEL_34:
+/* line: 100 */     if ( dword_24C4C )
+/* line: 101 */       sub_12E3C("Content-type: %s\n\n", (const char *)dword_24C4C);
+/* line: 102 */     else
+/* line: 103 */       sub_12E3C("Content-type: text/html; charset=utf-8\n\n");
+/* line: 104, address: 0xa228 */     if ( v14 )
+/* line: 105 */     {
+/* line: 106, address: 0xa270 */       v2 = sub_19BB8(v19);
+/* line: 107, address: 0xa284 */       v3 = sub_F53C(v2, HIDWORD(v2));
+/* line: 108, address: 0xa29c */       sub_EE10(v14, "code", v3);
+/* line: 109, address: 0xa2a8 */       if ( v19 > 10 )
+/* line: 110, address: 0xa2c0 */         v4 = "Unkown";
+/* line: 111 */       else
+/* line: 112, address: 0xa2b8 */         v4 = (&off_23EE0)[2 * v19];
+/* line: 113, address: 0xa2cc */       v5 = sub_F59C(v4);
+/* line: 114, address: 0xa2e4 */       sub_EE10(v14, "msg", v5);
+/* line: 115, address: 0xa2f0 */       ptr = (void *)sub_D010(v14);
+/* line: 116, address: 0xa2f8 */       sub_B4DC(v14);
+/* line: 117, address: 0xa304 */       if ( ptr )
+/* line: 118 */       {
+/* line: 119, address: 0xa30c */         sub_FB68(ptr);
+/* line: 120, address: 0xa31c */         sub_12E3C("%s", (const char *)ptr);
+/* line: 121, address: 0xa324 */         free(ptr);
+/* line: 122 */       }
+/* line: 123 */       else
+/* line: 124 */       {
+/* line: 125, address: 0xa348 */         v0 = (void *)sub_12E3C("{\"code\":%d, \"msg\":\"%s\"}", 9, off_23F28);
+/* line: 126 */       }
+/* line: 127 */     }
+/* line: 128 */     else
+/* line: 129 */     {
+/* line: 130, address: 0xa234 */       if ( v19 > 10 )
+/* line: 131, address: 0xa24c */         v1 = "Unkown";
+/* line: 132 */       else
+/* line: 133, address: 0xa244 */         v1 = (&off_23EE0)[2 * v19];
+/* line: 134, address: 0xa264 */       v0 = (void *)sub_12E3C("{\"code\":%d, \"msg\":\"%s\"}", v19, v1);
+/* line: 135 */     }
+/* line: 136 */   }
+/* line: 137, address: 0xa368 */   return 0;
+/* line: 138 */ }
+
+[TOOL-MODEL] {"tool": "get_xrefs_to(address='0x9DE8')"}
+{"tool": "decompile_function(address='0x9F04')"}
+
+[IDA-TOOL] get_xrefs_to(address='0x9DE8') -> OK
+[
+  {
+    "address": "0xa1d0",
+    "type": "code",
+    "function": {
+      "address": "0xa1d0",
+      "name": "sub_9F04",
+      "size": "0x468"
+    }
+  }
+]
+
+[IDA-TOOL] decompile_function(address='0x9F04') -> OK
+/* line: 0, address: 0x9f04 */ int sub_9F04()
+/* line: 1 */ {
+/* line: 2 */   void *v0; // r0
+/* line: 3 */   const char *v1; // r3
+/* line: 4 */   __int64 v2; // r0
+/* line: 5 */   int v3; // r0
+/* line: 6 */   const char *v4; // r3
+/* line: 7 */   int v5; // r0
+/* line: 8 */   _BYTE v7[2048]; // [sp+0h] [bp-834h] BYREF
+/* line: 9 */   void *ptr; // [sp+800h] [bp-34h]
+/* line: 10 */   char *v9; // [sp+804h] [bp-30h]
+/* line: 11 */   char *v10; // [sp+808h] [bp-2Ch]
+/* line: 12 */   char *nptr; // [sp+80Ch] [bp-28h]
+/* line: 13 */   char *s; // [sp+810h] [bp-24h]
+/* line: 14 */   char *s1; // [sp+814h] [bp-20h]
+/* line: 15 */   int v14; // [sp+818h] [bp-1Ch]
+/* line: 16 */   int v15; // [sp+81Ch] [bp-18h]
+/* line: 17 */   char *v16; // [sp+820h] [bp-14h]
+/* line: 18 */   char *v17; // [sp+824h] [bp-10h]
+/* line: 19 */   int v18; // [sp+828h] [bp-Ch]
+/* line: 20 */   int v19; // [sp+82Ch] [bp-8h]
+/* line: 21 */ 
+/* line: 22, address: 0x9f28 */   v0 = memset(v7, 0, sizeof(v7));
+/* line: 23 */   while ( sub_12120(v0) >= 0 )
+/* line: 24 */   {
+/* line: 25, address: 0x9f34 */     v14 = 0;
+/* line: 26, address: 0x9f44 */     s1 = getenv("REQUEST_METHOD");
+/* line: 27, address: 0x9f54 */     s = getenv("SCRIPT_NAME");
+/* line: 28, address: 0x9f64 */     nptr = getenv("CONTENT_LENGTH");
+/* line: 29, address: 0x9f70 */     if ( !s )
+/* line: 30 */     {
+/* line: 31, address: 0x9f98 */       v19 = 4;
+/* line: 32, address: 0x9f9c */       goto LABEL_34;
+/* line: 33 */     }
+/* line: 34, address: 0x9f80 */     v10 = strrchr(s, 47);
+/* line: 35, address: 0x9fb0 */     if ( !v10 || (++v10, !*v10) )
+/* line: 36 */     {
+/* line: 37, address: 0x9fc0 */       v19 = 4;
+/* line: 38, address: 0x9fc4 */       goto LABEL_34;
+/* line: 39 */     }
+/* line: 40, address: 0x9fd0 */     if ( !s1 )
+/* line: 41 */     {
+/* line: 42, address: 0x9fd8 */       v19 = 4;
+/* line: 43, address: 0x9fdc */       goto LABEL_34;
+/* line: 44 */     }
+/* line: 45, address: 0x9fec */     if ( !strcmp(s1, "POST") )
+/* line: 46 */     {
+/* line: 47, address: 0xa010 */       memset(v7, 0, sizeof(v7));
+/* line: 48, address: 0xa01c */       if ( nptr )
+/* line: 49 */       {
+/* line: 50, address: 0xa028 */         v18 = atoi(nptr);
+/* line: 51, address: 0xa034 */         if ( v18 > 0 )
+/* line: 52, address: 0xa05c */           v19 = sub_12F94(v7, 1, 2048, &dword_24C50);
+/* line: 53 */       }
+/* line: 54, address: 0xa078 */       if ( v19 < v18 || v19 == 2048 )
+/* line: 55 */       {
+/* line: 56, address: 0xa080 */         v19 = 6;
+/* line: 57, address: 0xa084 */         goto LABEL_34;
+/* line: 58 */       }
+/* line: 59, address: 0xa090 */       v17 = v7;
+/* line: 60 */     }
+/* line: 61 */     else
+/* line: 62 */     {
+/* line: 63, address: 0xa0a4 */       if ( strcmp(s1, "GET") )
+/* line: 64 */       {
+/* line: 65, address: 0xa0cc */         v19 = 4;
+/* line: 66, address: 0xa0d0 */         goto LABEL_34;
+/* line: 67 */       }
+/* line: 68, address: 0xa0c0 */       v17 = getenv("QUERY_STRING");
+/* line: 69 */     }
+/* line: 70, address: 0xa0e4 */     if ( v17 && *v17 )
+/* line: 71, address: 0xa0f8 */       v15 = sub_998C(v17);
+/* line: 72 */     else
+/* line: 73, address: 0xa104 */       v15 = 0;
+/* line: 74, address: 0xa110 */     v16 = s + 14;
+/* line: 75, address: 0xa124 */     if ( memcmp(s + 14, ";stok=", 6u) )
+/* line: 76 */     {
+/* line: 77, address: 0xa188 */       v16 = 0;
+/* line: 78 */ LABEL_31:
+/* line: 79, address: 0xa18c */       v14 = sub_F62C();
+/* line: 80, address: 0xa19c */       if ( v14 )
+/* line: 81 */       {
+/* line: 82, address: 0xa1bc */         memset(&dword_24C4C, 0, sizeof(dword_24C4C));
+/* line: 83, address: 0xa1d4 */         v19 = sub_9DE8(v10, (int)v16, v15, v14);
+/* line: 84, address: 0xa1dc */         sub_9AC4(v15);
+/* line: 85 */       }
+/* line: 86 */       else
+/* line: 87 */       {
+/* line: 88, address: 0xa1a4 */         v19 = 9;
+/* line: 89 */       }
+/* line: 90, address: 0xa1a8 */       goto LABEL_34;
+/* line: 91 */     }
+/* line: 92, address: 0xa13c */     v16 += 6;
+/* line: 93, address: 0xa14c */     v9 = strchr(v16, 47);
+/* line: 94, address: 0xa158 */     if ( v9 )
+/* line: 95, address: 0xa164 */       *v9 = 0;
+/* line: 96, address: 0xa170 */     v19 = sub_11AAC(v16);
+/* line: 97, address: 0xa17c */     if ( !v19 )
+/* line: 98, address: 0xa17c */       goto LABEL_31;
+/* line: 99 */ LABEL_34:
+/* line: 100 */     if ( dword_24C4C )
+/* line: 101 */       sub_12E3C("Content-type: %s\n\n", (const char *)dword_24C4C);
+/* line: 102 */     else
+/* line: 103 */       sub_12E3C("Content-type: text/html; charset=utf-8\n\n");
+/* line: 104, address: 0xa228 */     if ( v14 )
+/* line: 105 */     {
+/* line: 106, address: 0xa270 */       v2 = sub_19BB8(v19);
+/* line: 107, address: 0xa284 */       v3 = sub_F53C(v2, HIDWORD(v2));
+/* line: 108, address: 0xa29c */       sub_EE10(v14, "code", v3);
+/* line: 109, address: 0xa2a8 */       if ( v19 > 10 )
+/* line: 110, address: 0xa2c0 */         v4 = "Unkown";
+/* line: 111 */       else
+/* line: 112, address: 0xa2b8 */         v4 = (&off_23EE0)[2 * v19];
+/* line: 113, address: 0xa2cc */       v5 = sub_F59C(v4);
+/* line: 114, address: 0xa2e4 */       sub_EE10(v14, "msg", v5);
+/* line: 115, address: 0xa2f0 */       ptr = (void *)sub_D010(v14);
+/* line: 116, address: 0xa2f8 */       sub_B4DC(v14);
+/* line: 117, address: 0xa304 */       if ( ptr )
+/* line: 118 */       {
+/* line: 119, address: 0xa30c */         sub_FB68(ptr);
+/* line: 120, address: 0xa31c */         sub_12E3C("%s", (const char *)ptr);
+/* line: 121, address: 0xa324 */         free(ptr);
+/* line: 122 */       }
+/* line: 123 */       else
+/* line: 124 */       {
+/* line: 125, address: 0xa348 */         v0 = (void *)sub_12E3C("{\"code\":%d, \"msg\":\"%s\"}", 9, off_23F28);
+/* line: 126 */       }
+/* line: 127 */     }
+/* line: 128 */     else
+/* line: 129 */     {
+/* line: 130, address: 0xa234 */       if ( v19 > 10 )
+/* line: 131, address: 0xa24c */         v1 = "Unkown";
+/* line: 132 */       else
+/* line: 133, address: 0xa244 */         v1 = (&off_23EE0)[2 * v19];
+/* line: 134, address: 0xa264 */       v0 = (void *)sub_12E3C("{\"code\":%d, \"msg\":\"%s\"}", v19, v1);
+/* line: 135 */     }
+/* line: 136 */   }
+/* line: 137, address: 0xa368 */   return 0;
+/* line: 138 */ }
+
+[TOOL-MODEL] {"status": "completed", "result": "已完成三部分分析：\n\n1) 字符串 \"dev_name\" 的引用与使用上下文\n- 字符串地址：0x1aef0，内容：\"dev_name\"\n- 交叉引用共 2 处：\n  - sub_A6E8 @ 0xa6e8（引用点 0xa728）\n  - sub_A7E0 @ 0xa7e0（引用点 0xabf4 / 反编译中字段写入点 0xac00）\n\n相关反编译函数如下：\n\n[函数 1] sub_A6E8 @ 0xa6e8\n```c\nint __fastcall sub_A6E8(int a1)\n{\n  char v3[4]; // actually used as 0x800 buffer in decompilation output\n  const char *v4;\n  void *s1;\n  _BOOL4 v6;\n  int v7;\n\n  v6 = 0;\n  v7 = 0;\n  s1 = (void *)sub_9B30(a1, \"action\");\n  v4 = (const char *)sub_9B30(a1, \"dev_name\");\n  if ( s1 )\n    v6 = memcmp(s1, \"fdel\", 4u) == 0;\n  if ( !v4 || !*v4 )\n    return 3;\n  sub_A510(v4);\n  snprintf(v3, 0x800u, \"cfm post netctrl 51?op=3,string_info=%s\", v4);\n  system(v3);\n  return v7;\n}\n```\n\n分析：\n- `dev_name` 通过 `sub_9B30(a1, \"dev_name\")` 从请求/参数对象 `a1` 中读取。\n- 这表明 `dev_name` 很可能是外部可控输入。\n- 随后该值传给 `sub_A510(v4)`，然后被拼接进命令字符串：\n  - `\"cfm post netctrl 51?op=3,string_info=%s\"`\n- 最终进入 sink：`system(v3)`。\n- 因此从当前代码看，`dev_name` 存在明显的 attacker-controlled 候选路径，是否可利用取决于 `sub_A510` 是否做了充分过滤/转义；但至少数据流是：\n  - request parameter `dev_name` -> `v4` -> `snprintf(...%s, v4)` -> `system()`\n\n[函数 2] sub_A7E0 @ 0xa7e0\n```c\nint __fastcall sub_A7E0(int a1)\n{\n  ...\n  v35 = sub_12488(\"/tmp/usb/UsbVolumeInfo\", \"r\");\n  if ( v35 )\n  {\n    v39 = sub_F5F0();\n    if ( v39 )\n    {\n      while ( sub_12A8C(v27, 2047, v35) )\n      {\n        s = v27;\n        v38 = strchr(v27, 59);\n        if ( v38 )\n          *v38++ = 0;\n        v25 = strchr(v38, 59);\n        if ( v25 )\n        {\n          *v25 = 0;\n          v25 = v25 + 1;\n        }\n        while ( v25 )\n        {\n          v33 = strtok_r(0, \"~\", &v25);\n          if ( !v33 )\n            break;\n          v32 = strchr(v33, 58);\n          if ( v32 )\n          {\n            *v32 = 0;\n            sprintf(v26, \"%s%s\", \"/var/etc/upan/\", v33);\n            statvfs64(v26, &v18);\n            ...\n            v9 = sub_F59C(s);\n            sub_EE10(v36, \"name\", v9);\n            v10 = sub_F59C(v38);\n            sub_EE10(v36, \"dev_name\", v10);\n            v11 = sub_F59C(v33);\n            sub_EE10(v36, \"label\", v11);\n            ...\n            sub_ED84(v39, v36);\n          }\n        }\n      }\n      sub_124E8(v35);\n    }\n    else\n    {\n      v37 = 9;\n    }\n  }\n  else\n  {\n    v37 = 0;\n  }\n  if ( v39 )\n    sub_EE10(a1, \"info\", v39);\n  return v37;\n}\n```\n\n分析：\n- 这里 `dev_name` 不是从 HTTP 参数直接读取，而是从 `/tmp/usb/UsbVolumeInfo` 文件解析出的字段 `v38` 写入结果对象。\n- 即：文件内容 -> `v38` -> `sub_EE10(..., \"dev_name\", ...)`\n- 这更像是信息输出/序列化字段名，不是 sink 前的直接命令构造点。\n\n结论：\n- `dev_name` 的高风险使用点在 `sub_A6E8`。\n- 它在该函数中明显来自请求参数，并最终传入 `system()` 命令拼接，具备潜在攻击者可控性。\n- 另一个函数 `sub_A7E0` 中的 `dev_name` 仅作为输出字段名使用，来源是本地文件解析结果。\n\n2) 地址 0xA6E8 对应函数的反编译代码与参数构造/数据流\n- 0xA6E8 属于函数 `sub_A6E8`\n- 反编译代码已如上完整给出。\n- 关键数据流：\n  - `sub_9B30(a1, \"action\")` -> `s1`\n  - `sub_9B30(a1, \"dev_name\")` -> `v4`\n  - 检查 `v4` 非空非空串\n  - `sub_A510(v4)`\n  - `snprintf(\"cfm post netctrl 51?op=3,string_info=%s\", v4)`\n  - `system(...)`\n- 注意：虽然 `action` 被读取并比较是否为 `\"fdel\"`，但反编译结果中 `v6` 的值未影响后续控制流，可能是编译优化/反编译不完整，也可能是残留逻辑；当前可见代码里真正决定 sink 参数的是 `dev_name`。\n\n3) endpoint registration / URL-to-handler 相关字符串搜索结果\n已搜索：\n- `/goform/` -> 未发现匹配\n- `/cgi/` -> 未发现匹配\n- `/cgi-bin/` -> 发现 1 处字符串：\n  - 0x1b078: `/cgi-bin/luci/;stok=%s`\n\n该字符串的引用函数：`sub_11E70 @ 0x11e70`\n\n反编译代码：\n```c\nint __fastcall sub_11E70(int **a1, int a2)\n{\n  int Value;\n  int v4;\n  char v8[64];\n  char s[64];\n  char s2[256];\n  int *v11;\n  char *s1;\n  const char *v13;\n\n  v13 = 0;\n  memset(s, 0, sizeof(s));\n  s1 = (char *)sub_9B30(a1, \"username\");\n  v11 = sub_9B30(a1, \"password\");\n  Value = GetValue(\"sys.userpass\", s2);\n  if ( s2[0] )\n  {\n    if ( !s1 || !v11 )\n      return 1;\n    sub_1197C(v11, s, 64);\n    if ( strncmp(s, s2, 0x40u) )\n      return 1;\n    GetValue(\"sys.username\", s2);\n    Value = strncmp(s1, s2, 0x40u);\n    if ( Value )\n      return 1;\n  }\n  v13 = (const char *)sub_11C14(Value);\n  if ( !v13 )\n    return 6;\n  sprintf(v8, \"/cgi-bin/luci/;stok=%s\", v13);\n  v4 = sub_F59C(v8);\n  sub_EE10(a2, \"stok\", v4);\n  return 0;\n}\n```\n\n分析：\n- 这是登录/认证后生成带 token 的 LuCI URL：`/cgi-bin/luci/;stok=%s`\n- 该函数更像是返回前端跳转 URL 或 session/token 信息，而不是直接的 URL-handler 注册表。\n- 当前样本中没有搜到 `/goform/` 或 `/cgi/` 风格映射字符串，至少在字符串层面未见明显 endpoint registration 表。\n\n总体结论：\n- `dev_name` 在 `sub_A6E8` 中可由请求参数控制，并流入 `system()`，是重点审计点。\n- `sub_A7E0` 中的 `dev_name` 是输出字段名，来源于 USB 信息文件解析。\n- URL 相关仅发现 `/cgi-bin/luci/;stok=%s`，未发现 `/goform/` 或 `/cgi/` 的 endpoint 注册字符串。"}
+
+[TOOL-MODEL] 任务完成 (共9轮)
+
+[VULN-AGENT] Round 2
+Additional Information: I need cross-references to the caller function at address 0xA6E8 to find the dispatcher that registers this handler and determine the HTTP endpoint path. Please provide the xrefs to function 0xA6E8 and the decompiled code of the caller/dispatcher functions that invoke or register it.
+
+[TOOL-MODEL] {"tool": "get_xrefs_to(address='0xA6E8')"}
+
+
+[IDA-TOOL] get_xrefs_to(address='0xA6E8') -> OK
+[
+  {
+    "address": "0x9e8c",
+    "type": "code",
+    "function": {
+      "address": "0x9e8c",
+      "name": "sub_9DE8",
+      "size": "0x11c"
+    }
+  }
+]
+
+[TOOL-MODEL] {"status": "completed", "result": "Decompilation shows 0xA1D0 is not a separate function start; it is the call site inside function sub_9F04 at 0x9F04. Therefore the decompiled code for 0xA1D0 and main/dispatcher at 0x9F04 is the same function sub_9F04().\n\nRelevant decompiled caller context:\n- REQUEST_METHOD = getenv(\"REQUEST_METHOD\")\n- SCRIPT_NAME = getenv(\"SCRIPT_NAME\")\n- CONTENT_LENGTH = getenv(\"CONTENT_LENGTH\")\n- v10 = strrchr(SCRIPT_NAME, '/') ; ++v10\n  => a1 to sub_9DE8 is the last path component of SCRIPT_NAME, i.e. the CGI endpoint/binary name.\n- For POST: reads request body into local buffer v7 via sub_12F94(...), then v17 = v7\n- For GET: v17 = getenv(\"QUERY_STRING\")\n- if (v17 && *v17) v15 = sub_998C(v17); else v15 = 0\n  => a3 to sub_9DE8 is v15, built from QUERY_STRING or POST body by sub_998C. This strongly indicates a parsed HTTP/CGI parameter container.\n- v16 = s + 14; if memcmp(s + 14, \";stok=\", 6)\n    v16 = 0;\n  else\n    v16 += 6; v9 = strchr(v16, '/'); if (v9) *v9 = 0; v19 = sub_11AAC(v16);\n  => a2 is an optional session/auth token extracted from SCRIPT_NAME as ;stok=<token>/...\n- v14 = sub_F62C();\n  => a4 is a newly created response/result object/container.\n- Call site:\n  0xA1D4: v19 = sub_9DE8(v10, (int)v16, v15, v14);\n\nSo sub_9DE8 arguments are constructed as:\n- a1 = v10 = basename(SCRIPT_NAME), outer CGI/dispatcher endpoint name\n- a2 = v16 = optional stok token parsed from SCRIPT_NAME, else 0\n- a3 = v15 = result of sub_998C(request_params), where request_params is QUERY_STRING for GET or POST body for POST\n- a4 = v14 = response/output object from sub_F62C()\n\nCross-references to sub_9DE8 (0x9DE8):\n- One code xref found:\n  - 0xA1D0 in function sub_9F04 (function start 0x9F04, size 0x468)\n  - decompiled call instruction is at 0xA1D4: sub_9DE8(v10, (int)v16, v15, v14)\n\nEndpoint/dispatcher mapping for \"usbeject\":\n- From this caller alone, the outer dispatcher does not hardcode \"usbeject\".\n- The action string is not passed here as a literal; instead sub_9DE8 receives the parsed parameter container a3 and must internally resolve action names like \"usbeject\" from that container.\n- The outer endpoint path visible here is derived from SCRIPT_NAME:\n  - endpoint binary/path tail = basename(SCRIPT_NAME) -> a1\n  - optional auth/session path segment = ;stok=<token>\n- Therefore the HTTP route shape is approximately:\n  - /.../<cgi_name>?...   or   /.../;stok=<token>/<cgi_name>?...\n  and the specific action \"usbeject\" is likely inside GET/POST parameters parsed into a3, not in the outer path at this layer.\n\nAuthentication behavior observed from caller:\n- If SCRIPT_NAME contains ;stok=<token>/..., token is extracted and validated by sub_11AAC(v16).\n- If validation fails, request does not reach sub_9DE8.\n- If no ;stok= prefix is present at s+14, v16 is set to 0 and execution still proceeds to sub_9DE8.\n- So auth appears token-aware but not unconditionally required by this wrapper; whether token is mandatory may depend on sub_9DE8 or the specific dispatched action.\n\nConclusion:\n- Yes, a3 is very likely an HTTP/CGI parameter container produced by parsing QUERY_STRING or POST body via sub_998C.\n- 0xA1D0 is within sub_9F04, not a distinct function.\n- The only direct caller/xref to sub_9DE8 found is sub_9F04.\n- The outer dispatcher/endpoint mapping visible here is based on SCRIPT_NAME basename plus optional ;stok token in path; \"usbeject\" itself is likely mapped inside sub_9DE8 from the parsed request parameters."}
+
+[TOOL-MODEL] 任务完成 (共3轮)
+
+[TOOL-MODEL] {"tool": "decompile_function(address='0x9e8c')"}
+
+[IDA-TOOL] decompile_function(address='0x9e8c') -> OK
+/* line: 0, address: 0x9de8 */ int __fastcall sub_9DE8(const char *a1, int a2, int a3, int a4)
+/* line: 1 */ {
+/* line: 2 */   int v8; // [sp+14h] [bp-8h]
+/* line: 3 */ 
+/* line: 4, address: 0x9e08 */   v8 = 4;
+/* line: 5, address: 0x9e18 */   if ( !strcmp(a1, "request") )
+/* line: 6, address: 0x9e34 */     return sub_B1B0(a3, a4);
+/* line: 7, address: 0x9e48 */   if ( !strcmp(a1, "usblist") )
+/* line: 8, address: 0x9e60 */     return sub_A7E0(a4);
+/* line: 9, address: 0x9e74 */   if ( !strcmp(a1, "usbeject") )
+/* line: 10, address: 0x9e90 */     return sub_A6E8(a3);
+/* line: 11, address: 0x9ea4 */   if ( !strcmp(a1, "download") )
+/* line: 12, address: 0x9ec0 */     return sub_A36C(a3, a4);
+/* line: 13, address: 0x9ed4 */   if ( !strcmp(a1, "stok") )
+/* line: 14, address: 0x9ef0 */     return sub_11E70(a3, a4);
+/* line: 15, address: 0x9f00 */   return v8;
+/* line: 16 */ }
+
+[VULN-AGENT] Round 4
+Conclusion: Controllable
+
+VULN_SPEC_START
+{
+  "endpoint": "/usbeject",
+  "http_method": "POST",
+  "param_key": "dev_name",
+  "source_function": "sub_9B30",
+  "auth_required": false,
+  "code_snippet": "v4 = (const char *)sub_9B30(a1, \"dev_name\");\nsnprintf(v3, 0x800u, \"cfm post netctrl 51?op=3,string_info=%s\", v4);\nsystem(v3);",
+  "param_handling": "The HTTP request body or query string is parsed into a parameter container, dev_name is fetched from that container by key, then interpolated into a shell command and passed to system() with no effective sanitization.",
+  "buffer_size": null,
+  "dangerous_chars": [";", "|", "`", "$()"],
+  "taint_propagation": "HTTP GET/POST input -> sub_998C parsed parameter container -> sub_9B30(a1, \"dev_name\") -> snprintf(\"...%s\", v4) -> system()",
+  "evidence_digest": "The caller sub_9F04 reads REQUEST_METHOD, then takes either QUERY_STRING for GET or POST body content, and parses it with sub_998C into a parameter container passed as a3 to sub_9DE8. In sub_9DE8, the action string matching \"usbeject\" dispatches to sub_A6E8(a3). In sub_A6E8, sub_9B30 is a key/value lookup helper and retrieves the request parameter named \"dev_name\" from that attacker-influenced container. The value is only checked for non-empty, passed to sub_A510 which merely edits /tmp/usb/UsbVolumeInfo and does not perform shell escaping, then inserted into a command string and executed with system(). Endpoint discovery was attempted: no /goform/ or /cgi-bin/ registration strings were found, and the CGI wrapper derives routing from SCRIPT_NAME basename; the best-supported externally reachable path is the basename-driven endpoint /usbeject.",
+  "reachability": "PASS",
+  "reachability_evidence": "sub_9F04 accepts GET or POST CGI input, parses parameters, and dispatches basename(SCRIPT_NAME) through sub_9DE8 to the usbeject handler.",
+  "controllability": "PASS",
+  "controllability_evidence": "dev_name is looked up from the parsed HTTP parameter container and is not effectively sanitized before being embedded in a shell command.",
+  "attribution": "PASS",
+  "attribution_evidence": "The sink argument originates specifically from the request parameter key \"dev_name\" in the usbeject handler path.",
+  "confidence": 0.94
+}
+VULN_SPEC_END
+
+============================================================
+[FINAL RESULT] controllable
+Phase 1 (Trace):         19.0s
+Phase 2 (Controllability): 123.8s
+Total:                   142.8s
+VulnSpec:                KEEP_US_AC15V1.0BR_V15.03.05.18_multi_TD01_app_data_center_0xa7c0.json
+Completed: 2026-04-21T02:01:51.398838
+============================================================
+
+[TOOL-MODEL] {"status": "completed", "result": "对函数0xA6E8的交叉引用结果如下：\n- 唯一代码引用来自 0x9E8C，对应函数 sub_9DE8（起始地址 0x9DE8，大小 0x11C）\n\nsub_9DE8 的反编译代码如下：\n```c\nint __fastcall sub_9DE8(const char *a1, int a2, int a3, int a4)\n{\n  int v8;\n\n  v8 = 4;\n  if ( !strcmp(a1, \"request\") )\n    return sub_B1B0(a3, a4);\n  if ( !strcmp(a1, \"usblist\") )\n    return sub_A7E0(a4);\n  if ( !strcmp(a1, \"usbeject\") )\n    return sub_A6E8(a3);\n  if ( !strcmp(a1, \"download\") )\n    return sub_A36C(a3, a4);\n  if ( !strcmp(a1, \"stok\") )\n    return sub_11E70(a3, a4);\n  return v8;\n}\n```\n\n分析结论：\n- 0xA6E8 被 sub_9DE8 作为一个分发处理函数调用。\n- 触发条件是：`!strcmp(a1, \"usbeject\")`\n- 因此该 handler 对应的分发关键字/endpoint path 很可能是：`usbeject`\n- 从该 dispatcher 的结构看，它根据第一个参数 `a1` 的字符串值选择不同处理函数，所以 0xA6E8 对应的是名为 `usbeject` 的 HTTP 动作或路径标识。\n\n已找到：\n- xrefs to 0xA6E8\n- 调用它的 dispatcher 函数\n- dispatcher 的完整反编译代码\n- 可推断的 endpoint/path 标识：`usbeject`"}
+
+[TOOL-MODEL] 任务完成 (共3轮)
+
+[VULN-AGENT] Round 3
+Conclusion: Controllable
+
+VULN_SPEC_START
+{
+  "endpoint": "usbeject",
+  "http_method": "POST",
+  "param_key": "dev_name",
+  "source_function": "sub_9B30",
+  "auth_required": "unknown",
+  "code_snippet": "v4 = (const char *)sub_9B30(a1, \"dev_name\");\nsnprintf(v3, 0x800u, \"cfm post netctrl 51?op=3,string_info=%s\", v4);\nsystem(v3);",
+  "param_handling": "The handler reads the request parameter dev_name via sub_9B30, performs only a non-empty check and a call to sub_A510, then concatenates it into a shell command executed by system().",
+  "buffer_size": null,
+  "dangerous_chars": [";", "|", "`", "$()"],
+  "taint_propagation": "HTTP/request object a1 -> sub_9B30(a1, \"dev_name\") -> v4 -> snprintf(command, \"%s\", v4) -> system(command)",
+  "evidence_digest": "In sub_A6E8, the sink argument is built from sub_9B30(a1, \"dev_name\"), so the command content is derived from an external request parameter. The dispatcher sub_9DE8 invokes sub_A6E8 when its route/action selector equals \"usbeject\", establishing the reachable handler keyword. The command string is formed as 'cfm post netctrl 51?op=3,string_info=%s' and then passed to system() without shell escaping visible in the provided code. A call to sub_A510(v4) exists, but no evidence was provided that it neutralizes shell metacharacters, so controllability remains attacker-driven. Endpoint discovery was attempted: no /goform/ or /cgi/ mapping strings were found, but cross-reference tracing identified the action name 'usbeject' in the dispatcher.",
+  "reachability": "PASS",
+  "reachability_evidence": "sub_9DE8 dispatches to sub_A6E8 when strcmp(a1, \"usbeject\") == 0.",
+  "controllability": "PASS",
+  "controllability_evidence": "sub_A6E8 directly reads dev_name from the request object using sub_9B30 and inserts it into the system command.",
+  "attribution": "PASS",
+  "attribution_evidence": "The vulnerable value is specifically the request parameter key \"dev_name\" within the 'usbeject' handler path.",
+  "confidence": 0.9
+}
+VULN_SPEC_END
+
+============================================================
+[FINAL RESULT] controllable
+Phase 1 (Trace):         17.6s
+Phase 2 (Controllability): 93.5s
+Total:                   111.1s
+VulnSpec:                KEEP_US_AC15V1.0BR_V15.03.05.18_multi_TD01_app_data_center_0xa7c0.json
+Completed: 2026-04-21T02:02:08.726326
+============================================================

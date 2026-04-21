@@ -1,0 +1,13 @@
+{
+    "results": {},
+    "sha256": "80c54de4fbbfef5fe45788489d8c987f7cf6d0002a29afaf4cfc49873e2c0c70",
+    "name": "business_proc",
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/bin/business_proc",
+    "closures": [],
+    "cfg_time": null,
+    "vra_time": null,
+    "sieve_time": 5088.888534784317,
+    "error": "OOMKILLED",
+    "has_sinks": true,
+    "ret_code": -9
+}

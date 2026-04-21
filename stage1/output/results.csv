@@ -1,0 +1,306 @@
+
+True Positives	=CountIF(H5:H300, "Y")/(CountIF(H5:H300, "Y") + CountIF(H5:H300, "N"))
+Completed	=CountA(G5:G300) & " of " & CountA(F5:F300)
+Brand	Firmware	SHA256	Name	Sink	Addr	TP	CFG Time	VRA Time	Analysis Time	Checked By	Notes
+analyzed	US_AC15V1.0BR_V15.03.05.18_multi_TD01	03bbfc8f4fd1e90bd01b59d0310c05a30e73cdde32d50df0b9d81f9a1405692b	dhcps				8.27	48.79	2763.41		
+				execl	0x142b0								likely,possibly,tags,valid_funcs	True
+				popen	0x14b98								likely,possibly,tags,valid_funcs	True
+				system	0x27ab8								likely,possibly,tags,valid_funcs	True
+analyzed	US_AC15V1.0BR_V15.03.05.18_multi_TD01	0a6db21848482b16d49a3b9e3d59a5769a8daffc14a3292dba96a03608346c59	multiWAN				3.64	28.54	698.28		
+				doSystemCmd	0x1408c								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x1437c								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x142c0								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14148								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x145b4								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14670								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x140b4								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x145dc								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x143a4								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14698								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x142e8								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14170								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x145fc								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x146b8								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x140d4								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14308								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x143c4								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14190								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14748								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14424								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14454								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x141f0								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x146e8								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x143f4								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x147d8								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14718								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14778								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x147a8								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x141c0								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14484								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14220								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14838								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x144e4								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14868								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x148c8								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14808								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14250								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x148f8								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14544								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14514								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x144b4								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14898								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x19410								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x1944c								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x196b8								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x169c8								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0xd8e0								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0xd91c								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0xdac8								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0xdafc								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0xdb6c								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0xdbac								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0xdbec								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0xdc2c								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0xdd14								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0xdd84								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0xddb4								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x15ecc								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x15f08								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x161fc								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x17b40								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x17b7c								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x17df8								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0xe044								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0xe080								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0xe128								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0xe168								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x12f2c								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0xcbac								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0xcbe8								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0xced8								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0xb184								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0xef54								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0xef6c								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x142c0								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x1408c								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14670								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x145b4								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14148								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x1437c								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x143a4								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14698								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14170								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x146b8								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14308								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x145fc								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x140d4								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14190								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x143c4								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x146e8								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14748								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14484								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14718								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14778								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x141f0								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14424								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x143f4								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x147a8								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x147d8								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14454								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x141c0								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14898								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14514								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x144b4								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x148f8								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x144e4								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14808								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x148c8								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14868								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14220								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14838								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14544								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x14250								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x16e04								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x16ee8								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x16f48								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x16ff4								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x10354								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x103a4								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x103fc								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x13a28								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x13a74								likely,possibly,tags,valid_funcs	True
+analyzed	US_AC15V1.0BR_V15.03.05.18_multi_TD01	0ba02e187410e92a7abc8230eab742603913d61c410666ca9a58628531737cab	nginx				50.64	185.81	76.67		
+				execve	0x25a48								likely,possibly,tags,valid_funcs	False
+analyzed	US_AC15V1.0BR_V15.03.05.18_multi_TD01	1ef6a3746966a5b3e772e372e20372358bac3db6e24d622183f6329a52d62866	taskset				0.46	2.01	30.97		
+				execvp	0x9acc								likely,possibly,tags,valid_funcs	True
+analyzed	US_AC15V1.0BR_V15.03.05.18_multi_TD01	29eeec6a58dbae42058113938a734f8f43c54b6a5c21697f74f53dd0eb2b0c9c	inadyn				1.77	6.19	65.47		
+				system	0xa2e4								likely,possibly,tags,valid_funcs	True
+				system	0xa284								likely,possibly,tags,valid_funcs	True
+analyzed	US_AC15V1.0BR_V15.03.05.18_multi_TD01	3032d9b4035b5bc3a9eb9307a26c766129d61c72922cf247dbea36427b4b73fe	88ip				0.59	3.86	40.45		
+				doSystemCmd	0xadd4								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0xb014								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0xaeb0								likely,possibly,tags,valid_funcs	True
+analyzed	US_AC15V1.0BR_V15.03.05.18_multi_TD01	31142f1e826b571ad5065ef30bc45f75899d17ef85d586a7dd1351d4a3e56926	udevd				3.18	15.45	5226.70		
+				execv	0x13eb4								likely,possibly,tags,valid_funcs	True
+				execv	0x13eb4								likely,possibly,tags,valid_funcs	True
+analyzed	US_AC15V1.0BR_V15.03.05.18_multi_TD01	3c5ab30e9fe307e50a2412042560b0af9802d495095054d32a145cd1f9bb1691	spawn-fcgi				0.55	1.63	20.19		
+				execv	0x95d4								likely,possibly,tags,valid_funcs	True
+analyzed	US_AC15V1.0BR_V15.03.05.18_multi_TD01	41bf40ce4219f99a2e4cf4324d6978393e4bdd07adfc354bda52f884f8a5ec37	app_data_center				4.54	27.41	115.96		
+				execl	0x17dfc								likely,possibly,tags,valid_funcs	False
+				popen	0x13384								likely,possibly,tags,valid_funcs	False
+				system	0xa7c0								likely,possibly,tags,valid_funcs	True
+analyzed	US_AC15V1.0BR_V15.03.05.18_multi_TD01	5054e69155a035832e6cc9f9e7312a6f08519e289777f204bbd66a81f4e46eba	phddns				3.82	13.69	152.94		
+				doSystemCmd	0x10e28								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x10e54								likely,possibly,tags,valid_funcs	False
+				system	0x11ad8								likely,possibly,tags,valid_funcs	True
+analyzed	US_AC15V1.0BR_V15.03.05.18_multi_TD01	5418b94a7eb54feb0dc4ff3d8fbf329e1224bbe5adafc00c735697b5aa713e04	time_check				3.31	27.30	312.84		
+				doSystemCmd	0xd384								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x155d8								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x1569c								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x16e08								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x16ecc								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x1a8e0								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x1abdc								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x1abf8								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x1ac84								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x1aca0								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x1ac14								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x1ad28								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x1929c								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x1929c								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x1929c								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x1929c								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x192ec								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x192ec								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x192ec								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x192ec								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x19308								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x19308								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x19308								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x19308								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x1a25c								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x1a284								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x1a328								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x1a350								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x1a2ac								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x1a428								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0xf20c								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0xf12c								likely,possibly,tags,valid_funcs	True
+				popen	0x15a70								likely,possibly,tags,valid_funcs	True
+analyzed	US_AC15V1.0BR_V15.03.05.18_multi_TD01	636c5f44fbe17cf07b88c32af7e9f09d60b7580c386f25b94e0b86d4d5cc74b2	minidlna				13.57	61.12	6907.64		
+				system	0x2e170								likely,possibly,tags,valid_funcs	True
+analyzed	US_AC15V1.0BR_V15.03.05.18_multi_TD01	65f91c34c6f76ac32f336a5dd11e850e7d9f16ce5708b60a63365b709277cec3	netctrl				11.82	90.02	799.55		
+				doSystemCmd	0xdc6c								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0xdd2c								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0xce38								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0xd518								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0xd53c								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x1d390								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x1bae8								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x1bb08								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x1bb28								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x1bb48								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0xd9f8								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x32858								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x32878								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x327e0								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0xdc6c								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x42110								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x40ba8								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0xdd2c								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x31e38								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0xfe7c								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0xfe98								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0xfecc								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x15510								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x3e104								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x10810								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x108bc								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x108cc								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x1cc24								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x1cc04								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x1ce4c								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x1ce2c								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x1cc64								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x1cc44								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x47a74								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0xdaf0								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x119c8								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x11a04								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x11b74								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x1f1d8								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x47c20								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x315c0								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x42d8c								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x42dfc								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0xe8f4								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0xe95c								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0xe9a0								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x42110								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x428ec								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x42a60								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x429f4								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x428c0								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x42830								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x4297c								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x42ad0								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x429a0								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x32754								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x32774								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x10620								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x421e0								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x3f43c								likely,possibly,tags,valid_funcs	False
+				doSystemCmd	0x3e5f8								likely,possibly,tags,valid_funcs	False
+				popen	0x1d250								likely,possibly,tags,valid_funcs	False
+				popen	0xe4ec								likely,possibly,tags,valid_funcs	False
+				system	0x3f8c4								likely,possibly,tags,valid_funcs	False
+				system	0x3f8c4								likely,possibly,tags,valid_funcs	False
+analyzed	US_AC15V1.0BR_V15.03.05.18_multi_TD01	85a788a1d24b2278a0770b688e3cdea32d601480a9db42da657197378ad9694c	pppoecd				9.61	28.36	246.16		
+				system	0xfdbc								likely,possibly,tags,valid_funcs	False
+analyzed	US_AC15V1.0BR_V15.03.05.18_multi_TD01	88ebff299142ca5732eea056da9a55e2b6c19362b6096ff399e6868af2ff9e5d	moniter				0.52	1.15	0.35		
+				doSystemCmd	0x88a4								likely,possibly,tags,valid_funcs	False
+analyzed	US_AC15V1.0BR_V15.03.05.18_multi_TD01	8e1c5e9a1420cb1a788bf56291d8b7048c16113b4a6742bb45c4367ca6a619a4	igmpproxy				1.57	9.08	357.31		
+				system	0xbc20								likely,possibly,tags,valid_funcs	True
+				system	0xbd78								likely,possibly,tags,valid_funcs	True
+				system	0xbc20								likely,possibly,tags,valid_funcs	False
+				system	0xbd78								likely,possibly,tags,valid_funcs	False
+				system	0xbc20								likely,possibly,tags,valid_funcs	True
+				system	0xbc20								likely,possibly,tags,valid_funcs	True
+				system	0xbc20								likely,possibly,tags,valid_funcs	True
+				system	0xbd78								likely,possibly,tags,valid_funcs	True
+				system	0xbd78								likely,possibly,tags,valid_funcs	True
+				system	0xbd78								likely,possibly,tags,valid_funcs	True
+				system	0xbc20								likely,possibly,tags,valid_funcs	True
+				system	0xbd78								likely,possibly,tags,valid_funcs	True
+				system	0xbc20								likely,possibly,tags,valid_funcs	True
+				system	0xbd78								likely,possibly,tags,valid_funcs	True
+				system	0xbc20								likely,possibly,tags,valid_funcs	True
+				system	0xbc20								likely,possibly,tags,valid_funcs	True
+				system	0xbd78								likely,possibly,tags,valid_funcs	True
+				system	0xbd78								likely,possibly,tags,valid_funcs	True
+analyzed	US_AC15V1.0BR_V15.03.05.18_multi_TD01	a20674b93b94ce9b385cce29a7d0f0e7bd67f0980e7d86dc60b00a6831ad8ba9	dhttpd				10.97	68.64	505.27		
+				execve	0x357a0								likely,possibly,tags,valid_funcs	False
+				execve	0xd6a8								likely,possibly,tags,valid_funcs	False
+analyzed	US_AC15V1.0BR_V15.03.05.18_multi_TD01	b3f044431e1d6b88e2ad1ee3be0aa7bf30d33155870c6e59c9e22219e4dba1dd	pptpctrl				1.20	4.09	65.42		
+				execvp	0xa514								likely,possibly,tags,valid_funcs	True
+analyzed	US_AC15V1.0BR_V15.03.05.18_multi_TD01	c34679eef45f15154c5c0403e1644d972843722cf89ec2438743d8bb93aec8d6	udhcpd				1.83	5.87	0.96		
+				system	0xa5cc								likely,possibly,tags,valid_funcs	True
+analyzed	US_AC15V1.0BR_V15.03.05.18_multi_TD01	c7220e29e37a191ec7eb8120d511a60a624f6af75e49ae0f197b192904eb4e50	pptpd				1.55	3.93	246.64		
+				execvp	0xa5bc								likely,possibly,tags,valid_funcs	True
+analyzed	US_AC15V1.0BR_V15.03.05.18_multi_TD01	cae5d3fe406d5c7112a6e0bc3b119d0729706eacb7dbd49710bc7318f3c6166c	3322ip				1.78	7.23	58.90		
+				doSystemCmd	0xe198								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0xe628								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0xe27c								likely,possibly,tags,valid_funcs	True
+analyzed	US_AC15V1.0BR_V15.03.05.18_multi_TD01	f7db6fffe5c1e819540facdca0fb22d48980e212618822124648260aad9eaf87	wan_surf				0.52	3.39	126.17		
+				doSystemCmd	0x9ca8								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x8dcc								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x8df0								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x8dcc								likely,possibly,tags,valid_funcs	True
+				doSystemCmd	0x8df0								likely,possibly,tags,valid_funcs	True
+analyzed	US_AC15V1.0BR_V15.03.05.18_multi_TD01	ff8787614c65acbafba36fa3fb9334ca238a06d1a9949f96db610aabb0362839	udhcpc				1.27	4.12	128.43		
+				execle	0xb2b0								likely,possibly,tags,valid_funcs	True
+
+
+
+Firmware	ENV Time	CFG Time	VRA Time	Analysis Time	Total (Minutes)
+US_AC15V1.0BR_V15.03.05.18_multi_TD01	1670.271513223648	157.12192845344543	782.5222115516663	19239.989345788956	=SUM(B306:E306)/60

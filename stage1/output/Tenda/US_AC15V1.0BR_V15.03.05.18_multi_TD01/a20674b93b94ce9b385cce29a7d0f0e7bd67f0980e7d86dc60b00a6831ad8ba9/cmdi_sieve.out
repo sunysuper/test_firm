@@ -1,0 +1,144 @@
+[2;36m[04/19/26 15:22:27][0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mTARGETING SINKS: doSystemCmd, execve               [0m
+[2;36m[04/19/26 15:22:28][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function                      [0m
+[2;36m                    [0m         [37mformGetWanErrerCheck@0x34a38...                    [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mRunning RDA on function                            [0m
+[2;36m                    [0m         [37mformGetWanErrerCheck@0x34a38...                    [0m
+[2;36m[04/19/26 15:22:33][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37msub_340e0(<MultiValues(<BV32 TOP>)>) @ 0x34b94     [0m
+[2;36m[04/19/26 15:22:36][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for sub_311dc() @ 0x340ec    [0m
+[2;36m[04/19/26 15:22:43][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37msub_33a2c(<MultiValues(<BV32 TOP>)>,               [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 0x3abb4>)>, <MultiValues(<BV32  [0m
+[2;36m                    [0m         [37m0x3abac>)>) @ 0x34bc4                              [0m
+[2;36m[04/19/26 15:22:46][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37msub_31088(<MultiValues(<BV32 0x3abb4>)>) @ 0x33a88 [0m
+[2;36m[04/19/26 15:22:53][0m[2;36m [0m[34mINFO    [0m [37mFound 1 potential sinks.                           [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to doSystemCmd:[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37mdoSystemCmd([0m[37m                                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            r0: "wan_surf &"[0m[37m,[0m[37m                     [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            ) @ 0x34b28 -> [0m[33m<BV32 0x0>[0m[37m             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFound 0 unresolved vulnerable definitions.         [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mExclude function 0x34a38 from future slices since  [0m
+[2;36m                    [0m         [37mthe data dependencies are fully resolved.          [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mAnalyzed 0/2 for sink doSystemCmd                  [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function                      [0m
+[2;36m                    [0m         [37mformSetWanErrerCheck@0x34ca0...                    [0m
+[2;36m[04/19/26 15:22:55][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA on function                            [0m
+[2;36m                    [0m         [37mformSetWanErrerCheck@0x34ca0...                    [0m
+[2;36m[04/19/26 15:23:04][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37msub_27c1c(<MultiValues(<BV32 0x381e0>)>,           [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 0x63e>)>, <MultiValues(<BV32    [0m
+[2;36m                    [0m         [37m0x381e8>)>, <MultiValues(<BV32 0x38244>)>) @       [0m
+[2;36m                    [0m         [37m0x15424                                            [0m
+[2;36m[04/19/26 15:23:39][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37msub_25500(<MultiValues(<BV32 stack_base -          [0m
+[2;36m                    [0m         [37m0x10b0>)>, <MultiValues(<BV32 0x1000>)>,           [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 0x39c34>)>, <MultiValues(<BV32  [0m
+[2;36m                    [0m         [37m0x39c40>)>) @ 0x27a7c                              [0m
+[2;36m[04/19/26 15:23:46][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37msub_170fc(<MultiValues(<BV32 TOP>)>,               [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 0x3abd4>)>, <MultiValues({0:    [0m
+[2;36m                    [0m         [37m{<BV32 0x0>, <BV32 0x1>}})>, <MultiValues(<BV32    [0m
+[2;36m                    [0m         [37m0x3abd4>)>) @ 0x34df4                              [0m
+[2;36m[04/19/26 15:23:54][0m[2;36m [0m[34mINFO    [0m [37mFound 1 potential sinks.                           [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to doSystemCmd:[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37mdoSystemCmd([0m[37m                                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            r0: "killall -9 dhttpd"[0m[37m,[0m[37m              [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            ) @ 0x34dac -> [0m[33m<BV32 0x0>[0m[37m             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFound 0 unresolved vulnerable definitions.         [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mExclude function 0x34ca0 from future slices since  [0m
+[2;36m                    [0m         [37mthe data dependencies are fully resolved.          [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mAnalyzed 1/2 for sink doSystemCmd                  [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function sub_35688@0x35688... [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mRunning RDA on function sub_35688@0x35688...       [0m
+[2;36m[04/19/26 15:23:55][0m[2;36m [0m[34mINFO    [0m [37mFound 1 potential sinks.                           [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFound 1 unresolved vulnerable definitions.         [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m**************************************************[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mUNRESOLVED CLOSURES to execve: [0m[1;31m                    [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m--------------------------------------------------[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mTRACE: sub_35688->execve                           [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;31mexecve([0m[1;31m                                           [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;31m       r0: <BV32 TOP>,[0m[1;31m                            [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;31m       r1: <BV32 TOP>,[0m[1;31m                            [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;31m       r2: <BV32 TOP>,[0m[1;31m                            [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;31m       ) @ 0x357a0[0m[1;31m                                [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m                                                   [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mBINARY: dhttpd                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mINPUT SOURCES:                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;34mUNKNOWN[0m[1;31m                                            [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mAnalyzed 0/2 for sink execve                       [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function sub_d564@0xd564...   [0m
+[2;36m[04/19/26 15:23:57][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function sub_c188@0xc188...   [0m
+[2;36m[04/19/26 15:25:33][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA on function sub_c188@0xc188...         [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37msub_27c1c(<MultiValues(<BV32 0x39b28>)>,           [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 0x15a>)>, <MultiValues(<BV32    [0m
+[2;36m                    [0m         [37m0x39b34>)>, <MultiValues(<BV32 0x39b88>)>) @       [0m
+[2;36m                    [0m         [37m0x25668                                            [0m
+[2;36m[04/19/26 15:25:56][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37msub_2ba68(<MultiValues(<BV32 0x3868c>)>) @ 0x16100 [0m
+[2;36m[04/19/26 15:26:46][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for sub_26a68() @ 0x26a64    [0m
+[2;36m[04/19/26 15:26:52][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for sub_264d4() @ 0x264d0    [0m
+[2;36m[04/19/26 15:29:44][0m[2;36m [0m[34mINFO    [0m [37mFound 1 potential sinks.                           [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFound 1 unresolved vulnerable definitions.         [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m**************************************************[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mUNRESOLVED CLOSURES to execve: [0m[1;31m                    [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m--------------------------------------------------[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mTRACE: sub_c188->sub_d564->execve                  [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31mexecve([0m[1;31m                                          [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m       r0: <BV32 TOP> | <BV32 heap_base> -> [0m[1;34m"<BV8[0m
+[2;36m                    [0m         [1;34mTOP>" | "<BV8 TOP>" | "<BV8 TOP>" | "<BV8 TOP>" | [0m[1;31m [0m
+[2;36m                    [0m         [1;34m"<BV8 TOP>" | "<BV8 TOP>" | "<BV8 TOP>" | "<BV8 [0m[1;31m   [0m
+[2;36m                    [0m         [1;34mTOP[7:0]><BV8 TOP[15:8]><BV16 Reverse(TOP[31:16])>"[0m
+[2;36m                    [0m         [1;34m| "<BV8 TOP[7:0]><BV8 TOP[15:8]><BV16 [0m[1;31m             [0m
+[2;36m                    [0m         [1;34mReverse(TOP[31:16])>" | "<BV8 TOP[7:0]><BV8 [0m[1;31m       [0m
+[2;36m                    [0m         [1;34mTOP[15:8]>" | "<BV8 TOP[7:0]>" | "      "[0m[1;31m | "032",[0m[1;31m       [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m       r1: <BV32 TOP> | <BV32 heap_base + 0x100> [0m
+[2;36m                    [0m         [1;31m-> [0m[1;34m"<BV32 Reverse(TOP)>" | "  " | "<BV32 [0m[1;31m            [0m
+[2;36m                    [0m         [1;34mReverse(heap_base)>"[0m[1;31m,[0m[1;31m                              [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m       r2: <BV32 heap_base + 0x128> -> [0m[1;32m<BV16 [0m[1;31m    [0m
+[2;36m                    [0m         [1;32m0x0>[0m[1;37m,[0m[1;31m                                              [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m       ) @ 0xd6a8[0m[1;31m                                [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m                                                   [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mBINARY: dhttpd                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mINPUT SOURCES:                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;34mUNKNOWN[0m[1;31m                                            [0m
+[2;36m[04/19/26 15:30:53][0m[2;36m [0m[34mINFO    [0m [37mAnalyzed 1/2 for sink execve                       [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m**************************************************[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mUNRESOLVED CLOSURES to execve: [0m[1;31m                    [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m--------------------------------------------------[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mTRACE: sub_35688->execve                           [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;31mexecve([0m[1;31m                                           [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;31m       r0: <BV32 TOP>,[0m[1;31m                            [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;31m       r1: <BV32 TOP>,[0m[1;31m                            [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;31m       r2: <BV32 TOP>,[0m[1;31m                            [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;31m       ) @ 0x357a0[0m[1;31m                                [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m                                                   [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mBINARY: dhttpd                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mINPUT SOURCES:                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;34mUNKNOWN[0m[1;31m                                            [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m--------------------------------------------------[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mTRACE: sub_c188->sub_d564->execve                  [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31mexecve([0m[1;31m                                          [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m       r0: <BV32 TOP> | <BV32 heap_base> -> [0m[1;34m"<BV8[0m
+[2;36m                    [0m         [1;34mTOP>" | "<BV8 TOP>" | "<BV8 TOP>" | "<BV8 TOP>" | [0m[1;31m [0m
+[2;36m                    [0m         [1;34m"<BV8 TOP>" | "<BV8 TOP>" | "<BV8 TOP>" | "<BV8 [0m[1;31m   [0m
+[2;36m                    [0m         [1;34mTOP[7:0]><BV8 TOP[15:8]><BV16 Reverse(TOP[31:16])>"[0m
+[2;36m                    [0m         [1;34m| "<BV8 TOP[7:0]><BV8 TOP[15:8]><BV16 [0m[1;31m             [0m
+[2;36m                    [0m         [1;34mReverse(TOP[31:16])>" | "<BV8 TOP[7:0]><BV8 [0m[1;31m       [0m
+[2;36m                    [0m         [1;34mTOP[15:8]>" | "<BV8 TOP[7:0]>" | "      "[0m[1;31m | "032",[0m[1;31m       [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m       r1: <BV32 TOP> | <BV32 heap_base + 0x100> [0m
+[2;36m                    [0m         [1;31m-> [0m[1;34m"<BV32 Reverse(TOP)>" | "  " | "<BV32 [0m[1;31m            [0m
+[2;36m                    [0m         [1;34mReverse(heap_base)>"[0m[1;31m,[0m[1;31m                              [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m       r2: <BV32 heap_base + 0x128> -> [0m[1;32m<BV16 [0m[1;31m    [0m
+[2;36m                    [0m         [1;32m0x0>[0m[1;37m,[0m[1;31m                                              [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m       ) @ 0xd6a8[0m[1;31m                                [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m                                                   [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mBINARY: dhttpd                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mINPUT SOURCES:                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;34mUNKNOWN[0m[1;31m                                            [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFinished Running Analysis                          [0m

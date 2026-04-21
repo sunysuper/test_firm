@@ -1,0 +1,50 @@
+# ===== Secrets / 环境特定 =====
+.env
+stage2/src/config.py
+
+# ===== Python venv / 构建产物 =====
+venv/
+**/venv/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+*.so
+
+# ===== 分析产物 / 测试数据 =====
+# Stage1 固件 & 分析结果（含版权固件文件和绝对路径）
+stage1/firm/
+stage1/src/operation-sieve-public-master/ExperimentReplication.md
+stage1/src/operation-sieve-public-master/assets
+stage1/src/operation-sieve-public-master/README.md
+
+# Stage2 分析输出（含日志、VulnSpec、字符串搜索结果）
+stage2/src/README.md
+
+# IDA 数据库碎片（万一有人把固件解包后的 .id? 提交进来）
+*.i64
+*.id0
+*.id1
+*.id2
+*.nam
+*.til
+*.asm
+
+# ===== IDE / 编辑器 =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# ===== Claude Code 本地设置（工具权限等，不适合共享） =====
+.claude/settings.local.json
+CLAUDE.md
+
+# ===== 临时调试日志（测试过程中产生的）=====
+/tmp/ida_mcp_*.log
+/tmp/auto_start_mcp_*.log

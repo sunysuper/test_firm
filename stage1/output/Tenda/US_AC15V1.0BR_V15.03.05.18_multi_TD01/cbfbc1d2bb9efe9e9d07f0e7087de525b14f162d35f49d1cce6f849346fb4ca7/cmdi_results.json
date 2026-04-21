@@ -1,0 +1,29 @@
+{
+    "closures": [],
+    "cfg_time": 0.2549777030944824,
+    "vra_time": 0.5812845230102539,
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/bin/alibaba_update",
+    "name": "alibaba_update",
+    "has_sinks": true,
+    "sha256": "cbfbc1d2bb9efe9e9d07f0e7087de525b14f162d35f49d1cce6f849346fb4ca7",
+    "sink_times": {},
+    "error": null,
+    "sieve_time": 11.056188106536865,
+    "sinks": {
+        "doSystemCmd": 16
+    },
+    "time_data": {
+        "0x88b8 -> 0x8580": {
+            "taint_time": 0.37186455726623535,
+            "rda_time": 6.137175798416138
+        },
+        "0x877c -> 0x8580": {
+            "taint_time": 0.12000346183776855,
+            "rda_time": 4.14276123046875
+        },
+        "0x86f0 -> 0x8580": {
+            "taint_time": 0.04054570198059082,
+            "rda_time": 0.04824972152709961
+        }
+    }
+}

@@ -1,0 +1,325 @@
+{
+    "closures": [
+        {
+            "trace": [
+                {
+                    "function": "main",
+                    "string": "main() @ 0x9f04",
+                    "ins_addr": "0x9f04"
+                },
+                {
+                    "function": "sub_9de8",
+                    "string": "sub_9de8(<MultiValues(<BV32 TOP + 0x1>)>, <MultiValues({0: {<BV32 0x0>, <BV32 heap_base + 0x34>}})>, <MultiValues({0: {<BV32 TOP>, <BV32 0x0>}})>, <MultiValues({0: {<BV32 0x1>, <BV32 0x0>, <BV32 TOP>, <BV32 0x2>}})>) @ 0xa1d0",
+                    "ins_addr": "0xa1d0"
+                },
+                {
+                    "function": "sub_a6e8",
+                    "string": "sub_a6e8(<MultiValues({0: {<BV32 TOP>, <BV32 0x0>}})>, <MultiValues({0: {<BV32 0x1>, <BV32 0x0>, <BV32 TOP>, <BV32 0x2>}})>) @ 0x9e8c",
+                    "ins_addr": "0x9e8c"
+                }
+            ],
+            "sink": {
+                "function": "system",
+                "string": "system(<MultiValues(<BV32 stack_base - 0x1070>)>) @ 0xa7c0",
+                "ins_addr": "0xa7c0"
+            },
+            "depth": 3,
+            "inputs": {
+                "likely": [
+                    "REQUEST_METHOD"
+                ],
+                "possibly": [
+                    "CONTENT_LENGTH",
+                    "SCRIPT_NAME",
+                    "QUERY_STRING",
+                    "stdin",
+                    "fgets("
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": [
+                    40768
+                ]
+            },
+            "rank": 70.7,
+            "confidence": 0.55,
+            "source_score": 1.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.1,
+            "summary_augmented": true,
+            "summary_tags": [
+                "HEAP_MUTATION",
+                "GLOBAL_WRITE"
+            ],
+            "summary_locations": [
+                "0x16a64",
+                "0x16d4c",
+                "0x16cf0",
+                "0x17348",
+                "0x134f8"
+            ],
+            "ani_skip_records": [
+                "reanalyzed",
+                "reanalyzed",
+                "reanalyzed",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": true,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_13368",
+                    "string": "sub_13368(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0x13368",
+                    "ins_addr": "0x13368"
+                }
+            ],
+            "sink": {
+                "function": "popen",
+                "string": "popen(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0x13384",
+                "ins_addr": "0x13384"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_17d6c",
+                    "string": "sub_17d6c(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0x17d6c",
+                    "ins_addr": "0x17d6c"
+                }
+            ],
+            "sink": {
+                "function": "execl",
+                "string": "execl(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0x17dfc",
+                "ins_addr": "0x17dfc"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        }
+    ],
+    "cfg_time": 4.536206007003784,
+    "vra_time": 27.41014575958252,
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/usr/bin/app_data_center",
+    "name": "app_data_center",
+    "has_sinks": true,
+    "sha256": "41bf40ce4219f99a2e4cf4324d6978393e4bdd07adfc354bda52f884f8a5ec37",
+    "sink_times": {
+        "system": 112.24711632728577,
+        "popen": 3.2189085483551025,
+        "execl": 0.2066943645477295
+    },
+    "error": null,
+    "sieve_time": 115.95767450332642,
+    "sinks": {
+        "system": 1,
+        "popen": 1,
+        "execl": 1
+    },
+    "time_data": {
+        "0xa6e8 -> 0x9de8 -> 0x9f04 -> 0x94a4": {
+            "taint_time": 5.691508769989014,
+            "rda_time": 106.55436301231384
+        },
+        "0x13368 -> 0x987c": {
+            "taint_time": 0.03599047660827637,
+            "rda_time": 3.181344985961914
+        },
+        "0x17d6c -> 0x96fc": {
+            "taint_time": 0.10782146453857422,
+            "rda_time": 0.0974893569946289
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "sha256": "913e1a916cf2fd54772f1cd56932bdc6cbd25b0df7307c9a2cb2fe26b3b688f5",
+    "name": "cfm",
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/bin/cfm",
+    "closures": [],
+    "cfg_time": 0,
+    "vra_time": 0,
+    "sieve_time": 0,
+    "error": null,
+    "ret_code": 0,
+    "has_sinks": false
+}

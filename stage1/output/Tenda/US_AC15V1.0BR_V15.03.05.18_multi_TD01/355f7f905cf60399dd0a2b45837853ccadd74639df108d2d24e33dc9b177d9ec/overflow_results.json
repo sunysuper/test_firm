@@ -1,0 +1,12 @@
+{
+    "sha256": "355f7f905cf60399dd0a2b45837853ccadd74639df108d2d24e33dc9b177d9ec",
+    "name": "mac_filter.ko",
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/lib/modules/mac_filter.ko",
+    "closures": [],
+    "cfg_time": 0,
+    "vra_time": 0,
+    "sieve_time": 0,
+    "error": null,
+    "ret_code": 0,
+    "has_sinks": false
+}

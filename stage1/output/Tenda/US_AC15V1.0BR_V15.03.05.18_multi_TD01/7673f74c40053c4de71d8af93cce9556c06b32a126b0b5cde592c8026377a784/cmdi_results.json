@@ -1,0 +1,12 @@
+{
+    "sha256": "7673f74c40053c4de71d8af93cce9556c06b32a126b0b5cde592c8026377a784",
+    "name": "nas",
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/usr/sbin/nas",
+    "closures": [],
+    "cfg_time": 0,
+    "vra_time": 0,
+    "sieve_time": 0,
+    "error": null,
+    "ret_code": 0,
+    "has_sinks": false
+}

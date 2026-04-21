@@ -1,0 +1,313 @@
+[2;36m[04/16/26 13:33:49][0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mTARGETING SINKS: doSystemCmd                       [0m
+[2;36m[04/16/26 13:33:50][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function sub_a1c4@0xa1c4...   [0m
+[2;36m[04/16/26 13:33:53][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function main@0x8ce4...       [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mRunning RDA on function main@0x8ce4...             [0m
+[2;36m[04/16/26 13:34:18][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37msub_99cc(<MultiValues(<BV32 0x3>)>,                [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 stack_base - 0xb4c>)>) @ 0xaf1c [0m
+[2;36m[04/16/26 13:34:30][0m[2;36m [0m[34mINFO    [0m [37mFound 6 potential sinks.                           [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to doSystemCmd:[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37mdoSystemCmd([0m[37m                                     [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r0: "echo '1337' > /etc/ddnspid2"[0m[37m | [0m[37m [0m
+[2;36m                    [0m         [37m"echo '1337' > /etc/ddnspid1"[0m[37m | "echo '1337' > [0m[37m    [0m
+[2;36m                    [0m         [37m/etc/ddnspid3"[0m[37m | "echo '1337' > /etc/ddnspid4"[0m[37m,[0m[37m    [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r1: <BV32 TOP>,[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r2: None -> [0m[32m<BV32 0x2>[0m[37m | None -> [0m[37m    [0m
+[2;36m                    [0m         [32m<BV32 0x1>[0m[37m | None -> [0m[32m<BV32 0x4>[0m[37m | None -> [0m[32m<BV32 [0m[37m   [0m
+[2;36m                    [0m         [32m0x3>[0m[37m,[0m[37m                                              [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            ) @ 0xa3f0 -> [0m[33m<BV32 0x0>[0m[37m             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to doSystemCmd:[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37mdoSystemCmd([0m[37m                                     [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r0: "echo '1337' > /etc/ddnspid2"[0m[37m | [0m[37m [0m
+[2;36m                    [0m         [37m"echo '1337' > /etc/ddnspid1"[0m[37m | "echo '1337' > [0m[37m    [0m
+[2;36m                    [0m         [37m/etc/ddnspid3"[0m[37m | "echo '1337' > /etc/ddnspid4"[0m[37m,[0m[37m    [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r1: <BV32 TOP>,[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r2: None -> [0m[32m<BV32 0x2>[0m[37m | None -> [0m[37m    [0m
+[2;36m                    [0m         [32m<BV32 0x1>[0m[37m | None -> [0m[32m<BV32 0x4>[0m[37m | None -> [0m[32m<BV32 [0m[37m   [0m
+[2;36m                    [0m         [32m0x3>[0m[37m,[0m[37m                                              [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            ) @ 0xa3f0 -> [0m[33m<BV32 0x0>[0m[37m             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to doSystemCmd:[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37mdoSystemCmd([0m[37m                                     [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r0: "echo '1337' > /etc/ddnspid2"[0m[37m | [0m[37m [0m
+[2;36m                    [0m         [37m"echo '1337' > /etc/ddnspid1"[0m[37m | "echo '1337' > [0m[37m    [0m
+[2;36m                    [0m         [37m/etc/ddnspid3"[0m[37m | "echo '1337' > /etc/ddnspid4"[0m[37m,[0m[37m    [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r1: <BV32 TOP>,[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r2: None -> [0m[32m<BV32 0x2>[0m[37m | None -> [0m[37m    [0m
+[2;36m                    [0m         [32m<BV32 0x1>[0m[37m | None -> [0m[32m<BV32 0x4>[0m[37m | None -> [0m[32m<BV32 [0m[37m   [0m
+[2;36m                    [0m         [32m0x3>[0m[37m,[0m[37m                                              [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            ) @ 0xa3f0 -> [0m[33m<BV32 0x0>[0m[37m             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to doSystemCmd:[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37mdoSystemCmd([0m[37m                                     [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r0: "echo '1337' > /etc/ddnspid2"[0m[37m | [0m[37m [0m
+[2;36m                    [0m         [37m"echo '1337' > /etc/ddnspid1"[0m[37m | "echo '1337' > [0m[37m    [0m
+[2;36m                    [0m         [37m/etc/ddnspid3"[0m[37m | "echo '1337' > /etc/ddnspid4"[0m[37m,[0m[37m    [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r1: <BV32 TOP>,[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r2: None -> [0m[32m<BV32 0x2>[0m[37m | None -> [0m[37m    [0m
+[2;36m                    [0m         [32m<BV32 0x1>[0m[37m | None -> [0m[32m<BV32 0x4>[0m[37m | None -> [0m[32m<BV32 [0m[37m   [0m
+[2;36m                    [0m         [32m0x3>[0m[37m,[0m[37m                                              [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            ) @ 0xa3f0 -> [0m[33m<BV32 0x0>[0m[37m             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to doSystemCmd:[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37mdoSystemCmd([0m[37m                                     [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r0: "ip rule del to 127.1.1.1 table [0m[37m [0m
+[2;36m                    [0m         [37mwan3"[0m[37m | "ip rule del to 127.1.1.1 table wan2"[0m[37m | "ip[0m
+[2;36m                    [0m         [37mrule del to 127.1.1.1 table wan1"[0m[37m | "ip rule del to[0m
+[2;36m                    [0m         [37m127.1.1.1 table wan4"[0m[37m,[0m[37m                             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r1: <BV32 heap_base> -> [0m[32m"127.1.1.1"[0m[37m,[0m[37m [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r2: None -> [0m[32m<BV32 0x2>[0m[37m | None -> [0m[37m    [0m
+[2;36m                    [0m         [32m<BV32 0x1>[0m[37m | None -> [0m[32m<BV32 0x4>[0m[37m | None -> [0m[32m<BV32 [0m[37m   [0m
+[2;36m                    [0m         [32m0x3>[0m[37m,[0m[37m                                              [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            ) @ 0xa4bc -> [0m[33m<BV32 0x0>[0m[37m             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to doSystemCmd:[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37mdoSystemCmd([0m[37m                                     [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r0: "ip rule del to 127.1.1.1 table [0m[37m [0m
+[2;36m                    [0m         [37mwan3"[0m[37m | "ip rule del to 127.1.1.1 table wan2"[0m[37m | "ip[0m
+[2;36m                    [0m         [37mrule del to 127.1.1.1 table wan1"[0m[37m | "ip rule del to[0m
+[2;36m                    [0m         [37m127.1.1.1 table wan4"[0m[37m,[0m[37m                             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r1: <BV32 heap_base> -> [0m[32m"127.1.1.1"[0m[37m,[0m[37m [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r2: None -> [0m[32m<BV32 0x2>[0m[37m | None -> [0m[37m    [0m
+[2;36m                    [0m         [32m<BV32 0x1>[0m[37m | None -> [0m[32m<BV32 0x4>[0m[37m | None -> [0m[32m<BV32 [0m[37m   [0m
+[2;36m                    [0m         [32m0x3>[0m[37m,[0m[37m                                              [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            ) @ 0xa4bc -> [0m[33m<BV32 0x0>[0m[37m             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to doSystemCmd:[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37mdoSystemCmd([0m[37m                                     [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r0: "ip rule del to 127.1.1.1 table [0m[37m [0m
+[2;36m                    [0m         [37mwan3"[0m[37m | "ip rule del to 127.1.1.1 table wan2"[0m[37m | "ip[0m
+[2;36m                    [0m         [37mrule del to 127.1.1.1 table wan1"[0m[37m | "ip rule del to[0m
+[2;36m                    [0m         [37m127.1.1.1 table wan4"[0m[37m,[0m[37m                             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r1: <BV32 heap_base> -> [0m[32m"127.1.1.1"[0m[37m,[0m[37m [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r2: None -> [0m[32m<BV32 0x2>[0m[37m | None -> [0m[37m    [0m
+[2;36m                    [0m         [32m<BV32 0x1>[0m[37m | None -> [0m[32m<BV32 0x4>[0m[37m | None -> [0m[32m<BV32 [0m[37m   [0m
+[2;36m                    [0m         [32m0x3>[0m[37m,[0m[37m                                              [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            ) @ 0xa4bc -> [0m[33m<BV32 0x0>[0m[37m             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to doSystemCmd:[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37mdoSystemCmd([0m[37m                                     [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r0: "ip rule del to 127.1.1.1 table [0m[37m [0m
+[2;36m                    [0m         [37mwan3"[0m[37m | "ip rule del to 127.1.1.1 table wan2"[0m[37m | "ip[0m
+[2;36m                    [0m         [37mrule del to 127.1.1.1 table wan1"[0m[37m | "ip rule del to[0m
+[2;36m                    [0m         [37m127.1.1.1 table wan4"[0m[37m,[0m[37m                             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r1: <BV32 heap_base> -> [0m[32m"127.1.1.1"[0m[37m,[0m[37m [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r2: None -> [0m[32m<BV32 0x2>[0m[37m | None -> [0m[37m    [0m
+[2;36m                    [0m         [32m<BV32 0x1>[0m[37m | None -> [0m[32m<BV32 0x4>[0m[37m | None -> [0m[32m<BV32 [0m[37m   [0m
+[2;36m                    [0m         [32m0x3>[0m[37m,[0m[37m                                              [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            ) @ 0xa4bc -> [0m[33m<BV32 0x0>[0m[37m             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to doSystemCmd:[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37mdoSystemCmd([0m[37m                                     [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r0: "ip rule del to 127.1.1.1 table [0m[37m [0m
+[2;36m                    [0m         [37mwan3"[0m[37m | "ip rule del to 127.1.1.1 table wan2"[0m[37m | "ip[0m
+[2;36m                    [0m         [37mrule del to 127.1.1.1 table wan1"[0m[37m | "ip rule del to[0m
+[2;36m                    [0m         [37m127.1.1.1 table wan4"[0m[37m,[0m[37m                             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r1: <BV32 heap_base> -> [0m[32m"127.1.1.1"[0m[37m,[0m[37m [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r2: None -> [0m[32m<BV32 0x2>[0m[37m | None -> [0m[37m    [0m
+[2;36m                    [0m         [32m<BV32 0x1>[0m[37m | None -> [0m[32m<BV32 0x4>[0m[37m | None -> [0m[32m<BV32 [0m[37m   [0m
+[2;36m                    [0m         [32m0x3>[0m[37m,[0m[37m                                              [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            ) @ 0xa4bc -> [0m[33m<BV32 0x0>[0m[37m             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to doSystemCmd:[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37mdoSystemCmd([0m[37m                                     [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r0: "ip rule del to 127.1.1.1 table [0m[37m [0m
+[2;36m                    [0m         [37mwan3"[0m[37m | "ip rule del to 127.1.1.1 table wan2"[0m[37m | "ip[0m
+[2;36m                    [0m         [37mrule del to 127.1.1.1 table wan1"[0m[37m | "ip rule del to[0m
+[2;36m                    [0m         [37m127.1.1.1 table wan4"[0m[37m,[0m[37m                             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r1: <BV32 heap_base> -> [0m[32m"127.1.1.1"[0m[37m,[0m[37m [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r2: None -> [0m[32m<BV32 0x2>[0m[37m | None -> [0m[37m    [0m
+[2;36m                    [0m         [32m<BV32 0x1>[0m[37m | None -> [0m[32m<BV32 0x4>[0m[37m | None -> [0m[32m<BV32 [0m[37m   [0m
+[2;36m                    [0m         [32m0x3>[0m[37m,[0m[37m                                              [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            ) @ 0xa4bc -> [0m[33m<BV32 0x0>[0m[37m             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to doSystemCmd:[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37mdoSystemCmd([0m[37m                                     [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r0: "ip rule del to 127.1.1.1 table [0m[37m [0m
+[2;36m                    [0m         [37mwan3"[0m[37m | "ip rule del to 127.1.1.1 table wan2"[0m[37m | "ip[0m
+[2;36m                    [0m         [37mrule del to 127.1.1.1 table wan1"[0m[37m | "ip rule del to[0m
+[2;36m                    [0m         [37m127.1.1.1 table wan4"[0m[37m,[0m[37m                             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r1: <BV32 heap_base> -> [0m[32m"127.1.1.1"[0m[37m,[0m[37m [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r2: None -> [0m[32m<BV32 0x2>[0m[37m | None -> [0m[37m    [0m
+[2;36m                    [0m         [32m<BV32 0x1>[0m[37m | None -> [0m[32m<BV32 0x4>[0m[37m | None -> [0m[32m<BV32 [0m[37m   [0m
+[2;36m                    [0m         [32m0x3>[0m[37m,[0m[37m                                              [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            ) @ 0xa4bc -> [0m[33m<BV32 0x0>[0m[37m             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to doSystemCmd:[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37mdoSystemCmd([0m[37m                                     [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r0: "ip rule del to 127.1.1.1 table [0m[37m [0m
+[2;36m                    [0m         [37mwan3"[0m[37m | "ip rule del to 127.1.1.1 table wan2"[0m[37m | "ip[0m
+[2;36m                    [0m         [37mrule del to 127.1.1.1 table wan1"[0m[37m | "ip rule del to[0m
+[2;36m                    [0m         [37m127.1.1.1 table wan4"[0m[37m,[0m[37m                             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r1: <BV32 heap_base> -> [0m[32m"127.1.1.1"[0m[37m,[0m[37m [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r2: None -> [0m[32m<BV32 0x2>[0m[37m | None -> [0m[37m    [0m
+[2;36m                    [0m         [32m<BV32 0x1>[0m[37m | None -> [0m[32m<BV32 0x4>[0m[37m | None -> [0m[32m<BV32 [0m[37m   [0m
+[2;36m                    [0m         [32m0x3>[0m[37m,[0m[37m                                              [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            ) @ 0xa4bc -> [0m[33m<BV32 0x0>[0m[37m             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to doSystemCmd:[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37mdoSystemCmd([0m[37m                                     [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r0: "ip rule add to 127.1.1.1 table [0m[37m [0m
+[2;36m                    [0m         [37mwan2"[0m[37m | "ip rule add to 127.1.1.1 table wan4"[0m[37m | "ip[0m
+[2;36m                    [0m         [37mrule add to 127.1.1.1 table wan1"[0m[37m | "ip rule add to[0m
+[2;36m                    [0m         [37m127.1.1.1 table wan3"[0m[37m,[0m[37m                             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r1: <BV32 heap_base> -> [0m[32m"127.1.1.1"[0m[37m,[0m[37m [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r2: None -> [0m[32m<BV32 0x2>[0m[37m | None -> [0m[37m    [0m
+[2;36m                    [0m         [32m<BV32 0x1>[0m[37m | None -> [0m[32m<BV32 0x4>[0m[37m | None -> [0m[32m<BV32 [0m[37m   [0m
+[2;36m                    [0m         [32m0x3>[0m[37m,[0m[37m                                              [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            ) @ 0xa4ec -> [0m[33m<BV32 0x0>[0m[37m             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to doSystemCmd:[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37mdoSystemCmd([0m[37m                                     [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r0: "ip rule add to 127.1.1.1 table [0m[37m [0m
+[2;36m                    [0m         [37mwan2"[0m[37m | "ip rule add to 127.1.1.1 table wan4"[0m[37m | "ip[0m
+[2;36m                    [0m         [37mrule add to 127.1.1.1 table wan1"[0m[37m | "ip rule add to[0m
+[2;36m                    [0m         [37m127.1.1.1 table wan3"[0m[37m,[0m[37m                             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r1: <BV32 heap_base> -> [0m[32m"127.1.1.1"[0m[37m,[0m[37m [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r2: None -> [0m[32m<BV32 0x2>[0m[37m | None -> [0m[37m    [0m
+[2;36m                    [0m         [32m<BV32 0x1>[0m[37m | None -> [0m[32m<BV32 0x4>[0m[37m | None -> [0m[32m<BV32 [0m[37m   [0m
+[2;36m                    [0m         [32m0x3>[0m[37m,[0m[37m                                              [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            ) @ 0xa4ec -> [0m[33m<BV32 0x0>[0m[37m             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to doSystemCmd:[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37mdoSystemCmd([0m[37m                                     [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r0: "ip rule add to 127.1.1.1 table [0m[37m [0m
+[2;36m                    [0m         [37mwan2"[0m[37m | "ip rule add to 127.1.1.1 table wan4"[0m[37m | "ip[0m
+[2;36m                    [0m         [37mrule add to 127.1.1.1 table wan1"[0m[37m | "ip rule add to[0m
+[2;36m                    [0m         [37m127.1.1.1 table wan3"[0m[37m,[0m[37m                             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r1: <BV32 heap_base> -> [0m[32m"127.1.1.1"[0m[37m,[0m[37m [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r2: None -> [0m[32m<BV32 0x2>[0m[37m | None -> [0m[37m    [0m
+[2;36m                    [0m         [32m<BV32 0x1>[0m[37m | None -> [0m[32m<BV32 0x4>[0m[37m | None -> [0m[32m<BV32 [0m[37m   [0m
+[2;36m                    [0m         [32m0x3>[0m[37m,[0m[37m                                              [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            ) @ 0xa4ec -> [0m[33m<BV32 0x0>[0m[37m             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to doSystemCmd:[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37mdoSystemCmd([0m[37m                                     [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r0: "ip rule add to 127.1.1.1 table [0m[37m [0m
+[2;36m                    [0m         [37mwan2"[0m[37m | "ip rule add to 127.1.1.1 table wan4"[0m[37m | "ip[0m
+[2;36m                    [0m         [37mrule add to 127.1.1.1 table wan1"[0m[37m | "ip rule add to[0m
+[2;36m                    [0m         [37m127.1.1.1 table wan3"[0m[37m,[0m[37m                             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r1: <BV32 heap_base> -> [0m[32m"127.1.1.1"[0m[37m,[0m[37m [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r2: None -> [0m[32m<BV32 0x2>[0m[37m | None -> [0m[37m    [0m
+[2;36m                    [0m         [32m<BV32 0x1>[0m[37m | None -> [0m[32m<BV32 0x4>[0m[37m | None -> [0m[32m<BV32 [0m[37m   [0m
+[2;36m                    [0m         [32m0x3>[0m[37m,[0m[37m                                              [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            ) @ 0xa4ec -> [0m[33m<BV32 0x0>[0m[37m             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to doSystemCmd:[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37mdoSystemCmd([0m[37m                                     [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r0: "ip rule add to 127.1.1.1 table [0m[37m [0m
+[2;36m                    [0m         [37mwan2"[0m[37m | "ip rule add to 127.1.1.1 table wan4"[0m[37m | "ip[0m
+[2;36m                    [0m         [37mrule add to 127.1.1.1 table wan1"[0m[37m | "ip rule add to[0m
+[2;36m                    [0m         [37m127.1.1.1 table wan3"[0m[37m,[0m[37m                             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r1: <BV32 heap_base> -> [0m[32m"127.1.1.1"[0m[37m,[0m[37m [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r2: None -> [0m[32m<BV32 0x2>[0m[37m | None -> [0m[37m    [0m
+[2;36m                    [0m         [32m<BV32 0x1>[0m[37m | None -> [0m[32m<BV32 0x4>[0m[37m | None -> [0m[32m<BV32 [0m[37m   [0m
+[2;36m                    [0m         [32m0x3>[0m[37m,[0m[37m                                              [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            ) @ 0xa4ec -> [0m[33m<BV32 0x0>[0m[37m             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to doSystemCmd:[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37mdoSystemCmd([0m[37m                                     [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r0: "ip rule add to 127.1.1.1 table [0m[37m [0m
+[2;36m                    [0m         [37mwan2"[0m[37m | "ip rule add to 127.1.1.1 table wan4"[0m[37m | "ip[0m
+[2;36m                    [0m         [37mrule add to 127.1.1.1 table wan1"[0m[37m | "ip rule add to[0m
+[2;36m                    [0m         [37m127.1.1.1 table wan3"[0m[37m,[0m[37m                             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r1: <BV32 heap_base> -> [0m[32m"127.1.1.1"[0m[37m,[0m[37m [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r2: None -> [0m[32m<BV32 0x2>[0m[37m | None -> [0m[37m    [0m
+[2;36m                    [0m         [32m<BV32 0x1>[0m[37m | None -> [0m[32m<BV32 0x4>[0m[37m | None -> [0m[32m<BV32 [0m[37m   [0m
+[2;36m                    [0m         [32m0x3>[0m[37m,[0m[37m                                              [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            ) @ 0xa4ec -> [0m[33m<BV32 0x0>[0m[37m             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to doSystemCmd:[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37mdoSystemCmd([0m[37m                                     [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r0: "ip rule add to 127.1.1.1 table [0m[37m [0m
+[2;36m                    [0m         [37mwan2"[0m[37m | "ip rule add to 127.1.1.1 table wan4"[0m[37m | "ip[0m
+[2;36m                    [0m         [37mrule add to 127.1.1.1 table wan1"[0m[37m | "ip rule add to[0m
+[2;36m                    [0m         [37m127.1.1.1 table wan3"[0m[37m,[0m[37m                             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r1: <BV32 heap_base> -> [0m[32m"127.1.1.1"[0m[37m,[0m[37m [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r2: None -> [0m[32m<BV32 0x2>[0m[37m | None -> [0m[37m    [0m
+[2;36m                    [0m         [32m<BV32 0x1>[0m[37m | None -> [0m[32m<BV32 0x4>[0m[37m | None -> [0m[32m<BV32 [0m[37m   [0m
+[2;36m                    [0m         [32m0x3>[0m[37m,[0m[37m                                              [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            ) @ 0xa4ec -> [0m[33m<BV32 0x0>[0m[37m             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to doSystemCmd:[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37mdoSystemCmd([0m[37m                                     [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r0: "ip rule add to 127.1.1.1 table [0m[37m [0m
+[2;36m                    [0m         [37mwan2"[0m[37m | "ip rule add to 127.1.1.1 table wan4"[0m[37m | "ip[0m
+[2;36m                    [0m         [37mrule add to 127.1.1.1 table wan1"[0m[37m | "ip rule add to[0m
+[2;36m                    [0m         [37m127.1.1.1 table wan3"[0m[37m,[0m[37m                             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r1: <BV32 heap_base> -> [0m[32m"127.1.1.1"[0m[37m,[0m[37m [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            r2: None -> [0m[32m<BV32 0x2>[0m[37m | None -> [0m[37m    [0m
+[2;36m                    [0m         [32m<BV32 0x1>[0m[37m | None -> [0m[32m<BV32 0x4>[0m[37m | None -> [0m[32m<BV32 [0m[37m   [0m
+[2;36m                    [0m         [32m0x3>[0m[37m,[0m[37m                                              [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m            ) @ 0xa4ec -> [0m[33m<BV32 0x0>[0m[37m             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFound 2 unresolved vulnerable definitions.         [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m**************************************************[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mUNRESOLVED CLOSURES to doSystemCmd: [0m[1;31m               [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m--------------------------------------------------[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31mdoSystemCmd([0m[1;31m                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m            r0: "echo 0 >/etc/ddns_<BV32 [0m[1;31m        [0m
+[2;36m                    [0m         [1;31mARGV_3>",[0m[1;31m                                          [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m            r1: [0m[1;96mARGV[0m[1;31m[3] | [0m[1;96mARGV[0m[1;31m[3] -> [0m[1;34m"<BV32 [0m[1;31m     [0m
+[2;36m                    [0m         [1;34mARGV_3>"[0m[1;31m,[0m[1;31m                                          [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m            ) @ 0xadd4 -> [0m[1;33m<BV32 0x0>[0m[1;31m             [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m                                                   [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mBINARY: 88ip                                       [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mINPUT SOURCES:                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mLikely:[0m[1;31m                                            [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mNONE[0m[1;31m                                               [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;33mRANK: 0.600[0m[1;31m                                        [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m**************************************************[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mUNRESOLVED CLOSURES to doSystemCmd: [0m[1;31m               [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m--------------------------------------------------[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31mdoSystemCmd([0m[1;31m                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m            r0: "echo 0 >/etc/ddns_<BV32 [0m[1;31m        [0m
+[2;36m                    [0m         [1;31mARGV_3>",[0m[1;31m                                          [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m            r1: [0m[1;96mARGV[0m[1;31m[3] | [0m[1;96mARGV[0m[1;31m[3] -> [0m[1;34m"<BV32 [0m[1;31m     [0m
+[2;36m                    [0m         [1;34mARGV_3>"[0m[1;31m,[0m[1;31m                                          [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m            ) @ 0xb014 -> [0m[1;33m<BV32 0x0>[0m[1;31m             [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m                                                   [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mBINARY: 88ip                                       [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mINPUT SOURCES:                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mLikely:[0m[1;31m                                            [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mNONE[0m[1;31m                                               [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;33mRANK: 0.600[0m[1;31m                                        [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m**************************************************[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mUNRESOLVED CLOSURES to doSystemCmd: [0m[1;31m               [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m--------------------------------------------------[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31mdoSystemCmd([0m[1;31m                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m            r0: "echo 1 >/etc/ddns_<BV32 [0m[1;31m        [0m
+[2;36m                    [0m         [1;31mARGV_3>",[0m[1;31m                                          [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m            r1: [0m[1;96mARGV[0m[1;31m[3] | [0m[1;96mARGV[0m[1;31m[3] -> [0m[1;34m"<BV32 [0m[1;31m     [0m
+[2;36m                    [0m         [1;34mARGV_3>"[0m[1;31m,[0m[1;31m                                          [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m            ) @ 0xaeb0 -> [0m[1;33m<BV32 0x0>[0m[1;31m             [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m                                                   [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mBINARY: 88ip                                       [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mINPUT SOURCES:                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mLikely:[0m[1;31m                                            [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mNONE[0m[1;31m                                               [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;33mRANK: 0.600[0m[1;31m                                        [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mAnalyzed 0/1 for sink doSystemCmd                  [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m**************************************************[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mUNRESOLVED CLOSURES to doSystemCmd: [0m[1;31m               [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m--------------------------------------------------[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31mdoSystemCmd([0m[1;31m                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m            r0: "echo 0 >/etc/ddns_<BV32 [0m[1;31m        [0m
+[2;36m                    [0m         [1;31mARGV_3>",[0m[1;31m                                          [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m            r1: [0m[1;96mARGV[0m[1;31m[3] | [0m[1;96mARGV[0m[1;31m[3] -> [0m[1;34m"<BV32 [0m[1;31m     [0m
+[2;36m                    [0m         [1;34mARGV_3>"[0m[1;31m,[0m[1;31m                                          [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m            ) @ 0xadd4 -> [0m[1;33m<BV32 0x0>[0m[1;31m             [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m                                                   [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mBINARY: 88ip                                       [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mINPUT SOURCES:                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mLikely:[0m[1;31m                                            [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mNONE[0m[1;31m                                               [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;33mRANK: 0.600[0m[1;31m                                        [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m--------------------------------------------------[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31mdoSystemCmd([0m[1;31m                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m            r0: "echo 0 >/etc/ddns_<BV32 [0m[1;31m        [0m
+[2;36m                    [0m         [1;31mARGV_3>",[0m[1;31m                                          [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m            r1: [0m[1;96mARGV[0m[1;31m[3] | [0m[1;96mARGV[0m[1;31m[3] -> [0m[1;34m"<BV32 [0m[1;31m     [0m
+[2;36m                    [0m         [1;34mARGV_3>"[0m[1;31m,[0m[1;31m                                          [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m            ) @ 0xb014 -> [0m[1;33m<BV32 0x0>[0m[1;31m             [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m                                                   [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mBINARY: 88ip                                       [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mINPUT SOURCES:                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mLikely:[0m[1;31m                                            [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mNONE[0m[1;31m                                               [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;33mRANK: 0.600[0m[1;31m                                        [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m--------------------------------------------------[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31mdoSystemCmd([0m[1;31m                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m            r0: "echo 1 >/etc/ddns_<BV32 [0m[1;31m        [0m
+[2;36m                    [0m         [1;31mARGV_3>",[0m[1;31m                                          [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m            r1: [0m[1;96mARGV[0m[1;31m[3] | [0m[1;96mARGV[0m[1;31m[3] -> [0m[1;34m"<BV32 [0m[1;31m     [0m
+[2;36m                    [0m         [1;34mARGV_3>"[0m[1;31m,[0m[1;31m                                          [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m            ) @ 0xaeb0 -> [0m[1;33m<BV32 0x0>[0m[1;31m             [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m                                                   [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mBINARY: 88ip                                       [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mINPUT SOURCES:                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mLikely:[0m[1;31m                                            [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mNONE[0m[1;31m                                               [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;33mRANK: 0.600[0m[1;31m                                        [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFinished Running Analysis                          [0m

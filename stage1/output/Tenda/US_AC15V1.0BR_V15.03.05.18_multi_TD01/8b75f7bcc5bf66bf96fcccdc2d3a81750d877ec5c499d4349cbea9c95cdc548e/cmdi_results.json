@@ -1,0 +1,12 @@
+{
+    "sha256": "8b75f7bcc5bf66bf96fcccdc2d3a81750d877ec5c499d4349cbea9c95cdc548e",
+    "name": "chkntfs",
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/bin/chkntfs",
+    "closures": [],
+    "cfg_time": 0,
+    "vra_time": 0,
+    "sieve_time": 0,
+    "error": null,
+    "ret_code": 0,
+    "has_sinks": false
+}

@@ -1,0 +1,21 @@
+{
+    "closures": [],
+    "cfg_time": 0.25153160095214844,
+    "vra_time": 0.40666723251342773,
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/usr/sbin/comad",
+    "name": "comad",
+    "has_sinks": true,
+    "sha256": "cf849b1d98817a72e39665628354624f8ae83e27accb51487ea4c78b078bb3c7",
+    "sink_times": {},
+    "error": null,
+    "sieve_time": 0.5578117370605469,
+    "sinks": {
+        "system": 5
+    },
+    "time_data": {
+        "0x8714 -> 0x8574": {
+            "taint_time": 0.17877626419067383,
+            "rda_time": 0.31943774223327637
+        }
+    }
+}

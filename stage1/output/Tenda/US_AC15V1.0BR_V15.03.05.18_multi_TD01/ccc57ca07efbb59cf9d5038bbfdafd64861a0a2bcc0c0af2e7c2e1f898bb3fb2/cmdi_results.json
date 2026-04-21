@@ -1,0 +1,21 @@
+{
+    "closures": [],
+    "cfg_time": 2.0017220973968506,
+    "vra_time": 9.954503059387207,
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/usr/sbin/acsd",
+    "name": "acsd",
+    "has_sinks": true,
+    "sha256": "ccc57ca07efbb59cf9d5038bbfdafd64861a0a2bcc0c0af2e7c2e1f898bb3fb2",
+    "sink_times": {},
+    "error": null,
+    "sieve_time": 125.55408334732056,
+    "sinks": {
+        "system": 9
+    },
+    "time_data": {
+        "0xcef4 -> 0xd5ec -> 0x8d2c": {
+            "taint_time": 44.1968891620636,
+            "rda_time": 81.23409676551819
+        }
+    }
+}

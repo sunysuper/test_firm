@@ -1,0 +1,21 @@
+{
+    "closures": [],
+    "cfg_time": 2.9276695251464844,
+    "vra_time": 10.995667934417725,
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/bin/pptp",
+    "name": "pptp",
+    "has_sinks": true,
+    "sha256": "1b71df64a7ebfbdfb2824806c8a80adf96b8f35fc8305fd514e156e886c8ea96",
+    "sink_times": {},
+    "error": null,
+    "sieve_time": 82.45510411262512,
+    "sinks": {
+        "execvp": 1
+    },
+    "time_data": {
+        "0x9ea8 -> 0x9f3c -> 0x96d8": {
+            "taint_time": 2.627359390258789,
+            "rda_time": 79.80230259895325
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "sha256": "bb1804c3398eb0e6e5b2e6ce895ccbc45183ce9e29245e1cf211a1f04f043acb",
+    "name": "dnrd",
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/bin/dnrd",
+    "closures": [],
+    "cfg_time": 0,
+    "vra_time": 0,
+    "sieve_time": 0,
+    "error": null,
+    "ret_code": 0,
+    "has_sinks": false
+}

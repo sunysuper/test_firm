@@ -1,0 +1,12 @@
+{
+    "sha256": "9c5e62d773d6b061db291e2e12cabe9370f7203bf93a2224df893b3528f962cb",
+    "name": "emf.ko",
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/lib/modules/2.6.36.4brcmarm/kernel/drivers/net/emf/emf.ko",
+    "closures": [],
+    "cfg_time": 0,
+    "vra_time": 0,
+    "sieve_time": 0,
+    "error": null,
+    "ret_code": 0,
+    "has_sinks": false
+}

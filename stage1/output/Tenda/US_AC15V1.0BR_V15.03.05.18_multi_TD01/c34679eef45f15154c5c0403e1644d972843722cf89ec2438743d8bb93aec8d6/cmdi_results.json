@@ -1,0 +1,62 @@
+{
+    "closures": [
+        {
+            "trace": [
+                {
+                    "function": "sub_a45c",
+                    "string": "sub_a45c() @ 0xa45c",
+                    "ins_addr": "0xa45c"
+                }
+            ],
+            "sink": {
+                "function": "system",
+                "string": "system(<MultiValues(<BV32 stack_base - 0x12c>)>) @ 0xa5cc",
+                "ins_addr": "0xa5cc"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": true,
+            "sanitized": false
+        }
+    ],
+    "cfg_time": 1.8269562721252441,
+    "vra_time": 5.868930339813232,
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/usr/sbin/udhcpd",
+    "name": "udhcpd",
+    "has_sinks": true,
+    "sha256": "c34679eef45f15154c5c0403e1644d972843722cf89ec2438743d8bb93aec8d6",
+    "sink_times": {
+        "system": 0.8967270851135254
+    },
+    "error": null,
+    "sieve_time": 0.9614312648773193,
+    "sinks": {
+        "system": 1
+    },
+    "time_data": {
+        "0xa45c -> 0x8e1c": {
+            "taint_time": 0.2589385509490967,
+            "rda_time": 0.6368286609649658
+        }
+    }
+}

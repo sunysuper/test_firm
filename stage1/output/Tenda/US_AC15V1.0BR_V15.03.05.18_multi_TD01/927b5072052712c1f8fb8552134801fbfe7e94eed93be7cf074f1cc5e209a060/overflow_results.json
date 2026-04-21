@@ -1,0 +1,751 @@
+{
+    "closures": [
+        {
+            "trace": [
+                {
+                    "function": "sub_8d94",
+                    "string": "sub_8d94(<MultiValues(<BV32 TOP>)>) @ 0x8d94",
+                    "ins_addr": "0x8d94"
+                }
+            ],
+            "sink": {
+                "function": "strcpy",
+                "string": "strcpy(<MultiValues(<BV32 stack_base - 0x430>)>, <MultiValues(<BV32 TOP>)>) @ 0x8dc0",
+                "ins_addr": "0x8dc0"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_8b5c",
+                    "string": "sub_8b5c(<MultiValues(<BV32 TOP>)>) @ 0x8b5c",
+                    "ins_addr": "0x8b5c"
+                }
+            ],
+            "sink": {
+                "function": "strcpy",
+                "string": "strcpy(<MultiValues(<BV32 stack_base - 0x430>)>, <MultiValues(<BV32 TOP>)>) @ 0x8b88",
+                "ins_addr": "0x8b88"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_87ec",
+                    "string": "sub_87ec(<MultiValues(<BV32 TOP>)>) @ 0x87ec",
+                    "ins_addr": "0x87ec"
+                }
+            ],
+            "sink": {
+                "function": "strcpy",
+                "string": "strcpy(<MultiValues(<BV32 stack_base - 0x430>)>, <MultiValues(<BV32 TOP>)>) @ 0x8808",
+                "ins_addr": "0x8808"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_8c04",
+                    "string": "sub_8c04(<MultiValues(<BV32 TOP>)>) @ 0x8c04",
+                    "ins_addr": "0x8c04"
+                }
+            ],
+            "sink": {
+                "function": "strcpy",
+                "string": "strcpy(<MultiValues(<BV32 stack_base - 0x430>)>, <MultiValues(<BV32 TOP>)>) @ 0x8c30",
+                "ins_addr": "0x8c30"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_9018",
+                    "string": "sub_9018(<MultiValues(<BV32 TOP>)>) @ 0x9018",
+                    "ins_addr": "0x9018"
+                }
+            ],
+            "sink": {
+                "function": "strcpy",
+                "string": "strcpy(<MultiValues(<BV32 stack_base - 0x430>)>, <MultiValues(<BV32 TOP>)>) @ 0x903c",
+                "ins_addr": "0x903c"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_8e44",
+                    "string": "sub_8e44(<MultiValues(<BV32 TOP>)>) @ 0x8e44",
+                    "ins_addr": "0x8e44"
+                }
+            ],
+            "sink": {
+                "function": "strcpy",
+                "string": "strcpy(<MultiValues(<BV32 stack_base - 0x434>)>, <MultiValues(<BV32 TOP>)>) @ 0x8e74",
+                "ins_addr": "0x8e74"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_8a0c",
+                    "string": "sub_8a0c(<MultiValues(<BV32 TOP>)>) @ 0x8a0c",
+                    "ins_addr": "0x8a0c"
+                }
+            ],
+            "sink": {
+                "function": "strcpy",
+                "string": "strcpy(<MultiValues(<BV32 stack_base - 0x430>)>, <MultiValues(<BV32 TOP>)>) @ 0x8a38",
+                "ins_addr": "0x8a38"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_8904",
+                    "string": "sub_8904(<MultiValues(<BV32 TOP>)>) @ 0x8904",
+                    "ins_addr": "0x8904"
+                }
+            ],
+            "sink": {
+                "function": "strcpy",
+                "string": "strcpy(<MultiValues(<BV32 stack_base - 0x438>)>, <MultiValues(<BV32 TOP>)>) @ 0x891c",
+                "ins_addr": "0x891c"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_8f30",
+                    "string": "sub_8f30(<MultiValues(<BV32 TOP>)>) @ 0x8f30",
+                    "ins_addr": "0x8f30"
+                }
+            ],
+            "sink": {
+                "function": "strcpy",
+                "string": "strcpy(<MultiValues(<BV32 stack_base - 0x434>)>, <MultiValues(<BV32 TOP>)>) @ 0x8f60",
+                "ins_addr": "0x8f60"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_9190",
+                    "string": "sub_9190(<MultiValues(<BV32 TOP>)>) @ 0x9190",
+                    "ins_addr": "0x9190"
+                }
+            ],
+            "sink": {
+                "function": "strcpy",
+                "string": "strcpy(<MultiValues(<BV32 stack_base - 0x430>)>, <MultiValues(<BV32 TOP>)>) @ 0x91b8",
+                "ins_addr": "0x91b8"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_8ce0",
+                    "string": "sub_8ce0(<MultiValues(<BV32 TOP>)>) @ 0x8ce0",
+                    "ins_addr": "0x8ce0"
+                }
+            ],
+            "sink": {
+                "function": "strcpy",
+                "string": "strcpy(<MultiValues(<BV32 stack_base - 0x430>)>, <MultiValues(<BV32 TOP>)>) @ 0x8d0c",
+                "ins_addr": "0x8d0c"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_8ab4",
+                    "string": "sub_8ab4(<MultiValues(<BV32 TOP>)>) @ 0x8ab4",
+                    "ins_addr": "0x8ab4"
+                }
+            ],
+            "sink": {
+                "function": "strcpy",
+                "string": "strcpy(<MultiValues(<BV32 stack_base - 0x430>)>, <MultiValues(<BV32 TOP>)>) @ 0x8ae0",
+                "ins_addr": "0x8ae0"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_9280",
+                    "string": "sub_9280(<MultiValues(<BV32 TOP>)>) @ 0x9280",
+                    "ins_addr": "0x9280"
+                }
+            ],
+            "sink": {
+                "function": "strcpy",
+                "string": "strcpy(<MultiValues(<BV32 stack_base - 0x430>)>, <MultiValues(<BV32 TOP>)>) @ 0x92a8",
+                "ins_addr": "0x92a8"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_9508",
+                    "string": "sub_9508(<MultiValues(<BV32 TOP>)>) @ 0x9508",
+                    "ins_addr": "0x9508"
+                }
+            ],
+            "sink": {
+                "function": "strcpy",
+                "string": "strcpy(<MultiValues(<BV32 stack_base - 0x438>)>, <MultiValues(<BV32 TOP>)>) @ 0x9534",
+                "ins_addr": "0x9534"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_90d4",
+                    "string": "sub_90d4(<MultiValues(<BV32 TOP>)>) @ 0x90d4",
+                    "ins_addr": "0x90d4"
+                }
+            ],
+            "sink": {
+                "function": "strcpy",
+                "string": "strcpy(<MultiValues(<BV32 stack_base - 0x430>)>, <MultiValues(<BV32 TOP>)>) @ 0x90f8",
+                "ins_addr": "0x90f8"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_9374",
+                    "string": "sub_9374(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0x9374",
+                    "ins_addr": "0x9374"
+                }
+            ],
+            "sink": {
+                "function": "strcpy",
+                "string": "strcpy(<MultiValues(<BV32 stack_base - 0x438>)>, <MultiValues(<BV32 TOP>)>) @ 0x93a0",
+                "ins_addr": "0x93a0"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        }
+    ],
+    "cfg_time": 0.5157978534698486,
+    "vra_time": 1.3612654209136963,
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/bin/emf",
+    "name": "emf",
+    "has_sinks": true,
+    "sha256": "927b5072052712c1f8fb8552134801fbfe7e94eed93be7cf074f1cc5e209a060",
+    "sink_times": {
+        "strcpy": 14.272121906280518
+    },
+    "error": null,
+    "sieve_time": 14.316230297088623,
+    "sinks": {
+        "strcpy": 16
+    },
+    "time_data": {
+        "0x8d94 -> 0x8604": {
+            "taint_time": 0.0634150505065918,
+            "rda_time": 4.986030101776123
+        },
+        "0x8b5c -> 0x8604": {
+            "taint_time": 0.23912286758422852,
+            "rda_time": 0.4288930892944336
+        },
+        "0x87ec -> 0x8604": {
+            "taint_time": 0.09658956527709961,
+            "rda_time": 0.4879775047302246
+        },
+        "0x8c04 -> 0x8604": {
+            "taint_time": 0.06650447845458984,
+            "rda_time": 0.4739115238189697
+        },
+        "0x9018 -> 0x8604": {
+            "taint_time": 0.0557866096496582,
+            "rda_time": 0.4647345542907715
+        },
+        "0x8e44 -> 0x8604": {
+            "taint_time": 0.07473206520080566,
+            "rda_time": 0.46202993392944336
+        },
+        "0x8a0c -> 0x8604": {
+            "taint_time": 0.05038785934448242,
+            "rda_time": 0.4866366386413574
+        },
+        "0x8904 -> 0x8604": {
+            "taint_time": 0.07954263687133789,
+            "rda_time": 0.4591372013092041
+        },
+        "0x8f30 -> 0x8604": {
+            "taint_time": 0.07958555221557617,
+            "rda_time": 0.45789027214050293
+        },
+        "0x9190 -> 0x8604": {
+            "taint_time": 0.07762598991394043,
+            "rda_time": 0.4554476737976074
+        },
+        "0x8ce0 -> 0x8604": {
+            "taint_time": 0.06589245796203613,
+            "rda_time": 0.5113582611083984
+        },
+        "0x8ab4 -> 0x8604": {
+            "taint_time": 0.08019232749938965,
+            "rda_time": 0.69281005859375
+        },
+        "0x9280 -> 0x8604": {
+            "taint_time": 0.0713810920715332,
+            "rda_time": 0.46837687492370605
+        },
+        "0x9508 -> 0x8604": {
+            "taint_time": 0.0791940689086914,
+            "rda_time": 0.46318531036376953
+        },
+        "0x90d4 -> 0x8604": {
+            "taint_time": 0.06603050231933594,
+            "rda_time": 0.4706137180328369
+        },
+        "0x9374 -> 0x8604": {
+            "taint_time": 0.11818647384643555,
+            "rda_time": 0.4840977191925049
+        }
+    }
+}

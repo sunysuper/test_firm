@@ -1,0 +1,28 @@
+TRACE: 
+sub_472d4->sub_433ec->sub_423ec->sub_3e3b0->sub_3e56c->sub_3e5f4->doSystemCmd
+TRACE: 
+sub_472d4->sub_431c4->sub_42404->sub_3e4fc->sub_3e56c->sub_3e5f4->doSystemCmd
+TRACE: 
+sub_472d4->sub_431c4->sub_4241c->sub_423ec->sub_3e3b0->sub_3e56c->sub_3e5f4->doS
+ystemCmd
+TRACE: 
+sub_472d4->sub_431c4->sub_4241c->sub_42404->sub_3e4fc->sub_3e56c->sub_3e5f4->doS
+ystemCmd
+TRACE: sub_474a0->sub_40614->sub_3e4fc->sub_3e56c->sub_3e5f4->doSystemCmd
+TRACE: sub_472d4->sub_436a4->sub_3e3b0->sub_3e56c->sub_3e5f4->doSystemCmd
+TRACE: 
+sub_472d4->sub_43584->sub_42404->sub_3e4fc->sub_3e56c->sub_3e5f4->doSystemCmd
+TRACE: 
+sub_472d4->sub_433ec->sub_42404->sub_3e4fc->sub_3e56c->sub_3e5f4->doSystemCmd
+TRACE: 
+sub_472d4->sub_43584->sub_423ec->sub_3e3b0->sub_3e56c->sub_3e5f4->doSystemCmd
+TRACE: sub_472d4->sub_436a4->sub_3e4fc->sub_3e56c->sub_3e5f4->doSystemCmd
+TRACE: sub_474a0->sub_40614->sub_3e3b0->sub_3e56c->sub_3e5f4->doSystemCmd
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[37m|[0m[1;31mdoSystemCmd[0m[1;31m([0m
+[37m|[0m[1;31m            r0: [0m[1;31m<[0m[1;31mBV32[0m[1;31m TOP[0m[1;31m>[0m[1;31m,[0m
+[37m|[0m[1;31m            [0m[1;31m)[0m[1;31m @ [0m[1;31m0x3e5f8[0m[1;31m -> [0m[1;33m<[0m[1;33mBV32[0m[1;33m TOP[0m[1;33m>[0m
+
+BINARY: netctrl
+INPUT SOURCES:
+[1;34mUNKNOWN[0m

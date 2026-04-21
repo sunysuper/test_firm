@@ -1,0 +1,21 @@
+{
+    "closures": [],
+    "cfg_time": 0.4903604984283447,
+    "vra_time": 3.123293399810791,
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/bin/speedtest",
+    "name": "speedtest",
+    "has_sinks": true,
+    "sha256": "f6440edf0131b9f6d2e4bccb4e6070f47f496e49276b8dc919efcaf0b2b9a5af",
+    "sink_times": {},
+    "error": null,
+    "sieve_time": 52.53947472572327,
+    "sinks": {
+        "doSystemCmd": 3
+    },
+    "time_data": {
+        "0x92b8 -> 0x8bd4": {
+            "taint_time": 0.4535248279571533,
+            "rda_time": 52.0329749584198
+        }
+    }
+}

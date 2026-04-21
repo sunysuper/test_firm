@@ -1,0 +1,63 @@
+{
+    "closures": [
+        {
+            "trace": [
+                {
+                    "function": "sub_8854",
+                    "string": "sub_8854(<MultiValues(<BV32 TOP>)>) @ 0x8854",
+                    "ins_addr": "0x8854"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues(<BV120 0x6b696c6c616c6c202d3920 .. TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0x88a4",
+                "ins_addr": "0x88a4"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 1.0,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [],
+            "reachable_from_main": false,
+            "sanitized": false
+        }
+    ],
+    "cfg_time": 0.5243453979492188,
+    "vra_time": 1.1514661312103271,
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/bin/moniter",
+    "name": "moniter",
+    "has_sinks": true,
+    "sha256": "88ebff299142ca5732eea056da9a55e2b6c19362b6096ff399e6868af2ff9e5d",
+    "sink_times": {
+        "doSystemCmd": 0.2949955463409424
+    },
+    "error": null,
+    "sieve_time": 0.3466525077819824,
+    "sinks": {
+        "doSystemCmd": 2
+    },
+    "time_data": {
+        "0x87fc -> 0x86d4": {
+            "taint_time": 0.04155397415161133,
+            "rda_time": 0.07021975517272949
+        },
+        "0x8854 -> 0x86d4": {
+            "taint_time": 0.07004261016845703,
+            "rda_time": 0.08293795585632324
+        }
+    }
+}

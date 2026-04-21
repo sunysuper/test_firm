@@ -1,0 +1,12 @@
+{
+    "sha256": "caa75aa74dfc777a5fa97bd646af5b426ce3410137629c0b1b8c28752cea51c0",
+    "name": "NetUSB.ko",
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/lib/modules/NetUSB.ko",
+    "closures": [],
+    "cfg_time": 0,
+    "vra_time": 0,
+    "sieve_time": 0,
+    "error": null,
+    "ret_code": 0,
+    "has_sinks": false
+}

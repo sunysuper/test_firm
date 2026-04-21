@@ -1,0 +1,12 @@
+{
+    "sha256": "b3ff0b81df8e8acd3ba911b38c6a1e247997bd34ac547473b6f77c8bc21f6a44",
+    "name": "privilege_ip.ko",
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/lib/modules/privilege_ip.ko",
+    "closures": [],
+    "cfg_time": 0,
+    "vra_time": 0,
+    "sieve_time": 0,
+    "error": null,
+    "ret_code": 0,
+    "has_sinks": false
+}

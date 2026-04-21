@@ -1,0 +1,42 @@
+TRACE: 
+dhcpInform->sub_16d64->sub_14e34->dhcpStop->sub_ed14->sub_e7c0->sub_e998->doSyst
+emCmd
+TRACE: 
+dhcpInform->sub_121e0->sub_12864->sub_12940->sub_ed14->sub_e7c0->sub_e998->doSys
+temCmd
+TRACE: 
+dhcpReboot->sub_18a18->sub_16d64->sub_14e34->dhcpStop->sub_ed14->sub_e7c0->sub_e
+998->doSystemCmd
+TRACE: 
+dhcpInit->sub_18a18->sub_18c68->sub_121e0->sub_12864->sub_12940->sub_ed14->sub_e
+7c0->sub_e998->doSystemCmd
+TRACE: 
+dhcpInit->sub_18a18->sub_16d64->sub_14e34->dhcpStop->sub_ed14->sub_e7c0->sub_e99
+8->doSystemCmd
+TRACE: 
+dhcpInit->sub_18a18->sub_18c68->dhcpStop->sub_ed14->sub_e7c0->sub_e998->doSystem
+Cmd
+TRACE: 
+dhcpReboot->sub_18a18->sub_18c68->dhcpStop->sub_ed14->sub_e7c0->sub_e998->doSyst
+emCmd
+TRACE: 
+dhcpInit->sub_16d64->sub_14e34->dhcpStop->sub_ed14->sub_e7c0->sub_e998->doSystem
+Cmd
+TRACE: 
+dhcpRebind->sub_16d64->sub_14e34->dhcpStop->sub_ed14->sub_e7c0->sub_e998->doSyst
+emCmd
+TRACE: 
+dhcpReboot->sub_18a18->sub_18c68->sub_121e0->sub_12864->sub_12940->sub_ed14->sub
+_e7c0->sub_e998->doSystemCmd
+TRACE: 
+dhcpRenew->sub_16d64->sub_14e34->dhcpStop->sub_ed14->sub_e7c0->sub_e998->doSyste
+mCmd
+TRACE: dhcpInit->dhcpStop->sub_ed14->sub_e7c0->sub_e998->doSystemCmd
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[37m|[0m[1;31mdoSystemCmd[0m[1;31m([0m
+[37m|[0m[1;31m            r0: [0m[1;31m"[0m[1;31m<[0m[1;31mBV32[0m[1;31m TOP[0m[1;31m>[0m[1;31mÿÿZ|"[0m[1;31m,[0m
+[37m|[0m[1;31m            [0m[1;31m)[0m[1;31m @ [0m[1;31m0xeaf8[0m[1;31m -> [0m[1;33m<[0m[1;33mBV32[0m[1;33m TOP[0m[1;33m>[0m
+
+BINARY: dhcpcd
+INPUT SOURCES:
+[1;34mUNKNOWN[0m

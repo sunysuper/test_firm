@@ -1,0 +1,81 @@
+{
+    "closures": [
+        {
+            "trace": [
+                {
+                    "function": "sub_25a2c",
+                    "string": "sub_25a2c(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0x25a2c",
+                    "ins_addr": "0x25a2c"
+                }
+            ],
+            "sink": {
+                "function": "execve",
+                "string": "execve(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0x25a48",
+                "ins_addr": "0x25a48"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.15,
+            "summary_augmented": true,
+            "summary_tags": [
+                "OVERFLOW_POSSIBLE"
+            ],
+            "summary_locations": [
+                "0xb99c",
+                "0xb884",
+                "0x239a4"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        }
+    ],
+    "cfg_time": 50.639058351516724,
+    "vra_time": 185.81410145759583,
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/usr/bin/nginx",
+    "name": "nginx",
+    "has_sinks": true,
+    "sha256": "0ba02e187410e92a7abc8230eab742603913d61c410666ca9a58628531737cab",
+    "sink_times": {
+        "execve": 76.5145411491394
+    },
+    "error": null,
+    "sieve_time": 76.6701774597168,
+    "sinks": {
+        "execve": 1
+    },
+    "time_data": {
+        "0x25a2c -> 0x9a24": {
+            "taint_time": 0.0551600456237793,
+            "rda_time": 76.45779776573181
+        }
+    }
+}

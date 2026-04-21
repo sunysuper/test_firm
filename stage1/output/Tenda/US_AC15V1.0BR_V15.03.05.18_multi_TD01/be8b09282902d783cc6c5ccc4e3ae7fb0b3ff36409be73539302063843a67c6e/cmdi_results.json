@@ -1,0 +1,26 @@
+{
+    "closures": [],
+    "cfg_time": 0.3847520351409912,
+    "vra_time": 1.4162132740020752,
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/bin/tendaupload",
+    "name": "tendaupload",
+    "has_sinks": true,
+    "sha256": "be8b09282902d783cc6c5ccc4e3ae7fb0b3ff36409be73539302063843a67c6e",
+    "sink_times": {},
+    "error": null,
+    "sieve_time": 3.3770294189453125,
+    "sinks": {
+        "system": 5,
+        "doSystemCmd": 1
+    },
+    "time_data": {
+        "0x9078 -> 0x8924": {
+            "taint_time": 1.4144046306610107,
+            "rda_time": 1.6281840801239014
+        },
+        "0x8b9c -> 0x89f0": {
+            "taint_time": 0.10152173042297363,
+            "rda_time": 0.1499011516571045
+        }
+    }
+}

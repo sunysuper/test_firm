@@ -1,0 +1,12 @@
+{
+    "sha256": "0da5862667c670e8a5fcdc0e771b3d974ad2ced623a7e4b1d7e20886953fb2c6",
+    "name": "usb-storage.ko",
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/lib/modules/2.6.36.4brcmarm/kernel/drivers/usb/storage/usb-storage.ko",
+    "closures": [],
+    "cfg_time": 0,
+    "vra_time": 0,
+    "sieve_time": 0,
+    "error": null,
+    "ret_code": 0,
+    "has_sinks": false
+}

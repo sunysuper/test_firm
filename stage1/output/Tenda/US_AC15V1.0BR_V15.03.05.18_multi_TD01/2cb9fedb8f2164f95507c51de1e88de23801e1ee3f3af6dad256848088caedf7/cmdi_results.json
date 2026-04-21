@@ -1,0 +1,12 @@
+{
+    "sha256": "2cb9fedb8f2164f95507c51de1e88de23801e1ee3f3af6dad256848088caedf7",
+    "name": "cdc-acm.ko",
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/lib/modules/2.6.36.4brcmarm/kernel/drivers/usb/class/cdc-acm.ko",
+    "closures": [],
+    "cfg_time": 0,
+    "vra_time": 0,
+    "sieve_time": 0,
+    "error": null,
+    "ret_code": 0,
+    "has_sinks": false
+}

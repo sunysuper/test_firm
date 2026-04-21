@@ -1,0 +1,12 @@
+{
+    "sha256": "cafd922ac97199a12459ac26672e64dbbc7b6fefb362cbb2c9166b1db7d0bee1",
+    "name": "usbmon.ko",
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/lib/modules/2.6.36.4brcmarm/kernel/drivers/usb/mon/usbmon.ko",
+    "closures": [],
+    "cfg_time": 0,
+    "vra_time": 0,
+    "sieve_time": 0,
+    "error": null,
+    "ret_code": 0,
+    "has_sinks": false
+}

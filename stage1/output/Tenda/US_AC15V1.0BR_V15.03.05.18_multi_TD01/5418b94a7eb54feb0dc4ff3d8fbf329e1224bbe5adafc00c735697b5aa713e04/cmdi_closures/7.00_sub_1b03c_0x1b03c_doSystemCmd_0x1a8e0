@@ -1,0 +1,42 @@
+main->sub_1b03c->sub_1a738->sub_1a93c->sub_1b03c->doSystemCmd
+--------------------------------------------------
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[37m|[0m[32m|[0m[34m|[0m[1;31mdoSystemCmd[0m[1;31m([0m
+[37m|[0m[32m|[0m[34m|[0m[1;31m            r0: [0m[1;31m"pppoecd eth1 -u [0m[1;31m<[0m[1;31mBV256[0m[1;31m [0m
+[1;31mGetValue[0m[1;31m([0m[1;31m"[0m[1;31mwl.wisp.pppoe_name"[0m[1;31m)[0m[1;31m@[0m[1;31m0x1a880[0m[1;31m> -p <BV256 [0m
+[1;31mGetValue[0m[1;31m([0m[1;31m"wl.wisp.pppoe_password"[0m[1;31m)[0m[1;31m@[0m[1;31m0x1a898[0m[1;31m> -r <BV256 [0m
+[1;31mGetValue[0m[1;31m([0m[1;31m"wl.wisp.pppoe_mtu"[0m[1;31m)[0m[1;31m@[0m[1;31m0x1a8b0[0m[1;31m> -t <BV256 [0m
+[1;31mGetValue[0m[1;31m([0m[1;31m"wl.wisp.pppoe_mtu"[0m[1;31m)[0m[1;31m@[0m[1;31m0x1a8b0[0m[1;31m>[0m[1;31m -i [0m[1;31m0[0m[1;31m -U [0m[1;31m0[0m[1;31m &",[0m
+[37m|[0m[32m|[0m[34m|[0m[1;31m            r1: [0m[1;31m<[0m[1;31mBV32[0m[1;31m stack_base - [0m[1;31m0x158[0m[1;31m> -> [0m[1;34m"<BV256 [0m
+[1;34mGetValue[0m[1;34m([0m[1;34m"[0m[1;34mwl.wisp.pppoe_name"[0m[1;34m)[0m[1;34m@[0m[1;34m0x1a880[0m[1;34m>[0m[1;34m"[0m[1;31m,[0m
+[37m|[0m[32m|[0m[34m|[0m[1;31m            r2: [0m[1;31m<[0m[1;31mBV32[0m[1;31m stack_base - [0m[1;31m0x258[0m[1;31m> -> [0m[1;34m"<BV256 [0m
+[1;34mGetValue[0m[1;34m([0m[1;34m"[0m[1;34mwl.wisp.pppoe_password"[0m[1;34m)[0m[1;34m@[0m[1;34m0x1a898[0m[1;34m>[0m[1;34m"[0m[1;31m,[0m
+[37m|[0m[32m|[0m[34m|[0m[1;31m            r3: [0m[1;31m<[0m[1;31mBV32[0m[1;31m stack_base - [0m[1;31m0x298[0m[1;31m> -> [0m[1;34m"<BV256 [0m
+[1;34mGetValue[0m[1;34m([0m[1;34m"[0m[1;34mwl.wisp.pppoe_mtu"[0m[1;34m)[0m[1;34m@[0m[1;34m0x1a8b0[0m[1;34m>[0m[1;34m"[0m[1;31m,[0m
+[37m|[0m[32m|[0m[34m|[0m[1;31m            [0m[1;31m<[0m[1;31mMem[0m[1;31m SP-[0m[1;31m0x2a8[0m[1;31m<[0m[1;31m4[0m[1;31m> [0m[1;31m([0m[1;31mstack[0m[1;31m)[0m[1;31m>: <BV32 stack_base - [0m[1;31m0x298[0m[1;31m> -> [0m[1;34m"<BV256 [0m
+[1;34mGetValue[0m[1;34m([0m[1;34m"[0m[1;34mwl.wisp.pppoe_mtu"[0m[1;34m)[0m[1;34m@[0m[1;34m0x1a8b0[0m[1;34m>[0m[1;34m"[0m[1;31m,[0m
+[37m|[0m[32m|[0m[34m|[0m[1;31m            [0m[1;31m)[0m[1;31m @ [0m[1;31m0x1a8e0[0m[1;31m -> [0m[1;33m<[0m[1;33mBV32[0m[1;33m [0m[1;33m0x0[0m[1;33m>[0m
+
+BINARY: time_check
+INPUT SOURCES:
+[1;35mLikely:[0m
+[1;35m----------[0m
+[1;35mKEY: [0m[1;35m"wl.wisp.pppoe_mtu"[0m
+[1;35mKeywords: [0m[1;3;35mNone[0m
+[1;35mBinary Source: UNKNOWN[0m
+[1;35mSink: [0m[1;35mGetValue[0m[1;35m([0m[1;35m"wl.wisp.pppoe_mtu"[0m[1;35m)[0m[1;35m@[0m[1;35m0x1a8b0[0m
+[1;35m----------[0m
+[1;35m----------[0m
+[1;35mKEY: [0m[1;35m"wl.wisp.pppoe_name"[0m
+[1;35mKeywords: [0m[1;3;35mNone[0m
+[1;35mBinary Source: UNKNOWN[0m
+[1;35mSink: [0m[1;35mGetValue[0m[1;35m([0m[1;35m"wl.wisp.pppoe_name"[0m[1;35m)[0m[1;35m@[0m[1;35m0x1a880[0m
+[1;35m----------[0m
+[1;35m----------[0m
+[1;35mKEY: [0m[1;35m"wl.wisp.pppoe_password"[0m
+[1;35mKeywords: [0m[1;3;35mNone[0m
+[1;35mBinary Source: UNKNOWN[0m
+[1;35mSink: [0m[1;35mGetValue[0m[1;35m([0m[1;35m"wl.wisp.pppoe_password"[0m[1;35m)[0m[1;35m@[0m[1;35m0x1a898[0m
+[1;35m----------[0m
+[33mRANK: [0m[1;33m7.000[0m

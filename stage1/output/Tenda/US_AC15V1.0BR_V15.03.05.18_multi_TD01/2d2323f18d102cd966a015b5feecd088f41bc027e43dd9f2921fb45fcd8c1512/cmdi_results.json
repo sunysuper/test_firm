@@ -1,0 +1,25 @@
+{
+    "closures": [],
+    "cfg_time": 0.2903015613555908,
+    "vra_time": 1.0319104194641113,
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/bin/upgrade",
+    "name": "upgrade",
+    "has_sinks": true,
+    "sha256": "2d2323f18d102cd966a015b5feecd088f41bc027e43dd9f2921fb45fcd8c1512",
+    "sink_times": {},
+    "error": null,
+    "sieve_time": 8.115015745162964,
+    "sinks": {
+        "doSystemCmd": 19
+    },
+    "time_data": {
+        "0x8d00 -> 0x87fc": {
+            "taint_time": 0.8100242614746094,
+            "rda_time": 6.259187698364258
+        },
+        "0x8978 -> 0x87fc": {
+            "taint_time": 0.2803349494934082,
+            "rda_time": 0.563521146774292
+        }
+    }
+}

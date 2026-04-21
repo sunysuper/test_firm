@@ -1,0 +1,29 @@
+TRACE: sub_474a0->sub_40614->sub_3e3b0->sub_3f100->tpi_write_passwd->system
+TRACE: sub_472d4->sub_436a4->sub_3e3b0->sub_3f100->tpi_write_passwd->system
+TRACE: 
+sub_472d4->sub_431c4->sub_4241c->sub_423ec->sub_3e3b0->sub_3f100->tpi_write_pass
+wd->system
+TRACE: 
+sub_472d4->sub_43584->sub_423ec->sub_3e3b0->sub_3f100->tpi_write_passwd->system
+TRACE: 
+sub_472d4->sub_433ec->sub_423ec->sub_3e3b0->sub_3f100->tpi_write_passwd->system
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[37m|[0m[32m|[0m[1;31msystem[0m[1;31m([0m
+[37m|[0m[32m|[0m[1;31m       r0: [0m[1;31m<[0m[1;31mBV32[0m[1;31m stack_base - [0m[1;31m0x3ab0[0m[1;31m> -> [0m[1;34m"smbpasswd -a <BV200 [0m
+[1;34mGetValue[0m[1;34m([0m[1;34m"[0m[1;34musb.samba.user"[0m[1;34m)[0m[1;34m@[0m[1;34m0x3f330[0m[1;34m[[0m[1;34m255:56[0m[1;34m][0m[1;34m>[0m[1;34m" | "[0m[1;34msmbpasswd -a <BV256 [0m
+[1;34mGetValue[0m[1;34m([0m[1;34m"usb.samba.user"[0m[1;34m)[0m[1;34m@[0m[1;34m0x3f330[0m[1;34m> -s < [0m[1;34m/tmp/[0m[1;34msmbpasswd[0m[1;34m" | [0m[1;34m"smbpasswd -a <BV256 [0m
+[1;34mGetValue[0m[1;34m([0m[1;34m"[0m[1;34musb.samba.user"[0m[1;34m)[0m[1;34m@[0m[1;34m0x3f330[0m[1;34m> -s < [0m[1;34m/tmp/[0m[1;34msmbpasswd[0m[1;34m" | [0m[1;34m"smbpasswd -a admin [0m
+[1;34m-s < /tmp/smbpasswd<BV56 GetValue[0m[1;34m([0m[1;34m"[0m[1;34musb.samba.user"[0m[1;34m)[0m[1;34m@[0m[1;34m0x3f330[0m[1;34m[[0m[1;34m55:0[0m[1;34m][0m[1;34m>[0m[1;34m -s < [0m
+[1;34m/tmp/[0m[1;34msmbpasswd[0m[1;34m"[0m[1;31m,[0m
+[37m|[0m[32m|[0m[1;31m       [0m[1;31m)[0m[1;31m @ [0m[1;31m0x3f8c4[0m[1;31m -> [0m[1;33m<[0m[1;33mBV32[0m[1;33m [0m[1;33m0x0[0m[1;33m>[0m
+
+BINARY: netctrl
+INPUT SOURCES:
+[1;35mLikely:[0m
+[1;35m----------[0m
+[1;35mKEY: [0m[1;35m"usb.samba.user"[0m
+[1;35mKeywords: [0m[1;3;35mNone[0m
+[1;35mBinary Source: UNKNOWN[0m
+[1;35mSink: [0m[1;35mGetValue[0m[1;35m([0m[1;35m"usb.samba.user"[0m[1;35m)[0m[1;35m@[0m[1;35m0x3f330[0m
+[1;35m----------[0m
+[33mRANK: [0m[1;33m1.400[0m

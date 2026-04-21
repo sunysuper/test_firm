@@ -1,0 +1,12 @@
+{
+    "sha256": "d5ad3209ff167e43debc684f2fe897b6c1daec82b0823cc6af24e1792b0874c8",
+    "name": "fastnat.ko",
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/lib/modules/fastnat.ko",
+    "closures": [],
+    "cfg_time": 0,
+    "vra_time": 0,
+    "sieve_time": 0,
+    "error": null,
+    "ret_code": 0,
+    "has_sinks": false
+}

@@ -1,0 +1,12 @@
+{
+    "sha256": "35d57747ffc72f7a5684c8e7e3b85ed4d3a01cc7cf555441a022cc72c9359ce8",
+    "name": "xl2tpd",
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/bin/xl2tpd",
+    "closures": [],
+    "cfg_time": 0,
+    "vra_time": 0,
+    "sieve_time": 0,
+    "error": "EARLY TERMINATION",
+    "ret_code": 1,
+    "has_sinks": true
+}

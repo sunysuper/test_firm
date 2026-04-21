@@ -1,0 +1,12 @@
+{
+    "sha256": "ec38af1ab82f0e65cac38173cb1710ab7004fcff2f5a543b5410ab8b4d6183db",
+    "name": "GPL_NetUSB.ko",
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/lib/modules/GPL_NetUSB.ko",
+    "closures": [],
+    "cfg_time": 0,
+    "vra_time": 0,
+    "sieve_time": 0,
+    "error": null,
+    "ret_code": 0,
+    "has_sinks": false
+}

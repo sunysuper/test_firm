@@ -1,0 +1,74 @@
+{
+  "alert_id": "ALERT-Tenda-httpd-0xad398",
+  "decision": "DISCARD",
+  "vuln_type": "cmd_injection",
+  "target": {
+    "firmware": "US_AC15V1.0BR_V15.03.05.18_multi_TD01",
+    "binary": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/bin/httpd",
+    "binary_arch": "mipsel",
+    "caller_function": "formSetFirewallCfg",
+    "caller_addr": "0xac818",
+    "sink_function": "doSystemCmd",
+    "sink_addr": "0xad398"
+  },
+  "input_channel": {
+    "source_type": "unknown",
+    "source_function": "sub_2BABC",
+    "source_addr": "",
+    "protocol": "HTTP",
+    "method": "POST",
+    "endpoint": "/goform/SetFirewallCfg",
+    "param_key": "firewallEn",
+    "content_type": "application/x-www-form-urlencoded"
+  },
+  "preconditions": {
+    "auth_required": true,
+    "default_credentials": null,
+    "config_dependencies": [],
+    "other": null
+  },
+  "sink_context": {
+    "code_snippet": "tpi_wan_get_ifname(i + 1, v24, v25, v7);\ndoSystemCmd(\"iptables -t filter -D INPUT -i %s -p icmp -m icmp --icmp-type 8 -j DROP\", (const char *)v7);",
+    "param_handling": "The HTTP form parameter firewallEn only controls whether the command path executes; the %s sink argument is filled separately into v7 by tpi_wan_get_ifname based on internal configuration values.",
+    "buffer_size": null,
+    "dangerous_chars": [
+      ";",
+      "|",
+      "`",
+      "$()"
+    ]
+  },
+  "dataflow_summary": {
+    "call_chain": [
+      "formSetFirewallCfg"
+    ],
+    "call_chain_addrs": [
+      "0xac818"
+    ],
+    "taint_propagation": "HTTP /goform/SetFirewallCfg firewallEn via sub_2BABC → branch/feature toggles in formSetFirewallCfg → tpi_wan_get_ifname(..., v7) supplies interface name → doSystemCmd format %s"
+  },
+  "verification": {
+    "reachability": {
+      "status": "PASS",
+      "evidence": "A request to /goform/SetFirewallCfg reaches formSetFirewallCfg, which conditionally executes the doSystemCmd call path."
+    },
+    "controllability": {
+      "status": "FAIL",
+      "evidence": "The sink parameter is v7 from tpi_wan_get_ifname, not the HTTP parameter firewallEn, and no evidence shows attacker-controlled data can set v7 contents."
+    },
+    "attribution": {
+      "status": "PASS",
+      "evidence": "The sink call at 0xad398 is directly located in formSetFirewallCfg and its endpoint registration was identified in sub_426B8."
+    }
+  },
+  "evidence_digest": "The handler formSetFirewallCfg is registered through sub_1721C(\"SetFirewallCfg\", formSetFirewallCfg), which maps to the HTTP endpoint /goform/SetFirewallCfg. Inside the handler, attacker-facing input is read from sub_2BABC(a1, \"firewallEn\", \"1111\"), but this value is only copied into dest and used to decide whether firewall rules should be updated. The actual sink argument at 0xad398 is v7, which is populated by tpi_wan_get_ifname(i + 1, v24, v25, v7) after reading configuration keys such as wans.flag, wan%d.connecttype, and sys.mode. The implementation of tpi_wan_get_ifname is only a thunk to an imported function, so the current evidence does not show attacker-controlled HTTP data reaching the sink parameter itself. Because the command argument is an interface name derived by external WAN-interface selection logic rather than direct web input, controllability is not established from the provided material.",
+  "metadata": {
+    "analysis_timestamp": "2026-04-21T02:12:38.903522",
+    "analysis_model": "gpt-5.4",
+    "tool_model": "gpt-5.4",
+    "reasoning_rounds": 0,
+    "tool_calls_total": 0,
+    "interaction_log_path": "Tenda/US_AC15V1.0BR_V15.03.05.18_multi_TD01/Tenda_US_AC15V1.0BR_V15.03.05.18_multi_TD01_bin_httpd_cmdi_0xad398.txt",
+    "confidence": 0.91
+  }
+}

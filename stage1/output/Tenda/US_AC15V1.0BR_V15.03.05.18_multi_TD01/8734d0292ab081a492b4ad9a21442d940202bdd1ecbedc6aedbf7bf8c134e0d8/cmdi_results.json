@@ -1,0 +1,16 @@
+{
+    "closures": [],
+    "cfg_time": 2.9070286750793457,
+    "vra_time": 21.076881408691406,
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/bin/l2tpd",
+    "name": "l2tpd",
+    "has_sinks": true,
+    "sha256": "8734d0292ab081a492b4ad9a21442d940202bdd1ecbedc6aedbf7bf8c134e0d8",
+    "sink_times": {},
+    "error": null,
+    "sieve_time": 0.20271539688110352,
+    "sinks": {
+        "doSystemCmd": 1
+    },
+    "time_data": {}
+}

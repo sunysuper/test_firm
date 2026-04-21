@@ -1,0 +1,12 @@
+{
+    "sha256": "f592101c50162ab110e7e44913ce9eebe623b4e3606e950deb0ea4367386cc7d",
+    "name": "nvram",
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/bin/nvram",
+    "closures": [],
+    "cfg_time": 0,
+    "vra_time": 0,
+    "sieve_time": 0,
+    "error": null,
+    "ret_code": 0,
+    "has_sinks": false
+}

@@ -1,0 +1,12 @@
+{
+    "sha256": "041e92829a045c02be0010c04f39e2e6a13c7b4f2993a9cbe51cc03a160c65e3",
+    "name": "logserver",
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/bin/logserver",
+    "closures": [],
+    "cfg_time": 0,
+    "vra_time": 0,
+    "sieve_time": 0,
+    "error": null,
+    "ret_code": 0,
+    "has_sinks": false
+}

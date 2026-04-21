@@ -1,0 +1,11 @@
+TRACE: ageActiveRoutes->sub_caa0->sub_c8b8->sub_babc->system
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[37m|[0m[32m|[0m[34m|[0m[33m|[0m[1;31msystem[0m[1;31m([0m
+[37m|[0m[32m|[0m[34m|[0m[33m|[0m[1;31m       r0: [0m[1;31m<[0m[1;31mBV32[0m[1;31m stack_base - [0m[1;31m0x13c[0m[1;31m> -> [0m[1;34m"iptables -t filter -D FORWARD -i [0m
+[1;34m<BV32 TOP> -d [0m[1;34m1337.1337.1337.1337[0m[1;34m -j ACCEPT [0m[1;34m2[0m[1;34m>[0m[1;34m/dev/[0m[1;34mnull[0m
+[1;34m"[0m[1;31m,[0m
+[37m|[0m[32m|[0m[34m|[0m[33m|[0m[1;31m       [0m[1;31m)[0m[1;31m @ [0m[1;31m0xbd78[0m[1;31m -> [0m[1;33m<[0m[1;33mBV32[0m[1;33m [0m[1;33m0x0[0m[1;33m>[0m
+
+BINARY: igmpproxy
+INPUT SOURCES:
+[1;34mUNKNOWN[0m

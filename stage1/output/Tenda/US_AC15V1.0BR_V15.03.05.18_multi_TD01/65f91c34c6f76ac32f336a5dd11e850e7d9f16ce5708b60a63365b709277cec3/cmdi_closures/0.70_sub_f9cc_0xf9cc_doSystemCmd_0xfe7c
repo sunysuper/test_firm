@@ -1,0 +1,57 @@
+TRACE: sub_f61c->sub_f558->sub_f161->sub_f12d->sub_ee95->sub_f9cc->doSystemCmd
+TRACE: sub_f61c->sub_f558->sub_f161->sub_f9cc->doSystemCmd
+TRACE: sub_f409->sub_f40c->sub_f161->sub_f12d->sub_ee95->sub_f9cc->doSystemCmd
+TRACE: sub_f34b->sub_f350->sub_ef39->sub_ee95->sub_f9cc->doSystemCmd
+TRACE: sub_f409->sub_f40c->sub_f448->sub_ee95->sub_f9cc->doSystemCmd
+TRACE: sub_fc90->sub_f161->sub_f12d->sub_ee95->sub_f9cc->doSystemCmd
+TRACE: sub_f441->sub_f9cc->doSystemCmd
+TRACE: sub_f718->sub_f161->sub_f9cc->doSystemCmd
+TRACE: sub_f87b->sub_f87c->sub_f558->sub_f225->sub_f9cc->doSystemCmd
+TRACE: sub_f1d1->sub_f161->sub_f12d->sub_ee95->sub_f9cc->doSystemCmd
+TRACE: sub_fc90->sub_f161->sub_f9cc->doSystemCmd
+TRACE: sub_faf1->sub_fbe0->sub_f558->sub_f161->sub_f9cc->doSystemCmd
+TRACE: sub_f87b->sub_f87c->sub_f161->sub_f9cc->doSystemCmd
+TRACE: sub_f1dd->sub_f9cc->doSystemCmd
+TRACE: sub_f8b4->sub_f219->sub_f12d->sub_ee95->sub_f9cc->doSystemCmd
+TRACE: sub_f7f0->sub_f161->sub_f9cc->doSystemCmd
+TRACE: sub_f87b->sub_f87c->sub_f558->sub_f225->sub_fd84->sub_f9cc->doSystemCmd
+TRACE: sub_f011->sub_ee95->sub_f9cc->doSystemCmd
+TRACE: sub_faf1->sub_fbe0->sub_f558->sub_f225->sub_fd84->sub_f9cc->doSystemCmd
+TRACE: sub_f478->sub_f448->sub_ee95->sub_f9cc->doSystemCmd
+TRACE: sub_f514->sub_f00d->sub_ee95->sub_f9cc->doSystemCmd
+TRACE: sub_f409->sub_f40c->sub_f161->sub_f9cc->doSystemCmd
+TRACE: sub_f34b->sub_f350->sub_ee95->sub_f9cc->doSystemCmd
+TRACE: sub_f61c->sub_f558->sub_f225->sub_f9cc->doSystemCmd
+TRACE: 
+sub_f87b->sub_f87c->sub_f558->sub_f161->sub_f12d->sub_ee95->sub_f9cc->doSystemCm
+d
+TRACE: sub_f8b4->sub_f219->sub_f9cc->doSystemCmd
+TRACE: sub_10914->sub_1008c->sub_ff08->sub_f225->sub_fd84->sub_f9cc->doSystemCmd
+TRACE: 
+sub_faf1->sub_fbe0->sub_f558->sub_f161->sub_f12d->sub_ee95->sub_f9cc->doSystemCm
+d
+TRACE: sub_f61c->sub_f558->sub_f225->sub_fd84->sub_f9cc->doSystemCmd
+TRACE: sub_10650->sub_ff08->sub_f225->sub_fd84->sub_f9cc->doSystemCmd
+TRACE: sub_f718->sub_f161->sub_f12d->sub_ee95->sub_f9cc->doSystemCmd
+TRACE: sub_f1bd->sub_ee95->sub_f9cc->doSystemCmd
+TRACE: sub_f2a4->sub_f12d->sub_ee95->sub_f9cc->doSystemCmd
+TRACE: sub_f87b->sub_f87c->sub_f558->sub_f161->sub_f9cc->doSystemCmd
+TRACE: sub_f1d1->sub_f161->sub_f9cc->doSystemCmd
+TRACE: sub_10914->sub_1008c->sub_ff08->sub_f225->sub_f9cc->doSystemCmd
+TRACE: sub_faf1->sub_fbe0->sub_f558->sub_f225->sub_f9cc->doSystemCmd
+TRACE: sub_f7f0->sub_f161->sub_f12d->sub_ee95->sub_f9cc->doSystemCmd
+TRACE: sub_f439->sub_f9cc->doSystemCmd
+TRACE: sub_f059->sub_ee95->sub_f9cc->doSystemCmd
+TRACE: sub_10650->sub_ff08->sub_f225->sub_f9cc->doSystemCmd
+TRACE: sub_ee99->sub_ee95->sub_f9cc->doSystemCmd
+TRACE: sub_f87b->sub_f87c->sub_f161->sub_f12d->sub_ee95->sub_f9cc->doSystemCmd
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[37m|[0m[1;31mdoSystemCmd[0m[1;31m([0m
+[37m|[0m[1;31m            r0: [0m[1;31m"[0m[1;31m<[0m[1;31mBV32[0m[1;31m TOP[0m[1;31m>[0m[1;31mÿþÞà"[0m[1;31m,[0m
+[37m|[0m[1;31m            [0m[1;31m)[0m[1;31m @ [0m[1;31m0xfe7c[0m[1;31m -> [0m[1;33m<[0m[1;33mBV32[0m[1;33m TOP[0m[1;33m>[0m
+
+BINARY: netctrl
+INPUT SOURCES:
+[1;35mLikely:[0m
+[1;35mNONE[0m
+[33mRANK: [0m[1;33m0.700[0m

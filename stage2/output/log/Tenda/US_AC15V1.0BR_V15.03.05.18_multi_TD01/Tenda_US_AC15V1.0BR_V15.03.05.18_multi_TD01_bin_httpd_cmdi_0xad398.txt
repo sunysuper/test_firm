@@ -1,0 +1,915 @@
+============================================================
+IDACMP Vulnerability Analysis Log
+============================================================
+Timestamp:    2026-04-21T02:10:51.987777
+Binary:       httpd
+Vendor:       Tenda
+Firmware:     US_AC15V1.0BR_V15.03.05.18_multi_TD01
+Vuln Type:    cmdi
+Sink:         doSystemCmd @ 0xad398
+Rank:         7.7
+Reachable:    False
+Sanitized:    False
+Analysis Model: gpt-5.4
+Tool Model:     gpt-5.4
+============================================================
+
+Trace Path:
+  [0] formSetFirewallCfg @ 0xac818
+      formSetFirewallCfg(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0xac818
+
+Sink:
+  Function: doSystemCmd
+  Address:  0xad398
+  Call:     doSystemCmd(<MultiValues({0: {<BV584 0x69707461626c6573202d742066696c746572202d4420494e505554202d6920 .. Reverse(GetValue("lan.webport")@0xaa35c[63:32]) - 0x298 .. 0x202d702069636d70202d6d2069636d7020...
+
+============================================================
+[PHASE 1] Trace Analysis
+============================================================
+
+[TRACE-AGENT] Round 1
+Additional Information: Please provide the decompiled code (or disassembly around the sink) for the caller function `formSetFirewallCfg` at `0xac818`, specifically the basic block/instructions leading up to the sink call `doSystemCmd` at `0xad398`. I need the in-function assignments and string construction immediately before `0xad398` to verify whether the second argument really comes from `Reverse(GetValue("lan.webport")@0xaa35c[63:32]) - 0x298` or from some local buffer/other variable constructed inside `formSetFirewallCfg`.
+
+[TOOL-MODEL] {"tool": "decompile_function(address='0xac818')"}
+
+
+[IDA-TOOL] decompile_function(address='0xac818') -> OK
+/* line: 0, address: 0xac818 */ int __fastcall formSetFirewallCfg(int a1)
+/* line: 1 */ {
+/* line: 2 */   char *Value; // r0
+/* line: 3 */   _DWORD v4[8]; // [sp+1Ch] [bp-2E8h] BYREF
+/* line: 4 */   _DWORD s1[8]; // [sp+3Ch] [bp-2C8h] BYREF
+/* line: 5 */   __int128 v6; // [sp+5Ch] [bp-2A8h] BYREF
+/* line: 6 */   _DWORD v7[4]; // [sp+6Ch] [bp-298h] BYREF
+/* line: 7 */   int v8; // [sp+7Ch] [bp-288h] BYREF
+/* line: 8 */   _BYTE v9[24]; // [sp+80h] [bp-284h] BYREF
+/* line: 9 */   _DWORD v10[4]; // [sp+98h] [bp-26Ch] BYREF
+/* line: 10 */   int v11; // [sp+A8h] [bp-25Ch]
+/* line: 11 */   int v12; // [sp+ACh] [bp-258h]
+/* line: 12 */   int v13; // [sp+B0h] [bp-254h]
+/* line: 13 */   int v14; // [sp+B4h] [bp-250h]
+/* line: 14 */   _BYTE v15[320]; // [sp+B8h] [bp-24Ch] BYREF
+/* line: 15 */   _BYTE v16[16]; // [sp+1F8h] [bp-10Ch] BYREF
+/* line: 16 */   char nptr[64]; // [sp+208h] [bp-FCh] BYREF
+/* line: 17 */   char v18[64]; // [sp+248h] [bp-BCh] BYREF
+/* line: 18 */   _DWORD v19[2]; // [sp+288h] [bp-7Ch] BYREF
+/* line: 19 */   char s[64]; // [sp+290h] [bp-74h] BYREF
+/* line: 20 */   char dest[4]; // [sp+2D0h] [bp-34h] BYREF
+/* line: 21 */   int v22; // [sp+2D4h] [bp-30h]
+/* line: 22 */   char *v23; // [sp+2D8h] [bp-2Ch]
+/* line: 23 */   int v24; // [sp+2DCh] [bp-28h]
+/* line: 24 */   int v25; // [sp+2E0h] [bp-24h]
+/* line: 25 */   int v26; // [sp+2E4h] [bp-20h]
+/* line: 26 */   char *src; // [sp+2E8h] [bp-1Ch]
+/* line: 27 */   int i; // [sp+2ECh] [bp-18h]
+/* line: 28 */   int v29; // [sp+2F0h] [bp-14h]
+/* line: 29 */   _BOOL4 v30; // [sp+2F4h] [bp-10h]
+/* line: 30 */ 
+/* line: 31, address: 0xac83c */   *(_DWORD *)dest = 0;
+/* line: 32, address: 0xac844 */   v22 = 0;
+/* line: 33, address: 0xac85c */   memset(s, 0, sizeof(s));
+/* line: 34, address: 0xac864 */   v19[0] = 0;
+/* line: 35, address: 0xac86c */   v19[1] = 0;
+/* line: 36, address: 0xac874 */   src = 0;
+/* line: 37, address: 0xac88c */   memset(v18, 0, sizeof(v18));
+/* line: 38, address: 0xac8a4 */   memset(nptr, 0, sizeof(nptr));
+/* line: 39, address: 0xac8ac */   v30 = 0;
+/* line: 40, address: 0xac8b8 */   memset(v16, 0, sizeof(v16));
+/* line: 41, address: 0xacaf8 */   memset(v15, 0, sizeof(v15));
+/* line: 42, address: 0xacb58 */   v29 = 0;
+/* line: 43, address: 0xacb64 */   v11 = 0;
+/* line: 44, address: 0xacb70 */   v12 = 0;
+/* line: 45, address: 0xacb7c */   v13 = 0;
+/* line: 46, address: 0xacb88 */   v14 = 0;
+/* line: 47, address: 0xacb98 */   memset(v9, 0, sizeof(v9));
+/* line: 48, address: 0xacbfc */   src = (char *)sub_2BABC(a1, "firewallEn", "1111");
+/* line: 49, address: 0xacc04 */   Value = (char *)strlen(src);
+/* line: 50, address: 0xacc10 */   if ( (unsigned int)Value > 3 )
+/* line: 51 */   {
+/* line: 52, address: 0xacc24 */     strcpy(dest, src);
+/* line: 53, address: 0xacc3c */     GetValue("security.ddos.map", s);
+/* line: 54, address: 0xacc54 */     GetValue("firewall.pingwan", v19);
+/* line: 55, address: 0xacc80 */     sprintf(
+/* line: 56 */       nptr,
+/* line: 57 */       "%c,1500;%c,1500;%c,1500",
+/* line: 58 */       (unsigned __int8)dest[0],
+/* line: 59 */       (unsigned __int8)dest[2],
+/* line: 60 */       (unsigned __int8)dest[1]);
+/* line: 61, address: 0xacc98 */     SetValue("security.ddos.map", nptr);
+/* line: 62, address: 0xaccb4 */     SetValue("firewall.pingwan", &dest[3]);
+/* line: 63, address: 0xaccd0 */     memset(nptr, (int)&unk_F306C, sizeof(nptr));
+/* line: 64, address: 0xacce8 */     Value = (char *)GetValue("security.ddos.map", nptr);
+/* line: 65, address: 0xaccf4 */     if ( Value )
+/* line: 66 */     {
+/* line: 67, address: 0xacd24 */       if ( sscanf(nptr, "%[^;];%[^;];%[^;]", &v15[96], &v15[128], &v15[160]) == 3 )
+/* line: 68 */       {
+/* line: 69, address: 0xacd30 */         if ( v15[96] == 49 )
+/* line: 70 */         {
+/* line: 71, address: 0xacd3c */           v29 |= 4u;
+/* line: 72, address: 0xacd54 */           v11 = atoi(&v15[98]);
+/* line: 73 */         }
+/* line: 74, address: 0xacd60 */         if ( v15[128] == 49 )
+/* line: 75 */         {
+/* line: 76, address: 0xacd6c */           v29 |= 2u;
+/* line: 77, address: 0xacd84 */           v12 = atoi(&v15[130]);
+/* line: 78 */         }
+/* line: 79, address: 0xacd90 */         if ( v15[160] == 49 )
+/* line: 80 */         {
+/* line: 81, address: 0xacd9c */           v29 |= 1u;
+/* line: 82, address: 0xacdb4 */           v13 = atoi(&v15[162]);
+/* line: 83 */         }
+/* line: 84 */       }
+/* line: 85, address: 0xacdd8 */       Value = (char *)sscanf(s, "%[^;];%[^;];%[^;]", &v15[32], v15, &v15[64]);
+/* line: 86, address: 0xace98 */       if ( Value == (char *)3
+/* line: 87 */         && v15[32] == v15[96]
+/* line: 88 */         && (v15[96] == 48 || (Value = (char *)atoi(&v15[34]), (char *)v11 == Value))
+/* line: 89 */         && v15[0] == v15[128]
+/* line: 90 */         && (v15[128] == 48 || (Value = (char *)atoi(&v15[2]), (char *)v12 == Value))
+/* line: 91 */         && v15[64] == v15[160]
+/* line: 92 */         && (v15[160] == 48 || (Value = (char *)atoi(&v15[66]), (char *)v13 == Value)) )
+/* line: 93 */       {
+/* line: 94, address: 0xacea0 */         v30 = 0;
+/* line: 95 */       }
+/* line: 96 */       else
+/* line: 97 */       {
+/* line: 98, address: 0xacebc */         GetValue("security.ipop.map", v16);
+/* line: 99, address: 0xaced0 */         tpi_arp_ddos_ip_fence_enable(v29, v16);
+/* line: 100, address: 0xaceec */         v10[0] = v29;
+/* line: 101, address: 0xacef4 */         v10[3] = v11;
+/* line: 102, address: 0xacefc */         v10[2] = v12;
+/* line: 103, address: 0xacf04 */         v10[1] = v13;
+/* line: 104, address: 0xacf10 */         sub_AA1B0(v9);
+/* line: 105, address: 0xacf1c */         tpi_ddos_ip_lan_info_set(v9);
+/* line: 106, address: 0xacf28 */         Value = (char *)tpi_ddos_fence_set(v10);
+/* line: 107, address: 0xacf34 */         if ( !Value )
+/* line: 108, address: 0xacf3c */           v30 = 0;
+/* line: 109 */       }
+/* line: 110 */     }
+/* line: 111, address: 0xacf54 */     if ( LOBYTE(v19[0]) != (unsigned __int8)dest[3] )
+/* line: 112 */     {
+/* line: 113, address: 0xacf5c */       i = 0;
+/* line: 114, address: 0xacf64 */       v26 = 1;
+/* line: 115, address: 0xacf6c */       v25 = 0;
+/* line: 116, address: 0xacf74 */       v24 = 3;
+/* line: 117, address: 0xacf7c */       v8 = 0;
+/* line: 118, address: 0xacf88 */       memset(v7, 0, sizeof(v7));
+/* line: 119, address: 0xacfc4 */       strcpy((char *)&v6, "vlan2");
+/* line: 120, address: 0xacfdc */       memset((char *)&v6 + 6, 0, 10);
+/* line: 121, address: 0xad01c */       memset(s1, 0, sizeof(s1));
+/* line: 122, address: 0xad080 */       memset(v4, 0, sizeof(v4));
+/* line: 123, address: 0xad0f0 */       GetValue("wl2g.public.mode", s1);
+/* line: 124, address: 0xad108 */       GetValue("wl5g.public.mode", v4);
+/* line: 125, address: 0xad144 */       if ( !strcmp((const char *)s1, "wisp") || !strcmp((const char *)v4, "wisp") )
+/* line: 126 */       {
+/* line: 127, address: 0xad154 */         Value = (char *)getWispIfName();
+/* line: 128, address: 0xad15c */         v23 = Value;
+/* line: 129, address: 0xad170 */         if ( Value && *v23 )
+/* line: 130 */         {
+/* line: 131, address: 0xad18c */           strcpy((char *)v7, v23);
+/* line: 132, address: 0xad198 */           if ( dest[3] == 49 )
+/* line: 133 */           {
+/* line: 134, address: 0xad1b0 */             doSystemCmd("iptables -t filter -D INPUT -i %s -p icmp -m icmp --icmp-type 8 -j DROP", (const char *)v7);
+/* line: 135, address: 0xad1c8 */             Value = (char *)doSystemCmd(
+/* line: 136 */                               "iptables -t filter -I INPUT -i %s -p icmp -m icmp --icmp-type 8 -j DROP",
+/* line: 137 */                               (const char *)v7);
+/* line: 138 */           }
+/* line: 139 */           else
+/* line: 140 */           {
+/* line: 141, address: 0xad1e4 */             Value = (char *)doSystemCmd(
+/* line: 142 */                               "iptables -t filter -D INPUT -i %s -p icmp -m icmp --icmp-type 8 -j DROP",
+/* line: 143 */                               (const char *)v7);
+/* line: 144 */           }
+/* line: 145 */         }
+/* line: 146 */       }
+/* line: 147 */       else
+/* line: 148 */       {
+/* line: 149, address: 0xad200 */         GetValue("wans.flag", nptr);
+/* line: 150, address: 0xad20c */         Value = (char *)atoi(nptr);
+/* line: 151, address: 0xad210 */         v26 = (int)Value;
+/* line: 152, address: 0xad218 */         for ( i = 0; i < v26; ++i )
+/* line: 153 */         {
+/* line: 154, address: 0xad244 */           sprintf(v18, "wan%d.connecttype", i + 1);
+/* line: 155, address: 0xad258 */           GetValue(v18, nptr);
+/* line: 156, address: 0xad268 */           v25 = atoi(nptr);
+/* line: 157, address: 0xad280 */           GetValue("sys.mode", nptr);
+/* line: 158, address: 0xad290 */           v24 = atoi(nptr);
+/* line: 159, address: 0xad2ac */           tpi_wan_get_ifname(i + 1, v24, v25, v7);
+/* line: 160, address: 0xad2b8 */           Value = (char *)tpi_wan_double_access_check(&v8);
+/* line: 161, address: 0xad2c4 */           if ( Value )
+/* line: 162, address: 0xad2c4 */             break;
+/* line: 163, address: 0xad2d0 */           if ( dest[3] == 49 )
+/* line: 164 */           {
+/* line: 165, address: 0xad2dc */             if ( v8 == 1 )
+/* line: 166 */             {
+/* line: 167, address: 0xad2f4 */               doSystemCmd("iptables -t filter -D INPUT -i %s -p icmp -m icmp --icmp-type 8 -j DROP", (const char *)v7);
+/* line: 168, address: 0xad30c */               doSystemCmd("iptables -t filter -D INPUT -i %s -p icmp -m icmp --icmp-type 8 -j DROP", (const char *)&v6);
+/* line: 169, address: 0xad324 */               doSystemCmd("iptables -t filter -I INPUT -i %s -p icmp -m icmp --icmp-type 8 -j DROP", (const char *)v7);
+/* line: 170, address: 0xad33c */               Value = (char *)doSystemCmd(
+/* line: 171 */                                 "iptables -t filter -I INPUT -i %s -p icmp -m icmp --icmp-type 8 -j DROP",
+/* line: 172 */                                 (const char *)&v6);
+/* line: 173 */             }
+/* line: 174 */             else
+/* line: 175 */             {
+/* line: 176, address: 0xad358 */               doSystemCmd("iptables -t filter -D INPUT -i %s -p icmp -m icmp --icmp-type 8 -j DROP", (const char *)v7);
+/* line: 177, address: 0xad370 */               Value = (char *)doSystemCmd(
+/* line: 178 */                                 "iptables -t filter -I INPUT -i %s -p icmp -m icmp --icmp-type 8 -j DROP",
+/* line: 179 */                                 (const char *)v7);
+/* line: 180 */             }
+/* line: 181 */           }
+/* line: 182, address: 0xad380 */           else if ( v8 )
+/* line: 183 */           {
+/* line: 184, address: 0xad3b4 */             doSystemCmd("iptables -t filter -D INPUT -i %s -p icmp -m icmp --icmp-type 8 -j DROP", (const char *)v7);
+/* line: 185, address: 0xad3cc */             Value = (char *)doSystemCmd(
+/* line: 186 */                               "iptables -t filter -D INPUT -i %s -p icmp -m icmp --icmp-type 8 -j DROP",
+/* line: 187 */                               (const char *)&v6);
+/* line: 188 */           }
+/* line: 189 */           else
+/* line: 190 */           {
+/* line: 191, address: 0xad398 */             Value = (char *)doSystemCmd(
+/* line: 192 */                               "iptables -t filter -D INPUT -i %s -p icmp -m icmp --icmp-type 8 -j DROP",
+/* line: 193 */                               (const char *)v7);
+/* line: 194 */           }
+/* line: 195 */         }
+/* line: 196 */       }
+/* line: 197 */     }
+/* line: 198 */   }
+/* line: 199, address: 0xad410 */   v30 = CommitCfm(Value) == 0;
+/* line: 200, address: 0xad438 */   sub_2C43C(a1, "HTTP/1.0 200 OK\r\n\r\n");
+/* line: 201, address: 0xad450 */   sub_2C43C(a1, "{\"errCode\":%d}", v30);
+/* line: 202, address: 0xad464 */   return sub_2C984(a1, 200);
+/* line: 203 */ }
+
+[TOOL-MODEL] {"status": "completed", "result": "已获取 `formSetFirewallCfg` 在 `0xac818` 的反编译代码，并可直接确认 sink `doSystemCmd`@`0xad398` 的第二个参数不是来自 `Reverse(GetValue(\"lan.webport\")@0xaa35c[63:32]) - 0x298`，而是来自函数内部局部缓冲区 `v7`。\n\n关键结论：\n- `0xad398` 调用点为：\n  `doSystemCmd(\"iptables -t filter -D INPUT -i %s -p icmp -m icmp --icmp-type 8 -j DROP\", (const char *)v7);`\n- 第二个参数明确是 `(const char *)v7`。\n- `v7` 是当前函数中的局部栈缓冲区：`_DWORD v7[4]; // [sp+6Ch] [bp-298h] BYREF`\n- 在到达 `0xad398` 之前，`v7` 的内容由如下调用在循环内写入：\n  `tpi_wan_get_ifname(i + 1, v24, v25, v7);`\n  因此它表示某个 WAN 接口名字符串。\n\n`0xad398` 之前的就地赋值/字符串构造链如下：\n1. 进入非 WISP 分支：\n   - `GetValue(\"wans.flag\", nptr);`\n   - `v26 = atoi(nptr);`\n   - `for (i = 0; i < v26; ++i)`\n2. 每轮循环中构造字符串并读取配置：\n   - `sprintf(v18, \"wan%d.connecttype\", i + 1);`   ← 在局部缓冲区 `v18` 中构造配置项名\n   - `GetValue(v18, nptr);`\n   - `v25 = atoi(nptr);`\n   - `GetValue(\"sys.mode\", nptr);`\n   - `v24 = atoi(nptr);`\n3. 生成 sink 所需接口名：\n   - `tpi_wan_get_ifname(i + 1, v24, v25, v7);`   ← 将接口名写入局部缓冲区 `v7`\n4. 判断双接入状态：\n   - `tpi_wan_double_access_check(&v8);`\n5. 落入 `dest[3] != 49 && !v8` 分支后执行 sink：\n   - `doSystemCmd(..., (const char *)v7);` @ `0xad398`\n\n紧邻 `0xad398` 的控制流条件：\n- `if (dest[3] == 49) { ... }`\n- `else if (v8) { ... }`\n- `else { doSystemCmd(..., v7); }`  ← `0xad398`\n\n因此，`0xad398` 这条 sink 的第二参数来源链是：\n`v7` <- `tpi_wan_get_ifname(i + 1, v24, v25, v7)`\n其中：\n- `i` 来自循环计数\n- `v24` 来自 `atoi(GetValue(\"sys.mode\"))`\n- `v25` 来自 `atoi(GetValue(sprintf(\"wan%d.connecttype\", i+1)))`\n\n未见任何与 `lan.webport`、`Reverse(...)`、或 `-0x298` 偏移计算相关的来源参与 `0xad398` 这一调用。你提到的 `0xaa35c` 数据流不对应这里的 sink 参数；这里是函数内局部 buffer 构造/填充后的接口名字串。"}
+
+[TOOL-MODEL] 任务完成 (共2轮)
+
+[TRACE-AGENT] Round 2
+[{'function': 'formSetFirewallCfg', 'string': 'formSetFirewallCfg(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0xac818', 'ins_addr': '0xac818'}, {'function': 'doSystemCmd', 'string': 'doSystemCmd("iptables -t filter -D INPUT -i %s -p icmp -m icmp --icmp-type 8 -j DROP", v7 <- tpi_wan_get_ifname(i + 1, v24, v25, v7)) @ 0xad398', 'ins_addr': '0xad398'}]
+
+============================================================
+[PHASE 1 RESULT] Extracted Source (耗时 26.9s)
+[{'function': 'formSetFirewallCfg', 'string': 'formSetFirewallCfg(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0xac818', 'ins_addr': '0xac818'}, {'function': 'doSystemCmd', 'string': 'doSystemCmd("iptables -t filter -D INPUT -i %s -p icmp -m icmp --icmp-type 8 -j DROP", v7 <- tpi_wan_get_ifname(i + 1, v24, v25, v7)) @ 0xad398', 'ins_addr': '0xad398'}]
+============================================================
+
+============================================================
+[PHASE 2] Vulnerability Controllability Analysis
+============================================================
+
+[VULN-AGENT] Round 1
+Additional Information: I need the decompiled code of the function at address 0xac818 to analyze how the argument to `doSystemCmd` is constructed and whether attacker input reaches `tpi_wan_get_ifname(i + 1, v24, v25, v7)`. Also, because the sink flow involves interface-name construction rather than an obvious HTTP parameter, I need the decompiled code of the callee around address 0xad398 and, if separate, the decompiled code of `tpi_wan_get_ifname` to determine whether the `%s` argument is attacker-controlled. Additionally, I need to search for endpoint registration strings to identify the HTTP path for `formSetFirewallCfg`: please search for strings matching `/goform/`, `/cgi-bin/`, or `/cgi/` in the binary and provide the decompiled dispatcher/registration function that maps the handler `formSetFirewallCfg` to a URL.
+
+[TOOL-MODEL] {"tool": "decompile_function(address='0xac818')"}
+
+
+[IDA-TOOL] decompile_function(address='0xac818') -> OK
+/* line: 0, address: 0xac818 */ int __fastcall formSetFirewallCfg(int a1)
+/* line: 1 */ {
+/* line: 2 */   char *Value; // r0
+/* line: 3 */   _DWORD v4[8]; // [sp+1Ch] [bp-2E8h] BYREF
+/* line: 4 */   _DWORD s1[8]; // [sp+3Ch] [bp-2C8h] BYREF
+/* line: 5 */   __int128 v6; // [sp+5Ch] [bp-2A8h] BYREF
+/* line: 6 */   _DWORD v7[4]; // [sp+6Ch] [bp-298h] BYREF
+/* line: 7 */   int v8; // [sp+7Ch] [bp-288h] BYREF
+/* line: 8 */   _BYTE v9[24]; // [sp+80h] [bp-284h] BYREF
+/* line: 9 */   _DWORD v10[4]; // [sp+98h] [bp-26Ch] BYREF
+/* line: 10 */   int v11; // [sp+A8h] [bp-25Ch]
+/* line: 11 */   int v12; // [sp+ACh] [bp-258h]
+/* line: 12 */   int v13; // [sp+B0h] [bp-254h]
+/* line: 13 */   int v14; // [sp+B4h] [bp-250h]
+/* line: 14 */   _BYTE v15[320]; // [sp+B8h] [bp-24Ch] BYREF
+/* line: 15 */   _BYTE v16[16]; // [sp+1F8h] [bp-10Ch] BYREF
+/* line: 16 */   char nptr[64]; // [sp+208h] [bp-FCh] BYREF
+/* line: 17 */   char v18[64]; // [sp+248h] [bp-BCh] BYREF
+/* line: 18 */   _DWORD v19[2]; // [sp+288h] [bp-7Ch] BYREF
+/* line: 19 */   char s[64]; // [sp+290h] [bp-74h] BYREF
+/* line: 20 */   char dest[4]; // [sp+2D0h] [bp-34h] BYREF
+/* line: 21 */   int v22; // [sp+2D4h] [bp-30h]
+/* line: 22 */   char *v23; // [sp+2D8h] [bp-2Ch]
+/* line: 23 */   int v24; // [sp+2DCh] [bp-28h]
+/* line: 24 */   int v25; // [sp+2E0h] [bp-24h]
+/* line: 25 */   int v26; // [sp+2E4h] [bp-20h]
+/* line: 26 */   char *src; // [sp+2E8h] [bp-1Ch]
+/* line: 27 */   int i; // [sp+2ECh] [bp-18h]
+/* line: 28 */   int v29; // [sp+2F0h] [bp-14h]
+/* line: 29 */   _BOOL4 v30; // [sp+2F4h] [bp-10h]
+/* line: 30 */ 
+/* line: 31, address: 0xac83c */   *(_DWORD *)dest = 0;
+/* line: 32, address: 0xac844 */   v22 = 0;
+/* line: 33, address: 0xac85c */   memset(s, 0, sizeof(s));
+/* line: 34, address: 0xac864 */   v19[0] = 0;
+/* line: 35, address: 0xac86c */   v19[1] = 0;
+/* line: 36, address: 0xac874 */   src = 0;
+/* line: 37, address: 0xac88c */   memset(v18, 0, sizeof(v18));
+/* line: 38, address: 0xac8a4 */   memset(nptr, 0, sizeof(nptr));
+/* line: 39, address: 0xac8ac */   v30 = 0;
+/* line: 40, address: 0xac8b8 */   memset(v16, 0, sizeof(v16));
+/* line: 41, address: 0xacaf8 */   memset(v15, 0, sizeof(v15));
+/* line: 42, address: 0xacb58 */   v29 = 0;
+/* line: 43, address: 0xacb64 */   v11 = 0;
+/* line: 44, address: 0xacb70 */   v12 = 0;
+/* line: 45, address: 0xacb7c */   v13 = 0;
+/* line: 46, address: 0xacb88 */   v14 = 0;
+/* line: 47, address: 0xacb98 */   memset(v9, 0, sizeof(v9));
+/* line: 48, address: 0xacbfc */   src = (char *)sub_2BABC(a1, "firewallEn", "1111");
+/* line: 49, address: 0xacc04 */   Value = (char *)strlen(src);
+/* line: 50, address: 0xacc10 */   if ( (unsigned int)Value > 3 )
+/* line: 51 */   {
+/* line: 52, address: 0xacc24 */     strcpy(dest, src);
+/* line: 53, address: 0xacc3c */     GetValue("security.ddos.map", s);
+/* line: 54, address: 0xacc54 */     GetValue("firewall.pingwan", v19);
+/* line: 55, address: 0xacc80 */     sprintf(
+/* line: 56 */       nptr,
+/* line: 57 */       "%c,1500;%c,1500;%c,1500",
+/* line: 58 */       (unsigned __int8)dest[0],
+/* line: 59 */       (unsigned __int8)dest[2],
+/* line: 60 */       (unsigned __int8)dest[1]);
+/* line: 61, address: 0xacc98 */     SetValue("security.ddos.map", nptr);
+/* line: 62, address: 0xaccb4 */     SetValue("firewall.pingwan", &dest[3]);
+/* line: 63, address: 0xaccd0 */     memset(nptr, (int)&unk_F306C, sizeof(nptr));
+/* line: 64, address: 0xacce8 */     Value = (char *)GetValue("security.ddos.map", nptr);
+/* line: 65, address: 0xaccf4 */     if ( Value )
+/* line: 66 */     {
+/* line: 67, address: 0xacd24 */       if ( sscanf(nptr, "%[^;];%[^;];%[^;]", &v15[96], &v15[128], &v15[160]) == 3 )
+/* line: 68 */       {
+/* line: 69, address: 0xacd30 */         if ( v15[96] == 49 )
+/* line: 70 */         {
+/* line: 71, address: 0xacd3c */           v29 |= 4u;
+/* line: 72, address: 0xacd54 */           v11 = atoi(&v15[98]);
+/* line: 73 */         }
+/* line: 74, address: 0xacd60 */         if ( v15[128] == 49 )
+/* line: 75 */         {
+/* line: 76, address: 0xacd6c */           v29 |= 2u;
+/* line: 77, address: 0xacd84 */           v12 = atoi(&v15[130]);
+/* line: 78 */         }
+/* line: 79, address: 0xacd90 */         if ( v15[160] == 49 )
+/* line: 80 */         {
+/* line: 81, address: 0xacd9c */           v29 |= 1u;
+/* line: 82, address: 0xacdb4 */           v13 = atoi(&v15[162]);
+/* line: 83 */         }
+/* line: 84 */       }
+/* line: 85, address: 0xacdd8 */       Value = (char *)sscanf(s, "%[^;];%[^;];%[^;]", &v15[32], v15, &v15[64]);
+/* line: 86, address: 0xace98 */       if ( Value == (char *)3
+/* line: 87 */         && v15[32] == v15[96]
+/* line: 88 */         && (v15[96] == 48 || (Value = (char *)atoi(&v15[34]), (char *)v11 == Value))
+/* line: 89 */         && v15[0] == v15[128]
+/* line: 90 */         && (v15[128] == 48 || (Value = (char *)atoi(&v15[2]), (char *)v12 == Value))
+/* line: 91 */         && v15[64] == v15[160]
+/* line: 92 */         && (v15[160] == 48 || (Value = (char *)atoi(&v15[66]), (char *)v13 == Value)) )
+/* line: 93 */       {
+/* line: 94, address: 0xacea0 */         v30 = 0;
+/* line: 95 */       }
+/* line: 96 */       else
+/* line: 97 */       {
+/* line: 98, address: 0xacebc */         GetValue("security.ipop.map", v16);
+/* line: 99, address: 0xaced0 */         tpi_arp_ddos_ip_fence_enable(v29, v16);
+/* line: 100, address: 0xaceec */         v10[0] = v29;
+/* line: 101, address: 0xacef4 */         v10[3] = v11;
+/* line: 102, address: 0xacefc */         v10[2] = v12;
+/* line: 103, address: 0xacf04 */         v10[1] = v13;
+/* line: 104, address: 0xacf10 */         sub_AA1B0(v9);
+/* line: 105, address: 0xacf1c */         tpi_ddos_ip_lan_info_set(v9);
+/* line: 106, address: 0xacf28 */         Value = (char *)tpi_ddos_fence_set(v10);
+/* line: 107, address: 0xacf34 */         if ( !Value )
+/* line: 108, address: 0xacf3c */           v30 = 0;
+/* line: 109 */       }
+/* line: 110 */     }
+/* line: 111, address: 0xacf54 */     if ( LOBYTE(v19[0]) != (unsigned __int8)dest[3] )
+/* line: 112 */     {
+/* line: 113, address: 0xacf5c */       i = 0;
+/* line: 114, address: 0xacf64 */       v26 = 1;
+/* line: 115, address: 0xacf6c */       v25 = 0;
+/* line: 116, address: 0xacf74 */       v24 = 3;
+/* line: 117, address: 0xacf7c */       v8 = 0;
+/* line: 118, address: 0xacf88 */       memset(v7, 0, sizeof(v7));
+/* line: 119, address: 0xacfc4 */       strcpy((char *)&v6, "vlan2");
+/* line: 120, address: 0xacfdc */       memset((char *)&v6 + 6, 0, 10);
+/* line: 121, address: 0xad01c */       memset(s1, 0, sizeof(s1));
+/* line: 122, address: 0xad080 */       memset(v4, 0, sizeof(v4));
+/* line: 123, address: 0xad0f0 */       GetValue("wl2g.public.mode", s1);
+/* line: 124, address: 0xad108 */       GetValue("wl5g.public.mode", v4);
+/* line: 125, address: 0xad144 */       if ( !strcmp((const char *)s1, "wisp") || !strcmp((const char *)v4, "wisp") )
+/* line: 126 */       {
+/* line: 127, address: 0xad154 */         Value = (char *)getWispIfName();
+/* line: 128, address: 0xad15c */         v23 = Value;
+/* line: 129, address: 0xad170 */         if ( Value && *v23 )
+/* line: 130 */         {
+/* line: 131, address: 0xad18c */           strcpy((char *)v7, v23);
+/* line: 132, address: 0xad198 */           if ( dest[3] == 49 )
+/* line: 133 */           {
+/* line: 134, address: 0xad1b0 */             doSystemCmd("iptables -t filter -D INPUT -i %s -p icmp -m icmp --icmp-type 8 -j DROP", (const char *)v7);
+/* line: 135, address: 0xad1c8 */             Value = (char *)doSystemCmd(
+/* line: 136 */                               "iptables -t filter -I INPUT -i %s -p icmp -m icmp --icmp-type 8 -j DROP",
+/* line: 137 */                               (const char *)v7);
+/* line: 138 */           }
+/* line: 139 */           else
+/* line: 140 */           {
+/* line: 141, address: 0xad1e4 */             Value = (char *)doSystemCmd(
+/* line: 142 */                               "iptables -t filter -D INPUT -i %s -p icmp -m icmp --icmp-type 8 -j DROP",
+/* line: 143 */                               (const char *)v7);
+/* line: 144 */           }
+/* line: 145 */         }
+/* line: 146 */       }
+/* line: 147 */       else
+/* line: 148 */       {
+/* line: 149, address: 0xad200 */         GetValue("wans.flag", nptr);
+/* line: 150, address: 0xad20c */         Value = (char *)atoi(nptr);
+/* line: 151, address: 0xad210 */         v26 = (int)Value;
+/* line: 152, address: 0xad218 */         for ( i = 0; i < v26; ++i )
+/* line: 153 */         {
+/* line: 154, address: 0xad244 */           sprintf(v18, "wan%d.connecttype", i + 1);
+/* line: 155, address: 0xad258 */           GetValue(v18, nptr);
+/* line: 156, address: 0xad268 */           v25 = atoi(nptr);
+/* line: 157, address: 0xad280 */           GetValue("sys.mode", nptr);
+/* line: 158, address: 0xad290 */           v24 = atoi(nptr);
+/* line: 159, address: 0xad2ac */           tpi_wan_get_ifname(i + 1, v24, v25, v7);
+/* line: 160, address: 0xad2b8 */           Value = (char *)tpi_wan_double_access_check(&v8);
+/* line: 161, address: 0xad2c4 */           if ( Value )
+/* line: 162, address: 0xad2c4 */             break;
+/* line: 163, address: 0xad2d0 */           if ( dest[3] == 49 )
+/* line: 164 */           {
+/* line: 165, address: 0xad2dc */             if ( v8 == 1 )
+/* line: 166 */             {
+/* line: 167, address: 0xad2f4 */               doSystemCmd("iptables -t filter -D INPUT -i %s -p icmp -m icmp --icmp-type 8 -j DROP", (const char *)v7);
+/* line: 168, address: 0xad30c */               doSystemCmd("iptables -t filter -D INPUT -i %s -p icmp -m icmp --icmp-type 8 -j DROP", (const char *)&v6);
+/* line: 169, address: 0xad324 */               doSystemCmd("iptables -t filter -I INPUT -i %s -p icmp -m icmp --icmp-type 8 -j DROP", (const char *)v7);
+/* line: 170, address: 0xad33c */               Value = (char *)doSystemCmd(
+/* line: 171 */                                 "iptables -t filter -I INPUT -i %s -p icmp -m icmp --icmp-type 8 -j DROP",
+/* line: 172 */                                 (const char *)&v6);
+/* line: 173 */             }
+/* line: 174 */             else
+/* line: 175 */             {
+/* line: 176, address: 0xad358 */               doSystemCmd("iptables -t filter -D INPUT -i %s -p icmp -m icmp --icmp-type 8 -j DROP", (const char *)v7);
+/* line: 177, address: 0xad370 */               Value = (char *)doSystemCmd(
+/* line: 178 */                                 "iptables -t filter -I INPUT -i %s -p icmp -m icmp --icmp-type 8 -j DROP",
+/* line: 179 */                                 (const char *)v7);
+/* line: 180 */             }
+/* line: 181 */           }
+/* line: 182, address: 0xad380 */           else if ( v8 )
+/* line: 183 */           {
+/* line: 184, address: 0xad3b4 */             doSystemCmd("iptables -t filter -D INPUT -i %s -p icmp -m icmp --icmp-type 8 -j DROP", (const char *)v7);
+/* line: 185, address: 0xad3cc */             Value = (char *)doSystemCmd(
+/* line: 186 */                               "iptables -t filter -D INPUT -i %s -p icmp -m icmp --icmp-type 8 -j DROP",
+/* line: 187 */                               (const char *)&v6);
+/* line: 188 */           }
+/* line: 189 */           else
+/* line: 190 */           {
+/* line: 191, address: 0xad398 */             Value = (char *)doSystemCmd(
+/* line: 192 */                               "iptables -t filter -D INPUT -i %s -p icmp -m icmp --icmp-type 8 -j DROP",
+/* line: 193 */                               (const char *)v7);
+/* line: 194 */           }
+/* line: 195 */         }
+/* line: 196 */       }
+/* line: 197 */     }
+/* line: 198 */   }
+/* line: 199, address: 0xad410 */   v30 = CommitCfm(Value) == 0;
+/* line: 200, address: 0xad438 */   sub_2C43C(a1, "HTTP/1.0 200 OK\r\n\r\n");
+/* line: 201, address: 0xad450 */   sub_2C43C(a1, "{\"errCode\":%d}", v30);
+/* line: 202, address: 0xad464 */   return sub_2C984(a1, 200);
+/* line: 203 */ }
+
+[TOOL-MODEL] {"tool": "get_function_by_address(address='0xad398')"}
+
+[IDA-TOOL] get_function_by_address(address='0xad398') -> OK
+{
+  "address": "0xad398",
+  "name": "formSetFirewallCfg",
+  "size": "0xc50"
+}
+
+[TOOL-MODEL] {"tool": "get_function_by_name(name='tpi_wan_get_ifname')"}
+
+[IDA-TOOL] get_function_by_name(name='tpi_wan_get_ifname') -> OK
+{
+  "address": "0xf904",
+  "name": "tpi_wan_get_ifname",
+  "size": "0xc"
+}
+
+[TOOL-MODEL] {"tool": "decompile_function(address='0xf904')"}
+
+[IDA-TOOL] decompile_function(address='0xf904') -> OK
+/* line: 0, address: 0xf904 */ // attributes: thunk
+/* line: 1 */ int __fastcall tpi_wan_get_ifname(int a1, int a2, int a3, int a4)
+/* line: 2 */ {
+/* line: 3 */   return __imp_tpi_wan_get_ifname(a1, a2, a3, a4);
+/* line: 4 */ }
+
+[TOOL-MODEL] {"tool": "list_strings_filter(filter='/goform/', offset=0, count=100)"}
+
+[IDA-TOOL] list_strings_filter(filter='/goform/', offset=0, count=100) -> OK
+{
+  "data": [
+    {
+      "address": "0xdc1f4",
+      "length": 9,
+      "string": "/goform/"
+    },
+    {
+      "address": "0xdcb6c",
+      "length": 15,
+      "string": "/goform/telnet"
+    },
+    {
+      "address": "0xdcb88",
+      "length": 21,
+      "string": "/goform/fast_setting"
+    },
+    {
+      "address": "0xdcba0",
+      "length": 12,
+      "string": "/goform/ate"
+    },
+    {
+      "address": "0xdcbac",
+      "length": 20,
+      "string": "/goform/InsertWhite"
+    },
+    {
+      "address": "0xdcbd0",
+      "length": 28,
+      "string": "/goform/getWanConnectStatus"
+    },
+    {
+      "address": "0xdcbec",
+      "length": 19,
+      "string": "/goform/getProduct"
+    },
+    {
+      "address": "0xdcc00",
+      "length": 24,
+      "string": "/goform/getRebootStatus"
+    },
+    {
+      "address": "0xdccd4",
+      "length": 24,
+      "string": "/goform/GetRouterStatus"
+    },
+    {
+      "address": "0xdccec",
+      "length": 25,
+      "string": "/goform/getWanParameters"
+    },
+    {
+      "address": "0xdcd08",
+      "length": 21,
+      "string": "/goform/GetUSBStatus"
+    },
+    {
+      "address": "0xdcd58",
+      "length": 19,
+      "string": "/goform/WifiApScan"
+    }
+  ],
+  "next_offset": null
+}
+
+[TOOL-MODEL] {"tool": "list_strings_filter(filter='formSetFirewallCfg', offset=0, count=100)"}
+
+[IDA-TOOL] list_strings_filter(filter='formSetFirewallCfg', offset=0, count=100) -> OK
+{
+  "data": [
+    {
+      "address": "0xcb4b",
+      "length": 19,
+      "string": "formSetFirewallCfg"
+    }
+  ],
+  "next_offset": null
+}
+
+[TOOL-MODEL] {"tool": "get_xrefs_to(address='0xcb4b')"}
+
+[IDA-TOOL] get_xrefs_to(address='0xcb4b') -> OK
+[
+  {
+    "address": "0x9d08",
+    "type": "data",
+    "function": null
+  }
+]
+
+[TOOL-MODEL] {"tool": "get_function_by_address(address='0x9d08')"}
+
+[IDA-TOOL] get_function_by_address(address='0x9d08') -> ERROR
+JSON-RPC error -32000: No function found at address 0x9d08
+
+[TOOL-MODEL] {"tool": "list_globals_filter(filter='0x9d08', offset=0, count=20)"}
+
+[IDA-TOOL] list_globals_filter(filter='0x9d08', offset=0, count=20) -> OK
+{
+  "data": [],
+  "next_offset": null
+}
+
+[TOOL-MODEL] {"tool": "list_globals_filter(filter='formSetFirewallCfg', offset=0, count=100)"}
+
+[IDA-TOOL] list_globals_filter(filter='formSetFirewallCfg', offset=0, count=100) -> OK
+{
+  "data": [
+    {
+      "address": "0xff95c",
+      "name": "formSetFirewallCfg_ptr"
+    }
+  ],
+  "next_offset": null
+}
+
+[TOOL-MODEL] {"tool": "get_xrefs_to(address='0xff95c')"}
+
+[IDA-TOOL] get_xrefs_to(address='0xff95c') -> OK
+[
+  {
+    "address": "0x43158",
+    "type": "data",
+    "function": {
+      "address": "0x43158",
+      "name": "sub_426B8",
+      "size": "0x1acc"
+    }
+  },
+  {
+    "address": "0x4315c",
+    "type": "data",
+    "function": {
+      "address": "0x4315c",
+      "name": "sub_426B8",
+      "size": "0x1acc"
+    }
+  },
+  {
+    "address": "0x439c0",
+    "type": "data",
+    "function": {
+      "address": "0x439c0",
+      "name": "sub_426B8",
+      "size": "0x1acc"
+    }
+  }
+]
+
+[TOOL-MODEL] {"tool": "decompile_function(address='0x426b8')"}
+
+[IDA-TOOL] decompile_function(address='0x426b8') -> OK
+/* line: 0, address: 0x426b8 */ int sub_426B8()
+/* line: 1 */ {
+/* line: 2 */   int v0; // r0
+/* line: 3 */ 
+/* line: 4, address: 0x426e0 */   sub_10150("TendaGetLongString", aspTendaGetLongString);
+/* line: 5, address: 0x426fc */   sub_10150("aspTendaGetStatus", aspTendaGetStatus);
+/* line: 6, address: 0x42718 */   sub_1721C("updateUrlLog", updateUrlLog);
+/* line: 7, address: 0x42734 */   sub_1721C("SysStatusHandle", fromSysStatusHandle);
+/* line: 8, address: 0x42750 */   sub_1721C("GetWanStatus", formGetWanStatus);
+/* line: 9, address: 0x4276c */   sub_1721C("GetSysInfo", formGetSysInfo);
+/* line: 10, address: 0x42788 */   sub_1721C("GetWanStatistic", formGetWanStatistic);
+/* line: 11, address: 0x427a4 */   sub_1721C("GetAllWanInfo", formGetAllWanInfo);
+/* line: 12, address: 0x427c0 */   sub_1721C("GetWanNum", formGetWanNum);
+/* line: 13, address: 0x427dc */   sub_10150("aspGetWanNum", aspGetWanNum);
+/* line: 14, address: 0x427f8 */   sub_1721C("getPortStatus", formGetPortStatus);
+/* line: 15, address: 0x42814 */   sub_1721C("GetSystemStatus", formGetSystemStatus);
+/* line: 16, address: 0x42830 */   sub_1721C("GetRouterStatus", formGetRouterStatus);
+/* line: 17, address: 0x4284c */   sub_1721C("setNotUpgrade", formsetNotUpgrade);
+/* line: 18, address: 0x42868 */   sub_10150("aspGetCharset", aspGetCharset);
+/* line: 19, address: 0x42884 */   sub_1721C("WizardHandle", fromWizardHandle);
+/* line: 20, address: 0x428a0 */   sub_1721C("fast_setting_get", form_fast_setting_get);
+/* line: 21, address: 0x428bc */   sub_1721C("fast_setting_pppoe_get", form_fast_setting_pppoe_get);
+/* line: 22, address: 0x428d8 */   sub_1721C("fast_setting_wifi_set", form_fast_setting_wifi_set);
+/* line: 23, address: 0x428f4 */   sub_1721C("fast_setting_pppoe_set", form_fast_setting_pppoe_set);
+/* line: 24, address: 0x42910 */   sub_1721C("getWanConnectStatus", formGetWanConnectStatus);
+/* line: 25, address: 0x4292c */   sub_1721C("getProduct", GetProduct);
+/* line: 26, address: 0x42948 */   sub_1721C("fast_setting_internet_set", form_fast_setting_internet_set);
+/* line: 27, address: 0x42964 */   sub_1721C("usb_get", form_usb_get);
+/* line: 28, address: 0x42980 */   v0 = sub_1721C("SysToolpassword", SysToolpassword);
+/* line: 29, address: 0x42984 */   sub_AFA0C(v0);
+/* line: 30, address: 0x429a0 */   sub_1721C("notNowUpgrade", formNotNowUpgrade);
+/* line: 31, address: 0x429bc */   sub_1721C("getHomeLink", formGetHomeLink);
+/* line: 32, address: 0x429d8 */   sub_1721C("AdvGetMacMtuWan", fromAdvGetMacMtuWan);
+/* line: 33, address: 0x429f4 */   sub_1721C("AdvSetMacMtuWan", fromAdvSetMacMtuWan);
+/* line: 34, address: 0x42a10 */   sub_1721C("AdvGetLanIp", formAdvGetLanIp);
+/* line: 35, address: 0x42a2c */   sub_1721C("AdvSetLanip", fromAdvSetLanip);
+/* line: 36, address: 0x42a48 */   sub_1721C("SetWebIpAccess", SetWebIpAccess);
+/* line: 37, address: 0x42a64 */   sub_1721C("WanPolicy", fromWanPolicy);
+/* line: 38, address: 0x42a80 */   sub_1721C("SetRemoteWebCfg", formSetSafeWanWebMan);
+/* line: 39, address: 0x42a9c */   sub_1721C("GetRemoteWebCfg", formGetSafeWanWebMan);
+/* line: 40, address: 0x42ab8 */   sub_1721C("WanParameterSetting", formWanParameterSetting);
+/* line: 41, address: 0x42ad4 */   sub_1721C("getWanParameters", formGetWanParameter);
+/* line: 42, address: 0x42af0 */   sub_1721C("getAdvanceStatus", getAdvanceStatus);
+/* line: 43, address: 0x42b0c */   sub_1721C("openDnsCheck", setDnsCheck);
+/* line: 44, address: 0x42b28 */   sub_1721C("initDnsCheck", getDnsCheck);
+/* line: 45, address: 0x42b44 */   sub_1721C("InsertWhite", add_white_node);
+/* line: 46, address: 0x42b60 */   sub_1721C("PowerSaveGet", getSmartPowerManagement);
+/* line: 47, address: 0x42b7c */   sub_1721C("PowerSaveSet", setSmartPowerManagement);
+/* line: 48, address: 0x42b98 */   sub_1721C("initSchedWifi", getSchedWifi);
+/* line: 49, address: 0x42bb4 */   sub_1721C("openSchedWifi", setSchedWifi);
+/* line: 50, address: 0x42bd0 */   sub_1721C("GetLEDCfg", formGetSchedLed);
+/* line: 51, address: 0x42bec */   sub_1721C("SetLEDCfg", formSetSchedLed);
+/* line: 52, address: 0x42c08 */   sub_1721C("GetParentControlInfo", GetParentControlInfo);
+/* line: 53, address: 0x42c24 */   sub_1721C("saveParentControlInfo", saveParentControlInfo);
+/* line: 54, address: 0x42c40 */   sub_1721C("GetDhcpServer", formGetDhcpServer);
+/* line: 55, address: 0x42c5c */   sub_1721C("DhcpSetSer", fromDhcpSetSer);
+/* line: 56, address: 0x42c78 */   sub_10150("TendaGetDhcpClients", aspTendaGetDhcpClients);
+/* line: 57, address: 0x42c94 */   sub_1721C("DhcpListClient", fromDhcpListClient);
+/* line: 58, address: 0x42cb0 */   sub_1721C("ajaxTendaGetDhcpClients", formTendaGetDhcpClients);
+/* line: 59, address: 0x42ccc */   sub_10150("TendaGetDhcpClients", aspTendaGetDhcpClients);
+/* line: 60, address: 0x42ce8 */   sub_1721C("getOnlineList", formGetOnlineList);
+/* line: 61, address: 0x42d04 */   sub_1721C("GetAdvanceStatus", formGetAdvanceStatus);
+/* line: 62, address: 0x42d20 */   sub_1721C("SetVirtualServerCfg", formSetVirtualSer);
+/* line: 63, address: 0x42d3c */   sub_1721C("GetVirtualServerCfg", formGetVirtualSer);
+/* line: 64, address: 0x42d58 */   sub_1721C("SetDMZCfg", mDMZSetCfg);
+/* line: 65, address: 0x42d74 */   sub_1721C("GetDMZCfg", mDMZGetCfg);
+/* line: 66, address: 0x42d90 */   sub_1721C("GetUpnpCfg", formGetUpnpLists);
+/* line: 67, address: 0x42dac */   sub_1721C("SetUpnpCfg", formSetUpnp);
+/* line: 68, address: 0x42dc8 */   sub_1721C("NatStaticSetting", fromNatStaticSetting);
+/* line: 69, address: 0x42de4 */   sub_1721C("SetDDNSCfg", formSetSysToolDDNS);
+/* line: 70, address: 0x42e00 */   sub_1721C("GetDDNSCfg", formGetSysToolDDNS);
+/* line: 71, address: 0x42e1c */   sub_10150("mGetRouteTable", aspmGetRouteTable);
+/* line: 72, address: 0x42e38 */   sub_1721C("GetStaticRouteCfg", formGetRouteStatic);
+/* line: 73, address: 0x42e54 */   sub_1721C("SetStaticRouteCfg", fromSetRouteStatic);
+/* line: 74, address: 0x42e70 */   sub_1721C("addressNat", fromAddressNat);
+/* line: 75, address: 0x42e8c */   sub_10150("mNatGetStatic", mNatGetStatic);
+/* line: 76, address: 0x42ea8 */   sub_10150("asp_error_message", asp_error_message);
+/* line: 77, address: 0x42ec4 */   sub_10150("asp_error_redirect_url", asp_error_redirect_url);
+/* line: 78, address: 0x42ee0 */   sub_10150("mGetIPRate", aspmGetIPRate);
+/* line: 79, address: 0x42efc */   sub_1721C("AdvSetPortVlan", fromAdvSetPortVlan);
+/* line: 80, address: 0x42f18 */   sub_1721C("BulletinSet", formBulletinSet);
+/* line: 81, address: 0x42f34 */   sub_1721C("AdvSetNat", formNatSet);
+/* line: 82, address: 0x42f50 */   sub_10150("NatSet", aspNatSet);
+/* line: 83, address: 0x42f6c */   sub_1721C("getMacFilterCfg", formGetMacFilterCfg);
+/* line: 84, address: 0x42f88 */   sub_1721C("setMacFilterCfg", formSetMacFilterCfg);
+/* line: 85, address: 0x42fa4 */   sub_1721C("parentControlEn", formSetParentControlEnable);
+/* line: 86, address: 0x42fc0 */   sub_1721C("GetParentCtrlList", formGetParentCtrlList);
+/* line: 87, address: 0x42fdc */   sub_1721C("SetNetControlList", formSetQosBand);
+/* line: 88, address: 0x42ff8 */   sub_1721C("GetNetControlList", formGetQosBand);
+/* line: 89, address: 0x43014 */   sub_1721C("GetDeviceDetail", formGetDeviceDetail);
+/* line: 90, address: 0x43030 */   sub_1721C("SetClientState", formSetClientState);
+/* line: 91, address: 0x4304c */   sub_1721C("SetOnlineDevName", formSetDeviceName);
+/* line: 92, address: 0x43068 */   sub_1721C("GetSystemSet", formGetSystemSet);
+/* line: 93, address: 0x43084 */   sub_1721C("SetSpeedWan", formSetSpeedWan);
+/* line: 94, address: 0x430a0 */   sub_1721C("getParentalRuleList", getParentControlAllInfo);
+/* line: 95, address: 0x430bc */   sub_1721C("delParentalRule", delParentControlOneInfo);
+/* line: 96, address: 0x430d8 */   sub_1721C("setBlackRule", formAddMacfilterRule);
+/* line: 97, address: 0x430f4 */   sub_1721C("delBlackRule", formDelMacfilterRule);
+/* line: 98, address: 0x43110 */   sub_1721C("getBlackRuleList", formGetMacfilterRuleList);
+/* line: 99, address: 0x4312c */   sub_1721C("SetIPTVCfg", formSetIptv);
+/* line: 100, address: 0x43148 */   sub_1721C("GetIPTVCfg", formGetIptv);
+/* line: 101, address: 0x43164 */   sub_1721C("SetFirewallCfg", formSetFirewallCfg);
+/* line: 102, address: 0x43180 */   sub_1721C("GetFirewallCfg", formGetFirewallCfg);
+/* line: 103, address: 0x4319c */   sub_1721C("GetDdosDefenceList", formGetDdosDefenceList);
+/* line: 104, address: 0x431b8 */   sub_1721C("initAutoQos", formGetAutoQosInfo);
+/* line: 105, address: 0x431d4 */   sub_1721C("saveAutoQos", formSetAutoQosInfo);
+/* line: 106, address: 0x431f0 */   sub_1721C("getQosSpeed", formGetBandWidthSpeed);
+/* line: 107, address: 0x4320c */   sub_1721C("GetSySLogCfg", formGetSysLog);
+/* line: 108, address: 0x43228 */   sub_1721C("SysToolSysLog", fromSysToolSysLog);
+/* line: 109, address: 0x43244 */   sub_1721C("LogsSetting", fromLogsSetting);
+/* line: 110, address: 0x43260 */   sub_1721C("SysToolTime", fromSysToolTime);
+/* line: 111, address: 0x4327c */   sub_1721C("SysToolReboot", fromSysToolReboot);
+/* line: 112, address: 0x43298 */   sub_1721C("telnet", TendaTelnet);
+/* line: 113, address: 0x432b4 */   sub_1721C("SysToolRestoreSet", fromSysToolRestoreSet);
+/* line: 114, address: 0x432d0 */   sub_1721C("SysToolChangePwd", fromSysToolChangePwd);
+/* line: 115, address: 0x432ec */   sub_1721C("SysToolBaseUser", fromSysToolBaseUser);
+/* line: 116, address: 0x43308 */   sub_1721C("SysToolGetUpgrade", fromSysToolGetUpgrade);
+/* line: 117, address: 0x43324 */   sub_1721C("SysToolSetUpgrade", fromSysToolSetUpgrade);
+/* line: 118, address: 0x43340 */   sub_1721C("GetIpMacBind", fromGetIpMacBind);
+/* line: 119, address: 0x4335c */   sub_1721C("SetIpMacBind", fromSetIpMacBind);
+/* line: 120, address: 0x43378 */   sub_1721C("WifiMultiSsid", formWifiMultiSsid);
+/* line: 121, address: 0x43394 */   sub_1721C("WifiBasicGet", formWifiBasicGet);
+/* line: 122, address: 0x433b0 */   sub_1721C("WifiBasicSet", formWifiBasicSet);
+/* line: 123, address: 0x433cc */   sub_1721C("WifiApScan", formWifiApScan);
+/* line: 124, address: 0x433e8 */   sub_1721C("WifiBeamformingGet", formWifiBeamformingGet);
+/* line: 125, address: 0x43404 */   sub_1721C("WifiBeamformingSet", formWifiBeamformingSet);
+/* line: 126, address: 0x43420 */   sub_1721C("WifiClientList", formWifiClientList);
+/* line: 127, address: 0x4343c */   sub_1721C("WifiClientListAll", formWifiClientListAll);
+/* line: 128, address: 0x43458 */   sub_1721C("WifiMacFilterGet", formWifiMacFilterGet);
+/* line: 129, address: 0x43474 */   sub_1721C("WifiMacFilterSet", formWifiMacFilterSet);
+/* line: 130, address: 0x43490 */   sub_1721C("initWifiMacFilter", initWifiMacFilter);
+/* line: 131, address: 0x434ac */   sub_1721C("addWifiMacFilter", addWifiMacFilter);
+/* line: 132, address: 0x434c8 */   sub_1721C("delWifiMacFilter", delWifiMacFilter);
+/* line: 133, address: 0x434e4 */   sub_1721C("WifiRadioGet", formWifiRadioGet);
+/* line: 134, address: 0x43500 */   sub_1721C("WifiRadioSet", formWifiRadioSet);
+/* line: 135, address: 0x4351c */   sub_1721C("WifiPowerGet", formWifiPowerGet);
+/* line: 136, address: 0x43538 */   sub_1721C("WifiPowerSet", formWifiPowerSet);
+/* line: 137, address: 0x43554 */   sub_1721C("WifiStatistic", formWifiStatistic);
+/* line: 138, address: 0x43570 */   sub_1721C("WifiStatisticClear", formWifiStatisticClear);
+/* line: 139, address: 0x4358c */   sub_1721C("WifiDhcpGuestGet", formWifiDhcpGuestGet);
+/* line: 140, address: 0x435a8 */   sub_1721C("WifiDhcpGuestLists", formWifiDhcpGuestLists);
+/* line: 141, address: 0x435c4 */   sub_1721C("WifiDhcpGuestSet", formWifiDhcpGuestSet);
+/* line: 142, address: 0x435e0 */   sub_1721C("WifiStatus", formWifiStatus);
+/* line: 143, address: 0x435fc */   sub_1721C("getAliWifiScheduled", formAliScheduleStatus);
+/* line: 144, address: 0x43618 */   sub_1721C("WifiWpsStart", formWifiWpsStart);
+/* line: 145, address: 0x43634 */   sub_1721C("WifiWpsOOB", formWifiWpsOOB);
+/* line: 146, address: 0x43650 */   sub_1721C("WifiConfigGet", formWifiConfigGet);
+/* line: 147, address: 0x4366c */   sub_1721C("WifiWpsGet", formGetWifiWps);
+/* line: 148, address: 0x43688 */   sub_1721C("WifiWpsSet", formSetWifiWps);
+/* line: 149, address: 0x436a4 */   sub_1721C("WifiWpsStart", formStartWifiWps);
+/* line: 150, address: 0x43cac */   sub_1721C("GetUSBStatus", formGetUSBStatus);
+/* line: 151, address: 0x43cc8 */   sub_1721C("SetPrinterCfg", formSetUsbPrint);
+/* line: 152, address: 0x43ce4 */   sub_1721C("GetPrinterCfg", formGetUsbPrint);
+/* line: 153, address: 0x43d00 */   sub_1721C("SetSambaCfg", formSetSambaConf);
+/* line: 154, address: 0x43d1c */   sub_1721C("GetSambaCfg", formGetSambaConf);
+/* line: 155, address: 0x43d38 */   sub_1721C("setUsbUnload", formsetUsbUnload);
+/* line: 156, address: 0x43d54 */   sub_1721C("GetUsbCfg", formGetUsbCfg);
+/* line: 157, address: 0x43d70 */   sub_1721C("SetDlnaCfg", formDLNAserver);
+/* line: 158, address: 0x43d8c */   sub_1721C("GetDlnaCfg", getDLNAserverCfg);
+/* line: 159, address: 0x43da8 */   sub_1721C("expandDlnaFile", formExpandDlnaFile);
+/* line: 160, address: 0x43dc4 */   sub_1721C("ate", TendaAte);
+/* line: 161, address: 0x43de0 */   sub_1721C("exeCommand", formexeCommand);
+/* line: 162, address: 0x43dfc */   sub_1721C("WriteFacMac", formWriteFacMac);
+/* line: 163, address: 0x43e18 */   sub_1721C("MfgTest", formMfgTest);
+/* line: 164, address: 0x43e34 */   sub_1721C("TendaModelStatus", formTendaModelStatus);
+/* line: 165, address: 0x43e50 */   sub_10150("GetPortShow", aspGetPortShow);
+/* line: 166, address: 0x43e6c */   sub_10150("getcfm", aspGetCfm);
+/* line: 167, address: 0x43e88 */   sub_1721C("setcfm", formSetCfm);
+/* line: 168, address: 0x43ea4 */   sub_10150("getfilterMaxNum", aspGetfilterMaxNum);
+/* line: 169, address: 0x43ec0 */   sub_10150("getModeShow", aspGetModeShow);
+/* line: 170, address: 0x43edc */   sub_1721C("ajaxTendaGetGuestDhcpClients", formTendaGetGuestDhcpClients);
+/* line: 171, address: 0x43ef8 */   sub_10150("getMaxNatNum", aspGetMaxNatNum);
+/* line: 172, address: 0x43f14 */   sub_1721C("QuickIndex", formQuickIndex);
+/* line: 173, address: 0x43f30 */   sub_10150("getifnlist", aspGetifnlist);
+/* line: 174, address: 0x43f4c */   sub_1721C("SetSysAutoRebbotCfg", formSetRebootTimer);
+/* line: 175, address: 0x43f68 */   sub_1721C("GetSysAutoRebbotCfg", formGetRebootTimer);
+/* line: 176, address: 0x43f84 */   sub_1721C("SetSysTimeCfg", fromSetSysTime);
+/* line: 177, address: 0x43fa0 */   sub_1721C("GetSysTimeCfg", fromGetSysTime);
+/* line: 178, address: 0x43fbc */   sub_1721C("setApModeCfg", fromsetApModeCfg);
+/* line: 179, address: 0x43fd8 */   sub_1721C("getApModeCfg", fromgetApModeCfg);
+/* line: 180, address: 0x43ff4 */   sub_1721C("WifiExtraSet", fromSetWirelessRepeat);
+/* line: 181, address: 0x44010 */   sub_1721C("WifiExtraGet", fromGetWirelessRepeat);
+/* line: 182, address: 0x4402c */   sub_1721C("WifiGuestSet", fromSetWifiGusetBasic);
+/* line: 183, address: 0x44048 */   sub_1721C("WifiGuestGet", fromGetWifiGusetBasic);
+/* line: 184, address: 0x44064 */   sub_1721C("GetWrlStatus", fromGetWrlStatus);
+/* line: 185, address: 0x44080 */   sub_1721C("SetPptpServerCfg", formSetPPTPServer);
+/* line: 186, address: 0x4409c */   sub_1721C("GetPptpServerCfg", formGetPPTPServer);
+/* line: 187, address: 0x440b8 */   sub_1721C("getPptpOnlineClient", formgetPptpOnlineClient);
+/* line: 188, address: 0x440d4 */   sub_1721C("setPptpUserList", formSetPPTPUserList);
+/* line: 189, address: 0x440f0 */   sub_1721C("SetPptpClientCfg", formSetPPTPClient);
+/* line: 190, address: 0x4410c */   sub_1721C("GetPptpClientCfg", formGetPPTPClient);
+/* line: 191, address: 0x44128 */   sub_1721C("GetVpnStatus", formGetVpnStatus);
+/* line: 192, address: 0x44144 */   sub_1721C("GetSysStatus", formGetSysStatus);
+/* line: 193, address: 0x44160 */   sub_1721C("getRebootStatus", sub_45884);
+/* line: 194, address: 0x44180 */   return sub_1721C("exit", formExit);
+/* line: 195 */ }
+
+[TOOL-MODEL] {"tool": "get_function_by_name(name='sub_1721C')"}
+
+[IDA-TOOL] get_function_by_name(name='sub_1721C') -> OK
+{
+  "address": "0x1721c",
+  "name": "sub_1721C",
+  "size": "0x94"
+}
+
+[TOOL-MODEL] {"tool": "decompile_function(address='0x1721c')"}
+
+[IDA-TOOL] decompile_function(address='0x1721c') -> OK
+/* line: 0, address: 0x1721c */ int __fastcall sub_1721C(int a1, int a2)
+/* line: 1 */ {
+/* line: 2 */   int v3; // r4
+/* line: 3 */   _DWORD v6[3]; // [sp+18h] [bp-1Ch] BYREF
+/* line: 4 */   __int16 v7; // [sp+24h] [bp-10h]
+/* line: 5 */ 
+/* line: 6, address: 0x17240 */   if ( !a2 )
+/* line: 7, address: 0x17244 */     return -1;
+/* line: 8, address: 0x17254 */   v3 = dword_FFDD4;
+/* line: 9, address: 0x17268 */   sub_21130(v6, a2);
+/* line: 10, address: 0x1729c */   sub_1FD20(v3, a1, v6[0], v6[1], v6[2], v7, 0);
+/* line: 11, address: 0x172ac */   return 0;
+/* line: 12 */ }
+
+[TOOL-MODEL] {"status": "completed", "result": "已获取并分析所需反编译代码与URL映射信息：\n1) formSetFirewallCfg @ 0xac818 的完整反编译代码已获取。关键污点/参数构造路径如下：\n- HTTP处理函数名就是 formSetFirewallCfg。\n- 入口参数来自 sub_2BABC(a1, \"firewallEn\", \"1111\")，随后 src 被 strcpy 到 dest。\n- 在 ping-WAN 分支变化时，最终会构造 iptables 命令并调用 doSystemCmd，格式串固定为:\n  \"iptables -t filter -D/-I INPUT -i %s -p icmp -m icmp --icmp-type 8 -j DROP\"\n- 传给 %s 的参数不是直接HTTP参数，而是接口名缓冲区 v7。\n- 非 WISP 路径下：\n  * GetValue(\"wans.flag\", nptr) -> v26\n  * 循环每个 WAN：\n    - sprintf(v18, \"wan%d.connecttype\", i + 1)\n    - GetValue(v18, nptr) -> v25 = atoi(nptr)\n    - GetValue(\"sys.mode\", nptr) -> v24 = atoi(nptr)\n    - tpi_wan_get_ifname(i + 1, v24, v25, v7)\n    - 后续 doSystemCmd(..., v7)\n- 因此 doSystemCmd 的 %s 参数来源是 tpi_wan_get_ifname(i + 1, v24, v25, v7) 写入的接口名，而不是直接来自明显的HTTP表单字段。\n- 你特别指出的 sink 点 0xad398 不是单独callee，而是同一函数 formSetFirewallCfg 内部的一条 doSystemCmd 调用地址：\n  * 0xad398: doSystemCmd(\"iptables -t filter -D INPUT -i %s -p icmp -m icmp --icmp-type 8 -j DROP\", v7)\n\n2) 关于 0xad398 的“callee around address”分析：\n- 通过 get_function_by_address(0xad398) 确认，它属于 formSetFirewallCfg，本身不是独立函数入口。\n- 因此围绕 0xad398 的上下文已经包含在 0xac818 的完整反编译代码中，无额外独立callee可单独反编译。\n\n3) tpi_wan_get_ifname 的反编译结果：\n- tpi_wan_get_ifname @ 0xf904\n- 反编译显示它只是一个 thunk：\n  int __fastcall tpi_wan_get_ifname(int a1, int a2, int a3, int a4) {\n      return __imp_tpi_wan_get_ifname(a1, a2, a3, a4);\n  }\n- 这说明当前二进制中没有其具体实现，只是导入/跳板到外部实现 __imp_tpi_wan_get_ifname。\n- 因而仅凭当前IDB无法继续确认该函数内部是否把攻击者可控数据写入 v7，也无法证明 %s 最终是否可被攻击者完全控制。\n- 但从当前函数可明确得出：sink 参数由 WAN接口名构造逻辑提供，控制面取决于外部 tpi_wan_get_ifname 的实现及其依赖配置（WAN序号、sys.mode、wanX.connecttype）。\n\n4) endpoint registration / URL 映射分析：\n- 已搜索 /goform/ 字符串，发现全局前缀字符串 '/goform/' 以及多个具体路径。\n- 进一步通过 formSetFirewallCfg 字符串交叉引用定位到注册函数 sub_426B8。\n- sub_426B8 的反编译显示：\n  sub_1721C(\"SetFirewallCfg\", formSetFirewallCfg);\n- 注册辅助函数 sub_1721C(a1, a2) 内部调用 sub_1FD20(...) 完成 handler 注册；a1 是字符串名，a2 是函数指针。\n- 结合二进制中已存在的 '/goform/' 前缀字符串，以及其它已知对应项如:\n  '/goform/getWanConnectStatus' <-> sub_1721C(\"getWanConnectStatus\", formGetWanConnectStatus)\n  '/goform/getProduct' <-> sub_1721C(\"getProduct\", GetProduct)\n  '/goform/getRebootStatus' <-> sub_1721C(\"getRebootStatus\", sub_45884)\n  '/goform/GetRouterStatus' <-> sub_1721C(\"GetRouterStatus\", formGetRouterStatus)\n  '/goform/getWanParameters' <-> sub_1721C(\"getWanParameters\", formGetWanParameter)\n  '/goform/GetUSBStatus' <-> sub_1721C(\"GetUSBStatus\", formGetUSBStatus)\n  '/goform/WifiApScan' <-> sub_1721C(\"WifiApScan\", formWifiApScan)\n- 可一致推断 formSetFirewallCfg 对应HTTP路径为：/goform/SetFirewallCfg\n\n5) 结论：\n- formSetFirewallCfg 的 sink 参数并非直接HTTP参数，而是通过 tpi_wan_get_ifname(..., v7) 生成的接口名。\n- 地址 0xad398 是 formSetFirewallCfg 内部 doSystemCmd 调用点，不是独立callee。\n- tpi_wan_get_ifname 在当前样本中仅为导入thunk，无法从当前IDB继续判断其内部是否存在攻击者可控字符串拼接到接口名。\n- formSetFirewallCfg 的URL映射可定位到注册函数 sub_426B8，并可推断其HTTP端点为 /goform/SetFirewallCfg。"}
+
+[TOOL-MODEL] 模型输出incomplete状态，纠正重试...
+
+[TOOL-MODEL] 结束 (共15轮, 执行14个工具)
+
+[VULN-AGENT] Round 2
+Conclusion: Not Controllable
+
+VULN_SPEC_START
+{
+  "endpoint": "/goform/SetFirewallCfg",
+  "http_method": "POST",
+  "param_key": "firewallEn",
+  "source_function": "sub_2BABC",
+  "auth_required": true,
+  "code_snippet": "tpi_wan_get_ifname(i + 1, v24, v25, v7);\ndoSystemCmd(\"iptables -t filter -D INPUT -i %s -p icmp -m icmp --icmp-type 8 -j DROP\", (const char *)v7);",
+  "param_handling": "The HTTP form parameter firewallEn only controls whether the command path executes; the %s sink argument is filled separately into v7 by tpi_wan_get_ifname based on internal configuration values.",
+  "buffer_size": null,
+  "dangerous_chars": [";", "|", "`", "$()"],
+  "taint_propagation": "HTTP /goform/SetFirewallCfg firewallEn via sub_2BABC → branch/feature toggles in formSetFirewallCfg → tpi_wan_get_ifname(..., v7) supplies interface name → doSystemCmd format %s",
+  "evidence_digest": "The handler formSetFirewallCfg is registered through sub_1721C(\"SetFirewallCfg\", formSetFirewallCfg), which maps to the HTTP endpoint /goform/SetFirewallCfg. Inside the handler, attacker-facing input is read from sub_2BABC(a1, \"firewallEn\", \"1111\"), but this value is only copied into dest and used to decide whether firewall rules should be updated. The actual sink argument at 0xad398 is v7, which is populated by tpi_wan_get_ifname(i + 1, v24, v25, v7) after reading configuration keys such as wans.flag, wan%d.connecttype, and sys.mode. The implementation of tpi_wan_get_ifname is only a thunk to an imported function, so the current evidence does not show attacker-controlled HTTP data reaching the sink parameter itself. Because the command argument is an interface name derived by external WAN-interface selection logic rather than direct web input, controllability is not established from the provided material.",
+  "reachability": "PASS",
+  "reachability_evidence": "A request to /goform/SetFirewallCfg reaches formSetFirewallCfg, which conditionally executes the doSystemCmd call path.",
+  "controllability": "FAIL",
+  "controllability_evidence": "The sink parameter is v7 from tpi_wan_get_ifname, not the HTTP parameter firewallEn, and no evidence shows attacker-controlled data can set v7 contents.",
+  "attribution": "PASS",
+  "attribution_evidence": "The sink call at 0xad398 is directly located in formSetFirewallCfg and its endpoint registration was identified in sub_426B8.",
+  "confidence": 0.91
+}
+VULN_SPEC_END
+
+============================================================
+[FINAL RESULT] uncontrollable
+Phase 1 (Trace):         26.9s
+Phase 2 (Controllability): 80.0s
+Total:                   106.9s
+VulnSpec:                DISCARD_US_AC15V1.0BR_V15.03.05.18_multi_TD01_httpd_0xad398.json
+Completed: 2026-04-21T02:12:38.904354
+============================================================

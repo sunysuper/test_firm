@@ -1,0 +1,12 @@
+{
+    "sha256": "cd3fe82fbd632c836e725cbb65071e26089496e215605f414d22675c35307a0d",
+    "name": "loadbalance.ko",
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/lib/modules/loadbalance.ko",
+    "closures": [],
+    "cfg_time": 0,
+    "vra_time": 0,
+    "sieve_time": 0,
+    "error": null,
+    "ret_code": 0,
+    "has_sinks": false
+}

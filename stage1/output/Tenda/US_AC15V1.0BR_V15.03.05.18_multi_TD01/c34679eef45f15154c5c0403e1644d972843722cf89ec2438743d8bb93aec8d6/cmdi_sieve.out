@@ -1,0 +1,33 @@
+[2;36m[04/16/26 13:14:18][0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mTARGETING SINKS: system                            [0m
+[2;36m[04/16/26 13:14:19][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function sub_a45c@0xa45c...   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mRunning RDA on function sub_a45c@0xa45c...         [0m
+[2;36m[04/16/26 13:14:20][0m[2;36m [0m[34mINFO    [0m [37mFound 1 potential sinks.                           [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFound 1 unresolved vulnerable definitions.         [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m**************************************************[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mUNRESOLVED CLOSURES to system: [0m[1;31m                    [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m--------------------------------------------------[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;31msystem([0m[1;31m                                           [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;31m       r0: <BV32 stack_base - 0x12c> -> [0m[1;34m"<BV32 [0m[1;31m   [0m
+[2;36m                    [0m         [1;34mTOP> <BV32 TOP>"[0m[1;31m,[0m[1;31m                                  [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;31m       ) @ 0xa5cc -> [0m[1;33m<BV32 0x0>[0m[1;31m                   [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m                                                   [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mBINARY: udhcpd                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mINPUT SOURCES:                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;34mUNKNOWN[0m[1;31m                                            [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mExclude function 0xa45c from future slices since   [0m
+[2;36m                    [0m         [37mthe data dependencies are fully resolved.          [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mAnalyzed 0/1 for sink system                       [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m**************************************************[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mUNRESOLVED CLOSURES to system: [0m[1;31m                    [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m--------------------------------------------------[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;31msystem([0m[1;31m                                           [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;31m       r0: <BV32 stack_base - 0x12c> -> [0m[1;34m"<BV32 [0m[1;31m   [0m
+[2;36m                    [0m         [1;34mTOP> <BV32 TOP>"[0m[1;31m,[0m[1;31m                                  [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;31m       ) @ 0xa5cc -> [0m[1;33m<BV32 0x0>[0m[1;31m                   [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m                                                   [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mBINARY: udhcpd                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mINPUT SOURCES:                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;34mUNKNOWN[0m[1;31m                                            [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFinished Running Analysis                          [0m

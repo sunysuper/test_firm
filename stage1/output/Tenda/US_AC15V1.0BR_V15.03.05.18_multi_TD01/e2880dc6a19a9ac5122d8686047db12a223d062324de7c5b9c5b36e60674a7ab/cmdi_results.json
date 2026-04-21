@@ -1,0 +1,5417 @@
+{
+    "closures": [
+        {
+            "trace": [
+                {
+                    "function": "sub_a63ac",
+                    "string": "sub_a63ac() @ 0xa63ac",
+                    "ins_addr": "0xa63ac"
+                }
+            ],
+            "sink": {
+                "function": "system",
+                "string": "system(<MultiValues(<BV32 stack_base - 0x410>)>) @ 0xa6518",
+                "ins_addr": "0xa6518"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [
+                    "usb.samba.user"
+                ],
+                "possibly": [
+                    "usb.samba.pwd"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": [
+                    681016
+                ]
+            },
+            "rank": 1.4,
+            "confidence": 0.1,
+            "source_score": 0.1,
+            "path_factor": 1.0,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "formSetIptv",
+                    "string": "formSetIptv(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0xb0674",
+                    "ins_addr": "0xb0674"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues({0: {<BV296 0x6e7672616d20736574206164762e697074762e737462616c6c766c616e733d22 .. TOP .. 34>, <BV296 0x6e7672616d20736574206164762e697074762e737462616c6c766c616e733d22 .. TOP .. 34>, <BV296 0x6e7672616d20736574206164762e697074762e737462616c6c766c616e733d22 .. TOP .. 34>}})>, <MultiValues({0: {<BV32 0xf38d8>, <BV32 0xdc364>, <BV32 (0#16 .. TOP) << 0x10 | (0#16 .. TOP)>}})>) @ 0xb05b4",
+                "ins_addr": "0xb05b4"
+            },
+            "depth": 2,
+            "inputs": {
+                "likely": [],
+                "possibly": [
+                    "wans.flag",
+                    "iptv.city.vlan",
+                    "adv.iptv.stballvlans",
+                    "adv.iptv.stbpvid",
+                    "iptv.stb.enable"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0.7,
+            "confidence": 0.0312,
+            "source_score": 0.05,
+            "path_factor": 0.5,
+            "risk_bonus": 1.25,
+            "summary_augmented": true,
+            "summary_tags": [
+                "OVERFLOW_POSSIBLE",
+                "HEAP_MUTATION",
+                "GLOBAL_WRITE"
+            ],
+            "summary_locations": [
+                "0xb0224",
+                "0xb0260",
+                "0x2c43c",
+                "0x184f4",
+                "0x18548",
+                "0x190f0",
+                "0x193a8",
+                "0x19238",
+                "0x2c50c"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "formSetIptv",
+                    "string": "formSetIptv(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0xb0674",
+                    "ins_addr": "0xb0674"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues({0: {<BV296 0x6e7672616d20736574206164762e697074762e737462616c6c766c616e733d22 .. TOP .. 34>, <BV296 0x6e7672616d20736574206164762e697074762e737462616c6c766c616e733d22 .. TOP .. 34>, <BV296 0x6e7672616d20736574206164762e697074762e737462616c6c766c616e733d22 .. TOP .. 34>}})>, <MultiValues({0: {<BV32 0xf38d8>, <BV32 (0#16 .. TOP) << 0x10 | (0#16 .. TOP)>, <BV32 0xdc364>}})>) @ 0xb03c8",
+                "ins_addr": "0xb03c8"
+            },
+            "depth": 2,
+            "inputs": {
+                "likely": [],
+                "possibly": [
+                    "wans.flag",
+                    "iptv.city.vlan",
+                    "adv.iptv.stballvlans",
+                    "adv.iptv.stbpvid",
+                    "iptv.stb.enable"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0.7,
+            "confidence": 0.0312,
+            "source_score": 0.05,
+            "path_factor": 0.5,
+            "risk_bonus": 1.25,
+            "summary_augmented": true,
+            "summary_tags": [
+                "OVERFLOW_POSSIBLE",
+                "HEAP_MUTATION",
+                "GLOBAL_WRITE"
+            ],
+            "summary_locations": [
+                "0xb0224",
+                "0xb0260",
+                "0x2c43c",
+                "0x184f4",
+                "0x18548",
+                "0x190f0",
+                "0x193a8",
+                "0x19238",
+                "0x2c50c"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "formSetIptv",
+                    "string": "formSetIptv(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0xb0674",
+                    "ins_addr": "0xb0674"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues({0: {<BV264 0x6e7672616d20736574206164762e697074762e737462707669643d22 .. TOP .. 34>, <BV264 0x6e7672616d20736574206164762e697074762e737462707669643d22 .. TOP .. 34>, <BV264 0x6e7672616d20736574206164762e697074762e737462707669643d22 .. TOP .. 34>}})>, <MultiValues({0: {<BV32 0xf38d8>, <BV32 (0#16 .. TOP) << 0x10 | (0#16 .. TOP)>, <BV32 0xdc364>}})>) @ 0xb03dc",
+                "ins_addr": "0xb03dc"
+            },
+            "depth": 2,
+            "inputs": {
+                "likely": [],
+                "possibly": [
+                    "wans.flag",
+                    "iptv.city.vlan",
+                    "adv.iptv.stballvlans",
+                    "adv.iptv.stbpvid",
+                    "iptv.stb.enable"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0.7,
+            "confidence": 0.0312,
+            "source_score": 0.05,
+            "path_factor": 0.5,
+            "risk_bonus": 1.25,
+            "summary_augmented": true,
+            "summary_tags": [
+                "OVERFLOW_POSSIBLE",
+                "HEAP_MUTATION",
+                "GLOBAL_WRITE"
+            ],
+            "summary_locations": [
+                "0xb0224",
+                "0xb0260",
+                "0x2c43c",
+                "0x184f4",
+                "0x18548",
+                "0x190f0",
+                "0x193a8",
+                "0x19238",
+                "0x2c50c"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "formSetIptv",
+                    "string": "formSetIptv(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0xb0674",
+                    "ins_addr": "0xb0674"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues({0: {<BV264 0x6e7672616d20736574206164762e697074762e737462707669643d22 .. TOP .. 34>, <BV264 0x6e7672616d20736574206164762e697074762e737462707669643d22 .. TOP .. 34>, <BV264 0x6e7672616d20736574206164762e697074762e737462707669643d22 .. TOP .. 34>}})>, <MultiValues({0: {<BV32 0xdc364>, <BV32 0xf38d8>, <BV32 (0#16 .. TOP) << 0x10 | (0#16 .. TOP)>}})>) @ 0xb05c8",
+                "ins_addr": "0xb05c8"
+            },
+            "depth": 2,
+            "inputs": {
+                "likely": [],
+                "possibly": [
+                    "wans.flag",
+                    "iptv.city.vlan",
+                    "adv.iptv.stballvlans",
+                    "adv.iptv.stbpvid",
+                    "iptv.stb.enable"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0.7,
+            "confidence": 0.0312,
+            "source_score": 0.05,
+            "path_factor": 0.5,
+            "risk_bonus": 1.25,
+            "summary_augmented": true,
+            "summary_tags": [
+                "OVERFLOW_POSSIBLE",
+                "HEAP_MUTATION",
+                "GLOBAL_WRITE"
+            ],
+            "summary_locations": [
+                "0xb0224",
+                "0xb0260",
+                "0x2c43c",
+                "0x184f4",
+                "0x18548",
+                "0x190f0",
+                "0x193a8",
+                "0x19238",
+                "0x2c50c"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "formSetFirewallCfg",
+                    "string": "formSetFirewallCfg(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0xac818",
+                    "ins_addr": "0xac818"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues({0: {<BV584 0x69707461626c6573202d742066696c746572202d4420494e505554202d6920 .. Reverse(GetValue(\"lan.webport\")@0xaa35c[63:32]) - 0x298 .. 0x202d702069636d70202d6d2069636d70202d2d69636d702d747970652038202d6a2044524f50>, <BV568 0x69707461626c6573202d742066696c746572202d4420494e505554202d69200000202d702069636d70202d6d2069636d70202d2d69636d702d747970652038202d6a2044524f50>}})>, <MultiValues({0: {<BV32 stack_base - 0x29c>, <BV32 Reverse(GetValue(\"lan.webport\")@0xaa35c[63:32]) - 0x298>}})>) @ 0xad398",
+                "ins_addr": "0xad398"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [
+                    "lan.webport"
+                ],
+                "possibly": [
+                    "lan.ip",
+                    "security.ipop.map",
+                    "lan.mask",
+                    "security.ddos.map",
+                    "TOP",
+                    "firewall.pingwan"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": [
+                    697180
+                ]
+            },
+            "rank": 7.7,
+            "confidence": 0.3438,
+            "source_score": 0.55,
+            "path_factor": 0.5,
+            "risk_bonus": 1.25,
+            "summary_augmented": true,
+            "summary_tags": [
+                "OVERFLOW_POSSIBLE",
+                "HEAP_MUTATION",
+                "GLOBAL_WRITE"
+            ],
+            "summary_locations": [
+                "0x2c43c",
+                "0x184f4",
+                "0x18548",
+                "0x190f0",
+                "0x193a8",
+                "0x19238",
+                "0x2c50c",
+                "0x1976c",
+                "0x10610",
+                "0x196b8",
+                "0x1a67c",
+                "0x1b4e0"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "formSetFirewallCfg",
+                    "string": "formSetFirewallCfg(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0xac818",
+                    "ins_addr": "0xac818"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues({0: {<BV584 0x69707461626c6573202d742066696c746572202d4420494e505554202d6920 .. Reverse(GetValue(\"lan.webport\")@0xaa35c[63:32]) - 0x298 .. 0x202d702069636d70202d6d2069636d70202d2d69636d702d747970652038202d6a2044524f50>, <BV568 0x69707461626c6573202d742066696c746572202d4420494e505554202d69200000202d702069636d70202d6d2069636d70202d2d69636d702d747970652038202d6a2044524f50>}})>, <MultiValues({0: {<BV32 Reverse(GetValue(\"lan.webport\")@0xaa35c[63:32]) - 0x298>, <BV32 stack_base - 0x29c>}})>) @ 0xad3b4",
+                "ins_addr": "0xad3b4"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [
+                    "lan.webport"
+                ],
+                "possibly": [
+                    "lan.ip",
+                    "security.ipop.map",
+                    "lan.mask",
+                    "security.ddos.map",
+                    "TOP",
+                    "firewall.pingwan"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": [
+                    697180
+                ]
+            },
+            "rank": 7.7,
+            "confidence": 0.3438,
+            "source_score": 0.55,
+            "path_factor": 0.5,
+            "risk_bonus": 1.25,
+            "summary_augmented": true,
+            "summary_tags": [
+                "OVERFLOW_POSSIBLE",
+                "HEAP_MUTATION",
+                "GLOBAL_WRITE"
+            ],
+            "summary_locations": [
+                "0x2c43c",
+                "0x184f4",
+                "0x18548",
+                "0x190f0",
+                "0x193a8",
+                "0x19238",
+                "0x2c50c",
+                "0x1976c",
+                "0x10610",
+                "0x196b8",
+                "0x1a67c",
+                "0x1b4e0"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "formSetFirewallCfg",
+                    "string": "formSetFirewallCfg(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0xac818",
+                    "ins_addr": "0xac818"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues({0: {<BV584 0x69707461626c6573202d742066696c746572202d4420494e505554202d6920766c616e202d702069636d70202d6d2069636d70202d2d69636d702d747970652038202d6a2044524f50>, <BV584 0x69707461626c6573202d742066696c746572202d4420494e505554202d6920 .. Reverse(GetValue(\"lan.webport\")@0xaa35c[63:32]) - 0x2a8 .. 0x202d702069636d70202d6d2069636d70202d2d69636d702d747970652038202d6a2044524f50>}})>, <MultiValues({0: {<BV32 Reverse(GetValue(\"lan.webport\")@0xaa35c[63:32]) - 0x2a8>, <BV32 stack_base - 0x2ac>}})>) @ 0xad30c",
+                "ins_addr": "0xad30c"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [
+                    "lan.webport"
+                ],
+                "possibly": [
+                    "lan.ip",
+                    "security.ipop.map",
+                    "lan.mask",
+                    "security.ddos.map",
+                    "TOP",
+                    "firewall.pingwan"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": [
+                    697180
+                ]
+            },
+            "rank": 7.7,
+            "confidence": 0.3438,
+            "source_score": 0.55,
+            "path_factor": 0.5,
+            "risk_bonus": 1.25,
+            "summary_augmented": true,
+            "summary_tags": [
+                "OVERFLOW_POSSIBLE",
+                "HEAP_MUTATION",
+                "GLOBAL_WRITE"
+            ],
+            "summary_locations": [
+                "0x2c43c",
+                "0x184f4",
+                "0x18548",
+                "0x190f0",
+                "0x193a8",
+                "0x19238",
+                "0x2c50c",
+                "0x1976c",
+                "0x10610",
+                "0x196b8",
+                "0x1a67c",
+                "0x1b4e0"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "formSetFirewallCfg",
+                    "string": "formSetFirewallCfg(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0xac818",
+                    "ins_addr": "0xac818"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues({0: {<BV584 0x69707461626c6573202d742066696c746572202d4420494e505554202d6920766c616e202d702069636d70202d6d2069636d70202d2d69636d702d747970652038202d6a2044524f50>, <BV584 0x69707461626c6573202d742066696c746572202d4420494e505554202d6920 .. Reverse(GetValue(\"lan.webport\")@0xaa35c[63:32]) - 0x2a8 .. 0x202d702069636d70202d6d2069636d70202d2d69636d702d747970652038202d6a2044524f50>}})>, <MultiValues({0: {<BV32 stack_base - 0x2ac>, <BV32 Reverse(GetValue(\"lan.webport\")@0xaa35c[63:32]) - 0x2a8>}})>) @ 0xad3cc",
+                "ins_addr": "0xad3cc"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [
+                    "lan.webport"
+                ],
+                "possibly": [
+                    "lan.ip",
+                    "security.ipop.map",
+                    "lan.mask",
+                    "security.ddos.map",
+                    "TOP",
+                    "firewall.pingwan"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": [
+                    697180
+                ]
+            },
+            "rank": 7.7,
+            "confidence": 0.3438,
+            "source_score": 0.55,
+            "path_factor": 0.5,
+            "risk_bonus": 1.25,
+            "summary_augmented": true,
+            "summary_tags": [
+                "OVERFLOW_POSSIBLE",
+                "HEAP_MUTATION",
+                "GLOBAL_WRITE"
+            ],
+            "summary_locations": [
+                "0x2c43c",
+                "0x184f4",
+                "0x18548",
+                "0x190f0",
+                "0x193a8",
+                "0x19238",
+                "0x2c50c",
+                "0x1976c",
+                "0x10610",
+                "0x196b8",
+                "0x1a67c",
+                "0x1b4e0"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "formSetFirewallCfg",
+                    "string": "formSetFirewallCfg(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0xac818",
+                    "ins_addr": "0xac818"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues({0: {<BV584 0x69707461626c6573202d742066696c746572202d4420494e505554202d6920 .. Reverse(GetValue(\"lan.webport\")@0xaa35c[63:32]) - 0x298 .. 0x202d702069636d70202d6d2069636d70202d2d69636d702d747970652038202d6a2044524f50>, <BV584 0x69707461626c6573202d742066696c746572202d4420494e505554202d6920 .. TOP .. 0x202d702069636d70202d6d2069636d70202d2d69636d702d747970652038202d6a2044524f50>}})>, <MultiValues({0: {<BV32 Reverse(GetValue(\"lan.webport\")@0xaa35c[63:32]) - 0x298>, <BV32 stack_base - 0x29c>}})>) @ 0xad1b0",
+                "ins_addr": "0xad1b0"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [
+                    "lan.webport"
+                ],
+                "possibly": [
+                    "lan.ip",
+                    "security.ipop.map",
+                    "lan.mask",
+                    "security.ddos.map",
+                    "TOP",
+                    "firewall.pingwan"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": [
+                    697180
+                ]
+            },
+            "rank": 7.7,
+            "confidence": 0.3438,
+            "source_score": 0.55,
+            "path_factor": 0.5,
+            "risk_bonus": 1.25,
+            "summary_augmented": true,
+            "summary_tags": [
+                "OVERFLOW_POSSIBLE",
+                "HEAP_MUTATION",
+                "GLOBAL_WRITE"
+            ],
+            "summary_locations": [
+                "0x2c43c",
+                "0x184f4",
+                "0x18548",
+                "0x190f0",
+                "0x193a8",
+                "0x19238",
+                "0x2c50c",
+                "0x1976c",
+                "0x10610",
+                "0x196b8",
+                "0x1a67c",
+                "0x1b4e0"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "formSetFirewallCfg",
+                    "string": "formSetFirewallCfg(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0xac818",
+                    "ins_addr": "0xac818"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues({0: {<BV584 0x69707461626c6573202d742066696c746572202d4420494e505554202d6920 .. Reverse(GetValue(\"lan.webport\")@0xaa35c[63:32]) - 0x298 .. 0x202d702069636d70202d6d2069636d70202d2d69636d702d747970652038202d6a2044524f50>, <BV568 0x69707461626c6573202d742066696c746572202d4420494e505554202d69200000202d702069636d70202d6d2069636d70202d2d69636d702d747970652038202d6a2044524f50>}})>, <MultiValues({0: {<BV32 stack_base - 0x29c>, <BV32 Reverse(GetValue(\"lan.webport\")@0xaa35c[63:32]) - 0x298>}})>) @ 0xad2f4",
+                "ins_addr": "0xad2f4"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [
+                    "lan.webport"
+                ],
+                "possibly": [
+                    "lan.ip",
+                    "security.ipop.map",
+                    "lan.mask",
+                    "security.ddos.map",
+                    "TOP",
+                    "firewall.pingwan"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": [
+                    697180
+                ]
+            },
+            "rank": 7.7,
+            "confidence": 0.3438,
+            "source_score": 0.55,
+            "path_factor": 0.5,
+            "risk_bonus": 1.25,
+            "summary_augmented": true,
+            "summary_tags": [
+                "OVERFLOW_POSSIBLE",
+                "HEAP_MUTATION",
+                "GLOBAL_WRITE"
+            ],
+            "summary_locations": [
+                "0x2c43c",
+                "0x184f4",
+                "0x18548",
+                "0x190f0",
+                "0x193a8",
+                "0x19238",
+                "0x2c50c",
+                "0x1976c",
+                "0x10610",
+                "0x196b8",
+                "0x1a67c",
+                "0x1b4e0"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "formSetFirewallCfg",
+                    "string": "formSetFirewallCfg(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0xac818",
+                    "ins_addr": "0xac818"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues({0: {<BV584 0x69707461626c6573202d742066696c746572202d4420494e505554202d6920 .. Reverse(GetValue(\"lan.webport\")@0xaa35c[63:32]) - 0x298 .. 0x202d702069636d70202d6d2069636d70202d2d69636d702d747970652038202d6a2044524f50>, <BV568 0x69707461626c6573202d742066696c746572202d4420494e505554202d69200000202d702069636d70202d6d2069636d70202d2d69636d702d747970652038202d6a2044524f50>}})>, <MultiValues({0: {<BV32 Reverse(GetValue(\"lan.webport\")@0xaa35c[63:32]) - 0x298>, <BV32 stack_base - 0x29c>}})>) @ 0xad358",
+                "ins_addr": "0xad358"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [
+                    "lan.webport"
+                ],
+                "possibly": [
+                    "lan.ip",
+                    "security.ipop.map",
+                    "lan.mask",
+                    "security.ddos.map",
+                    "TOP",
+                    "firewall.pingwan"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": [
+                    697180
+                ]
+            },
+            "rank": 7.7,
+            "confidence": 0.3438,
+            "source_score": 0.55,
+            "path_factor": 0.5,
+            "risk_bonus": 1.25,
+            "summary_augmented": true,
+            "summary_tags": [
+                "OVERFLOW_POSSIBLE",
+                "HEAP_MUTATION",
+                "GLOBAL_WRITE"
+            ],
+            "summary_locations": [
+                "0x2c43c",
+                "0x184f4",
+                "0x18548",
+                "0x190f0",
+                "0x193a8",
+                "0x19238",
+                "0x2c50c",
+                "0x1976c",
+                "0x10610",
+                "0x196b8",
+                "0x1a67c",
+                "0x1b4e0"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "formSetFirewallCfg",
+                    "string": "formSetFirewallCfg(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0xac818",
+                    "ins_addr": "0xac818"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues({0: {<BV584 0x69707461626c6573202d742066696c746572202d4420494e505554202d6920 .. Reverse(GetValue(\"lan.webport\")@0xaa35c[63:32]) - 0x298 .. 0x202d702069636d70202d6d2069636d70202d2d69636d702d747970652038202d6a2044524f50>, <BV584 0x69707461626c6573202d742066696c746572202d4420494e505554202d6920 .. TOP .. 0x202d702069636d70202d6d2069636d70202d2d69636d702d747970652038202d6a2044524f50>}})>, <MultiValues({0: {<BV32 Reverse(GetValue(\"lan.webport\")@0xaa35c[63:32]) - 0x298>, <BV32 stack_base - 0x29c>}})>) @ 0xad1e4",
+                "ins_addr": "0xad1e4"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [
+                    "lan.webport"
+                ],
+                "possibly": [
+                    "lan.ip",
+                    "security.ipop.map",
+                    "lan.mask",
+                    "security.ddos.map",
+                    "TOP",
+                    "firewall.pingwan"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": [
+                    697180
+                ]
+            },
+            "rank": 7.7,
+            "confidence": 0.3438,
+            "source_score": 0.55,
+            "path_factor": 0.5,
+            "risk_bonus": 1.25,
+            "summary_augmented": true,
+            "summary_tags": [
+                "OVERFLOW_POSSIBLE",
+                "HEAP_MUTATION",
+                "GLOBAL_WRITE"
+            ],
+            "summary_locations": [
+                "0x2c43c",
+                "0x184f4",
+                "0x18548",
+                "0x190f0",
+                "0x193a8",
+                "0x19238",
+                "0x2c50c",
+                "0x1976c",
+                "0x10610",
+                "0x196b8",
+                "0x1a67c",
+                "0x1b4e0"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "formSetFirewallCfg",
+                    "string": "formSetFirewallCfg(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0xac818",
+                    "ins_addr": "0xac818"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues({0: {<BV568 0x69707461626c6573202d742066696c746572202d4920494e505554202d69200000202d702069636d70202d6d2069636d70202d2d69636d702d747970652038202d6a2044524f50>, <BV584 0x69707461626c6573202d742066696c746572202d4920494e505554202d6920 .. Reverse(GetValue(\"lan.webport\")@0xaa35c[63:32]) - 0x298 .. 0x202d702069636d70202d6d2069636d70202d2d69636d702d747970652038202d6a2044524f50>}})>, <MultiValues({0: {<BV32 Reverse(GetValue(\"lan.webport\")@0xaa35c[63:32]) - 0x298>, <BV32 stack_base - 0x29c>}})>) @ 0xad324",
+                "ins_addr": "0xad324"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [
+                    "lan.webport"
+                ],
+                "possibly": [
+                    "lan.ip",
+                    "security.ipop.map",
+                    "lan.mask",
+                    "security.ddos.map",
+                    "TOP",
+                    "firewall.pingwan"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": [
+                    697180
+                ]
+            },
+            "rank": 7.7,
+            "confidence": 0.3438,
+            "source_score": 0.55,
+            "path_factor": 0.5,
+            "risk_bonus": 1.25,
+            "summary_augmented": true,
+            "summary_tags": [
+                "OVERFLOW_POSSIBLE",
+                "HEAP_MUTATION",
+                "GLOBAL_WRITE"
+            ],
+            "summary_locations": [
+                "0x2c43c",
+                "0x184f4",
+                "0x18548",
+                "0x190f0",
+                "0x193a8",
+                "0x19238",
+                "0x2c50c",
+                "0x1976c",
+                "0x10610",
+                "0x196b8",
+                "0x1a67c",
+                "0x1b4e0"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "formSetFirewallCfg",
+                    "string": "formSetFirewallCfg(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0xac818",
+                    "ins_addr": "0xac818"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues({0: {<BV584 0x69707461626c6573202d742066696c746572202d4920494e505554202d6920 .. Reverse(GetValue(\"lan.webport\")@0xaa35c[63:32]) - 0x2a8 .. 0x202d702069636d70202d6d2069636d70202d2d69636d702d747970652038202d6a2044524f50>, <BV584 0x69707461626c6573202d742066696c746572202d4920494e505554202d6920766c616e202d702069636d70202d6d2069636d70202d2d69636d702d747970652038202d6a2044524f50>}})>, <MultiValues({0: {<BV32 Reverse(GetValue(\"lan.webport\")@0xaa35c[63:32]) - 0x2a8>, <BV32 stack_base - 0x2ac>}})>) @ 0xad33c",
+                "ins_addr": "0xad33c"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [
+                    "lan.webport"
+                ],
+                "possibly": [
+                    "lan.ip",
+                    "security.ipop.map",
+                    "lan.mask",
+                    "security.ddos.map",
+                    "TOP",
+                    "firewall.pingwan"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": [
+                    697180
+                ]
+            },
+            "rank": 7.7,
+            "confidence": 0.3438,
+            "source_score": 0.55,
+            "path_factor": 0.5,
+            "risk_bonus": 1.25,
+            "summary_augmented": true,
+            "summary_tags": [
+                "OVERFLOW_POSSIBLE",
+                "HEAP_MUTATION",
+                "GLOBAL_WRITE"
+            ],
+            "summary_locations": [
+                "0x2c43c",
+                "0x184f4",
+                "0x18548",
+                "0x190f0",
+                "0x193a8",
+                "0x19238",
+                "0x2c50c",
+                "0x1976c",
+                "0x10610",
+                "0x196b8",
+                "0x1a67c",
+                "0x1b4e0"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "formSetFirewallCfg",
+                    "string": "formSetFirewallCfg(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0xac818",
+                    "ins_addr": "0xac818"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues({0: {<BV568 0x69707461626c6573202d742066696c746572202d4920494e505554202d69200000202d702069636d70202d6d2069636d70202d2d69636d702d747970652038202d6a2044524f50>, <BV584 0x69707461626c6573202d742066696c746572202d4920494e505554202d6920 .. Reverse(GetValue(\"lan.webport\")@0xaa35c[63:32]) - 0x298 .. 0x202d702069636d70202d6d2069636d70202d2d69636d702d747970652038202d6a2044524f50>}})>, <MultiValues({0: {<BV32 stack_base - 0x29c>, <BV32 Reverse(GetValue(\"lan.webport\")@0xaa35c[63:32]) - 0x298>}})>) @ 0xad370",
+                "ins_addr": "0xad370"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [
+                    "lan.webport"
+                ],
+                "possibly": [
+                    "lan.ip",
+                    "security.ipop.map",
+                    "lan.mask",
+                    "security.ddos.map",
+                    "TOP",
+                    "firewall.pingwan"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": [
+                    697180
+                ]
+            },
+            "rank": 7.7,
+            "confidence": 0.3438,
+            "source_score": 0.55,
+            "path_factor": 0.5,
+            "risk_bonus": 1.25,
+            "summary_augmented": true,
+            "summary_tags": [
+                "OVERFLOW_POSSIBLE",
+                "HEAP_MUTATION",
+                "GLOBAL_WRITE"
+            ],
+            "summary_locations": [
+                "0x2c43c",
+                "0x184f4",
+                "0x18548",
+                "0x190f0",
+                "0x193a8",
+                "0x19238",
+                "0x2c50c",
+                "0x1976c",
+                "0x10610",
+                "0x196b8",
+                "0x1a67c",
+                "0x1b4e0"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "formSetFirewallCfg",
+                    "string": "formSetFirewallCfg(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0xac818",
+                    "ins_addr": "0xac818"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues({0: {<BV584 0x69707461626c6573202d742066696c746572202d4920494e505554202d6920 .. Reverse(GetValue(\"lan.webport\")@0xaa35c[63:32]) - 0x298 .. 0x202d702069636d70202d6d2069636d70202d2d69636d702d747970652038202d6a2044524f50>, <BV584 0x69707461626c6573202d742066696c746572202d4920494e505554202d6920 .. TOP .. 0x202d702069636d70202d6d2069636d70202d2d69636d702d747970652038202d6a2044524f50>}})>, <MultiValues({0: {<BV32 stack_base - 0x29c>, <BV32 Reverse(GetValue(\"lan.webport\")@0xaa35c[63:32]) - 0x298>}})>) @ 0xad1c8",
+                "ins_addr": "0xad1c8"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [
+                    "lan.webport"
+                ],
+                "possibly": [
+                    "lan.ip",
+                    "security.ipop.map",
+                    "lan.mask",
+                    "security.ddos.map",
+                    "TOP",
+                    "firewall.pingwan"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": [
+                    697180
+                ]
+            },
+            "rank": 7.7,
+            "confidence": 0.3438,
+            "source_score": 0.55,
+            "path_factor": 0.5,
+            "risk_bonus": 1.25,
+            "summary_augmented": true,
+            "summary_tags": [
+                "OVERFLOW_POSSIBLE",
+                "HEAP_MUTATION",
+                "GLOBAL_WRITE"
+            ],
+            "summary_locations": [
+                "0x2c43c",
+                "0x184f4",
+                "0x18548",
+                "0x190f0",
+                "0x193a8",
+                "0x19238",
+                "0x2c50c",
+                "0x1976c",
+                "0x10610",
+                "0x196b8",
+                "0x1a67c",
+                "0x1b4e0"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "formsetUsbUnload",
+                    "string": "formsetUsbUnload(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0xa6a30",
+                    "ins_addr": "0xa6a30"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues({0: {<BV328 0x63666d20706f7374206e65746374726c2035313f6f703d332c737472696e675f696e666f3d .. TOP>, <BV328 0x63666d20706f7374206e65746374726c2035313f6f703d332c737472696e675f696e666f3d .. TOP>, <BV328 0x63666d20706f7374206e65746374726c2035313f6f703d332c737472696e675f696e666f3d .. TOP>}})>, <MultiValues(<BV32 0x33>)>, <MultiValues(<BV32 0x3>)>, <MultiValues({0: {<BV32 0xf213c>, <BV32 0xdc364>, <BV32 (0#16 .. TOP) << 0x10 | (0#16 .. TOP)>}})>) @ 0xa6a94",
+                "ins_addr": "0xa6a94"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.25,
+            "summary_augmented": true,
+            "summary_tags": [
+                "OVERFLOW_POSSIBLE",
+                "HEAP_MUTATION",
+                "GLOBAL_WRITE"
+            ],
+            "summary_locations": [
+                "0x2c43c",
+                "0x184f4",
+                "0x18548",
+                "0x190f0",
+                "0x193a8",
+                "0x19238",
+                "0x2c50c",
+                "0x1976c",
+                "0x10610",
+                "0x196b8",
+                "0x1a67c",
+                "0x1b4e0",
+                "0x1ab7c",
+                "0x19f28",
+                "0x108e8"
+            ],
+            "ani_skip_records": [
+                "llm",
+                "reanalyzed",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "llm",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "formexeCommand",
+                    "string": "formexeCommand(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0x7ba84",
+                    "ins_addr": "0x7ba84"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues(<BV216 0x6563686f20 .. TOP .. 0x203e202f746d702f636d64546d702e747874>)>, <MultiValues(<BV32 0x102e84>)>) @ 0x7bd34",
+                "ins_addr": "0x7bd34"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.25,
+            "summary_augmented": true,
+            "summary_tags": [
+                "OVERFLOW_POSSIBLE",
+                "HEAP_MUTATION",
+                "GLOBAL_WRITE"
+            ],
+            "summary_locations": [
+                "0x2c43c",
+                "0x184f4",
+                "0x18548",
+                "0x190f0",
+                "0x193a8",
+                "0x19238",
+                "0x2c50c",
+                "0x1976c",
+                "0x10610",
+                "0x196b8",
+                "0x1a67c",
+                "0x1b4e0",
+                "0x1ab7c",
+                "0x19f28",
+                "0x108e8"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "llm",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "formexeCommand",
+                    "string": "formexeCommand(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0x7ba84",
+                    "ins_addr": "0x7ba84"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues(<BV216 0x6563686f20 .. TOP .. 0x203e202f746d702f636d64546d702e747874>)>, <MultiValues(<BV32 0x102e84>)>) @ 0x7bc0c",
+                "ins_addr": "0x7bc0c"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.25,
+            "summary_augmented": true,
+            "summary_tags": [
+                "OVERFLOW_POSSIBLE",
+                "HEAP_MUTATION",
+                "GLOBAL_WRITE"
+            ],
+            "summary_locations": [
+                "0x2c43c",
+                "0x184f4",
+                "0x18548",
+                "0x190f0",
+                "0x193a8",
+                "0x19238",
+                "0x2c50c",
+                "0x1976c",
+                "0x10610",
+                "0x196b8",
+                "0x1a67c",
+                "0x1b4e0",
+                "0x1ab7c",
+                "0x19f28",
+                "0x108e8"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "llm",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "formexeCommand",
+                    "string": "formexeCommand(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0x7ba84",
+                    "ins_addr": "0x7ba84"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues({0: {<BV176 TOP .. 0x203e202f746d702f636d64546d702e747874>, <BV176 TOP .. 0x203e202f746d702f636d64546d702e747874>, <BV176 TOP .. 0x203e202f746d702f636d64546d702e747874>}})>, <MultiValues(<BV32 stack_base - 0x220>)>) @ 0x7bca4",
+                "ins_addr": "0x7bca4"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.25,
+            "summary_augmented": true,
+            "summary_tags": [
+                "OVERFLOW_POSSIBLE",
+                "HEAP_MUTATION",
+                "GLOBAL_WRITE"
+            ],
+            "summary_locations": [
+                "0x2c43c",
+                "0x184f4",
+                "0x18548",
+                "0x190f0",
+                "0x193a8",
+                "0x19238",
+                "0x2c50c",
+                "0x1976c",
+                "0x10610",
+                "0x196b8",
+                "0x1a67c",
+                "0x1b4e0",
+                "0x1ab7c",
+                "0x19f28",
+                "0x108e8"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "llm",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "formexeCommand",
+                    "string": "formexeCommand(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0x7ba84",
+                    "ins_addr": "0x7ba84"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues({0: {<BV176 TOP .. 0x203e202f746d702f636d64546d702e747874>, <BV176 TOP .. 0x203e202f746d702f636d64546d702e747874>, <BV176 TOP .. 0x203e202f746d702f636d64546d702e747874>}})>, <MultiValues(<BV32 stack_base - 0x220>)>) @ 0x7bc58",
+                "ins_addr": "0x7bc58"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.25,
+            "summary_augmented": true,
+            "summary_tags": [
+                "OVERFLOW_POSSIBLE",
+                "HEAP_MUTATION",
+                "GLOBAL_WRITE"
+            ],
+            "summary_locations": [
+                "0x2c43c",
+                "0x184f4",
+                "0x18548",
+                "0x190f0",
+                "0x193a8",
+                "0x19238",
+                "0x2c50c",
+                "0x1976c",
+                "0x10610",
+                "0x196b8",
+                "0x1a67c",
+                "0x1b4e0",
+                "0x1ab7c",
+                "0x19f28",
+                "0x108e8"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "llm",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "formexeCommand",
+                    "string": "formexeCommand(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0x7ba84",
+                    "ins_addr": "0x7ba84"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues({0: {<BV32 TOP>, <BV32 TOP>}})>, <MultiValues(<BV32 stack_base - 0x220>)>) @ 0x7bcf0",
+                "ins_addr": "0x7bcf0"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.25,
+            "summary_augmented": true,
+            "summary_tags": [
+                "OVERFLOW_POSSIBLE",
+                "HEAP_MUTATION",
+                "GLOBAL_WRITE"
+            ],
+            "summary_locations": [
+                "0x2c43c",
+                "0x184f4",
+                "0x18548",
+                "0x190f0",
+                "0x193a8",
+                "0x19238",
+                "0x2c50c",
+                "0x1976c",
+                "0x10610",
+                "0x196b8",
+                "0x1a67c",
+                "0x1b4e0",
+                "0x1ab7c",
+                "0x19f28",
+                "0x108e8"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "llm",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "formexeCommand",
+                    "string": "formexeCommand(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0x7ba84",
+                    "ins_addr": "0x7ba84"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues(<BV176 TOP .. 0x203e202f746d702f636d64546d702e747874>)>, <MultiValues(<BV32 stack_base - 0x220>)>) @ 0x7bd90",
+                "ins_addr": "0x7bd90"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.25,
+            "summary_augmented": true,
+            "summary_tags": [
+                "OVERFLOW_POSSIBLE",
+                "HEAP_MUTATION",
+                "GLOBAL_WRITE"
+            ],
+            "summary_locations": [
+                "0x2c43c",
+                "0x184f4",
+                "0x18548",
+                "0x190f0",
+                "0x193a8",
+                "0x19238",
+                "0x2c50c",
+                "0x1976c",
+                "0x10610",
+                "0x196b8",
+                "0x1a67c",
+                "0x1b4e0",
+                "0x1ab7c",
+                "0x19f28",
+                "0x108e8"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "llm",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "formexeCommand",
+                    "string": "formexeCommand(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0x7ba84",
+                    "ins_addr": "0x7ba84"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues(<BV216 TOP .. 0x202d632033203e202f746d702f636d64546d702e747874>)>, <MultiValues(<BV32 stack_base - 0x220>)>) @ 0x7bd74",
+                "ins_addr": "0x7bd74"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.25,
+            "summary_augmented": true,
+            "summary_tags": [
+                "OVERFLOW_POSSIBLE",
+                "HEAP_MUTATION",
+                "GLOBAL_WRITE"
+            ],
+            "summary_locations": [
+                "0x2c43c",
+                "0x184f4",
+                "0x18548",
+                "0x190f0",
+                "0x193a8",
+                "0x19238",
+                "0x2c50c",
+                "0x1976c",
+                "0x10610",
+                "0x196b8",
+                "0x1a67c",
+                "0x1b4e0",
+                "0x1ab7c",
+                "0x19f28",
+                "0x108e8"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "llm",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_31ff8",
+                    "string": "sub_31ff8(<MultiValues(<BV32 TOP>)>) @ 0x31ff8",
+                    "ins_addr": "0x31ff8"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues(<BV32 TOP + 0xfffdddf8>)>) @ 0x32064",
+                "ins_addr": "0x32064"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 1.0,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_6b92c",
+                    "string": "sub_6b92c(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0x6b92c",
+                    "ins_addr": "0x6b92c"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues(<BV32 TOP>)>) @ 0x6b9c4",
+                "ins_addr": "0x6b9c4"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_316bc",
+                    "string": "sub_316bc(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0x316bc",
+                    "ins_addr": "0x316bc"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues(<BV152 0x6d7620 .. TOP .. 0x20202f7661722f696d616765>)>, <MultiValues(<BV32 TOP>)>) @ 0x3171c",
+                "ins_addr": "0x3171c"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_62f70",
+                    "string": "sub_62f70() @ 0x62f70",
+                    "ins_addr": "0x62f70"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues({0: {<BV32 TOP + 0xfffe3c7c>, <BV32 Reverse(TOP) + 0xfffe3c7c>}})>) @ 0x6306c",
+                "ins_addr": "0x6306c"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "formWriteFacMac",
+                    "string": "formWriteFacMac(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0x4550c",
+                    "ins_addr": "0x4550c"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues({0: {<BV96 0x63666d206d616320 .. TOP>, <BV96 0x63666d206d616320 .. TOP>, <BV200 0x63666d206d61632030303a30313a30323a31313a32323a3333>}})>, <MultiValues({0: {<BV32 (0#16 .. TOP) << 0x10 | (0#16 .. TOP)>, <BV32 0xdc364>, <BV32 0xe0088>}})>) @ 0x45574",
+                "ins_addr": "0x45574"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [
+                "0x1b4e0"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "TendaTelnet",
+                    "string": "TendaTelnet(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0x4fb88",
+                    "ins_addr": "0x4fb88"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues(<BV360 0x74656c6e657464202d6220 .. GetValue(\"lan.ip\")@0x4fc38 .. 0x2026>)>, <MultiValues(<BV32 stack_base - 0x130>)>) @ 0x4fc60",
+                "ins_addr": "0x4fc60"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [
+                    "lan.ip"
+                ],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": [
+                    326712
+                ]
+            },
+            "rank": 7.0,
+            "confidence": 0.3125,
+            "source_score": 0.5,
+            "path_factor": 0.5,
+            "risk_bonus": 1.25,
+            "summary_augmented": true,
+            "summary_tags": [
+                "OVERFLOW_POSSIBLE",
+                "HEAP_MUTATION",
+                "GLOBAL_WRITE"
+            ],
+            "summary_locations": [
+                "0x2c43c",
+                "0x184f4",
+                "0x18548",
+                "0x190f0",
+                "0x193a8",
+                "0x19238",
+                "0x2c50c",
+                "0x1976c",
+                "0x10610",
+                "0x196b8",
+                "0x1a67c",
+                "0x1b4e0",
+                "0x1ab7c",
+                "0x19f28",
+                "0x108e8"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "llm",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "formSetSambaConf",
+                    "string": "formSetSambaConf(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0xa56c8",
+                    "ins_addr": "0xa56c8"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues({0: {<BV328 0x63666d20706f7374206e65746374726c2035313f6f703d332c737472696e675f696e666f3d .. TOP>, <BV328 0x63666d20706f7374206e65746374726c2035313f6f703d332c737472696e675f696e666f3d .. TOP>, <BV328 0x63666d20706f7374206e65746374726c2035313f6f703d332c737472696e675f696e666f3d .. TOP>}})>, <MultiValues(<BV32 0x33>)>, <MultiValues(<BV32 0x3>)>, <MultiValues({0: {<BV32 0xf213c>, <BV32 (0#16 .. TOP) << 0x10 | (0#16 .. TOP)>, <BV32 0xdc364>}})>) @ 0xa587c",
+                "ins_addr": "0xa587c"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [
+                    "usb.samba.enable",
+                    "usb.samba.guest.user"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0.7,
+            "confidence": 0.0275,
+            "source_score": 0.05,
+            "path_factor": 0.5,
+            "risk_bonus": 1.1,
+            "summary_augmented": true,
+            "summary_tags": [
+                "HEAP_MUTATION",
+                "GLOBAL_WRITE"
+            ],
+            "summary_locations": [
+                "0x1b4e0",
+                "0x2c43c"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "formSetSambaConf",
+                    "string": "formSetSambaConf(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0xa56c8",
+                    "ins_addr": "0xa56c8"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues(<BV384 0x62757379626f782064656c7573657220 .. GetValue(\"usb.samba.guest.user\")@0xa58cc>)>, <MultiValues(<BV32 stack_base - 0x74>)>) @ 0xa58f4",
+                "ins_addr": "0xa58f4"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [
+                    "usb.samba.guest.user"
+                ],
+                "possibly": [
+                    "usb.samba.enable"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": [
+                    678092
+                ]
+            },
+            "rank": 1.4,
+            "confidence": 0.055,
+            "source_score": 0.1,
+            "path_factor": 0.5,
+            "risk_bonus": 1.1,
+            "summary_augmented": true,
+            "summary_tags": [
+                "HEAP_MUTATION",
+                "GLOBAL_WRITE"
+            ],
+            "summary_locations": [
+                "0x1b4e0",
+                "0x2c43c"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_a7e98",
+                    "string": "sub_a7e98(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0xa7e98",
+                    "ins_addr": "0xa7e98"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues(<BV344 0x6563686f2022 .. TOP .. 0x22203e3e202f6574632f6368656e6779616e636f6e6669672f .. TOP .. 0x2e646174>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0xa7f5c",
+                "ins_addr": "0xa7f5c"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.25,
+            "summary_augmented": true,
+            "summary_tags": [
+                "OVERFLOW_POSSIBLE",
+                "HEAP_MUTATION",
+                "GLOBAL_WRITE"
+            ],
+            "summary_locations": [
+                "0x2c43c",
+                "0x184f4",
+                "0x18548",
+                "0x190f0",
+                "0x193a8",
+                "0x19238",
+                "0x2c50c",
+                "0x1976c",
+                "0x10610",
+                "0x196b8",
+                "0x1a67c",
+                "0x1b4e0",
+                "0x1ab7c",
+                "0x19f28",
+                "0x108e8"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "llm",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_a1a00",
+                    "string": "sub_a1a00() @ 0xa1a00",
+                    "ins_addr": "0xa1a00"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues({0: {<BV32 TOP + 0xffff27ac>, <BV32 TOP + 0xffff27ac>, <BV32 TOP + 0xffff27ac>, <BV32 TOP + 0xffff27ac>}})>) @ 0xa31b4",
+                "ins_addr": "0xa31b4"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [
+                    "TOP",
+                    "/var/sta_encode_ssid_cache"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0.7,
+            "confidence": 0.025,
+            "source_score": 0.05,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_a1a00",
+                    "string": "sub_a1a00() @ 0xa1a00",
+                    "ins_addr": "0xa1a00"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues({0: {<BV32 TOP + 0xffff27c0>, <BV32 TOP + 0xffff27c0>, <BV32 TOP + 0xffff27c0>, <BV32 TOP + 0xffff27c0>}})>) @ 0xa31c8",
+                "ins_addr": "0xa31c8"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [
+                    "TOP",
+                    "/var/sta_encode_ssid_cache"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0.7,
+            "confidence": 0.025,
+            "source_score": 0.05,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_a1a00",
+                    "string": "sub_a1a00() @ 0xa1a00",
+                    "ins_addr": "0xa1a00"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues({0: {<BV32 TOP + 0xffff2808>, <BV32 TOP + 0xffff2808>, <BV32 TOP + 0xffff2808>, <BV32 TOP + 0xffff2808>}})>) @ 0xa31d8",
+                "ins_addr": "0xa31d8"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [
+                    "TOP",
+                    "/var/sta_encode_ssid_cache"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0.7,
+            "confidence": 0.025,
+            "source_score": 0.05,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_a1a00",
+                    "string": "sub_a1a00() @ 0xa1a00",
+                    "ins_addr": "0xa1a00"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues({0: {<BV32 TOP + 0xffff2850>, <BV32 TOP + 0xffff2850>, <BV32 TOP + 0xffff2850>, <BV32 TOP + 0xffff2850>}})>) @ 0xa31e8",
+                "ins_addr": "0xa31e8"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [
+                    "TOP",
+                    "/var/sta_encode_ssid_cache"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0.7,
+            "confidence": 0.025,
+            "source_score": 0.05,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_a1a00",
+                    "string": "sub_a1a00() @ 0xa1a00",
+                    "ins_addr": "0xa1a00"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues({0: {<BV32 TOP + 0xffff25e4>, <BV32 TOP + 0xffff25e4>, <BV32 TOP + 0xffff25e4>, <BV32 TOP + 0xffff25e4>}})>) @ 0xa3474",
+                "ins_addr": "0xa3474"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [
+                    "TOP",
+                    "/var/sta_encode_ssid_cache"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0.7,
+            "confidence": 0.025,
+            "source_score": 0.05,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_a1a00",
+                    "string": "sub_a1a00() @ 0xa1a00",
+                    "ins_addr": "0xa1a00"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues({0: {<BV32 TOP + 0xffff260c>, <BV32 TOP + 0xffff260c>, <BV32 TOP + 0xffff260c>, <BV32 TOP + 0xffff260c>}})>) @ 0xa34a0",
+                "ins_addr": "0xa34a0"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [
+                    "TOP",
+                    "/var/sta_encode_ssid_cache"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0.7,
+            "confidence": 0.025,
+            "source_score": 0.05,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_71e8c",
+                    "string": "sub_71e8c() @ 0x71e8c",
+                    "ins_addr": "0x71e8c"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues(<BV32 TOP + 0xfffe5e9c>)>) @ 0x71ed0",
+                "ins_addr": "0x71ed0"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_69bbc",
+                    "string": "sub_69bbc(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0x69bbc",
+                    "ins_addr": "0x69bbc"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues(<BV424 0x63617420 .. fgets(fopen(\"/proc/mounts\", \"r\")@0x69c94_376_32)@0x69de0_379_256 .. 47 .. TOP .. 0x203e202f6465762f6e756c6c>)>, <MultiValues(<BV32 stack_base - 0x224>)>) @ 0x69f20",
+                "ins_addr": "0x69f20"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [
+                    "/proc/mounts"
+                ],
+                "possibly": [
+                    "/sys/bus/usb/devices/usb1/idProduct"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": [
+                    433632,
+                    433300
+                ]
+            },
+            "rank": 1.0,
+            "confidence": 0.0357,
+            "source_score": 0.0714,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_a00c0",
+                    "string": "sub_a00c0() @ 0xa00c0",
+                    "ins_addr": "0xa00c0"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues({0: {<BV32 Reverse(TOP) + 0xffff250c>, <BV32 TOP + 0xffff250c>}})>) @ 0xa0174",
+                "ins_addr": "0xa0174"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [
+                    "TOP"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0.7,
+            "confidence": 0.025,
+            "source_score": 0.05,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_a00c0",
+                    "string": "sub_a00c0() @ 0xa00c0",
+                    "ins_addr": "0xa00c0"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues({0: {<BV32 Reverse(TOP) + 0xffff0ea8>, <BV32 TOP + 0xffff0ea8>}})>) @ 0xa023c",
+                "ins_addr": "0xa023c"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [
+                    "TOP"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0.7,
+            "confidence": 0.025,
+            "source_score": 0.05,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_b73dc",
+                    "string": "sub_b73dc(<MultiValues(<BV32 0x0>)>) @ 0xb73dc",
+                    "ins_addr": "0xb73dc"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues(<BV32 stack_base - 0x3f8>)>) @ 0xb7468",
+                "ins_addr": "0xb7468"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 1.0,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_92794",
+                    "string": "sub_92794() @ 0x92794",
+                    "ins_addr": "0x92794"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues({0: {<BV32 TOP + 0xffff0e00>, <BV32 TOP + 0xffff0e00>}})>) @ 0x92c84",
+                "ins_addr": "0x92c84"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [
+                    "wl5g.public.mode",
+                    "TOP",
+                    "/webroot/default.cfg"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0.7,
+            "confidence": 0.025,
+            "source_score": 0.05,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_92794",
+                    "string": "sub_92794() @ 0x92794",
+                    "ins_addr": "0x92794"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues({0: {<BV32 TOP + 0xffff0e28>, <BV32 TOP + 0xffff0e28>}})>) @ 0x92c98",
+                "ins_addr": "0x92c98"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [
+                    "wl5g.public.mode",
+                    "TOP",
+                    "/webroot/default.cfg"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0.7,
+            "confidence": 0.025,
+            "source_score": 0.05,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_92794",
+                    "string": "sub_92794() @ 0x92794",
+                    "ins_addr": "0x92794"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues(<BV32 TOP + 0xffff0ea8>)>) @ 0x92d98",
+                "ins_addr": "0x92d98"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [
+                    "wl5g.public.mode",
+                    "TOP",
+                    "/webroot/default.cfg"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0.7,
+            "confidence": 0.025,
+            "source_score": 0.05,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_a1850",
+                    "string": "sub_a1850() @ 0xa1850",
+                    "ins_addr": "0xa1850"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues(<BV32 TOP + 0xffff28f0>)>) @ 0xa34fc",
+                "ins_addr": "0xa34fc"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [
+                    "TOP"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0.7,
+            "confidence": 0.025,
+            "source_score": 0.05,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_70460",
+                    "string": "sub_70460() @ 0x70460",
+                    "ins_addr": "0x70460"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues(<BV32 TOP + 0xfffe5c7c>)>) @ 0x7047c",
+                "ins_addr": "0x7047c"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_70460",
+                    "string": "sub_70460() @ 0x70460",
+                    "ins_addr": "0x70460"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues(<BV32 TOP + 0xfffe5ca8>)>) @ 0x704a4",
+                "ins_addr": "0x704a4"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_a8c38",
+                    "string": "sub_a8c38() @ 0xa8c38",
+                    "ins_addr": "0xa8c38"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues(<BV32 TOP + 0xffff345c>)>) @ 0xa8ce8",
+                "ins_addr": "0xa8ce8"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_a8c38",
+                    "string": "sub_a8c38() @ 0xa8c38",
+                    "ins_addr": "0xa8c38"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues(<BV32 TOP + 0xffff3488>)>) @ 0xa8d00",
+                "ins_addr": "0xa8d00"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_a8c38",
+                    "string": "sub_a8c38() @ 0xa8c38",
+                    "ins_addr": "0xa8c38"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues(<BV32 TOP + 0xffff34b4>)>) @ 0xa8d38",
+                "ins_addr": "0xa8d38"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_a8c38",
+                    "string": "sub_a8c38() @ 0xa8c38",
+                    "ins_addr": "0xa8c38"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues(<BV32 TOP + 0xffff34d0>)>) @ 0xa8d74",
+                "ins_addr": "0xa8d74"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_a0f14",
+                    "string": "sub_a0f14() @ 0xa0f14",
+                    "ins_addr": "0xa0f14"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues(<BV360 0x63666d20706f7374206e65746374726c2035313f6f703d312c737472696e675f696e666f3d .. fgets(fopen(\"/tmp/UDiskname\", \"r+\")@0xa0f54_461_32)@0xa0f7c_462_64>)>, <MultiValues(<BV32 0x33>)>, <MultiValues(<BV32 0x1>)>, <MultiValues(<BV32 stack_base - 0x1c>)>) @ 0xa0fa8",
+                "ins_addr": "0xa0fa8"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [
+                    "/tmp/UDiskname"
+                ],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": [
+                    659324,
+                    659284
+                ]
+            },
+            "rank": 0.5,
+            "confidence": 0.0179,
+            "source_score": 0.0357,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_38c28",
+                    "string": "sub_38c28(<MultiValues(<BV32 TOP>)>) @ 0x38c28",
+                    "ins_addr": "0x38c28"
+                },
+                {
+                    "function": "sub_38a24",
+                    "string": "sub_38a24(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP + 0x2>)>, <MultiValues(<BV32 TOP - 0x2 - (TOP + 0x2)>)>) @ 0x38fc4",
+                    "ins_addr": "0x38fc4"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues(<BV32 stack_base - 0x250>)>) @ 0x38ab8",
+                "ins_addr": "0x38ab8"
+            },
+            "depth": 2,
+            "inputs": {
+                "likely": [],
+                "possibly": [
+                    "<BV32 TOP>"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0.5,
+            "confidence": 0.0179,
+            "source_score": 0.0357,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_3a648",
+                    "string": "sub_3a648() @ 0x3a648",
+                    "ins_addr": "0x3a648"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues(<BV368 0x6966636f6e66696720 .. GetValue(\"lan.gst.1.ip\")@0x3a7d8 .. 32 .. TOP>)>, <MultiValues(<BV32 stack_base - 0x74>)>, <MultiValues(<BV32 TOP>)>) @ 0x3a854",
+                "ins_addr": "0x3a854"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [
+                    "lan.gst.1.ip"
+                ],
+                "possibly": [
+                    "dhcps.gst.1.en",
+                    "dhcps.en"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": [
+                    239576
+                ]
+            },
+            "rank": 1.4,
+            "confidence": 0.05,
+            "source_score": 0.1,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_b03ec",
+                    "string": "sub_b03ec() @ 0xb03ec",
+                    "ins_addr": "0xb03ec"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues(<BV32 TOP + 0xffff4524>)>) @ 0xb0428",
+                "ins_addr": "0xb0428"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 1.0,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_b03ec",
+                    "string": "sub_b03ec() @ 0xb03ec",
+                    "ins_addr": "0xb03ec"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues(<BV32 TOP + 0xffff4548>)>) @ 0xb0438",
+                "ins_addr": "0xb0438"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 1.0,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [],
+            "reachable_from_main": false,
+            "sanitized": false
+        }
+    ],
+    "cfg_time": 37.61328840255737,
+    "vra_time": 268.9710440635681,
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/bin/httpd",
+    "name": "httpd",
+    "has_sinks": true,
+    "sha256": "e2880dc6a19a9ac5122d8686047db12a223d062324de7c5b9c5b36e60674a7ab",
+    "sink_times": {
+        "system": 4.8744423389434814,
+        "doSystemCmd": 1119.0646994113922
+    },
+    "error": "timeout",
+    "sieve_time": 10806.23462343216,
+    "sinks": {
+        "system": 3,
+        "doSystemCmd": 181
+    },
+    "time_data": {
+        "0xa63ac -> 0xee00": {
+            "taint_time": 0.3166043758392334,
+            "rda_time": 4.55634331703186
+        },
+        "0x4fb88 -> 0xee00": {
+            "taint_time": 0.10051417350769043,
+            "rda_time": 108.55743432044983
+        },
+        "0x3da1c -> 0x3aefc -> 0x3abd4 -> 0xee00": {
+            "taint_time": 43.40604591369629,
+            "rda_time": 212.26866817474365
+        },
+        "0x2e450 -> 0xf55c": {
+            "taint_time": 0.6313340663909912,
+            "rda_time": 117.65317821502686
+        },
+        "0xb0674 -> 0xf55c": {
+            "taint_time": 1.5090217590332031,
+            "rda_time": 35.96569848060608
+        },
+        "0xac818 -> 0xf55c": {
+            "taint_time": 1.8484911918640137,
+            "rda_time": 27.390459060668945
+        },
+        "0xa6a30 -> 0xf55c": {
+            "taint_time": 0.2841148376464844,
+            "rda_time": 21.85914707183838
+        },
+        "0x7ba84 -> 0xf55c": {
+            "taint_time": 5.7764732837677,
+            "rda_time": 8.41440725326538
+        },
+        "0x94444 -> 0xf55c": {
+            "taint_time": 0.15455031394958496,
+            "rda_time": 0.250199556350708
+        },
+        "0xa94dc -> 0xf55c": {
+            "taint_time": 0.815441370010376,
+            "rda_time": 6.198177337646484
+        },
+        "0x66b10 -> 0xf55c": {
+            "taint_time": 0.5543763637542725,
+            "rda_time": 1.4328598976135254
+        },
+        "0x31504 -> 0xf55c": {
+            "taint_time": 0.1660327911376953,
+            "rda_time": 0.4434378147125244
+        },
+        "0x6a494 -> 0xf55c": {
+            "taint_time": 0.05885481834411621,
+            "rda_time": 0.0959923267364502
+        },
+        "0x66490 -> 0xf55c": {
+            "taint_time": 0.19995379447937012,
+            "rda_time": 6.14670729637146
+        },
+        "0x61698 -> 0xf55c": {
+            "taint_time": 4.953595161437988,
+            "rda_time": 127.93882060050964
+        },
+        "0x50658 -> 0xf55c": {
+            "taint_time": 0.12374424934387207,
+            "rda_time": 0.22310781478881836
+        },
+        "0x31ff8 -> 0xf55c": {
+            "taint_time": 0.07128071784973145,
+            "rda_time": 0.10706782341003418
+        },
+        "0x6b92c -> 0xf55c": {
+            "taint_time": 0.10579085350036621,
+            "rda_time": 0.1081545352935791
+        },
+        "0xa0ff4 -> 0xf55c": {
+            "taint_time": 0.5034847259521484,
+            "rda_time": 0.6973154544830322
+        },
+        "0x316bc -> 0xf55c": {
+            "taint_time": 0.15729188919067383,
+            "rda_time": 0.27147674560546875
+        },
+        "0x62f70 -> 0xf55c": {
+            "taint_time": 0.357257604598999,
+            "rda_time": 24.231454610824585
+        },
+        "0x4550c -> 0xf55c": {
+            "taint_time": 3.5208001136779785,
+            "rda_time": 5.795720338821411
+        },
+        "0x61a08 -> 0xf55c": {
+            "taint_time": 0.98262619972229,
+            "rda_time": 1.167963981628418
+        },
+        "0xc3890 -> 0xf55c": {
+            "taint_time": 4.25914454460144,
+            "rda_time": 27.66911482810974
+        },
+        "0x56594 -> 0xf55c": {
+            "taint_time": 0.5624537467956543,
+            "rda_time": 5.480551481246948
+        },
+        "0x31848 -> 0xf55c": {
+            "taint_time": 0.05486559867858887,
+            "rda_time": 0.3982889652252197
+        },
+        "0x4fb88 -> 0xf55c": {
+            "taint_time": 0.1031656265258789,
+            "rda_time": 4.961997985839844
+        },
+        "0xa56c8 -> 0xf55c": {
+            "taint_time": 7.17033314704895,
+            "rda_time": 19.558370351791382
+        },
+        "0x77530 -> 0xf55c": {
+            "taint_time": 0.3462533950805664,
+            "rda_time": 0.42896413803100586
+        },
+        "0x6d4e4 -> 0xf55c": {
+            "taint_time": 0.14494991302490234,
+            "rda_time": 0.2516653537750244
+        },
+        "0xb3ab8 -> 0xf55c": {
+            "taint_time": 1.197699785232544,
+            "rda_time": 6.7840893268585205
+        },
+        "0x44af0 -> 0xf55c": {
+            "taint_time": 13.112613677978516,
+            "rda_time": 11.409801959991455
+        },
+        "0x7a924 -> 0xf55c": {
+            "taint_time": 6.60581111907959,
+            "rda_time": 19.195677757263184
+        },
+        "0x804a8 -> 0xf55c": {
+            "taint_time": 0.5598154067993164,
+            "rda_time": 0.7807457447052002
+        },
+        "0xa540c -> 0xf55c": {
+            "taint_time": 0.3349912166595459,
+            "rda_time": 5.146352291107178
+        },
+        "0x66cd8 -> 0xf55c": {
+            "taint_time": 40.40977120399475,
+            "rda_time": 98.2440299987793
+        },
+        "0xa7e98 -> 0xf55c": {
+            "taint_time": 0.17751049995422363,
+            "rda_time": 4.938234806060791
+        },
+        "0x9c604 -> 0xf55c": {
+            "taint_time": 0.3092305660247803,
+            "rda_time": 0.5756633281707764
+        },
+        "0x6a500 -> 0xf55c": {
+            "taint_time": 0.06422066688537598,
+            "rda_time": 0.08779716491699219
+        },
+        "0x5024c -> 0xf55c": {
+            "taint_time": 3.914520740509033,
+            "rda_time": 2.2269556522369385
+        },
+        "0xa1a00 -> 0xf55c": {
+            "taint_time": 15.763503551483154,
+            "rda_time": 17.450117349624634
+        },
+        "0x71e8c -> 0xf55c": {
+            "taint_time": 0.46775388717651367,
+            "rda_time": 33.84730362892151
+        },
+        "0x69bbc -> 0xf55c": {
+            "taint_time": 1.02177095413208,
+            "rda_time": 3.3304688930511475
+        },
+        "0x6fc78 -> 0xf55c": {
+            "taint_time": 0.15529251098632812,
+            "rda_time": 0.1594984531402588
+        },
+        "0xa00c0 -> 0xf55c": {
+            "taint_time": 0.16321420669555664,
+            "rda_time": 1.7681317329406738
+        },
+        "0x3ba04 -> 0xf55c": {
+            "taint_time": 0.32117223739624023,
+            "rda_time": 0.6279420852661133
+        },
+        "0x6ff90 -> 0xf55c": {
+            "taint_time": 1.1386964321136475,
+            "rda_time": 37.972994565963745
+        },
+        "0x5db4c -> 0xf55c": {
+            "taint_time": 4.099216938018799,
+            "rda_time": 43.2171688079834
+        },
+        "0xc4f30 -> 0xf55c": {
+            "taint_time": 4.032983303070068,
+            "rda_time": 14.905856370925903
+        },
+        "0xb0488 -> 0xb0674 -> 0xf55c": {
+            "taint_time": 1.6489167213439941,
+            "rda_time": 7.244815349578857
+        },
+        "0x69bbc -> 0x6a0ec -> 0xf55c": {
+            "taint_time": 0.04875612258911133,
+            "rda_time": 2.0786919593811035
+        },
+        "0xb029c -> 0xb0674 -> 0xf55c": {
+            "taint_time": 1.5597009658813477,
+            "rda_time": 8.298732042312622
+        },
+        "0x6ff90 -> 0x70788 -> 0xf55c": {
+            "taint_time": 0.6763002872467041,
+            "rda_time": 24.13880491256714
+        },
+        "0xa949c -> 0xf55c": {
+            "taint_time": 0.05214095115661621,
+            "rda_time": 0.07377767562866211
+        },
+        "0x3b230 -> 0x3c154 -> 0xf55c": {
+            "taint_time": 0.6698563098907471,
+            "rda_time": 20.023552417755127
+        },
+        "0xb73dc -> 0xf55c": {
+            "taint_time": 0.4896392822265625,
+            "rda_time": 0.15235590934753418
+        },
+        "0xae400 -> 0xf55c": {
+            "taint_time": 0.07377767562866211,
+            "rda_time": 0.14353704452514648
+        },
+        "0x69bbc -> 0x6a074 -> 0xf55c": {
+            "taint_time": 0.10746192932128906,
+            "rda_time": 1.7024919986724854
+        },
+        "0x92794 -> 0xf55c": {
+            "taint_time": 6.036540985107422,
+            "rda_time": 9.772694110870361
+        },
+        "0xa1850 -> 0xf55c": {
+            "taint_time": 0.17923521995544434,
+            "rda_time": 36.81881594657898
+        },
+        "0x70460 -> 0xf55c": {
+            "taint_time": 0.04242587089538574,
+            "rda_time": 1.7564904689788818
+        },
+        "0xa8c38 -> 0xf55c": {
+            "taint_time": 0.27649760246276855,
+            "rda_time": 3.18452787399292
+        },
+        "0xa0f14 -> 0xf55c": {
+            "taint_time": 0.23009014129638672,
+            "rda_time": 0.1690349578857422
+        },
+        "0x38a24 -> 0x38c28 -> 0xf55c": {
+            "taint_time": 1.9736385345458984,
+            "rda_time": 11.006698846817017
+        },
+        "0x3a648 -> 0xf55c": {
+            "taint_time": 0.34785890579223633,
+            "rda_time": 14.464895248413086
+        },
+        "0x3dc1c -> 0xf55c": {
+            "taint_time": 0.6181683540344238,
+            "rda_time": 9.373916625976562
+        },
+        "0x3ba04 -> 0x3aefc -> 0x3abd4 -> 0xf55c": {
+            "taint_time": 22.597453832626343,
+            "rda_time": 42.36060309410095
+        },
+        "0xb03ec -> 0xf55c": {
+            "taint_time": 0.04942917823791504,
+            "rda_time": 0.05661153793334961
+        }
+    },
+    "ret_code": 124
+}

@@ -1,0 +1,78 @@
+{
+  "alert_id": "ALERT-Tenda-app_data_center-0xa7c0",
+  "decision": "KEEP",
+  "vuln_type": "cmd_injection",
+  "target": {
+    "firmware": "US_AC15V1.0BR_V15.03.05.18_multi_TD01",
+    "binary": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/usr/bin/app_data_center",
+    "binary_arch": "mipsel",
+    "caller_function": "sub_a6e8",
+    "caller_addr": "0x9e8c",
+    "sink_function": "system",
+    "sink_addr": "0xa7c0"
+  },
+  "input_channel": {
+    "source_type": "unknown",
+    "source_function": "sub_9B30",
+    "source_addr": "",
+    "protocol": "HTTP",
+    "method": "POST",
+    "endpoint": "usbeject",
+    "param_key": "dev_name",
+    "content_type": "application/x-www-form-urlencoded"
+  },
+  "preconditions": {
+    "auth_required": "unknown",
+    "default_credentials": null,
+    "config_dependencies": [],
+    "other": null
+  },
+  "sink_context": {
+    "code_snippet": "v4 = (const char *)sub_9B30(a1, \"dev_name\");\nsnprintf(v3, 0x800u, \"cfm post netctrl 51?op=3,string_info=%s\", v4);\nsystem(v3);",
+    "param_handling": "The handler reads the request parameter dev_name via sub_9B30, performs only a non-empty check and a call to sub_A510, then concatenates it into a shell command executed by system().",
+    "buffer_size": null,
+    "dangerous_chars": [
+      ";",
+      "|",
+      "`",
+      "$()"
+    ]
+  },
+  "dataflow_summary": {
+    "call_chain": [
+      "main",
+      "sub_9de8",
+      "sub_a6e8"
+    ],
+    "call_chain_addrs": [
+      "0x9f04",
+      "0xa1d0",
+      "0x9e8c"
+    ],
+    "taint_propagation": "HTTP/request object a1 -> sub_9B30(a1, \"dev_name\") -> v4 -> snprintf(command, \"%s\", v4) -> system(command)"
+  },
+  "verification": {
+    "reachability": {
+      "status": "PASS",
+      "evidence": "sub_9DE8 dispatches to sub_A6E8 when strcmp(a1, \"usbeject\") == 0."
+    },
+    "controllability": {
+      "status": "PASS",
+      "evidence": "sub_A6E8 directly reads dev_name from the request object using sub_9B30 and inserts it into the system command."
+    },
+    "attribution": {
+      "status": "PASS",
+      "evidence": "The vulnerable value is specifically the request parameter key \"dev_name\" within the 'usbeject' handler path."
+    }
+  },
+  "evidence_digest": "In sub_A6E8, the sink argument is built from sub_9B30(a1, \"dev_name\"), so the command content is derived from an external request parameter. The dispatcher sub_9DE8 invokes sub_A6E8 when its route/action selector equals \"usbeject\", establishing the reachable handler keyword. The command string is formed as 'cfm post netctrl 51?op=3,string_info=%s' and then passed to system() without shell escaping visible in the provided code. A call to sub_A510(v4) exists, but no evidence was provided that it neutralizes shell metacharacters, so controllability remains attacker-driven. Endpoint discovery was attempted: no /goform/ or /cgi/ mapping strings were found, but cross-reference tracing identified the action name 'usbeject' in the dispatcher.",
+  "metadata": {
+    "analysis_timestamp": "2026-04-21T02:02:08.724597",
+    "analysis_model": "gpt-5.4",
+    "tool_model": "gpt-5.4",
+    "reasoning_rounds": 0,
+    "tool_calls_total": 0,
+    "interaction_log_path": "Tenda/US_AC15V1.0BR_V15.03.05.18_multi_TD01/Tenda_US_AC15V1.0BR_V15.03.05.18_multi_TD01_usr-bin_app_data_center_cmdi_0xa7c0.txt",
+    "confidence": 0.9
+  }
+}

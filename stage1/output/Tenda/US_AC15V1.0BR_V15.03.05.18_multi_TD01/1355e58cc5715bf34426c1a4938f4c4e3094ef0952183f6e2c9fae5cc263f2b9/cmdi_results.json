@@ -1,0 +1,12 @@
+{
+    "sha256": "1355e58cc5715bf34426c1a4938f4c4e3094ef0952183f6e2c9fae5cc263f2b9",
+    "name": "cdrom.ko",
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/lib/modules/2.6.36.4brcmarm/kernel/drivers/cdrom/cdrom.ko",
+    "closures": [],
+    "cfg_time": 0,
+    "vra_time": 0,
+    "sieve_time": 0,
+    "error": null,
+    "ret_code": 0,
+    "has_sinks": false
+}

@@ -1,0 +1,12 @@
+{
+    "sha256": "0e94754ec0262b351e6fcab062bf230ba00ef50be009cf95922ad2ceabca27ec",
+    "name": "sierra.ko",
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/lib/modules/2.6.36.4brcmarm/kernel/drivers/usb/serial/sierra.ko",
+    "closures": [],
+    "cfg_time": 0,
+    "vra_time": 0,
+    "sieve_time": 0,
+    "error": null,
+    "ret_code": 0,
+    "has_sinks": false
+}

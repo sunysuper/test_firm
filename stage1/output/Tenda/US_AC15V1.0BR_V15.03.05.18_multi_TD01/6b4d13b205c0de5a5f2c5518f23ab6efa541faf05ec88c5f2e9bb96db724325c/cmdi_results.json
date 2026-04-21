@@ -1,0 +1,12 @@
+{
+    "sha256": "6b4d13b205c0de5a5f2c5518f23ab6efa541faf05ec88c5f2e9bb96db724325c",
+    "name": "eapd",
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/bin/eapd",
+    "closures": [],
+    "cfg_time": 0,
+    "vra_time": 0,
+    "sieve_time": 0,
+    "error": null,
+    "ret_code": 0,
+    "has_sinks": false
+}

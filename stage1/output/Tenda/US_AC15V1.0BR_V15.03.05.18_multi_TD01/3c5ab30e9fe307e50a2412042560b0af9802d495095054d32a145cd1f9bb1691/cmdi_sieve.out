@@ -1,0 +1,57 @@
+[2;36m[04/16/26 17:27:40][0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mTARGETING SINKS: execl, execv                      [0m
+[2;36m[04/16/26 17:27:41][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function sub_93d8@0x93d8...   [0m
+[2;36m[04/16/26 17:27:42][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function main@0x9c60...       [0m
+[2;36m[04/16/26 17:27:44][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA on function main@0x9c60...             [0m
+[2;36m[04/16/26 17:27:54][0m[2;36m [0m[34mINFO    [0m [37mFound 1 potential sinks.                           [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to execl:[0m[37m                            [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37mexecl([0m[37m                                           [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m      r0: <BV32 0xa958> -> [0m[32m"/bin/sh"[0m[37m,[0m[37m            [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m      r1: <BV32 0xa960> -> [0m[32m"sh"[0m[37m,[0m[37m                 [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m      r2: <BV32 0xa964> -> [0m[32m"-c"[0m[37m,[0m[37m                 [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m      r3: <BV32 TOP>,[0m[37m                            [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m      ) @ 0x9648[0m[37m                                 [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFound 0 unresolved vulnerable definitions.         [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mAnalyzed 0/1 for sink execl                        [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function sub_93d8@0x93d8...   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function main@0x9c60...       [0m
+[2;36m[04/16/26 17:27:57][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA on function main@0x9c60...             [0m
+[2;36m[04/16/26 17:28:01][0m[2;36m [0m[34mINFO    [0m [37mFound 1 potential sinks.                           [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFound 1 unresolved vulnerable definitions.         [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m**************************************************[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mUNRESOLVED CLOSURES to execv: [0m[1;31m                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m--------------------------------------------------[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31mexecv([0m[1;31m                                           [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m      r0: [0m[1;96mARGV[0m[1;31m[1] -> [0m[1;34m"<BV32 ARGV_1>"[0m[1;31m | <BV32 TOP>[0m
+[2;36m                    [0m         [1;31m| [0m[1;96mARGV[0m[1;31m[1] | "032",[0m[1;31m                                 [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m      r1: [0m[1;96mARGV[0m[1;31m[-1] + 0x4 | [0m[1;96mARGV[0m[1;31m[-1] + 0x4 -> [0m[1;31m    [0m
+[2;36m                    [0m         [1;34m"<BV32 TOP>"[0m[1;31m | "032",[0m[1;31m                              [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m      ) @ 0x95d4[0m[1;31m                                 [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m                                                   [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mBINARY: spawn-fcgi                                 [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mINPUT SOURCES:                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mLikely:[0m[1;31m                                            [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35m----------[0m[1;31m                                         [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mKEY: "ARGV"[0m[1;31m                                        [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mSink: "ARGV"[0m[1;31m                                       [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35m----------[0m[1;31m                                         [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;33mRANK: 0.400[0m[1;31m                                        [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mAnalyzed 0/1 for sink execv                        [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m**************************************************[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mUNRESOLVED CLOSURES to execv: [0m[1;31m                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m--------------------------------------------------[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31mexecv([0m[1;31m                                           [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m      r0: [0m[1;96mARGV[0m[1;31m[1] -> [0m[1;34m"<BV32 ARGV_1>"[0m[1;31m | <BV32 TOP>[0m
+[2;36m                    [0m         [1;31m| [0m[1;96mARGV[0m[1;31m[1] | "032",[0m[1;31m                                 [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m      r1: [0m[1;96mARGV[0m[1;31m[-1] + 0x4 | [0m[1;96mARGV[0m[1;31m[-1] + 0x4 -> [0m[1;31m    [0m
+[2;36m                    [0m         [1;34m"<BV32 TOP>"[0m[1;31m | "032",[0m[1;31m                              [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m      ) @ 0x95d4[0m[1;31m                                 [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m                                                   [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mBINARY: spawn-fcgi                                 [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mINPUT SOURCES:                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mLikely:[0m[1;31m                                            [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35m----------[0m[1;31m                                         [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mKEY: "ARGV"[0m[1;31m                                        [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mSink: "ARGV"[0m[1;31m                                       [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35m----------[0m[1;31m                                         [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;33mRANK: 0.400[0m[1;31m                                        [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFinished Running Analysis                          [0m

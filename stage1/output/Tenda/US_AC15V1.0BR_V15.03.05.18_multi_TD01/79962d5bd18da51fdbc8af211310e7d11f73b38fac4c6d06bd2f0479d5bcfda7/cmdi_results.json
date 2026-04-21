@@ -1,0 +1,12 @@
+{
+    "sha256": "79962d5bd18da51fdbc8af211310e7d11f73b38fac4c6d06bd2f0479d5bcfda7",
+    "name": "url_filter.ko",
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/lib/modules/url_filter.ko",
+    "closures": [],
+    "cfg_time": 0,
+    "vra_time": 0,
+    "sieve_time": 0,
+    "error": null,
+    "ret_code": 0,
+    "has_sinks": false
+}

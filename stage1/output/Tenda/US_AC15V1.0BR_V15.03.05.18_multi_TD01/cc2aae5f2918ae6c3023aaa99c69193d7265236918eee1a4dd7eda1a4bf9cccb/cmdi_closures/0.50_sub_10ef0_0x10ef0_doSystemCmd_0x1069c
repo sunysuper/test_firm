@@ -1,0 +1,21 @@
+TRACE: 
+dhcpInit->sub_18a18->sub_18c68->sub_121e0->sub_12864->sub_12940->sub_10ef0->doSy
+stemCmd
+TRACE: dhcpRenew->sub_12c74->sub_10ef0->doSystemCmd
+TRACE: dhcpInform->sub_121e0->sub_12864->sub_12940->sub_10ef0->doSystemCmd
+TRACE: 
+dhcpReboot->sub_18a18->sub_18c68->sub_121e0->sub_12864->sub_12940->sub_10ef0->do
+SystemCmd
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[37m|[0m[32m|[0m[1;31mdoSystemCmd[0m[1;31m([0m
+[37m|[0m[32m|[0m[1;31m            r0: [0m[1;31m"route del [0m[1;31m<[0m[1;31mBV32[0m[1;31m TOP> gw <BV32 TOP[0m[1;31m>[0m[1;31m dev eth0"[0m[1;31m,[0m
+[37m|[0m[32m|[0m[1;31m            r1: [0m[1;31m<[0m[1;31mBV32[0m[1;31m stack_base - [0m[1;31m0xa4[0m[1;31m> -> [0m[1;34m"<BV32 TOP[0m[1;34m>[0m[1;34m"[0m[1;31m,[0m
+[37m|[0m[32m|[0m[1;31m            r2: [0m[1;31m<[0m[1;31mBV32[0m[1;31m stack_base - [0m[1;31m0xb8[0m[1;31m> -> [0m[1;34m"<BV32 TOP[0m[1;34m>[0m[1;34m"[0m[1;31m,[0m
+[37m|[0m[32m|[0m[1;31m            r3: [0m[1;31m<[0m[1;31mBV32[0m[1;31m [0m[1;31m0x1c71c[0m[1;31m> -[0m[1;31m>[0m[1;31m [0m[1;32m"eth0"[0m[1;37m,[0m
+[37m|[0m[32m|[0m[1;31m            [0m[1;31m)[0m[1;31m @ [0m[1;31m0x1069c[0m[1;31m -> [0m[1;33m<[0m[1;33mBV32[0m[1;33m [0m[1;33m0x0[0m[1;33m>[0m
+
+BINARY: dhcpcd
+INPUT SOURCES:
+[1;35mLikely:[0m
+[1;35mNONE[0m
+[33mRANK: [0m[1;33m0.500[0m

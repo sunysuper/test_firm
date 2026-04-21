@@ -1,0 +1,216 @@
+{
+    "closures": [
+        {
+            "trace": [
+                {
+                    "function": "main",
+                    "string": "main(<MultiValues(<BV32 TOP + ARGC>)>, <MultiValues(<BV32 stack_base + 0xdeadc0de>)>) @ 0x8ce4",
+                    "ins_addr": "0x8ce4"
+                },
+                {
+                    "function": "sub_a1c4",
+                    "string": "sub_a1c4(<MultiValues(<BV32 0xb1b8>)>, <MultiValues(<BV32 stack_base + 0xdeadc2de>)>, <MultiValues(<BV32 stack_base + 0xdeadc3de>)>, <MultiValues(<BV32 stack_base + 0xdeadc4de>)>) @ 0x8d84",
+                    "ins_addr": "0x8d84"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues(<BV176 0x6563686f2030203e2f6574632f64646e735f .. ARGV_3>)>, <MultiValues(<BV32 stack_base + 0xdeadc4de>)>) @ 0xadd4",
+                "ins_addr": "0xadd4"
+            },
+            "depth": 2,
+            "inputs": {
+                "likely": [],
+                "possibly": [
+                    "socket(AF_INET, SOCK_STREAM, 0)_7_3",
+                    "socket(AF_INET, SOCK_STREAM, 0)_23_3"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0.6,
+            "confidence": 0.0257,
+            "source_score": 0.0429,
+            "path_factor": 0.5,
+            "risk_bonus": 1.2,
+            "summary_augmented": true,
+            "summary_tags": [
+                "OVERFLOW_POSSIBLE",
+                "GLOBAL_WRITE"
+            ],
+            "summary_locations": [
+                "0x99cc"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": true,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "main",
+                    "string": "main(<MultiValues(<BV32 TOP + ARGC>)>, <MultiValues(<BV32 stack_base + 0xdeadc0de>)>) @ 0x8ce4",
+                    "ins_addr": "0x8ce4"
+                },
+                {
+                    "function": "sub_a1c4",
+                    "string": "sub_a1c4(<MultiValues(<BV32 0xb1b8>)>, <MultiValues(<BV32 stack_base + 0xdeadc2de>)>, <MultiValues(<BV32 stack_base + 0xdeadc3de>)>, <MultiValues(<BV32 stack_base + 0xdeadc4de>)>) @ 0x8d84",
+                    "ins_addr": "0x8d84"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues(<BV176 0x6563686f2030203e2f6574632f64646e735f .. ARGV_3>)>, <MultiValues(<BV32 stack_base + 0xdeadc4de>)>) @ 0xb014",
+                "ins_addr": "0xb014"
+            },
+            "depth": 2,
+            "inputs": {
+                "likely": [],
+                "possibly": [
+                    "socket(AF_INET, SOCK_STREAM, 0)_7_3",
+                    "socket(AF_INET, SOCK_STREAM, 0)_23_3"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0.6,
+            "confidence": 0.0257,
+            "source_score": 0.0429,
+            "path_factor": 0.5,
+            "risk_bonus": 1.2,
+            "summary_augmented": true,
+            "summary_tags": [
+                "OVERFLOW_POSSIBLE",
+                "GLOBAL_WRITE"
+            ],
+            "summary_locations": [
+                "0x99cc"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": true,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "main",
+                    "string": "main(<MultiValues(<BV32 TOP + ARGC>)>, <MultiValues(<BV32 stack_base + 0xdeadc0de>)>) @ 0x8ce4",
+                    "ins_addr": "0x8ce4"
+                },
+                {
+                    "function": "sub_a1c4",
+                    "string": "sub_a1c4(<MultiValues(<BV32 0xb1b8>)>, <MultiValues(<BV32 stack_base + 0xdeadc2de>)>, <MultiValues(<BV32 stack_base + 0xdeadc3de>)>, <MultiValues(<BV32 stack_base + 0xdeadc4de>)>) @ 0x8d84",
+                    "ins_addr": "0x8d84"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues(<BV176 0x6563686f2031203e2f6574632f64646e735f .. ARGV_3>)>, <MultiValues(<BV32 stack_base + 0xdeadc4de>)>) @ 0xaeb0",
+                "ins_addr": "0xaeb0"
+            },
+            "depth": 2,
+            "inputs": {
+                "likely": [],
+                "possibly": [
+                    "socket(AF_INET, SOCK_STREAM, 0)_7_3",
+                    "socket(AF_INET, SOCK_STREAM, 0)_23_3"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0.6,
+            "confidence": 0.0257,
+            "source_score": 0.0429,
+            "path_factor": 0.5,
+            "risk_bonus": 1.2,
+            "summary_augmented": true,
+            "summary_tags": [
+                "OVERFLOW_POSSIBLE",
+                "GLOBAL_WRITE"
+            ],
+            "summary_locations": [
+                "0x99cc"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": true,
+            "sanitized": false
+        }
+    ],
+    "cfg_time": 0.5883913040161133,
+    "vra_time": 3.8582022190093994,
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/bin/88ip",
+    "name": "88ip",
+    "has_sinks": true,
+    "sha256": "3032d9b4035b5bc3a9eb9307a26c766129d61c72922cf247dbea36427b4b73fe",
+    "sink_times": {
+        "doSystemCmd": 39.88629722595215
+    },
+    "error": null,
+    "sieve_time": 40.451438188552856,
+    "sinks": {
+        "doSystemCmd": 6
+    },
+    "time_data": {
+        "0xa1c4 -> 0x8ce4 -> 0x8b34": {
+            "taint_time": 3.2313482761383057,
+            "rda_time": 36.65247440338135
+        }
+    }
+}

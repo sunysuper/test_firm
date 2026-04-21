@@ -1,0 +1,12 @@
+{
+    "sha256": "acc470f36841acbbb00c5e551f3b5e08abab3a12a1a1fea63fffe24ff0d374ba",
+    "name": "vmstat",
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/usr/bin/vmstat",
+    "closures": [],
+    "cfg_time": 0,
+    "vra_time": 0,
+    "sieve_time": 0,
+    "error": null,
+    "ret_code": 0,
+    "has_sinks": false
+}

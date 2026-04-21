@@ -1,0 +1,388 @@
+{
+    "closures": [
+        {
+            "trace": [
+                {
+                    "function": "main",
+                    "string": "main(<MultiValues(<BV32 TOP + ARGC>)>, <MultiValues(<BV32 stack_base + 0xdeadc0de>)>) @ 0xb0c8",
+                    "ins_addr": "0xb0c8"
+                },
+                {
+                    "function": "sub_113f0",
+                    "string": "sub_113f0(<MultiValues(<BV32 TOP + ARGC>)>, <MultiValues(<BV32 stack_base + 0xdeadc0de>)>, <MultiValues(<BV32 0x1e3a8>)>, <MultiValues(<BV32 0x2e730>)>) @ 0xb1c8",
+                    "ins_addr": "0xb1c8"
+                },
+                {
+                    "function": "sub_11898",
+                    "string": "sub_11898(<MultiValues(<BV32 TOP + ARGC>)>, <MultiValues(<BV32 stack_base + 0xdeadc0de>)>, <MultiValues(<BV32 0x1e3a8>)>, <MultiValues(<BV32 0x2e730>)>) @ 0x11444",
+                    "ins_addr": "0x11444"
+                }
+            ],
+            "sink": {
+                "function": "system",
+                "string": "system(<MultiValues(<BV32 stack_base - 0x454>)>) @ 0x11ad8",
+                "ins_addr": "0x11ad8"
+            },
+            "depth": 3,
+            "inputs": {
+                "likely": [],
+                "possibly": [
+                    "fgets(",
+                    "<BV32 TOP>\" | \"<BV32 TOP>"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0.5,
+            "confidence": 0.0223,
+            "source_score": 0.0357,
+            "path_factor": 0.5,
+            "risk_bonus": 1.25,
+            "summary_augmented": true,
+            "summary_tags": [
+                "GLOBAL_WRITE",
+                "OVERFLOW_POSSIBLE",
+                "HEAP_MUTATION"
+            ],
+            "summary_locations": [
+                "0x123a8",
+                "0x11698",
+                "0xab7c"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": true,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_10cc4",
+                    "string": "sub_10cc4() @ 0x10cc4",
+                    "ins_addr": "0x10cc4"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues(<BV32 TOP + 0xffff6e3c>)>) @ 0x10e28",
+                "ins_addr": "0x10e28"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.25,
+            "summary_augmented": true,
+            "summary_tags": [
+                "GLOBAL_WRITE",
+                "FORMAT_STRING",
+                "OVERFLOW_POSSIBLE",
+                "HEAP_MUTATION"
+            ],
+            "summary_locations": [
+                "0xad08",
+                "0xaad8",
+                "0xe8c0",
+                "0xde6c"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "reanalyzed",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_10cc4",
+                    "string": "sub_10cc4() @ 0x10cc4",
+                    "ins_addr": "0x10cc4"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues(<BV32 TOP + 0xffff6e6c>)>) @ 0x10e54",
+                "ins_addr": "0x10e54"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.25,
+            "summary_augmented": true,
+            "summary_tags": [
+                "GLOBAL_WRITE",
+                "FORMAT_STRING",
+                "OVERFLOW_POSSIBLE",
+                "HEAP_MUTATION"
+            ],
+            "summary_locations": [
+                "0xad08",
+                "0xaad8",
+                "0xe8c0",
+                "0xde6c"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "reanalyzed",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "llm",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        }
+    ],
+    "cfg_time": 3.820157527923584,
+    "vra_time": 13.691283226013184,
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/bin/phddns",
+    "name": "phddns",
+    "has_sinks": true,
+    "sha256": "5054e69155a035832e6cc9f9e7312a6f08519e289777f204bbd66a81f4e46eba",
+    "sink_times": {
+        "system": 87.07294130325317,
+        "doSystemCmd": 65.65197396278381
+    },
+    "error": null,
+    "sieve_time": 152.9413342475891,
+    "sinks": {
+        "system": 1,
+        "doSystemCmd": 3
+    },
+    "time_data": {
+        "0x11898 -> 0x113f0 -> 0xb0c8 -> 0x8fa4": {
+            "taint_time": 8.711313962936401,
+            "rda_time": 78.36053776741028
+        },
+        "0xb0c8 -> 0x9190": {
+            "taint_time": 0.20154070854187012,
+            "rda_time": 38.88897919654846
+        },
+        "0x10cc4 -> 0x9190": {
+            "taint_time": 0.2087264060974121,
+            "rda_time": 26.319209337234497
+        }
+    }
+}

@@ -1,0 +1,65 @@
+# FirmSieve Docker Compose 编排
+#
+# 用法（stage2 为主要使用场景）:
+#   cp .env.example .env                       # 填入 API keys 和路径
+#   docker compose build                        # 构建镜像
+#   docker compose run --rm stage2 --dry-run   # 列出待分析任务
+#   docker compose run --rm stage2 --task Tenda_..._httpd_cmdi_0xad398
+#
+# Stage 1 按需使用（复用 operation-sieve 原仓库的 Dockerfile）:
+#   docker compose run --rm stage1 sieve /data/firm/your/binary --results /data/output
+#
+# 注意:
+# - IDA Pro 目录必须通过 IDA_HOST_PATH 环境变量指向宿主机真实路径
+# - FIRMWARE 目录、Stage1 output 目录以 bind mount 方式共享给容器
+# - UID/GID 用于保证容器内写入的文件在宿主机上归你所有
+
+services:
+  stage1:
+    build:
+      context: ../stage1/src/operation-sieve-public-master
+      dockerfile: docker/Dockerfile
+    image: firmsieve/stage1:latest
+    environment:
+      LLM_API_KEY: "${LLM_API_KEY:-}"
+      LLM_API_BASE: "${LLM_API_BASE:-}"
+      LLM_MODEL: "${LLM_MODEL:-}"
+    volumes:
+      - ../stage1/firm:/data/firm:ro
+      - ../stage1/output:/data/output:rw
+    working_dir: /operation-sieve
+    # 该服务不常驻，通过 `docker compose run` 按需触发
+
+  stage2:
+    build:
+      context: ..
+      dockerfile: docker/stage2/Dockerfile
+    image: firmsieve/stage2:latest
+    environment:
+      # LLM API
+      CLAUDE_BASE_URL:           "${CLAUDE_BASE_URL:-}"
+      CLAUDE_ANALYSIS_API_KEY:   "${CLAUDE_ANALYSIS_API_KEY:-}"
+      CLAUDE_TOOL_API_KEY:       "${CLAUDE_TOOL_API_KEY:-}"
+      CLAUDE_ANALYSIS_MODEL:     "${CLAUDE_ANALYSIS_MODEL:-gpt-4}"
+      CLAUDE_TOOL_MODEL:         "${CLAUDE_TOOL_MODEL:-gpt-4}"
+      # 路径（容器内）
+      FIRMSIEVE_SIEVE_RESULTS:   "/data/stage1-output"
+      FIRMSIEVE_FIRMWARE_ROOT:   "${FIRMSIEVE_FIRMWARE_ROOT:-/data/firm}"
+      FIRMSIEVE_LOG_FILE:        "/data/stage2-output/log/analysis_log.txt"
+      FIRMSIEVE_STRING_DIR:      "/data/stage2-output/string"
+    volumes:
+      # IDA Pro 安装目录（必须包含 license）
+      - "${IDA_HOST_PATH:?IDA_HOST_PATH 必须在 .env 中设置}:/opt/idapro:ro"
+      # Stage1 数据 & 输出
+      - ../stage1/firm:/data/firm:ro
+      - ../stage1/output:/data/stage1-output:ro
+      # Stage2 输出（可写）
+      - ../stage2/output:/data/stage2-output:rw
+      # IDA 用户目录（ida.reg、plugin symlink、ida_mcp_*.log 等），持久化防止每次重建
+      - ida_userdata:/root/.idapro
+    # 按宿主机 UID/GID 运行，保证挂载目录权限正确
+    # 若镜像里默认 root 跑没问题可注释掉下面一行
+    # user: "${UID:-1000}:${GID:-1000}"
+
+volumes:
+  ida_userdata:

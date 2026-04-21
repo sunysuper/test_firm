@@ -1,0 +1,63 @@
+[2;36m[04/16/26 13:37:57][0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mTARGETING SINKS: doSystemCmd                       [0m
+[2;36m[04/16/26 13:37:58][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function main@0x90cc...       [0m
+[2;36m[04/16/26 13:38:01][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA on function main@0x90cc...             [0m
+[2;36m[04/16/26 13:38:03][0m[2;36m [0m[34mINFO    [0m [37mFound 4 potential sinks.                           [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to doSystemCmd:[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37mdoSystemCmd([0m[37m                                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            r0: "rm -rf [0m[37m                          [0m
+[2;36m                    [0m         [37m/var/network_check_result.cfg"[0m[37m,[0m[37m                    [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            r1: <BV32 0xa004> -> [0m[37m                 [0m
+[2;36m                    [0m         [32m"/var/network_check_result.cfg"[0m[37m,[0m[37m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            ) @ 0x9448 -> [0m[33m<BV32 0x0>[0m[37m              [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to doSystemCmd:[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37mdoSystemCmd([0m[37m                                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            r0: "rm -rf [0m[37m                          [0m
+[2;36m                    [0m         [37m/var/network_check_result.cfg"[0m[37m,[0m[37m                    [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            r1: <BV32 0xa004> -> [0m[37m                 [0m
+[2;36m                    [0m         [32m"/var/network_check_result.cfg"[0m[37m,[0m[37m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            ) @ 0x9448 -> [0m[33m<BV32 0x0>[0m[37m              [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to doSystemCmd:[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37mdoSystemCmd([0m[37m                                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            r0: "rm -rf [0m[37m                          [0m
+[2;36m                    [0m         [37m/var/network_check_result.cfg"[0m[37m,[0m[37m                    [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            r1: <BV32 0xa004> -> [0m[37m                 [0m
+[2;36m                    [0m         [32m"/var/network_check_result.cfg"[0m[37m,[0m[37m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            ) @ 0x93b8 -> [0m[33m<BV32 0x0>[0m[37m              [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to doSystemCmd:[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37mdoSystemCmd([0m[37m                                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            r0: "rm -rf [0m[37m                          [0m
+[2;36m                    [0m         [37m/var/network_check_result.cfg"[0m[37m,[0m[37m                    [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            r1: <BV32 0xa004> -> [0m[37m                 [0m
+[2;36m                    [0m         [32m"/var/network_check_result.cfg"[0m[37m,[0m[37m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            ) @ 0x93b8 -> [0m[33m<BV32 0x0>[0m[37m              [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to doSystemCmd:[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37mdoSystemCmd([0m[37m                                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            r0: "echo 0 [0m[37m                          [0m
+[2;36m                    [0m         [37m>>/var/network_check_result.cfg"[0m[37m,[0m[37m                  [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            r1: <BV32 0xa004> -> [0m[37m                 [0m
+[2;36m                    [0m         [32m"/var/network_check_result.cfg"[0m[37m,[0m[37m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            ) @ 0x9464 -> [0m[33m<BV32 0x0>[0m[37m              [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to doSystemCmd:[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37mdoSystemCmd([0m[37m                                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            r0: "echo 0 [0m[37m                          [0m
+[2;36m                    [0m         [37m>>/var/network_check_result.cfg"[0m[37m,[0m[37m                  [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            r1: <BV32 0xa004> -> [0m[37m                 [0m
+[2;36m                    [0m         [32m"/var/network_check_result.cfg"[0m[37m,[0m[37m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            ) @ 0x9464 -> [0m[33m<BV32 0x0>[0m[37m              [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to doSystemCmd:[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37mdoSystemCmd([0m[37m                                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            r0: "echo 1 [0m[37m                          [0m
+[2;36m                    [0m         [37m>>/var/network_check_result.cfg"[0m[37m,[0m[37m                  [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            r1: <BV32 0xa004> -> [0m[37m                 [0m
+[2;36m                    [0m         [32m"/var/network_check_result.cfg"[0m[37m,[0m[37m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            ) @ 0x93d4 -> [0m[33m<BV32 0x0>[0m[37m              [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to doSystemCmd:[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37mdoSystemCmd([0m[37m                                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            r0: "echo 1 [0m[37m                          [0m
+[2;36m                    [0m         [37m>>/var/network_check_result.cfg"[0m[37m,[0m[37m                  [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            r1: <BV32 0xa004> -> [0m[37m                 [0m
+[2;36m                    [0m         [32m"/var/network_check_result.cfg"[0m[37m,[0m[37m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            ) @ 0x93d4 -> [0m[33m<BV32 0x0>[0m[37m              [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFound 0 unresolved vulnerable definitions.         [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mAnalyzed 0/1 for sink doSystemCmd                  [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFinished Running Analysis                          [0m

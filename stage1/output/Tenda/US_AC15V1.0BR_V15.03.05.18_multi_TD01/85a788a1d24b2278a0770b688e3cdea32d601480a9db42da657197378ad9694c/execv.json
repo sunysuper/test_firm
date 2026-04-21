@@ -1,0 +1,247 @@
+{
+    "execv": {
+        "ip-up": [
+            {
+                "args": {
+                    "0": [
+                        "/tmp/ppp/ip-up"
+                    ],
+                    "1": [
+                        "<BV32 TOP>"
+                    ],
+                    "2": [
+                        "<BV32 TOP>"
+                    ],
+                    "3": [
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "\u0000",
+                        "<BV32 TOP .. TOP .. TOP[15:8] .. TOP>"
+                    ],
+                    "4": [
+                        "\u0000",
+                        "<BV8 TOP>",
+                        "<BV32 TOP .. TOP .. TOP[15:8] .. TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV32 TOP .. TOP[23:8] .. TOP>",
+                        "<BV32 TOP .. TOP[23:16] .. TOP .. TOP>",
+                        "<BV32 TOP .. TOP .. TOP[15:8] .. TOP>",
+                        "<BV32 TOP .. TOP .. TOP .. TOP>",
+                        "<BV8 TOP>"
+                    ],
+                    "5": [
+                        "\u0000"
+                    ],
+                    "6": []
+                },
+                "vulnerable_args": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "addr": 76832
+            },
+            {
+                "args": {
+                    "0": [
+                        "/tmp/ppp/ip-up"
+                    ],
+                    "1": [
+                        "<BV32 TOP>"
+                    ],
+                    "2": [
+                        "<BV32 TOP>"
+                    ],
+                    "3": [
+                        "\u0000",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV32 TOP .. TOP .. TOP .. TOP[7:0]>",
+                        "<BV32 TOP .. TOP .. TOP[15:0]>"
+                    ],
+                    "4": [
+                        "<BV32 TOP .. TOP .. TOP .. TOP[7:0]>",
+                        "<BV32 TOP .. TOP .. TOP[15:0]>",
+                        "<BV32 TOP .. TOP[23:16] .. TOP .. TOP[7:0]>",
+                        "<BV32 TOP .. TOP[23:0]>",
+                        "<BV8 TOP>",
+                        "\u0000",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>"
+                    ],
+                    "5": [
+                        "\u0000"
+                    ],
+                    "6": []
+                },
+                "vulnerable_args": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "addr": 76832
+            }
+        ],
+        "ip-down": [
+            {
+                "args": {
+                    "0": [
+                        "/tmp/ppp/ip-down"
+                    ],
+                    "1": [
+                        "<BV32 TOP>"
+                    ],
+                    "2": [
+                        "<BV32 TOP>"
+                    ],
+                    "3": [
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "\u0000",
+                        "<BV32 TOP .. TOP[23:16] .. TOP .. TOP>",
+                        "<BV32 TOP .. TOP[23:8] .. TOP>",
+                        "<BV32 TOP .. TOP .. TOP .. TOP>",
+                        "<BV32 TOP .. TOP .. TOP[15:8] .. TOP>",
+                        "<BV8 TOP>",
+                        "<BV32 TOP .. TOP .. TOP[15:8] .. TOP>"
+                    ],
+                    "4": [
+                        "<BV8 TOP>",
+                        "\u0000",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP[7:0]>",
+                        "<BV8 TOP>",
+                        "\u0000",
+                        "<BV32 TOP .. TOP .. TOP .. TOP[7:0]>",
+                        "<BV32 TOP .. TOP .. TOP[15:0]>",
+                        "<BV32 TOP .. TOP .. TOP[7:0] .. TOP[7:0]>",
+                        "<BV32 TOP .. TOP[23:16] .. TOP .. TOP[7:0]>",
+                        "<BV32 TOP .. TOP[23:0]>",
+                        "<BV32 TOP .. TOP[23:16] .. TOP[7:0] .. TOP[7:0]>",
+                        "<BV32 TOP .. TOP[15:8] .. TOP .. TOP[7:0]>",
+                        "<BV32 TOP .. TOP[15:8] .. TOP[15:0]>",
+                        "<BV32 TOP .. TOP[15:0] .. TOP[7:0]>",
+                        "<BV32 TOP[23:16] .. TOP .. TOP .. TOP[7:0]>",
+                        "<BV32 TOP[23:16] .. TOP .. TOP[15:0]>",
+                        "<BV32 TOP[23:16] .. TOP .. TOP[7:0] .. TOP[7:0]>",
+                        "<BV32 TOP[23:16] .. TOP[23:16] .. TOP .. TOP[7:0]>",
+                        "<BV32 TOP[23:16] .. TOP[23:0]>",
+                        "<BV32 TOP[23:16] .. TOP[23:16] .. TOP[7:0] .. TOP[7:0]>",
+                        "<BV32 TOP[23:8] .. TOP .. TOP[7:0]>",
+                        "<BV32 TOP[23:8] .. TOP[15:0]>",
+                        "<BV32 TOP[23:0] .. TOP[7:0]>",
+                        "<BV24 TOP .. TOP .. TOP>",
+                        "<BV24 TOP .. TOP .. TOP[7:0]>",
+                        "<BV24 TOP .. TOP[15:8] .. TOP>",
+                        "<BV24 TOP .. TOP[15:0]>",
+                        "<BV24 TOP[23:16] .. TOP .. TOP>",
+                        "<BV24 TOP[23:16] .. TOP .. TOP[7:0]>",
+                        "<BV24 TOP[23:8] .. TOP>",
+                        "<BV24 TOP[23:0]>"
+                    ],
+                    "5": [
+                        "\u0000"
+                    ],
+                    "6": []
+                },
+                "vulnerable_args": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "addr": 76832
+            },
+            {
+                "args": {
+                    "0": [
+                        "/tmp/ppp/ip-down"
+                    ],
+                    "1": [
+                        "<BV32 TOP>"
+                    ],
+                    "2": [
+                        "<BV32 TOP>"
+                    ],
+                    "3": [
+                        "\u0000",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV32 TOP .. TOP .. TOP .. TOP[7:0]>",
+                        "<BV32 TOP .. TOP .. TOP[15:0]>"
+                    ],
+                    "4": [
+                        "<BV32 TOP .. TOP .. TOP .. TOP[7:0]>",
+                        "<BV32 TOP .. TOP .. TOP[15:0]>",
+                        "<BV32 TOP .. TOP[23:16] .. TOP .. TOP[7:0]>",
+                        "<BV32 TOP .. TOP[23:0]>",
+                        "<BV8 TOP>",
+                        "\u0000",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>",
+                        "<BV8 TOP>"
+                    ],
+                    "5": [
+                        "\u0000"
+                    ],
+                    "6": []
+                },
+                "vulnerable_args": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "addr": 76832
+            }
+        ]
+    },
+    "name": "pppoecd",
+    "sha256": "85a788a1d24b2278a0770b688e3cdea32d601480a9db42da657197378ad9694c"
+}

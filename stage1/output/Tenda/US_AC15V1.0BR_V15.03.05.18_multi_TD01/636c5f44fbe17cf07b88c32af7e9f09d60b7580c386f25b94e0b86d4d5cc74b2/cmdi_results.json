@@ -1,0 +1,74 @@
+{
+    "closures": [
+        {
+            "trace": [
+                {
+                    "function": "sub_2e0ec",
+                    "string": "sub_2e0ec(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0x2e0ec",
+                    "ins_addr": "0x2e0ec"
+                }
+            ],
+            "sink": {
+                "function": "system",
+                "string": "system(<MultiValues(<BV32 stack_base - 0x290>)>) @ 0x2e170",
+                "ins_addr": "0x2e170"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": true,
+            "sanitized": false
+        }
+    ],
+    "cfg_time": 13.570091247558594,
+    "vra_time": 61.120843172073364,
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/bin/minidlna",
+    "name": "minidlna",
+    "has_sinks": true,
+    "sha256": "636c5f44fbe17cf07b88c32af7e9f09d60b7580c386f25b94e0b86d4d5cc74b2",
+    "sink_times": {
+        "system": 6905.839943885803
+    },
+    "error": null,
+    "sieve_time": 6907.6361610889435,
+    "sinks": {
+        "system": 6
+    },
+    "time_data": {
+        "0xc5fc -> 0xb450": {
+            "taint_time": 67.13859820365906,
+            "rda_time": 6837.838636398315
+        },
+        "0x2e0ec -> 0xb450": {
+            "taint_time": 0.5831854343414307,
+            "rda_time": 0.26535987854003906
+        }
+    }
+}

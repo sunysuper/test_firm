@@ -1,0 +1,12 @@
+{
+    "sha256": "19f7808f9ba7d45aaeba51aedc4ea3ba8987d557dd7e5fd988ae671e95061e74",
+    "name": "et",
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/usr/sbin/et",
+    "closures": [],
+    "cfg_time": 0,
+    "vra_time": 0,
+    "sieve_time": 0,
+    "error": null,
+    "ret_code": 0,
+    "has_sinks": false
+}

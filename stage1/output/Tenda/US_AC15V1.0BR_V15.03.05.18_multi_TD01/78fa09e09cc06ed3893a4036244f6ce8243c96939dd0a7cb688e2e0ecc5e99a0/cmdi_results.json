@@ -1,0 +1,12 @@
+{
+    "sha256": "78fa09e09cc06ed3893a4036244f6ce8243c96939dd0a7cb688e2e0ecc5e99a0",
+    "name": "vsftpd",
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/bin/vsftpd",
+    "closures": [],
+    "cfg_time": 0,
+    "vra_time": 0,
+    "sieve_time": 0,
+    "error": null,
+    "ret_code": 0,
+    "has_sinks": false
+}

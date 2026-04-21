@@ -1,0 +1,14 @@
+[2;36m[04/16/26 14:03:16][0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mTARGETING SINKS: system                            [0m
+[2;36m[04/16/26 14:03:17][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function sub_ebe4@0xebe4...   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mRunning RDA on function sub_ebe4@0xebe4...         [0m
+[2;36m[04/16/26 14:03:21][0m[2;36m [0m[34mINFO    [0m [37mFound 1 potential sinks.                           [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to system:[0m[37m                           [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37msystem([0m[37m                                           [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m       r0: <BV32 stack_base - 0x88> -> [0m[32m"cfm post [0m[37m [0m
+[2;36m                    [0m         [32mnetctrl wps_restart_wl"[0m[37m,[0m[37m                           [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m       ) @ 0xec1c -> [0m[33m<BV32 0x0>[0m[37m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFound 0 unresolved vulnerable definitions.         [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mExclude function 0xebe4 from future slices since   [0m
+[2;36m                    [0m         [37mthe data dependencies are fully resolved.          [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mAnalyzed 0/1 for sink system                       [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFinished Running Analysis                          [0m

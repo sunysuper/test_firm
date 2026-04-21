@@ -1,0 +1,119 @@
+[2;36m[04/16/26 17:21:16][0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mTARGETING SINKS: execle                            [0m
+[2;36m[04/16/26 17:21:17][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function sub_aee4@0xaee4...   [0m
+[2;36m[04/16/26 17:21:20][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function main@0x92dc...       [0m
+[2;36m[04/16/26 17:21:37][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA on function main@0x92dc...             [0m
+[2;36m[04/16/26 17:21:49][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37msub_915c(<MultiValues(<BV32 0x2>)>) @ 0x96f0       [0m
+[2;36m[04/16/26 17:22:21][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37msub_a8f8(<MultiValues(<BV32 TOP>)>,                [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32      [0m
+[2;36m                    [0m         [37mstack_base - 0x60>)>) @ 0x9f80                     [0m
+[2;36m[04/16/26 17:22:30][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37msub_a5b4(<MultiValues(<BV32 stack_base - 0x5ec>)>, [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 0x7>)>) @ 0xa918                [0m
+[2;36m[04/16/26 17:22:37][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37msub_a3c0(<MultiValues(<BV32 stack_base - 0x5ec>)>, [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 0x7>)>, <MultiValues(<BV32      [0m
+[2;36m                    [0m         [37m0x6>)>) @ 0xa91c                                   [0m
+[2;36m[04/16/26 17:23:25][0m[2;36m [0m[34mINFO    [0m [37mFound 8 potential sinks.                           [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFound 1 unresolved vulnerable definitions.         [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m**************************************************[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mUNRESOLVED CLOSURES to execle: [0m[1;31m                    [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m--------------------------------------------------[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31mexecle([0m[1;31m                                          [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m       r0: <BV32 TOP>,[0m[1;31m                           [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m       r1: <BV32 TOP>,[0m[1;31m                           [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m       r2: <BV32 0xc980> -> [0m[1;32m"deconfig"[0m[1;37m,[0m[1;31m          [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m       ) @ 0xb2b0[0m[1;31m                                [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m                                                   [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mBINARY: udhcpc                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mINPUT SOURCES:                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mLikely:[0m[1;31m                                            [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mNONE[0m[1;31m                                               [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;33mRANK: 0.700[0m[1;31m                                        [0m
+[2;36m[04/16/26 17:23:26][0m[2;36m [0m[31mWARNING [0m [33mNot Saving Closure, {'wan1.dhcp.dns.hand2',        [0m
+[2;36m                    [0m         [33m'/dev/urandom', 'wan1.pppoe.dns.hand2', 'read(',   [0m
+[2;36m                    [0m         [33m'wan1.dhcp.dns.hand1', 'wan1.connecttype',         [0m
+[2;36m                    [0m         [33m'wan1.dhcp.dns.auto', 'wan1.pppoe.dns.auto',       [0m
+[2;36m                    [0m         [33m'wan1.pppoe.dns.hand1'} matches                    [0m
+[2;36m                    [0m         [33m{'wan1.dhcp.dns.hand2', '/dev/urandom',            [0m
+[2;36m                    [0m         [33m'wan1.pppoe.dns.hand2', 'read(',                   [0m
+[2;36m                    [0m         [33m'wan1.dhcp.dns.hand1', 'wan1.connecttype',         [0m
+[2;36m                    [0m         [33m'wan1.dhcp.dns.auto', 'wan1.pppoe.dns.auto',       [0m
+[2;36m                    [0m         [33m'wan1.pppoe.dns.hand1'}                            [0m
+[2;36m                   [0m[2;36m [0m[31mWARNING [0m [33mNot Saving Closure, {'wan1.dhcp.dns.hand2',        [0m
+[2;36m                    [0m         [33m'/dev/urandom', 'wan1.pppoe.dns.hand2', 'read(',   [0m
+[2;36m                    [0m         [33m'wan1.dhcp.dns.hand1', 'wan1.connecttype',         [0m
+[2;36m                    [0m         [33m'wan1.dhcp.dns.auto', 'wan1.pppoe.dns.auto',       [0m
+[2;36m                    [0m         [33m'wan1.pppoe.dns.hand1'} matches                    [0m
+[2;36m                    [0m         [33m{'wan1.dhcp.dns.hand2', '/dev/urandom',            [0m
+[2;36m                    [0m         [33m'wan1.pppoe.dns.hand2', 'read(',                   [0m
+[2;36m                    [0m         [33m'wan1.dhcp.dns.hand1', 'wan1.connecttype',         [0m
+[2;36m                    [0m         [33m'wan1.dhcp.dns.auto', 'wan1.pppoe.dns.auto',       [0m
+[2;36m                    [0m         [33m'wan1.pppoe.dns.hand1'}                            [0m
+[2;36m                   [0m[2;36m [0m[31mWARNING [0m [33mNot Saving Closure, {'wan1.dhcp.dns.hand2',        [0m
+[2;36m                    [0m         [33m'/dev/urandom', 'wan1.pppoe.dns.hand2', 'read(',   [0m
+[2;36m                    [0m         [33m'wan1.dhcp.dns.hand1', 'wan1.connecttype',         [0m
+[2;36m                    [0m         [33m'wan1.dhcp.dns.auto', 'wan1.pppoe.dns.auto',       [0m
+[2;36m                    [0m         [33m'wan1.pppoe.dns.hand1'} matches                    [0m
+[2;36m                    [0m         [33m{'wan1.dhcp.dns.hand2', '/dev/urandom',            [0m
+[2;36m                    [0m         [33m'wan1.pppoe.dns.hand2', 'read(',                   [0m
+[2;36m                    [0m         [33m'wan1.dhcp.dns.hand1', 'wan1.connecttype',         [0m
+[2;36m                    [0m         [33m'wan1.dhcp.dns.auto', 'wan1.pppoe.dns.auto',       [0m
+[2;36m                    [0m         [33m'wan1.pppoe.dns.hand1'}                            [0m
+[2;36m                   [0m[2;36m [0m[31mWARNING [0m [33mNot Saving Closure, {'wan1.dhcp.dns.hand2',        [0m
+[2;36m                    [0m         [33m'/dev/urandom', 'wan1.pppoe.dns.hand2', 'read(',   [0m
+[2;36m                    [0m         [33m'wan1.dhcp.dns.hand1', 'wan1.connecttype',         [0m
+[2;36m                    [0m         [33m'wan1.dhcp.dns.auto', 'wan1.pppoe.dns.auto',       [0m
+[2;36m                    [0m         [33m'wan1.pppoe.dns.hand1'} matches                    [0m
+[2;36m                    [0m         [33m{'wan1.dhcp.dns.hand2', '/dev/urandom',            [0m
+[2;36m                    [0m         [33m'wan1.pppoe.dns.hand2', 'read(',                   [0m
+[2;36m                    [0m         [33m'wan1.dhcp.dns.hand1', 'wan1.connecttype',         [0m
+[2;36m                    [0m         [33m'wan1.dhcp.dns.auto', 'wan1.pppoe.dns.auto',       [0m
+[2;36m                    [0m         [33m'wan1.pppoe.dns.hand1'}                            [0m
+[2;36m                   [0m[2;36m [0m[31mWARNING [0m [33mNot Saving Closure, {'wan1.dhcp.dns.hand2',        [0m
+[2;36m                    [0m         [33m'/dev/urandom', 'wan1.pppoe.dns.hand2', 'read(',   [0m
+[2;36m                    [0m         [33m'wan1.dhcp.dns.hand1', 'wan1.connecttype',         [0m
+[2;36m                    [0m         [33m'wan1.dhcp.dns.auto', 'wan1.pppoe.dns.auto',       [0m
+[2;36m                    [0m         [33m'wan1.pppoe.dns.hand1'} matches                    [0m
+[2;36m                    [0m         [33m{'wan1.dhcp.dns.hand2', '/dev/urandom',            [0m
+[2;36m                    [0m         [33m'wan1.pppoe.dns.hand2', 'read(',                   [0m
+[2;36m                    [0m         [33m'wan1.dhcp.dns.hand1', 'wan1.connecttype',         [0m
+[2;36m                    [0m         [33m'wan1.dhcp.dns.auto', 'wan1.pppoe.dns.auto',       [0m
+[2;36m                    [0m         [33m'wan1.pppoe.dns.hand1'}                            [0m
+[2;36m                   [0m[2;36m [0m[31mWARNING [0m [33mNot Saving Closure, {'wan1.dhcp.dns.hand2',        [0m
+[2;36m                    [0m         [33m'/dev/urandom', 'wan1.pppoe.dns.hand2', 'read(',   [0m
+[2;36m                    [0m         [33m'wan1.dhcp.dns.hand1', 'wan1.connecttype',         [0m
+[2;36m                    [0m         [33m'wan1.dhcp.dns.auto', 'wan1.pppoe.dns.auto',       [0m
+[2;36m                    [0m         [33m'wan1.pppoe.dns.hand1'} matches                    [0m
+[2;36m                    [0m         [33m{'wan1.dhcp.dns.hand2', '/dev/urandom',            [0m
+[2;36m                    [0m         [33m'wan1.pppoe.dns.hand2', 'read(',                   [0m
+[2;36m                    [0m         [33m'wan1.dhcp.dns.hand1', 'wan1.connecttype',         [0m
+[2;36m                    [0m         [33m'wan1.dhcp.dns.auto', 'wan1.pppoe.dns.auto',       [0m
+[2;36m                    [0m         [33m'wan1.pppoe.dns.hand1'}                            [0m
+[2;36m                   [0m[2;36m [0m[31mWARNING [0m [33mNot Saving Closure, {'wan1.dhcp.dns.hand2',        [0m
+[2;36m                    [0m         [33m'/dev/urandom', 'wan1.pppoe.dns.hand2', 'read(',   [0m
+[2;36m                    [0m         [33m'wan1.dhcp.dns.hand1', 'wan1.connecttype',         [0m
+[2;36m                    [0m         [33m'wan1.dhcp.dns.auto', 'wan1.pppoe.dns.auto',       [0m
+[2;36m                    [0m         [33m'wan1.pppoe.dns.hand1'} matches                    [0m
+[2;36m                    [0m         [33m{'wan1.dhcp.dns.hand2', '/dev/urandom',            [0m
+[2;36m                    [0m         [33m'wan1.pppoe.dns.hand2', 'read(',                   [0m
+[2;36m                    [0m         [33m'wan1.dhcp.dns.hand1', 'wan1.connecttype',         [0m
+[2;36m                    [0m         [33m'wan1.dhcp.dns.auto', 'wan1.pppoe.dns.auto',       [0m
+[2;36m                    [0m         [33m'wan1.pppoe.dns.hand1'}                            [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mAnalyzed 0/1 for sink execle                       [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m**************************************************[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mUNRESOLVED CLOSURES to execle: [0m[1;31m                    [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m--------------------------------------------------[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31mexecle([0m[1;31m                                          [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m       r0: <BV32 TOP>,[0m[1;31m                           [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m       r1: <BV32 TOP>,[0m[1;31m                           [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m       r2: <BV32 0xc980> -> [0m[1;32m"deconfig"[0m[1;37m,[0m[1;31m          [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m       ) @ 0xb2b0[0m[1;31m                                [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m                                                   [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mBINARY: udhcpc                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mINPUT SOURCES:                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mLikely:[0m[1;31m                                            [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mNONE[0m[1;31m                                               [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;33mRANK: 0.700[0m[1;31m                                        [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFinished Running Analysis                          [0m

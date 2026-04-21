@@ -1,0 +1,12 @@
+{
+    "sha256": "db7697c7c219bf4feccf42c1df563fcf014f02daa24efa7347490f52a9364610",
+    "name": "wlconf",
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/usr/sbin/wlconf",
+    "closures": [],
+    "cfg_time": 0,
+    "vra_time": 0,
+    "sieve_time": 0,
+    "error": null,
+    "ret_code": 0,
+    "has_sinks": false
+}

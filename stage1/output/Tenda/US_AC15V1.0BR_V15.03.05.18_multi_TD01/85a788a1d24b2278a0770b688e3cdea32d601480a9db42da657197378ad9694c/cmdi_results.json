@@ -1,0 +1,136 @@
+{
+    "closures": [
+        {
+            "trace": [
+                {
+                    "function": "sub_fe60",
+                    "string": "sub_fe60(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0xfe60",
+                    "ins_addr": "0xfe60"
+                },
+                {
+                    "function": "sub_fd94",
+                    "string": "sub_fd94(<MultiValues(<BV32 0x264e4>)>) @ 0x101f0",
+                    "ins_addr": "0x101f0"
+                }
+            ],
+            "sink": {
+                "function": "system",
+                "string": "system(<MultiValues(<BV32 stack_base - 0x78>)>) @ 0xfdbc",
+                "ins_addr": "0xfdbc"
+            },
+            "depth": 2,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "confidence": 0.0,
+            "source_score": 0.0,
+            "path_factor": 0.5,
+            "risk_bonus": 1.25,
+            "summary_augmented": true,
+            "summary_tags": [
+                "HEAP_MUTATION",
+                "OVERFLOW_POSSIBLE",
+                "GLOBAL_WRITE"
+            ],
+            "summary_locations": [
+                "0x12c6c",
+                "0xfc24"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "llm",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": false,
+            "sanitized": false
+        }
+    ],
+    "cfg_time": 9.614818096160889,
+    "vra_time": 28.361699104309082,
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/usr/sbin/pppoecd",
+    "name": "pppoecd",
+    "has_sinks": true,
+    "sha256": "85a788a1d24b2278a0770b688e3cdea32d601480a9db42da657197378ad9694c",
+    "sink_times": {
+        "system": 78.99462819099426
+    },
+    "error": null,
+    "sieve_time": 246.1557536125183,
+    "sinks": {
+        "system": 2,
+        "execve": 1
+    },
+    "time_data": {
+        "0xfd60 -> 0x9118": {
+            "taint_time": 0.03115558624267578,
+            "rda_time": 0.23492836952209473
+        },
+        "0xfd94 -> 0xfe60 -> 0x9118": {
+            "taint_time": 8.81653904914856,
+            "rda_time": 69.88837909698486
+        },
+        "0x12ae4 -> 0xf0fc -> 0x90d0": {
+            "taint_time": 0.03456759452819824,
+            "rda_time": 33.71617937088013
+        }
+    }
+}

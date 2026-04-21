@@ -1,0 +1,60 @@
+[2;36m[04/16/26 13:39:10][0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mTARGETING SINKS: doSystemCmd, popen                [0m
+[2;36m[04/16/26 13:39:11][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function sub_11228@0x11228... [0m
+[2;36m[04/16/26 13:39:12][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA on function sub_11228@0x11228...       [0m
+[2;36m[04/16/26 13:39:34][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for sub_10c58() @ 0x10c54    [0m
+[2;36m[04/16/26 13:39:38][0m[2;36m [0m[34mINFO    [0m [37mFound 1 potential sinks.                           [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to doSystemCmd:[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37mdoSystemCmd([0m[37m                                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            r0: "cfm Post netctrl 15?op=6"[0m[37m,[0m[37m       [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            r1: <BV32 0xf>,[0m[37m                       [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            r2: <BV32 0x6>,[0m[37m                       [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            ) @ 0x11b50 -> [0m[33m<BV32 0x0>[0m[37m             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFound 0 unresolved vulnerable definitions.         [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mExclude function 0x11228 from future slices since  [0m
+[2;36m                    [0m         [37mthe data dependencies are fully resolved.          [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mAnalyzed 0/20 for sink doSystemCmd                 [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function sub_27d84@0x27d84... [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function sub_27c04@0x27c04... [0m
+[2;36m[04/16/26 13:39:39][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA on function sub_27c04@0x27c04...       [0m
+[2;36m[04/16/26 13:39:41][0m[2;36m [0m[34mINFO    [0m [37mFound 1 potential sinks.                           [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to doSystemCmd:[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37mdoSystemCmd([0m[37m                                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            r0: "upgrade &"[0m[37m,[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            ) @ 0x27cfc -> [0m[33m<BV32 0x0>[0m[37m             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFound 0 unresolved vulnerable definitions.         [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mExclude function 0x27c04 from future slices since  [0m
+[2;36m                    [0m         [37mthe data dependencies are fully resolved.          [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mAnalyzed 2/20 for sink doSystemCmd                 [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function sub_12d60@0x12d60... [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mRunning RDA on function sub_12d60@0x12d60...       [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFound 1 potential sinks.                           [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to doSystemCmd:[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37mdoSystemCmd([0m[37m                                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            r0: "cfm Post netctrl 15?op=6"[0m[37m,[0m[37m       [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            r1: <BV32 0xf>,[0m[37m                       [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            r2: <BV32 0x6>,[0m[37m                       [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            ) @ 0x12e84 -> [0m[33m<BV32 0x0>[0m[37m             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFound 0 unresolved vulnerable definitions.         [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mExclude function 0x12d60 from future slices since  [0m
+[2;36m                    [0m         [37mthe data dependencies are fully resolved.          [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mAnalyzed 3/20 for sink doSystemCmd                 [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function                      [0m
+[2;36m                    [0m         [37mucloud_wifi_basic_info_set@0x1e7e4...              [0m
+[2;36m[04/16/26 13:39:42][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA on function                            [0m
+[2;36m                    [0m         [37mucloud_wifi_basic_info_set@0x1e7e4...              [0m
+[2;36m[04/16/26 13:39:45][0m[2;36m [0m[34mINFO    [0m [37mFound 1 potential sinks.                           [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to doSystemCmd:[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37mdoSystemCmd([0m[37m                                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            r0: "cfm post time_check [0m[37m             [0m
+[2;36m                    [0m         [37m3?string_info=1337"[0m[37m,[0m[37m                               [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            r1: <BV32 0x3>,[0m[37m                       [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            r2: <BV32 TOP>,[0m[37m                       [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            ) @ 0x1ea40 -> [0m[33m<BV32 0x0>[0m[37m             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFound 0 unresolved vulnerable definitions.         [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mExclude function 0x1e7e4 from future slices since  [0m
+[2;36m                    [0m         [37mthe data dependencies are fully resolved.          [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mAnalyzed 4/20 for sink doSystemCmd                 [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function sub_1743c@0x1743c... [0m
+[2;36m[04/16/26 13:40:00][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA on function sub_1743c@0x1743c...       [0m
+[2;36m[04/16/26 13:45:00][0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mTIMEOUT FOR subject: [<CallSite in function        [0m
+[2;36m                    [0m         [1;31m0x1743c, calling 0xab2c>], sink: doSystemCmd       [0m

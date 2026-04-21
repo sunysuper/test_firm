@@ -1,0 +1,12 @@
+{
+    "sha256": "3d50e32d5eb818655ef6a44e907be54c83cf1161923e87bcbd449b214b4f7fe9",
+    "name": "ohci-hcd.ko",
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/lib/modules/2.6.36.4brcmarm/kernel/drivers/usb/host/ohci-hcd.ko",
+    "closures": [],
+    "cfg_time": 0,
+    "vra_time": 0,
+    "sieve_time": 0,
+    "error": null,
+    "ret_code": 0,
+    "has_sinks": false
+}

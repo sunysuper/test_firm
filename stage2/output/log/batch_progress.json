@@ -1,0 +1,14 @@
+{
+  "completed": {
+    "Tenda_US_AC15V1.0BR_V15.03.05.18_multi_TD01_app_data_center_cmdi_0xa7c0": {
+      "result": "controllable",
+      "timestamp": "2026-04-21T02:02:08.726367"
+    },
+    "Tenda_US_AC15V1.0BR_V15.03.05.18_multi_TD01_httpd_cmdi_0xad398": {
+      "result": "uncontrollable",
+      "timestamp": "2026-04-21T02:12:38.904395"
+    }
+  },
+  "failed": {},
+  "last_updated": "2026-04-21T02:12:38.904442"
+}

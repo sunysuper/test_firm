@@ -1,0 +1,216 @@
+{
+    "closures": [
+        {
+            "trace": [
+                {
+                    "function": "main",
+                    "string": "main() @ 0xdb2c",
+                    "ins_addr": "0xdb2c"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues(<BV176 0x6563686f2030203e2f6574632f64646e735f .. TOP>)>, <MultiValues(<BV32 0x19b90>)>) @ 0xe198",
+                "ins_addr": "0xe198"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [
+                    "fgets("
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0.5,
+            "confidence": 0.0179,
+            "source_score": 0.0357,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [
+                "0xc0d0",
+                "0xa9c8"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": true,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "main",
+                    "string": "main() @ 0xdb2c",
+                    "ins_addr": "0xdb2c"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues(<BV176 0x6563686f2030203e2f6574632f64646e735f .. TOP>)>, <MultiValues(<BV32 0x19b90>)>) @ 0xe628",
+                "ins_addr": "0xe628"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [
+                    "fgets("
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0.5,
+            "confidence": 0.0179,
+            "source_score": 0.0357,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [
+                "0xc0d0",
+                "0xa9c8"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": true,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "main",
+                    "string": "main() @ 0xdb2c",
+                    "ins_addr": "0xdb2c"
+                }
+            ],
+            "sink": {
+                "function": "doSystemCmd",
+                "string": "doSystemCmd(<MultiValues(<BV176 0x6563686f2031203e2f6574632f64646e735f .. TOP>)>, <MultiValues(<BV32 0x19b90>)>) @ 0xe27c",
+                "ins_addr": "0xe27c"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [
+                    "fgets("
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0.5,
+            "confidence": 0.0179,
+            "source_score": 0.0357,
+            "path_factor": 0.5,
+            "risk_bonus": 1.0,
+            "summary_augmented": false,
+            "summary_tags": [],
+            "summary_locations": [
+                "0xc0d0",
+                "0xa9c8"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": true,
+            "sanitized": false
+        }
+    ],
+    "cfg_time": 1.7801423072814941,
+    "vra_time": 7.231626987457275,
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/bin/3322ip",
+    "name": "3322ip",
+    "has_sinks": true,
+    "sha256": "cae5d3fe406d5c7112a6e0bc3b119d0729706eacb7dbd49710bc7318f3c6166c",
+    "sink_times": {
+        "doSystemCmd": 28.625909328460693
+    },
+    "error": null,
+    "sieve_time": 58.89708876609802,
+    "sinks": {
+        "doSystemCmd": 6
+    },
+    "time_data": {
+        "0xdb2c -> 0x92e0": {
+            "taint_time": 1.9463348388671875,
+            "rda_time": 26.67750835418701
+        },
+        "0xb514 -> 0x92e0": {
+            "taint_time": 0.7962741851806641,
+            "rda_time": 4.85828971862793
+        },
+        "0xb514 -> 0xc3b0 -> 0x92e0": {
+            "taint_time": 1.0432803630828857,
+            "rda_time": 18.988749742507935
+        },
+        "0xb7d8 -> 0xb514 -> 0xc3b0 -> 0x92e0": {
+            "taint_time": 1.363786220550537,
+            "rda_time": 2.849827527999878
+        }
+    }
+}

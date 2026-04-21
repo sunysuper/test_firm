@@ -1,0 +1,12 @@
+{
+    "sha256": "6e7c82ee60946601e00c1972314ff2d4a9f8dcbd20e2bc78689e7d05d43a854a",
+    "name": "miniupnpd",
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/bin/miniupnpd",
+    "closures": [],
+    "cfg_time": 0,
+    "vra_time": 0,
+    "sieve_time": 0,
+    "error": null,
+    "ret_code": 0,
+    "has_sinks": false
+}

@@ -1,0 +1,50 @@
+[2;36m[04/16/26 13:50:56][0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mTARGETING SINKS: execve                            [0m
+[2;36m[04/16/26 13:50:57][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function sub_25a2c@0x25a2c... [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mRunning RDA on function sub_25a2c@0x25a2c...       [0m
+[2;36m[04/16/26 13:51:12][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37msub_b99c(<MultiValues(<BV32 0x2>)>,                [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32      [0m
+[2;36m                    [0m         [37mTOP>)>, <MultiValues(<BV32 0x6fe20>)>) @ 0x25a8c   [0m
+[2;36m[04/16/26 13:52:06][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37msub_b884(<MultiValues(<BV32 stack_base - 0x83c +   [0m
+[2;36m                    [0m         [37mTOP>)>, <MultiValues(<BV32 stack_base - 0x3c>)>,   [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 TOP>)>) @ 0xba90                [0m
+[2;36m[04/16/26 13:52:13][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37msub_239a4(<MultiValues(<BV32 TOP>)>,               [0m
+[2;36m                    [0m         [37m<MultiValues({0: {<BV32 stack_base - 0x83c + TOP>, [0m
+[2;36m                    [0m         [37m<BV32 stack_base - 0x6b>}})>, <MultiValues({0:     [0m
+[2;36m                    [0m         [37m{<BV32 stack_base - 0x3c - (stack_base - 0x83c +   [0m
+[2;36m                    [0m         [37mTOP)>, <BV32 stack_base - 0x3c - (stack_base -     [0m
+[2;36m                    [0m         [37m0x6b)>}})>, <MultiValues(<BV32 TOP>)>) @ 0xb8d8    [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFound 1 potential sinks.                           [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFound 1 unresolved vulnerable definitions.         [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m**************************************************[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mUNRESOLVED CLOSURES to execve: [0m[1;31m                    [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m--------------------------------------------------[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mTRACE: sub_25a2c->execve                           [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;31mexecve([0m[1;31m                                           [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;31m       r0: <BV32 TOP>,[0m[1;31m                            [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;31m       r1: <BV32 TOP>,[0m[1;31m                            [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;31m       r2: <BV32 TOP>,[0m[1;31m                            [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;31m       ) @ 0x25a48[0m[1;31m                                [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m                                                   [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mBINARY: nginx                                      [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mINPUT SOURCES:                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;34mUNKNOWN[0m[1;31m                                            [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mAnalyzed 0/1 for sink execve                       [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m**************************************************[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mUNRESOLVED CLOSURES to execve: [0m[1;31m                    [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m--------------------------------------------------[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mTRACE: sub_25a2c->execve                           [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;31mexecve([0m[1;31m                                           [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;31m       r0: <BV32 TOP>,[0m[1;31m                            [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;31m       r1: <BV32 TOP>,[0m[1;31m                            [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;31m       r2: <BV32 TOP>,[0m[1;31m                            [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;31m       ) @ 0x25a48[0m[1;31m                                [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m                                                   [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mBINARY: nginx                                      [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mINPUT SOURCES:                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;34mUNKNOWN[0m[1;31m                                            [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFinished Running Analysis                          [0m

@@ -1,0 +1,387 @@
+[2;36m[04/19/26 13:33:59][0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mTARGETING SINKS: execv                             [0m
+[2;36m[04/19/26 13:34:00][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function                      [0m
+[2;36m                    [0m         [37mrun_program@0x13bb4...                             [0m
+[2;36m[04/19/26 13:34:02][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function                      [0m
+[2;36m                    [0m         [37mudev_event_process@0x9ee8...                       [0m
+[2;36m[04/19/26 13:34:39][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function                      [0m
+[2;36m                    [0m         [37mudev_event_run@0xa364...                           [0m
+[2;36m[04/19/26 13:34:41][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function main@0xa700...       [0m
+[2;36m[04/19/26 13:34:59][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA on function main@0xa700...             [0m
+[2;36m[04/19/26 13:35:12][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37mudev_config_init(<MultiValues(<BV32 0x146ce>)>,    [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 0x3>)>, <MultiValues(<BV32      [0m
+[2;36m                    [0m         [37m0x18>)>, <MultiValues(<BV32 TOP>)>,                [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32      [0m
+[2;36m                    [0m         [37mTOP>)>, <MultiValues(<BV32 TOP>)>,                 [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 TOP>)>) @ 0xa73c                [0m
+[2;36m[04/19/26 13:35:19][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37mremove_trailing_chars(<MultiValues(<BV32           [0m
+[2;36m                    [0m         [37m0x1f910>)>, <MultiValues(<BV32 0x2f>)>,            [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 0x200>)>, <MultiValues(<BV32    [0m
+[2;36m                    [0m         [37m0x1c0>)>, <MultiValues({0: {<BV32 TOP>, <BV32      [0m
+[2;36m                    [0m         [37mTOP>}})>, <MultiValues({0: {<BV32 0x1e88c>, <BV32  [0m
+[2;36m                    [0m         [37m0x1e88c>}})>, <MultiValues({0: {<BV32 TOP>, <BV32  [0m
+[2;36m                    [0m         [37mTOP>}})>, <MultiValues({0: {<BV32 0xa740>, <BV32   [0m
+[2;36m                    [0m         [37m0xa740>}})>, <MultiValues(<BV32 TOP>)>,            [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32      [0m
+[2;36m                    [0m         [37mTOP>)>, <MultiValues(<BV32 TOP>)>) @ 0xcabc        [0m
+[2;36m[04/19/26 13:35:42][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for parse_config_file() @    [0m
+[2;36m                    [0m         [37m0xcac0                                             [0m
+[2;36m[04/19/26 13:35:47][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37mfile_map(<MultiValues(<BV32 0x1f910>)>,            [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 stack_base - 0x4a4>)>,          [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 stack_base - 0x4a8>)>) @ 0xc708 [0m
+[2;36m[04/19/26 13:40:00][0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mTIMEOUT FOR subject: [<CallSite in function        [0m
+[2;36m                    [0m         [1;31m0x13bb4, calling 0x968c>, <CallSite in function    [0m
+[2;36m                    [0m         [1;31m0x9ee8, calling 0x13bb4>, <CallSite in function    [0m
+[2;36m                    [0m         [1;31m0xa364, calling 0x9ee8>, <CallSite in function     [0m
+[2;36m                    [0m         [1;31m0xa700, calling 0xa364>], sink: execv              [0m
+[2;36m[04/19/26 13:43:10][0m[2;36m [0m[1;31mERROR   [0m [31mRDA Failed Due to Timeout                          [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mAnalyzed 0/6 for sink execv                        [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function                      [0m
+[2;36m                    [0m         [37mmsg_queue_manager@0xa4e0...                        [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mRunning RDA on function msg_queue_manager@0xa4e0...[0m
+[2;36m[04/19/26 13:43:25][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37mlog_message(<MultiValues(<BV32 0x6>)>,             [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 0x145cc>)>, <MultiValues(<BV32  [0m
+[2;36m                    [0m         [37m0x14478>)>) @ 0xa4b4                               [0m
+[2;36m[04/19/26 13:44:40][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37mstrlcat(<MultiValues(<BV32 stack_base - 0x154c>)>, [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 0x152c3>)>, <MultiValues(<BV32  [0m
+[2;36m                    [0m         [37m0x200>)>) @ 0xd7b0                                 [0m
+[2;36m[04/19/26 13:44:42][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37mcreate_path(<MultiValues(<BV32 stack_base -        [0m
+[2;36m                    [0m         [37m0x154c>)>) @ 0xd7cc                                [0m
+[2;36m[04/19/26 13:44:45][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37mlookup_user(<MultiValues(<BV32 TOP + 0x920>)>,     [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 stack_base - 0x134c>)>) @ 0xd810[0m
+[2;36m[04/19/26 13:45:59][0m[2;36m [0m[34mINFO    [0m [37mFound 1 potential sinks.                           [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFound 1 unresolved vulnerable definitions.         [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m**************************************************[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mUNRESOLVED CLOSURES to execv: [0m[1;31m                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m--------------------------------------------------[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;34m|[0m[1;33m|[0m[1;31mexecv([0m[1;31m                                         [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;34m|[0m[1;33m|[0m[1;31m      r0: <BV32 stack_base - 0x587> -> [0m[1;34m"<BV8 [0m[1;31m  [0m
+[2;36m                    [0m         [1;34mTOP>" | "<BV8 TOP[23:16]>" | "<BV8 TOP[31:24]>"[0m[1;31m | [0m[1;31m [0m
+[2;36m                    [0m         [1;31m<BV32 stack_base - 0x586> -> [0m[1;34m"<BV32 TOP>"[0m[1;31m | <BV32 [0m[1;31m [0m
+[2;36m                    [0m         [1;31mReverse(stack_base - 0x588)> -> [0m[1;34m"<BV8 TOP[31:24]>" [0m
+[2;36m                    [0m         [1;34m| "<BV8 TOP>" | "<BV8 TOP[23:16]>"[0m[1;31m | <BV32 [0m[1;31m        [0m
+[2;36m                    [0m         [1;31mstack_base - 0x788> -> [0m[1;34m"l" | "/" | "<BV8 TOP>"[0m[1;31m | [0m[1;31m  [0m
+[2;36m                    [0m         [1;31m<BV32 stack_base - 0x588> -> [0m[1;34m"<BV8 TOP[31:24]>" | [0m[1;31m [0m
+[2;36m                    [0m         [1;34m"<BV8 TOP>" | "<BV8 TOP[23:16]>"[0m[1;31m,[0m[1;31m                  [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;34m|[0m[1;33m|[0m[1;31m      r1: <BV32 stack_base - 0xf8c> -> [0m[1;34m"<BV32 [0m[1;31m [0m
+[2;36m                    [0m         [1;34mReverse(stack_base - 0x788)>" | "<BV32 [0m[1;31m            [0m
+[2;36m                    [0m         [1;34mReverse(stack_base - 0x587)>" | "<BV32 [0m[1;31m            [0m
+[2;36m                    [0m         [1;34mReverse(stack_base - 0x586)>" | "<BV32 [0m[1;31m            [0m
+[2;36m                    [0m         [1;34mReverse(stack_base - 0x588)>" | "<BV32 [0m[1;31m            [0m
+[2;36m                    [0m         [1;34mstack_base>  "[0m[1;31m,[0m[1;31m                                      [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;34m|[0m[1;33m|[0m[1;31m      ) @ 0x13eb4[0m[1;31m                              [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m                                                   [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mBINARY: udevd                                      [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mINPUT SOURCES:                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mLikely:[0m[1;31m                                            [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35m----------[0m[1;31m                                         [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mKEY: " "[0m[1;31m                                           [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mKeywords: None[0m[1;31m                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mBinary Source: UNKNOWN[0m[1;31m                             [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mSink: getenv(" ")@0x102b0[0m[1;31m                          [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mSink: getenv(" ")@0x102b0[0m[1;31m                          [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mSink: getenv(" ")@0x102b0[0m[1;31m                          [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35m----------[0m[1;31m                                         [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;33mRANK: 1.400[0m[1;31m                                        [0m
+[2;36m[04/19/26 13:46:09][0m[2;36m [0m[34mINFO    [0m [37mExclude function 0xa4e0 from future slices since   [0m
+[2;36m                    [0m         [37mthe data dependencies are fully resolved.          [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mAnalyzed 1/6 for sink execv                        [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function match_rule@0x10358...[0m
+[2;36m[04/19/26 13:46:52][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function                      [0m
+[2;36m                    [0m         [37mudev_rules_get_name@0x11178...                     [0m
+[2;36m[04/19/26 13:46:53][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function                      [0m
+[2;36m                    [0m         [37mudev_device_event@0xc09c...                        [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function                      [0m
+[2;36m                    [0m         [37mudev_event_process@0x9ee8...                       [0m
+[2;36m[04/19/26 13:46:54][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function                      [0m
+[2;36m                    [0m         [37mudev_event_run@0xa364...                           [0m
+[2;36m[04/19/26 13:46:56][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function main@0xa700...       [0m
+[2;36m[04/19/26 13:47:16][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA on function main@0xa700...             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37mudev_config_init(<MultiValues(<BV32 0x146ce>)>,    [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 0x3>)>, <MultiValues(<BV32      [0m
+[2;36m                    [0m         [37m0x18>)>, <MultiValues(<BV32 TOP>)>,                [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32      [0m
+[2;36m                    [0m         [37mTOP>)>, <MultiValues(<BV32 TOP>)>,                 [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 TOP>)>) @ 0xa73c                [0m
+[2;36m[04/19/26 13:47:17][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37mremove_trailing_chars(<MultiValues(<BV32           [0m
+[2;36m                    [0m         [37m0x1f910>)>, <MultiValues(<BV32 0x2f>)>,            [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 0x200>)>, <MultiValues(<BV32    [0m
+[2;36m                    [0m         [37m0x1c0>)>, <MultiValues({0: {<BV32 TOP>, <BV32      [0m
+[2;36m                    [0m         [37mTOP>}})>, <MultiValues({0: {<BV32 0x1e88c>, <BV32  [0m
+[2;36m                    [0m         [37m0x1e88c>}})>, <MultiValues({0: {<BV32 TOP>, <BV32  [0m
+[2;36m                    [0m         [37mTOP>}})>, <MultiValues({0: {<BV32 0xa740>, <BV32   [0m
+[2;36m                    [0m         [37m0xa740>}})>, <MultiValues(<BV32 TOP>)>,            [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32      [0m
+[2;36m                    [0m         [37mTOP>)>, <MultiValues(<BV32 TOP>)>) @ 0xcabc        [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for parse_config_file() @    [0m
+[2;36m                    [0m         [37m0xcac0                                             [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37mfile_map(<MultiValues(<BV32 0x1f910>)>,            [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 stack_base - 0x4a4>)>,          [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 stack_base - 0x4a8>)>) @ 0xc708 [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37mlog_message(<MultiValues(<BV32 0x3>)>,             [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 0x1507b>)>, <MultiValues(<BV32  [0m
+[2;36m                    [0m         [37m0x15040>)>) @ 0xc7e4                               [0m
+[2;36m[04/19/26 13:47:59][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for mem_size_mb() @ 0xafb0   [0m
+[2;36m[04/19/26 13:48:02][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for cpu_count() @ 0xb024     [0m
+[2;36m[04/19/26 13:48:10][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37mmsg_queue_manager(<MultiValues(<BV32 0x6>)>) @     [0m
+[2;36m                    [0m         [37m0xb450                                             [0m
+[2;36m[04/19/26 13:48:20][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37mrunning_processes_in_session(<MultiValues(<BV32    [0m
+[2;36m                    [0m         [37mTOP>)>, <MultiValues({0: {<BV32 TOP + 0xa>, <BV32  [0m
+[2;36m                    [0m         [37m0xa>}})>) @ 0xa560                                 [0m
+[2;36m[04/19/26 13:48:40][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37mstrlcat(<MultiValues(<BV32 stack_base - 0x2d78>)>, [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 0x158f8>)>, <MultiValues(<BV32  [0m
+[2;36m                    [0m         [37m0x200>)>) @ 0xf184                                 [0m
+[2;36m[04/19/26 13:52:16][0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mTIMEOUT FOR subject: [<CallSite in function        [0m
+[2;36m                    [0m         [1;31m0x13bb4, calling 0x968c>, <CallSite in function    [0m
+[2;36m                    [0m         [1;31m0x10358, calling 0x13bb4>, <CallSite in function   [0m
+[2;36m                    [0m         [1;31m0x11178, calling 0x10358>, <CallSite in function   [0m
+[2;36m                    [0m         [1;31m0xc09c, calling 0x11178>, <CallSite in function    [0m
+[2;36m                    [0m         [1;31m0x9ee8, calling 0xc09c>, <CallSite in function     [0m
+[2;36m                    [0m         [1;31m0xa364, calling 0x9ee8>, <CallSite in function     [0m
+[2;36m                    [0m         [1;31m0xa700, calling 0xa364>], sink: execv              [0m
+[2;36m[04/19/26 14:29:45][0m[2;36m [0m[1;31mERROR   [0m [31mRDA Failed Due to Timeout                          [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mAnalyzed 2/6 for sink execv                        [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function                      [0m
+[2;36m                    [0m         [37mudev_rules_get_run@0x11704...                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function                      [0m
+[2;36m                    [0m         [37mudev_device_event@0xc09c...                        [0m
+[2;36m[04/19/26 14:34:45][0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mTimed out for trace [<CallSite in function 0xc09c, [0m
+[2;36m                    [0m         [1;31mcalling 0x11704>]                                  [0m
+[2;36m[04/19/26 14:35:27][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA on function                            [0m
+[2;36m                    [0m         [37mudev_rules_get_run@0x11704...                      [0m
+[2;36m[04/19/26 14:35:30][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37mstrlcat(<MultiValues(<BV32 stack_base - 0x13f8>)>, [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 0x158f8>)>, <MultiValues(<BV32  [0m
+[2;36m                    [0m         [37m0x200>)>) @ 0xf184                                 [0m
+[2;36m[04/19/26 14:35:46][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37msysfs_resolve_link(<MultiValues(<BV32 stack_base - [0m
+[2;36m                    [0m         [37m0x13f8>)>, <MultiValues(<BV32 0x200>)>) @ 0xf190   [0m
+[2;36m[04/19/26 14:35:55][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37msysfs_device_get(<MultiValues(<BV32 stack_base -   [0m
+[2;36m                    [0m         [37m0x13f8>)>, <MultiValues({0: {<BV32 0x200>, <BV32   [0m
+[2;36m                    [0m         [37m0x2f>}})>, <MultiValues({0: {<BV32 0x6>, <BV32     [0m
+[2;36m                    [0m         [37m0x3>, <BV32 0x200>, <BV32 0x200>}})>,              [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 TOP>)>) @ 0xf1a0                [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37mremove_trailing_chars(<MultiValues(<BV32 stack_base[0m
+[2;36m                    [0m         [37m- 0x1880>)>, <MultiValues(<BV32 0x2f>)>,           [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 0x200>)>, <MultiValues(<BV32    [0m
+[2;36m                    [0m         [37mTOP>)>, <MultiValues(<BV32 TOP>)>,                 [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32      [0m
+[2;36m                    [0m         [37mTOP>)>, <MultiValues(<BV32 TOP>)>,                 [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32      [0m
+[2;36m                    [0m         [37mTOP>)>, <MultiValues(<BV32 TOP>)>,                 [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 TOP>)>) @ 0xec3c                [0m
+[2;36m[04/19/26 14:36:01][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37msysfs_device_set_values(<MultiValues(<BV32 TOP>)>, [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 stack_base - 0x1880>)>,         [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 0x0>)>, <MultiValues(<BV32      [0m
+[2;36m                    [0m         [37m0x0>)>, <MultiValues(<BV32 TOP>)>,                 [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32      [0m
+[2;36m                    [0m         [37mTOP>)>, <MultiValues(<BV32 TOP>)>,                 [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32      [0m
+[2;36m                    [0m         [37mTOP>)>) @ 0xed40                                   [0m
+[2;36m[04/19/26 14:37:11][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37mlog_message(<MultiValues(<BV32 0x3>)>,             [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 0x165a6>)>, <MultiValues(<BV32  [0m
+[2;36m                    [0m         [37m0x34da4>)>) @ 0x13ef0                              [0m
+[2;36m[04/19/26 14:37:38][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37mfile_map(<MultiValues(<BV32 stack_base - 0x350>)>, [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 stack_base - 0x4c>)>,           [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 stack_base - 0x50>)>) @ 0x10c60 [0m
+[2;36m[04/19/26 14:37:52][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37mimport_keys_into_env(<MultiValues(<BV32 TOP>)>,    [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 stack_base - 0xb50>)>,          [0m
+[2;36m                    [0m         [37m<MultiValues({0: {<BV32 0x0>, <BV32 0xff030000>,   [0m
+[2;36m                    [0m         [37m<BV32 Reverse(TOP)>}})>) @ 0x10c38                 [0m
+[2;36m[04/19/26 14:37:58][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37mname_list_key_add(<MultiValues(<BV32 TOP +         [0m
+[2;36m                    [0m         [37m0xb44>)>, <MultiValues({0: {<BV32 stack_base -     [0m
+[2;36m                    [0m         [37m0xd9f>, <BV32 stack_base - 0xda0>}})>) @ 0xf9c8    [0m
+[2;36m[04/19/26 14:38:00][0m[2;36m [0m[34mINFO    [0m [37mFound 2 potential sinks.                           [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFound 1 unresolved vulnerable definitions.         [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m**************************************************[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mUNRESOLVED CLOSURES to execv: [0m[1;31m                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m--------------------------------------------------[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;34m|[0m[1;31mexecv([0m[1;31m                                          [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;34m|[0m[1;31m      r0: <BV32 stack_base - 0xe36> -> [0m[1;34m"<BV32 [0m[1;31m  [0m
+[2;36m                    [0m         [1;34mTOP>"[0m[1;31m | <BV32 stack_base - 0xe38> -> [0m[1;34m"<BV8 [0m[1;31m        [0m
+[2;36m                    [0m         [1;34mTOP[23:16]>" | "<BV8 TOP[31:24]>" | "<BV8 TOP>"[0m[1;31m | [0m[1;31m [0m
+[2;36m                    [0m         [1;31m<BV32 stack_base - 0x1038> -> [0m[1;34m"<BV8 TOP><BV8 TOP> "[0m[1;31m [0m
+[2;36m                    [0m         [1;34m| "<BV8 TOP><BV8 TOP>" | "<BV8 TOP><BV8 TOP>" | [0m[1;31m   [0m
+[2;36m                    [0m         [1;34m"<BV8 TOP><BV8 TOP>" | "<BV8 TOP><BV8 TOP>" | "<BV8[0m
+[2;36m                    [0m         [1;34mTOP><BV8 TOP>"[0m[1;31m | <BV32 stack_base - 0xe37> -> [0m[1;34m"<BV8[0m
+[2;36m                    [0m         [1;34mTOP[23:16]>" | "<BV8 TOP>" | "<BV8 TOP[31:24]>"[0m[1;31m | [0m[1;31m [0m
+[2;36m                    [0m         [1;31m<BV32 Reverse(stack_base - 0xe38)> -> [0m[1;34m"<BV8 [0m[1;31m       [0m
+[2;36m                    [0m         [1;34mTOP[23:16]>" | "<BV8 TOP[31:24]>" | "<BV8 TOP>"[0m[1;31m,[0m[1;31m   [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;34m|[0m[1;31m      r1: <BV32 stack_base - 0x183c> -> [0m[1;34m"<BV32 [0m[1;31m [0m
+[2;36m                    [0m         [1;34mReverse(stack_base - 0xe37)>" | "<BV32 [0m[1;31m            [0m
+[2;36m                    [0m         [1;34mReverse(stack_base - 0xe38)>" | "<BV32 [0m[1;31m            [0m
+[2;36m                    [0m         [1;34mReverse(stack_base - 0xe36)>" | "<BV32 [0m[1;31m            [0m
+[2;36m                    [0m         [1;34mstack_base>  8" | "<BV32 Reverse(stack_base - [0m[1;31m       [0m
+[2;36m                    [0m         [1;34m0x1038)>"[0m[1;31m,[0m[1;31m                                         [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;34m|[0m[1;31m      ) @ 0x13eb4[0m[1;31m                               [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m                                                   [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mBINARY: udevd                                      [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mINPUT SOURCES:                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mLikely:[0m[1;31m                                            [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mNONE[0m[1;31m                                               [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;33mRANK: 0.700[0m[1;31m                                        [0m
+[2;36m                   [0m[2;36m [0m[31mWARNING [0m [33mNot Saving Closure, {'\x04\x00', 'read('} matches  [0m
+[2;36m                    [0m         [33m{'\x04\x00', 'read('}                              [0m
+[2;36m[04/19/26 14:38:19][0m[2;36m [0m[34mINFO    [0m [37mAnalyzed 3/6 for sink execv                        [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function                      [0m
+[2;36m                    [0m         [37mudev_device_event@0xc09c...                        [0m
+[2;36m[04/19/26 14:43:19][0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mTimed out for trace [<CallSite in function 0xc09c, [0m
+[2;36m                    [0m         [1;31mcalling 0x11704>]                                  [0m
+[2;36m[04/19/26 14:44:15][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function                      [0m
+[2;36m                    [0m         [37mmsg_queue_manager@0xa4e0...                        [0m
+[2;36m[04/19/26 14:44:16][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA on function msg_queue_manager@0xa4e0...[0m
+[2;36m[04/19/26 14:44:17][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37mlog_message(<MultiValues(<BV32 0x6>)>,             [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 0x145cc>)>, <MultiValues(<BV32  [0m
+[2;36m                    [0m         [37m0x14478>)>) @ 0xa4b4                               [0m
+[2;36m[04/19/26 14:44:22][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37mstrlcat(<MultiValues(<BV32 stack_base - 0x2948>)>, [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 0x158f8>)>, <MultiValues(<BV32  [0m
+[2;36m                    [0m         [37m0x200>)>) @ 0xf184                                 [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37msysfs_resolve_link(<MultiValues(<BV32 stack_base - [0m
+[2;36m                    [0m         [37m0x2948>)>, <MultiValues(<BV32 0x200>)>) @ 0xf190   [0m
+[2;36m[04/19/26 14:44:24][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37msysfs_device_get(<MultiValues(<BV32 stack_base -   [0m
+[2;36m                    [0m         [37m0x2948>)>, <MultiValues({0: {<BV32 0x200>, <BV32   [0m
+[2;36m                    [0m         [37m0x2f>}})>, <MultiValues({0: {<BV32 0x6>, <BV32     [0m
+[2;36m                    [0m         [37m0x3>, <BV32 0x200>, <BV32 0x200>}})>,              [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 TOP>)>) @ 0xf1a0                [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37mremove_trailing_chars(<MultiValues(<BV32 stack_base[0m
+[2;36m                    [0m         [37m- 0x2dd0>)>, <MultiValues(<BV32 0x2f>)>,           [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 0x200>)>, <MultiValues(<BV32    [0m
+[2;36m                    [0m         [37mTOP>)>, <MultiValues(<BV32 TOP>)>,                 [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32      [0m
+[2;36m                    [0m         [37mTOP>)>, <MultiValues(<BV32 TOP>)>,                 [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32      [0m
+[2;36m                    [0m         [37mTOP>)>, <MultiValues(<BV32 TOP>)>,                 [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 TOP>)>) @ 0xec3c                [0m
+[2;36m[04/19/26 14:44:25][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37msysfs_device_set_values(<MultiValues(<BV32 TOP>)>, [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 stack_base - 0x2dd0>)>,         [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 0x0>)>, <MultiValues(<BV32      [0m
+[2;36m                    [0m         [37m0x0>)>, <MultiValues(<BV32 TOP>)>,                 [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32      [0m
+[2;36m                    [0m         [37mTOP>)>, <MultiValues(<BV32 TOP>)>,                 [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32      [0m
+[2;36m                    [0m         [37mTOP>)>) @ 0xed40                                   [0m
+[2;36m[04/19/26 14:47:10][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37mfile_map(<MultiValues(<BV32 stack_base - 0x18a0>)>,[0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 stack_base - 0x159c>)>,         [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 stack_base - 0x15a0>)>) @       [0m
+[2;36m                    [0m         [37m0x10c60                                            [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37mimport_keys_into_env(<MultiValues(<BV32 TOP>)>,    [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 stack_base - 0x20a0>)>,         [0m
+[2;36m                    [0m         [37m<MultiValues({0: {<BV32 0x0>, <BV32 0xff030000>,   [0m
+[2;36m                    [0m         [37m<BV32 Reverse(TOP)>}})>) @ 0x10c38                 [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37mname_list_key_add(<MultiValues(<BV32 TOP +         [0m
+[2;36m                    [0m         [37m0xb44>)>, <MultiValues({0: {<BV32 stack_base -     [0m
+[2;36m                    [0m         [37m0x22ef>, <BV32 stack_base - 0x22f0>}})>) @ 0xf9c8  [0m
+[2;36m[04/19/26 14:47:16][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37msysfs_device_get_parent(<MultiValues(<BV32 TOP>)>) [0m
+[2;36m                    [0m         [37m@ 0x10ccc                                          [0m
+[2;36m[04/19/26 14:47:23][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37mudev_device_init(<MultiValues({0: {<BV32 0x0>,     [0m
+[2;36m                    [0m         [37m<BV32 0xffffffff>}})>) @ 0x10cdc                   [0m
+[2;36m[04/19/26 14:47:30][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37mname_list_add(<MultiValues(<BV32 TOP + 0xb44>)>,   [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32      [0m
+[2;36m                    [0m         [37mTOP>)>) @ 0x10d78                                  [0m
+[2;36m[04/19/26 14:47:34][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37mudev_device_cleanup(<MultiValues({0: {<BV32 TOP>,  [0m
+[2;36m                    [0m         [37m<BV32 0xffffffff>, <BV32 0x0>}})>) @ 0x10da4       [0m
+[2;36m[04/19/26 14:49:16][0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mTIMEOUT FOR subject: [<CallSite in function        [0m
+[2;36m                    [0m         [1;31m0x13bb4, calling 0x968c>, <CallSite in function    [0m
+[2;36m                    [0m         [1;31m0x10358, calling 0x13bb4>, <CallSite in function   [0m
+[2;36m                    [0m         [1;31m0x11178, calling 0x10358>, <CallSite in function   [0m
+[2;36m                    [0m         [1;31m0xc09c, calling 0x11178>, <CallSite in function    [0m
+[2;36m                    [0m         [1;31m0x9ee8, calling 0xc09c>, <CallSite in function     [0m
+[2;36m                    [0m         [1;31m0xa364, calling 0x9ee8>, <CallSite in function     [0m
+[2;36m                    [0m         [1;31m0xa4e0, calling 0xa364>], sink: execv              [0m
+[2;36m[04/19/26 15:01:06][0m[2;36m [0m[1;31mERROR   [0m [31mRDA Failed Due to Timeout                          [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mAnalyzed 5/6 for sink execv                        [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m**************************************************[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mUNRESOLVED CLOSURES to execv: [0m[1;31m                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m--------------------------------------------------[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;34m|[0m[1;33m|[0m[1;31mexecv([0m[1;31m                                         [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;34m|[0m[1;33m|[0m[1;31m      r0: <BV32 stack_base - 0x587> -> [0m[1;34m"<BV8 [0m[1;31m  [0m
+[2;36m                    [0m         [1;34mTOP>" | "<BV8 TOP[23:16]>" | "<BV8 TOP[31:24]>"[0m[1;31m | [0m[1;31m [0m
+[2;36m                    [0m         [1;31m<BV32 stack_base - 0x586> -> [0m[1;34m"<BV32 TOP>"[0m[1;31m | <BV32 [0m[1;31m [0m
+[2;36m                    [0m         [1;31mReverse(stack_base - 0x588)> -> [0m[1;34m"<BV8 TOP[31:24]>" [0m
+[2;36m                    [0m         [1;34m| "<BV8 TOP>" | "<BV8 TOP[23:16]>"[0m[1;31m | <BV32 [0m[1;31m        [0m
+[2;36m                    [0m         [1;31mstack_base - 0x788> -> [0m[1;34m"l" | "/" | "<BV8 TOP>"[0m[1;31m | [0m[1;31m  [0m
+[2;36m                    [0m         [1;31m<BV32 stack_base - 0x588> -> [0m[1;34m"<BV8 TOP[31:24]>" | [0m[1;31m [0m
+[2;36m                    [0m         [1;34m"<BV8 TOP>" | "<BV8 TOP[23:16]>"[0m[1;31m,[0m[1;31m                  [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;34m|[0m[1;33m|[0m[1;31m      r1: <BV32 stack_base - 0xf8c> -> [0m[1;34m"<BV32 [0m[1;31m [0m
+[2;36m                    [0m         [1;34mReverse(stack_base - 0x788)>" | "<BV32 [0m[1;31m            [0m
+[2;36m                    [0m         [1;34mReverse(stack_base - 0x587)>" | "<BV32 [0m[1;31m            [0m
+[2;36m                    [0m         [1;34mReverse(stack_base - 0x586)>" | "<BV32 [0m[1;31m            [0m
+[2;36m                    [0m         [1;34mReverse(stack_base - 0x588)>" | "<BV32 [0m[1;31m            [0m
+[2;36m                    [0m         [1;34mstack_base>  "[0m[1;31m,[0m[1;31m                                      [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;34m|[0m[1;33m|[0m[1;31m      ) @ 0x13eb4[0m[1;31m                              [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m                                                   [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mBINARY: udevd                                      [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mINPUT SOURCES:                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mLikely:[0m[1;31m                                            [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35m----------[0m[1;31m                                         [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mKEY: " "[0m[1;31m                                           [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mKeywords: None[0m[1;31m                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mBinary Source: UNKNOWN[0m[1;31m                             [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mSink: getenv(" ")@0x102b0[0m[1;31m                          [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mSink: getenv(" ")@0x102b0[0m[1;31m                          [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mSink: getenv(" ")@0x102b0[0m[1;31m                          [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35m----------[0m[1;31m                                         [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;33mRANK: 1.400[0m[1;31m                                        [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m--------------------------------------------------[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;34m|[0m[1;31mexecv([0m[1;31m                                          [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;34m|[0m[1;31m      r0: <BV32 stack_base - 0xe36> -> [0m[1;34m"<BV32 [0m[1;31m  [0m
+[2;36m                    [0m         [1;34mTOP>"[0m[1;31m | <BV32 stack_base - 0xe38> -> [0m[1;34m"<BV8 [0m[1;31m        [0m
+[2;36m                    [0m         [1;34mTOP[23:16]>" | "<BV8 TOP[31:24]>" | "<BV8 TOP>"[0m[1;31m | [0m[1;31m [0m
+[2;36m                    [0m         [1;31m<BV32 stack_base - 0x1038> -> [0m[1;34m"<BV8 TOP><BV8 TOP> "[0m[1;31m [0m
+[2;36m                    [0m         [1;34m| "<BV8 TOP><BV8 TOP>" | "<BV8 TOP><BV8 TOP>" | [0m[1;31m   [0m
+[2;36m                    [0m         [1;34m"<BV8 TOP><BV8 TOP>" | "<BV8 TOP><BV8 TOP>" | "<BV8[0m
+[2;36m                    [0m         [1;34mTOP><BV8 TOP>"[0m[1;31m | <BV32 stack_base - 0xe37> -> [0m[1;34m"<BV8[0m
+[2;36m                    [0m         [1;34mTOP[23:16]>" | "<BV8 TOP>" | "<BV8 TOP[31:24]>"[0m[1;31m | [0m[1;31m [0m
+[2;36m                    [0m         [1;31m<BV32 Reverse(stack_base - 0xe38)> -> [0m[1;34m"<BV8 [0m[1;31m       [0m
+[2;36m                    [0m         [1;34mTOP[23:16]>" | "<BV8 TOP[31:24]>" | "<BV8 TOP>"[0m[1;31m,[0m[1;31m   [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;34m|[0m[1;31m      r1: <BV32 stack_base - 0x183c> -> [0m[1;34m"<BV32 [0m[1;31m [0m
+[2;36m                    [0m         [1;34mReverse(stack_base - 0xe37)>" | "<BV32 [0m[1;31m            [0m
+[2;36m                    [0m         [1;34mReverse(stack_base - 0xe38)>" | "<BV32 [0m[1;31m            [0m
+[2;36m                    [0m         [1;34mReverse(stack_base - 0xe36)>" | "<BV32 [0m[1;31m            [0m
+[2;36m                    [0m         [1;34mstack_base>  8" | "<BV32 Reverse(stack_base - [0m[1;31m       [0m
+[2;36m                    [0m         [1;34m0x1038)>"[0m[1;31m,[0m[1;31m                                         [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;34m|[0m[1;31m      ) @ 0x13eb4[0m[1;31m                               [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m                                                   [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mBINARY: udevd                                      [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mINPUT SOURCES:                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mLikely:[0m[1;31m                                            [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mNONE[0m[1;31m                                               [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;33mRANK: 0.700[0m[1;31m                                        [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFinished Running Analysis                          [0m

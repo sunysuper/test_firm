@@ -1,0 +1,12 @@
+{
+    "sha256": "769848d9c4ce0103c35118c7e0335b17a7007be7961d9f2e51842729d3697d80",
+    "name": "auto_discover",
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/bin/auto_discover",
+    "closures": [],
+    "cfg_time": 0,
+    "vra_time": 0,
+    "sieve_time": 0,
+    "error": null,
+    "ret_code": 0,
+    "has_sinks": false
+}

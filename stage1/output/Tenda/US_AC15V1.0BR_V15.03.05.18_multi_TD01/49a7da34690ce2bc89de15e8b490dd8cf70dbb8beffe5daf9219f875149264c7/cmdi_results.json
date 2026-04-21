@@ -1,0 +1,21 @@
+{
+    "closures": [],
+    "cfg_time": 10.187076091766357,
+    "vra_time": 84.0000410079956,
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/bin/wps_monitor",
+    "name": "wps_monitor",
+    "has_sinks": true,
+    "sha256": "49a7da34690ce2bc89de15e8b490dd8cf70dbb8beffe5daf9219f875149264c7",
+    "sink_times": {},
+    "error": null,
+    "sieve_time": 3.7037203311920166,
+    "sinks": {
+        "system": 1
+    },
+    "time_data": {
+        "0xebe4 -> 0x9924": {
+            "taint_time": 0.02922654151916504,
+            "rda_time": 3.641153335571289
+        }
+    }
+}

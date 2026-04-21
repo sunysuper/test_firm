@@ -1,0 +1,12 @@
+{
+    "sha256": "cf849b1d98817a72e39665628354624f8ae83e27accb51487ea4c78b078bb3c7",
+    "name": "comad",
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/usr/sbin/comad",
+    "closures": [],
+    "cfg_time": 0,
+    "vra_time": 0,
+    "sieve_time": 0,
+    "error": null,
+    "ret_code": 0,
+    "has_sinks": false
+}

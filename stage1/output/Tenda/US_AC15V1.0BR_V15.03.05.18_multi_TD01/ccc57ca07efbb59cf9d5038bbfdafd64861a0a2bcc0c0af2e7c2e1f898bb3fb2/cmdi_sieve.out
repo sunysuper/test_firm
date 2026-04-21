@@ -1,0 +1,65 @@
+[2;36m[04/19/26 15:39:37][0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mTARGETING SINKS: system                            [0m
+[2;36m[04/19/26 15:39:38][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function sub_cef4@0xcef4...   [0m
+[2;36m[04/19/26 15:40:12][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function                      [0m
+[2;36m                    [0m         [37mtd_dbg_cmd_process@0xd5ec...                       [0m
+[2;36m[04/19/26 15:40:22][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA on function                            [0m
+[2;36m                    [0m         [37mtd_dbg_cmd_process@0xd5ec...                       [0m
+[2;36m[04/19/26 15:40:47][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37msub_acd0(<MultiValues(<BV32 0x8000>)>,             [0m
+[2;36m                    [0m         [37m<MultiValues({0: {<BV32 0xfa6c>, <BV32 0xfa6c>,    [0m
+[2;36m                    [0m         [37m<BV32 0x33>, <BV32 0x1008c>}})>, <MultiValues({0:  [0m
+[2;36m                    [0m         [37m{<BV32 0x10101>, <BV32 0x10101>, <BV32 0x330>}})>) [0m
+[2;36m                    [0m         [37m@ 0xafc0                                           [0m
+[2;36m[04/19/26 15:40:58][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37msub_ae1c(<MultiValues(<BV32 0x800>)>,              [0m
+[2;36m                    [0m         [37m<MultiValues({0: {<BV32 0xfa90>, <BV32 0x101bc>,   [0m
+[2;36m                    [0m         [37m<BV32 TOP>}})>, <MultiValues({0: {<BV32 0x5>, <BV32[0m
+[2;36m                    [0m         [37mReverse(TOP)>, <BV32 Reverse(TOP)>, <BV32          [0m
+[2;36m                    [0m         [37m0x357>}})>) @ 0xb048                               [0m
+[2;36m[04/19/26 15:41:43][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37msub_e88c(<MultiValues(<BV32 TOP>)>,                [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 0x0>)>, <MultiValues(<BV32      [0m
+[2;36m                    [0m         [37m0xccf0>)>, <MultiValues(<BV32 TOP>)>) @ 0xd800     [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFound 9 potential sinks.                           [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to system:[0m[37m                           [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37msystem([0m[37m                                          [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m       r0: <BV32 stack_base - 0x164> -> [0m[32m"cfm set [0m
+[2;36m                    [0m         [32mwl2g.public.channel 1337 &"[0m[37m,[0m[37m                       [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m       ) @ 0xcfe4 -> [0m[33m<BV32 0x0>[0m[37m                  [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to system:[0m[37m                           [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37msystem([0m[37m                                          [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m       r0: <BV32 stack_base - 0x164> -> [0m[32m"cfm "[0m[37m,[0m[37m  [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m       ) @ 0xd0d4 -> [0m[33m<BV32 0x0>[0m[37m                  [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to system:[0m[37m                           [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37msystem([0m[37m                                          [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m       r0: <BV32 stack_base - 0x164> -> [0m[32m"cfm "[0m[37m,[0m[37m  [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m       ) @ 0xd168 -> [0m[33m<BV32 0x0>[0m[37m                  [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to system:[0m[37m                           [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37msystem([0m[37m                                          [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m       r0: <BV32 stack_base - 0x164> -> [0m[32m"cfm "[0m[37m,[0m[37m  [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m       ) @ 0xd054 -> [0m[33m<BV32 0x0>[0m[37m                  [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to system:[0m[37m                           [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37msystem([0m[37m                                          [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m       r0: <BV32 stack_base - 0x164> -> [0m[32m"cfm "[0m[37m,[0m[37m  [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m       ) @ 0xd090 -> [0m[33m<BV32 0x0>[0m[37m                  [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to system:[0m[37m                           [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37msystem([0m[37m                                          [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m       r0: <BV32 stack_base - 0x164> -> [0m[32m"cfm "[0m[37m,[0m[37m  [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m       ) @ 0xd1c4 -> [0m[33m<BV32 0x0>[0m[37m                  [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to system:[0m[37m                           [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37msystem([0m[37m                                          [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m       r0: <BV32 stack_base - 0x164> -> [0m[32m"cfm "[0m[37m,[0m[37m  [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m       ) @ 0xd124 -> [0m[33m<BV32 0x0>[0m[37m                  [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to system:[0m[37m                           [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37msystem([0m[37m                                          [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m       r0: <BV32 stack_base - 0x164> -> [0m[32m"cfm "[0m[37m,[0m[37m  [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m       ) @ 0xd24c -> [0m[33m<BV32 0x0>[0m[37m                  [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to system:[0m[37m                           [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37msystem([0m[37m                                          [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m       r0: <BV32 stack_base - 0x164> -> [0m[32m"cfm "[0m[37m,[0m[37m  [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[32m|[0m[37m       ) @ 0xd200 -> [0m[33m<BV32 0x0>[0m[37m                  [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFound 0 unresolved vulnerable definitions.         [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mExclude function 0xd5ec from future slices since   [0m
+[2;36m                    [0m         [37mthe data dependencies are fully resolved.          [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mAnalyzed 0/1 for sink system                       [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFinished Running Analysis                          [0m

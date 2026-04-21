@@ -1,0 +1,12 @@
+{
+    "sha256": "70e37f3f9847c6c20b67b7d57c340a81dd8474a379d7db3771cb61506aee9c7b",
+    "name": "sntp",
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/bin/sntp",
+    "closures": [],
+    "cfg_time": 0,
+    "vra_time": 0,
+    "sieve_time": 0,
+    "error": null,
+    "ret_code": 0,
+    "has_sinks": false
+}

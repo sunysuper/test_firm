@@ -1,0 +1,47 @@
+[2;36m[04/16/26 14:01:02][0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mTARGETING SINKS: execvp                            [0m
+[2;36m[04/16/26 14:01:03][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function main@0x9460...       [0m
+[2;36m[04/16/26 14:01:06][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA on function main@0x9460...             [0m
+[2;36m[04/16/26 14:01:23][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37msub_8d6c(<MultiValues(<BV32 stack_base - 0x124>)>, [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 stack_base - 0x1e28>)>) @ 0x9a1c[0m
+[2;36m[04/16/26 14:01:33][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37msub_8ba8(<MultiValues(<BV32 stack_base - 0x124>)>, [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 stack_base - 0x228>)>) @ 0x9a50 [0m
+[2;36m[04/16/26 14:01:34][0m[2;36m [0m[34mINFO    [0m [37mFound 1 potential sinks.                           [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFound 1 unresolved vulnerable definitions.         [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m**************************************************[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mUNRESOLVED CLOSURES to execvp: [0m[1;31m                    [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m--------------------------------------------------[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;31mexecvp([0m[1;31m                                           [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;31m       r0: [0m[1;96mARGV[0m[1;31m[2] -> [0m[1;34m"<BV32 ARGV_2>"[0m[1;31m | [0m[1;96mARGV[0m[1;31m[2],[0m[1;31m  [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;31m       r1: [0m[1;96mARGV[0m[1;31m[-1] + 0x8 | [0m[1;96mARGV[0m[1;31m[-1] + 0x8 -> [0m[1;31m    [0m
+[2;36m                    [0m         [1;34m"<BV32 TOP>"[0m[1;31m,[0m[1;31m                                      [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;31m       ) @ 0x9acc[0m[1;31m                                 [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m                                                   [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mBINARY: taskset                                    [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mINPUT SOURCES:                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mLikely:[0m[1;31m                                            [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35m----------[0m[1;31m                                         [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mKEY: "ARGV"[0m[1;31m                                        [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mSink: "ARGV"[0m[1;31m                                       [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35m----------[0m[1;31m                                         [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;33mRANK: 0.400[0m[1;31m                                        [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mAnalyzed 0/1 for sink execvp                       [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m**************************************************[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mUNRESOLVED CLOSURES to execvp: [0m[1;31m                    [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m--------------------------------------------------[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;31mexecvp([0m[1;31m                                           [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;31m       r0: [0m[1;96mARGV[0m[1;31m[2] -> [0m[1;34m"<BV32 ARGV_2>"[0m[1;31m | [0m[1;96mARGV[0m[1;31m[2],[0m[1;31m  [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;31m       r1: [0m[1;96mARGV[0m[1;31m[-1] + 0x8 | [0m[1;96mARGV[0m[1;31m[-1] + 0x8 -> [0m[1;31m    [0m
+[2;36m                    [0m         [1;34m"<BV32 TOP>"[0m[1;31m,[0m[1;31m                                      [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;31m       ) @ 0x9acc[0m[1;31m                                 [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m                                                   [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mBINARY: taskset                                    [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mINPUT SOURCES:                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mLikely:[0m[1;31m                                            [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35m----------[0m[1;31m                                         [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mKEY: "ARGV"[0m[1;31m                                        [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35mSink: "ARGV"[0m[1;31m                                       [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;35m----------[0m[1;31m                                         [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;33mRANK: 0.400[0m[1;31m                                        [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFinished Running Analysis                          [0m

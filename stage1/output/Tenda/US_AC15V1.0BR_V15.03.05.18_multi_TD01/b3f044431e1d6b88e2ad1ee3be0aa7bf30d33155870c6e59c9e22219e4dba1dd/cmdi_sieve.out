@@ -1,0 +1,76 @@
+[2;36m[04/16/26 13:31:19][0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mTARGETING SINKS: system, doSystemCmd, execvp       [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function doSystemCmd@0x96cc...[0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function sub_9a3c@0x9a3c...   [0m
+[2;36m[04/16/26 13:31:20][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA on function sub_9a3c@0x9a3c...         [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFound 0 potential sinks.                           [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFound 0 unresolved vulnerable definitions.         [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mExclude function 0x9a3c from future slices since   [0m
+[2;36m                    [0m         [37mthe data dependencies are fully resolved.          [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mAnalyzed 0/1 for sink system                       [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function sub_9a3c@0x9a3c...   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mRunning RDA on function sub_9a3c@0x9a3c...         [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFound 1 potential sinks.                           [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to doSystemCmd:[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37mdoSystemCmd([0m[37m                                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            r0: "rm /tmp/pptp/logininfo1337"[0m[37m,[0m[37m     [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            r1: <BV32 stack_base - 0x30> -> [0m[37m      [0m
+[2;36m                    [0m         [32m"/tmp/pptp/logininfo1337"[0m[37m,[0m[37m                         [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            ) @ 0x9aa0 -> [0m[33m<BV32 0x0>[0m[37m              [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [34mResolved call to doSystemCmd:[0m[37m                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37mdoSystemCmd([0m[37m                                      [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            r0: "rm /tmp/pptp/logininfo1337"[0m[37m,[0m[37m     [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            r1: <BV32 stack_base - 0x30> -> [0m[37m      [0m
+[2;36m                    [0m         [32m"/tmp/pptp/logininfo1337"[0m[37m,[0m[37m                         [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37m|[0m[37m            ) @ 0x9aa0 -> [0m[33m<BV32 0x0>[0m[37m              [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFound 0 unresolved vulnerable definitions.         [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mExclude function 0x9a3c from future slices since   [0m
+[2;36m                    [0m         [37mthe data dependencies are fully resolved.          [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mAnalyzed 0/1 for sink doSystemCmd                  [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function sub_9de8@0x9de8...   [0m
+[2;36m[04/16/26 13:31:25][0m[2;36m [0m[34mINFO    [0m [37mRunning RDA Taint on function main@0xa704...       [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mRunning RDA on function main@0xa704...             [0m
+[2;36m[04/16/26 13:31:36][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37msub_bd88(<MultiValues(<BV32 TOP + ARGC>)>,         [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 stack_base + 0xdeadc0de>)>,     [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 0xc868>)>, <MultiValues(<BV32   [0m
+[2;36m                    [0m         [37mTOP>)>) @ 0xa9b8                                   [0m
+[2;36m[04/16/26 13:31:40][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for                          [0m
+[2;36m                    [0m         [37msub_bddc(<MultiValues(<BV32 TOP + ARGC>)>,         [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 stack_base + 0xdeadc0de>)>,     [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 0xc868>)>, <MultiValues(<BV32   [0m
+[2;36m                    [0m         [37mTOP>)>, <MultiValues(<BV32 0x20>)>,                [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32      [0m
+[2;36m                    [0m         [37mTOP>)>, <MultiValues({0: {<BV32 0x18>, <BV32       [0m
+[2;36m                    [0m         [37m0x14>}})>, <MultiValues(<BV32 0x110>)>,            [0m
+[2;36m                    [0m         [37m<MultiValues(<BV32 0xf0>)>, <MultiValues(<BV32     [0m
+[2;36m                    [0m         [37m0x15270>)>, <MultiValues(<BV32 stack_base -        [0m
+[2;36m                    [0m         [37m0x54>)>) @ 0xa9bc                                  [0m
+[2;36m[04/16/26 13:31:58][0m[2;36m [0m[34mINFO    [0m [37mLLM forced reanalysis for sub_9370() @ 0xa9f8      [0m
+[2;36m[04/16/26 13:32:25][0m[2;36m [0m[34mINFO    [0m [37mFound 1 potential sinks.                           [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFound 1 unresolved vulnerable definitions.         [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m**************************************************[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mUNRESOLVED CLOSURES to execvp: [0m[1;31m                    [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m--------------------------------------------------[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31mexecvp([0m[1;31m                                          [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m       r0: <BV32 TOP>,[0m[1;31m                           [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m       r1: <BV32 stack_base - 0x190> -> [0m[1;34m"<BV32 [0m[1;31m  [0m
+[2;36m                    [0m         [1;34mReverse(TOP)>"[0m[1;31m,[0m[1;31m                                    [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m       ) @ 0xa514[0m[1;31m                                [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m                                                   [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mBINARY: pptpctrl                                   [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mINPUT SOURCES:                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;34mUNKNOWN[0m[1;31m                                            [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mAnalyzed 0/1 for sink execvp                       [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m**************************************************[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mUNRESOLVED CLOSURES to execvp: [0m[1;31m                    [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m--------------------------------------------------[0m[1;31m [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31mexecvp([0m[1;31m                                          [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m       r0: <BV32 TOP>,[0m[1;31m                           [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m       r1: <BV32 stack_base - 0x190> -> [0m[1;34m"<BV32 [0m[1;31m  [0m
+[2;36m                    [0m         [1;34mReverse(TOP)>"[0m[1;31m,[0m[1;31m                                    [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;37m|[0m[1;32m|[0m[1;31m       ) @ 0xa514[0m[1;31m                                [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31m                                                   [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mBINARY: pptpctrl                                   [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;31mINPUT SOURCES:                                     [0m
+[2;36m                   [0m[2;36m [0m[1;7;31mCRITICAL[0m [1;34mUNKNOWN[0m[1;31m                                            [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [37mFinished Running Analysis                          [0m

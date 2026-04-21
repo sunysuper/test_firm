@@ -1,0 +1,12 @@
+{
+    "sha256": "d5772c67305933d6e2bc6ee1fbc271a725077e6c6ed130e2a377656841a596a9",
+    "name": "igs",
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/bin/igs",
+    "closures": [],
+    "cfg_time": 0,
+    "vra_time": 0,
+    "sieve_time": 0,
+    "error": null,
+    "ret_code": 0,
+    "has_sinks": false
+}

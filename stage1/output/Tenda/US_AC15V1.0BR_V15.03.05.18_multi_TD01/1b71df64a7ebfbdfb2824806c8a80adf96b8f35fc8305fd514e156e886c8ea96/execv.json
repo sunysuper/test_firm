@@ -1,0 +1,25 @@
+{
+    "execv": {
+        "pppd": [
+            {
+                "args": {
+                    "0": [
+                        "/bin/pppd"
+                    ],
+                    "1": [
+                        "<BV32 TOP>"
+                    ],
+                    "2": [
+                        "38400"
+                    ]
+                },
+                "vulnerable_args": [
+                    1
+                ],
+                "addr": 40740
+            }
+        ]
+    },
+    "name": "pptp",
+    "sha256": "1b71df64a7ebfbdfb2824806c8a80adf96b8f35fc8305fd514e156e886c8ea96"
+}

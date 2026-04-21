@@ -1,0 +1,84 @@
+{
+    "closures": [
+        {
+            "trace": [
+                {
+                    "function": "main",
+                    "string": "main(<MultiValues(<BV32 TOP + ARGC>)>, <MultiValues(<BV32 stack_base + 0xdeadc0de>)>) @ 0x9460",
+                    "ins_addr": "0x9460"
+                }
+            ],
+            "sink": {
+                "function": "execvp",
+                "string": "execvp(<MultiValues(<BV32 stack_base + 0xdeadc3de>)>, <MultiValues(<BV32 stack_base + 0xdeadc0e6>)>) @ 0x9acc",
+                "ins_addr": "0x9acc"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [
+                    "ARGV"
+                ],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0.4,
+            "confidence": 0.0179,
+            "source_score": 0.0286,
+            "path_factor": 0.5,
+            "risk_bonus": 1.25,
+            "summary_augmented": true,
+            "summary_tags": [
+                "OVERFLOW_POSSIBLE",
+                "FORMAT_STRING"
+            ],
+            "summary_locations": [
+                "0x8d6c",
+                "0x8ba8"
+            ],
+            "ani_skip_records": [
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "reanalyzed",
+                "reanalyzed",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped",
+                "skipped"
+            ],
+            "reachable_from_main": true,
+            "sanitized": false
+        }
+    ],
+    "cfg_time": 0.46442437171936035,
+    "vra_time": 2.007388114929199,
+    "path": "/home/mdf/FirmSieve/stage1/firm/Tenda/analyzed/_US_AC15V1.0BR_V15.03.05.18_multi_TD01.bin.extracted/squashfs-root/bin/taskset",
+    "name": "taskset",
+    "has_sinks": true,
+    "sha256": "1ef6a3746966a5b3e772e372e20372358bac3db6e24d622183f6329a52d62866",
+    "sink_times": {
+        "execvp": 30.891056299209595
+    },
+    "error": null,
+    "sieve_time": 30.965185403823853,
+    "sinks": {
+        "execvp": 1
+    },
+    "time_data": {
+        "0x9460 -> 0x87a4": {
+            "taint_time": 2.7535526752471924,
+            "rda_time": 28.13666558265686
+        }
+    }
+}
